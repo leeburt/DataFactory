@@ -1,0 +1,10 @@
+{
+  "total_images": 6,
+  "consistent_images": 1,
+  "inconsistent_images": 5,
+  "image_consistency_rate": 0.16666666666666666,
+  "total_components": 62,
+  "consistent_components": 11,
+  "component_consistency_rate": 0.1774193548387097,
+  "average_consistency_score": 42.91531385281385
+}

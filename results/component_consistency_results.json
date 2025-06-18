@@ -1,0 +1,666 @@
+{
+  "block_circuit_train_15k_0321_013211.jpg": {
+    "image_id": "block_circuit_train_15k_0321_013211.jpg",
+    "overall_consistent": true,
+    "overall_score": 81.42857142857143,
+    "component_count": 7,
+    "consistent_count": 6,
+    "component_results": [
+      {
+        "component_pair": "Servo Demodulator (Model 1) & servo demodulator (Model 2)",
+        "is_consistent": true,
+        "consistency_score": 95,
+        "inconsistencies": [],
+        "reasoning": "Both analyses describe one input from the read head and one output to the A/D stage. The naming differences (\"Output to A/D\" vs \"Demodulated Signal\", \"A/D Converter\" vs \"A/D\") are minor synonyms and do not affect the functional mapping. The role as a demodulator between the read head and A/D converter is the same in both models."
+      },
+      {
+        "component_pair": "A/D Converter (Model 1) & A/D converter (Model 2)",
+        "is_consistent": true,
+        "consistency_score": 95,
+        "inconsistencies": [],
+        "reasoning": "Both analyses describe a single analog input from the Servo Demodulator output and a single digital output to the DSP input, matching the circuit diagram. The functional role as an analog-to-digital converter is identical. The only minor differences are naming conventions for the input/output lines, which do not affect functional consistency."
+      },
+      {
+        "component_pair": "DSP Processor (Model 1) & DSP (Model 2)",
+        "is_consistent": true,
+        "consistency_score": 95,
+        "inconsistencies": [],
+        "reasoning": "Both analyses describe a single digital input from the A/D stage and a single digital output to the D/A stage. In Model 1, the input is labeled 'A/D Output' and connected to 'A/D Converter' at the 'Output Pin'; in Model 2 it is 'Digital signal from A/D' connected to 'A/D' at the 'Digital Output'. Likewise the outputs reference the D/A stage with equivalent roles. The slight differences in naming (e.g., 'DSP Processor' vs 'DSP', 'A/D Converter' vs 'A/D') are purely lexical and do not affect the described functionality or connection topology, which are fully aligned."
+      },
+      {
+        "component_pair": "D/A Converter (Model 1) & D/A converter (Model 2)",
+        "is_consistent": true,
+        "consistency_score": 90,
+        "inconsistencies": [],
+        "reasoning": "Both analyses describe a single digital input from the DSP and a single analog output to the actuator driver, matching the circuit diagram’s flow DSP → D/A → Actuator Driver. The connection roles (digital output pin on the DSP side, analog input pin on the actuator driver side) are semantically identical despite minor naming differences (e.g. “DSP Output” vs. “Input 1”, “Analog Signal” vs. “Output 1”). The overall function—converting DSP outputs to an analog signal for the actuator driver—is consistent between both models."
+      },
+      {
+        "component_pair": "Actuator Driver (Model 1) & actuator driver (Model 2)",
+        "is_consistent": true,
+        "consistency_score": 95,
+        "inconsistencies": [],
+        "reasoning": "Both analyses describe a single analog input from the D/A stage and a single output to the actuator coil, matching the circuit diagram. Model 1 refers to the input line as “D/A Output” from the “D/A Converter,” while Model 2 calls it “Input 1” from “D/A,” but both indicate the same analog output pin. Similarly, both have an output to the actuator coil, described slightly differently in naming but functionally equivalent. There are no substantive differences in connection count, types, or functional roles; the minor naming variations do not affect consistency."
+      },
+      {
+        "component_pair": "Actuator Coil (Model 1) & actuator coil (Model 2)",
+        "is_consistent": true,
+        "consistency_score": 100,
+        "inconsistencies": [],
+        "reasoning": "Both analyses describe one input from the Actuator Driver and no outputs, with the coil serving the same role of receiving drive signals. The naming and wording differences (line label vs. input number; \"output of Actuator Driver\" vs. \"coil output terminals\") are superficial and refer to the same connection. Therefore the descriptions are fully consistent."
+      },
+      {
+        "component_pair": "None & read head",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      }
+    ],
+    "reason": "6/7 组件分析一致"
+  },
+  "block_circuit_train_15k_0321_013461.jpg": {
+    "image_id": "block_circuit_train_15k_0321_013461.jpg",
+    "overall_consistent": false,
+    "overall_score": 28.571428571428573,
+    "component_count": 7,
+    "consistent_count": 0,
+    "component_results": [
+      {
+        "component_pair": "Differential Stage & Differential Stage",
+        "is_consistent": false,
+        "consistency_score": 50,
+        "inconsistencies": [],
+        "reasoning": "解析失败，基于文本内容分析可能的一致性"
+      },
+      {
+        "component_pair": "High gain Stage (Model 1) & High gain Stage (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 60,
+        "inconsistencies": [
+          "Model 1 lists only two inputs (Differential Stage output and Biasing Circuit output) while Model 2 includes a third input from the Compensation Circuitry output.",
+          "Model 1 omits the feedback connection from the Compensation Circuitry that is shown as an input in Model 2 and in the original diagram."
+        ],
+        "reasoning": "Both analyses agree on the core inputs from the Differential Stage and the Biasing Circuit and on the outputs to the Compensation Circuitry and to Vout. However, Model 2 correctly includes a third input from the Compensation Circuitry that feeds back into the High Gain Stage, which is clearly depicted in the original schematic. Model 1 fails to mention this compensation feedback input, resulting in a mismatch in the number and type of connections. Overall, the descriptions overlap on major connections but diverge on the compensation feedback path, leading to a partial inconsistency."
+      },
+      {
+        "component_pair": "Compensation Circuitry (Model 1) & Compensation Circuitry (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 40,
+        "inconsistencies": [
+          "Model 1 describes Input 2 as feedback from the High gain Stage, whereas Model 2 describes Input 2 as originating from the Differential Stage",
+          "Model 2 lists both inputs from the Differential Stage, in contrast to Model 1 which lists one input from the Differential Stage and one from the High gain Stage"
+        ],
+        "reasoning": "Both models agree on the component name and the single output connection to the High gain Stage, but they differ on the source of the second input. Model 1 treats the second input as feedback from the High gain Stage, forming the compensation loop, while Model 2 treats both inputs as taps from the Differential Stage outputs. This discrepancy in input sources indicates a conflicting interpretation of the compensation feedback path, reducing overall consistency."
+      },
+      {
+        "component_pair": "Biasing Circuit (Model 1) & Biasing Circuit (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 50,
+        "inconsistencies": [
+          "Model 1 describes only a single output to the Differential Stage, whereas Model 2 describes two outputs (to the Differential Stage and to the High Gain Stage)",
+          "Model 1 omits the bias connection to the High Gain Stage that is present in Model 2"
+        ],
+        "reasoning": "Both models agree that the Biasing Circuit has no inputs and that it supplies a bias to the Differential Stage at its bottom node. However, Model 2 additionally identifies a second output supplying bias to the High Gain Stage, which Model 1 fails to mention. This missing connection represents a functional discrepancy in the description of the circuit’s role and interconnections."
+      },
+      {
+        "component_pair": "None & voltage source V1",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      },
+      {
+        "component_pair": "None & voltage source V2",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      },
+      {
+        "component_pair": "None & output Vout",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      }
+    ],
+    "reason": "0/7 组件分析一致"
+  },
+  "20250609103211_40.jpg": {
+    "image_id": "20250609103211_40.jpg",
+    "overall_consistent": false,
+    "overall_score": 29.375,
+    "component_count": 8,
+    "consistent_count": 0,
+    "component_results": [
+      {
+        "component_pair": "DCO (Model 1) & DCO (Digitally Controlled Oscillator) (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 20,
+        "inconsistencies": [
+          "Model 1 lists two inputs (VOUTB, RESET) whereas Model 2 lists no inputs.",
+          "Model 1 treats VOUTB as an input to the Reference Divider, but Model 2 treats VOUTB as an output to the ÷2 block.",
+          "Model 1 reports only VOUT as an output, while Model 2 reports both VOUT and VOUTB as outputs to the ÷2 Divider."
+        ],
+        "reasoning": "The two analyses differ fundamentally in the number and role of pins: Model 1 describes VOUTB and RESET as inputs and only VOUT as an output, while Model 2 omits any inputs and declares both VOUT and VOUTB as outputs. Their reported connections to downstream blocks (Reference Divider vs ÷2 block) also conflict. These discrepancies indicate the descriptions are not consistent."
+      },
+      {
+        "component_pair": "Reference Divider (Model 1) & Reference Divider (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 65,
+        "inconsistencies": [
+          "Model 2 lists additional outputs (DEN_CLK, RST_CNT, MSK_CNT) that are not present in Model 1.",
+          "Model 1 describes only COM_CLK as an output whereas Model 2 includes COM_CLK plus DEN_CLK, RST_CNT, and MSK_CNT.",
+          "Minor naming differences for the reset input: “Reset Circuit” vs “System Reset Controller.”",
+          "Control input naming varies slightly: “Control Logic” vs “Control logic / selection register.”"
+        ],
+        "reasoning": "Both analyses agree on the core inputs (REF_CLK, REF_DIV_SEL<2:0>, RESET) and on the primary output COM_CLK, as well as the general function of dividing the reference clock for the FLL. However, Model 2 exposes three additional outputs (DEN_CLK, RST_CNT, MSK_CNT) that are tied into the downstream counter and mux functions in the diagram, which Model 1 omits entirely. The minor naming variations for the reset and control logic connections do not affect functionality, but the missing outputs in Model 1 indicate an incomplete description relative to Model 2 and the original schematic."
+      },
+      {
+        "component_pair": "18-bit Counter (Model 1) & 18-bit Counter (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 60,
+        "inconsistencies": [
+          "RST_CNT and MSK_CNT source mismatch: Model 1 attributes them to the Digital Phase Detector & Calculator, whereas Model 2 correctly attributes them to the Reference Divider.",
+          "RESET origin mismatch: Model 1 lists RESET as coming from the Tuning Controller (local loop reset), while Model 2 labels it as a Global Reset input."
+        ],
+        "reasoning": "Both analyses agree on the number of I/Os (four inputs, one output) and on the main data path Fco_DIV→18-bit Counter→DCO_CNT<17:0>→Digital Phase Detector & Calculator. However, they diverge on the roles of RST_CNT/MSK_CNT and the RESET signal. According to the schematic, RST_CNT and MSK_CNT are generated by the Reference Divider and feed both the 18-bit Counter and the Phase Detector, not by the Phase Detector itself. Similarly, the RESET to the counter is the loop reset from the Tuning Controller, not a global system reset. These mismatches lead to a moderate consistency score."
+      },
+      {
+        "component_pair": "Digital Phase Detector & Calculator (Model 1) & Digital Phase Detector & Calculator (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 25,
+        "inconsistencies": [
+          "Model 1 omits the COM_CLK input that actually drives the detector; Model 2 includes COM_CLK",
+          "Model 2 omits COMP_REF as an input and instead lists it incorrectly as an output, while Model 1 treats COMP_REF correctly as an input",
+          "Model 1 and Model 2 disagree on the RESET source (Tuning Controller vs Global Reset)",
+          "The number and identity of inputs/outputs differ: Model 1 has {DCO_CNT, COMP_REF, RESET} in/UPDN out; Model 2 has {COM_CLK, DCO_CNT, RESET} in/{UPDN, COMP_REF} out"
+        ],
+        "reasoning": "The two analyses disagree on the key signals driving the phase detector: COM_CLK should be an input but is missing in Model 1, COMP_REF should be an input but is mis‐classified as an output in Model 2, and RESET connections differ. Their I/O sets do not align with each other or with the original schematic, indicating inconsistent descriptions of component functionality and interface."
+      },
+      {
+        "component_pair": "Tuning Controller (Model 1) & Tuning Controller (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 25,
+        "inconsistencies": [
+          "Mismatch in outputs: Model 1 describes a single output DCO_CNT<17:0>, while Model 2 reports three outputs (two RESET lines and FLL_LOCK).",
+          "Model 1 incorrectly attributes the DCO_CNT bus output to the Tuning Controller, whereas in the schematic the 18-bit counter generates DCO_CNT and feeds it into the phase detector.",
+          "Model 1 omits the FLL_LOCK signal output, which Model 2 and the diagram show as a primary Tuning Controller output to system logic.",
+          "Model 2 lists dedicated RESET outputs to both the 18-bit counter and the phase detector for loop resets, functionality not captured in Model 1."
+        ],
+        "reasoning": "Model 1 and Model 2 agree on the UP/DN and external RESET inputs into the Tuning Controller, but they diverge in the outputs and functional role. The schematic clearly shows the 18-bit counter producing DCO_CNT, not the Tuning Controller, and the Tuning Controller issuing RESET pulses to both the counter and the phase detector as well as generating the FLL_LOCK status. Model 1’s output description is therefore erroneous and incomplete, leading to a low consistency score."
+      },
+      {
+        "component_pair": "MUX (Model 1) & Multiplexer (MUX) (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 25,
+        "inconsistencies": [
+          "Model 2 lists COMP_REF<17:0> as an input, but Model 1 lists it as the single output",
+          "Model 2 claims DEN_CLK is the output of the MUX, while Model 1 shows COMP_REF<17:0> as the MUX output",
+          "Model 2 includes INT_REF<17:0> connected to an FCW Map Table output (correct source) but mislabels the MUX participation, whereas Model 1 correctly shows INT_REF<17:0> as a MUX input from the map table",
+          "Model 2 incorrectly introduces an extra input and output signature that is not present in the original circuit diagram"
+        ],
+        "reasoning": "The two analyses disagree fundamentally on the pin count and signal direction of the MUX: Model 1 correctly shows two 18-bit reference buses and a comparator-enable signal selected onto COMP_REF<17:0>. Model 2 instead treats COMP_REF as an input and DEN_CLK as the output, which does not match the schematic. The intended role of the MUX in the FLL loop is to route either the external or internal reference into the digital phase detector, producing COMP_REF; Model 2’s description misassigns signals and thus is inconsistent with both Model 1 and the original diagram."
+      },
+      {
+        "component_pair": "FCW Map Table (Model 1) & FCW Map Table (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 15,
+        "inconsistencies": [
+          "Model 1 lists INT_REF<17:0> as an input and EXT_REF<17:0> as an output, whereas Model 2 lists INT_REF<17:0> as an output and omits EXT_REF entirely, effectively swapping port directions and names",
+          "Model 1 connects CH_SEL<5:0> to the Tuning Controller instead of to the FCW Map Table, while Model 2 correctly treats CH_SEL<5:0> as the channel‐select input to the FCW Map Table",
+          "The two analyses differ in port count: Model 1 describes two inputs and one output, but Model 2 describes one input and one output"
+        ],
+        "reasoning": "Comparing both analyses against the circuit diagram, Model 2 correctly describes the FCW Map Table as taking CH_SEL and producing an INT_REF output into the MUX. Model 1 has misassigned the directions and names of the reference ports (swapping INT_REF and EXT_REF) and misconnected CH_SEL to the Tuning Controller. These discrepancies in ports, connections, and functionality show the two descriptions are not consistent."
+      },
+      {
+        "component_pair": "None & /2 Divider",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      }
+    ],
+    "reason": "0/8 组件分析一致"
+  },
+  "ce55226ac412abf2b19842fc9be1ce5a.jpg": {
+    "image_id": "ce55226ac412abf2b19842fc9be1ce5a.jpg",
+    "overall_consistent": false,
+    "overall_score": 40.90909090909091,
+    "component_count": 11,
+    "consistent_count": 1,
+    "component_results": [
+      {
+        "component_pair": "START STOP LOGIC (Model 1) & START STOP LOGIC (Model 2)",
+        "is_consistent": true,
+        "consistency_score": 90,
+        "inconsistencies": [
+          "Output line naming: Model 1 labels the output as 'SERIAL CONTROL LOGIC', whereas Model 2 calls it 'START/STOP'"
+        ],
+        "reasoning": "Both analyses describe two inputs (SCL and SDA) connected to the external I²C bus and a single output feeding the Serial Control Logic. The only notable divergence is the naming of that output net: Model 1 generically refers to it by the destination component, while Model 2 uses the specific function name 'START/STOP'. All connection points, signal directions, and overall functional role of initiating I²C start/stop conditions are consistent between the two descriptions."
+      },
+      {
+        "component_pair": "SERIAL CONTROL LOGIC (Model 1) & SERIAL CONTROL LOGIC (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 20,
+        "inconsistencies": [
+          "Model 1 does not list VCC power input while Model 2 includes VCC input.",
+          "Model 1 omits the SDA input but Model 2 lists SDA as an input.",
+          "Model 1 treats LOAD and INC as inputs to Serial Control Logic, whereas Model 2 correctly treats LOAD and INC as outputs from Serial Control Logic to Data Word Addr/Counter.",
+          "Model 1 lists only one output (EN) while Model 2 lists three outputs (EN, LOAD, INC)."
+        ],
+        "reasoning": "The two analyses differ in both the number and direction of pins and in the inclusion of key signals. The original schematic shows VCC powering the control logic and the SDA line feeding into the serial block via start/stop logic and address comparator, neither of which appear in Model 1. Moreover, LOAD and INC should be driven by the Serial Control Logic to the Data Word Address/Counter, but Model 1 reverses their direction. These mismatches indicate the analyses are not consistent."
+      },
+      {
+        "component_pair": "DEVICE ADDRESS COMPARATOR (Model 1) & DEVICE ADDRESS COMPARATOR (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 60,
+        "inconsistencies": [
+          "Model 1 omits the SDA input present in Model 2 and the schematic",
+          "Model 2 incorrectly states the LOAD input comes from START STOP LOGIC instead of SERIAL CONTROL LOGIC"
+        ],
+        "reasoning": "Both analyses agree on the three address lines (A2, A1, A0) and the COMP output to the serial control logic, and they agree on the device’s role as address matching. However, Model 1 fails to list the SDA line input that taps directly into the comparator before the start/stop logic, while Model 2 wrongly attributes the LOAD signal source to the START/STOP logic rather than the SERIAL CONTROL LOGIC. These discrepancies in input enumeration and signal sourcing reduce overall consistency."
+      },
+      {
+        "component_pair": "DATA WORD ADDR/COUNTER (Model 1) & DATA WORD ADDR/COUNTER (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 65,
+        "inconsistencies": [
+          "Model 2 lists two LOAD inputs (from Device Address Comparator and Serial Control Logic) while Model 1 and the schematic show only a single LOAD input from the Serial Control Logic.",
+          "Model 2 mislabels the R/W input as coming from the Device Address Comparator’s output, whereas Model 1 correctly identifies R/W as a dedicated pin input to the counter.",
+          "Model 1 describes outputs as 'X DEC' and 'Y DEC' feeding directly into EEPROM and Serial MUX, but Model 2 describes them as 'X address bus' and 'Y address bus' feeding into X DEC and Y DEC blocks, indicating inconsistent naming and connection direction."
+        ],
+        "reasoning": "Both analyses agree that the DATA WORD ADDR/COUNTER serves as a loadable/incrementable address counter for EEPROM access, distributing signals to X and Y decoders. However, Model 2 introduces an extra LOAD path from the Device Address Comparator not present in the schematic or Model 1, incorrectly treats the R/W line as an output from the comparator, and uses different naming and connection points for the counter outputs. These discrepancies in input count, connection sources, and output descriptions reduce the overall consistency despite the shared functional role."
+      },
+      {
+        "component_pair": "H.V. PUMP/TIMING (Model 1) & H.V. PUMP/TIMING (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 70,
+        "inconsistencies": [
+          "Model 1 analysis omits the high-voltage output from H.V. PUMP/TIMING to Data Recovery that is shown in Model 2 and the original schematic.",
+          "Model 1 reports zero outputs while Model 2 correctly identifies one output line (High-voltage output) feeding Data Recovery.",
+          "Minor naming inconsistency: Model 1 uses uppercase 'SERIAL CONTROL LOGIC' vs Model 2 'Serial Control Logic'."
+        ],
+        "reasoning": "Both models agree on the single input 'EN' driven by the serial control logic, matching the schematic. However, Model 1 fails to document the component’s sole output—a high-voltage line feeding the Data Recovery block—while Model 2 captures this correctly. This mismatch in the number and role of outputs indicates an incomplete description in Model 1. The minor naming/style difference for the serial control logic does not affect connectivity but contributes to a slight inconsistency in labeling."
+      },
+      {
+        "component_pair": "DATA RECOVERY (Model 1) & DATA RECOVERY (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 15,
+        "inconsistencies": [
+          "Number and type of inputs/outputs differ (Model 1 has 2 inputs/2 outputs; Model 2 has 2 inputs/1 output)",
+          "Model 1 connects to X DEC, Y DEC, DATA WORD ADDR/COUNTER, EEPROM; Model 2 connects to H.V. PUMP/TIMING and SERIAL MUX",
+          "Functional descriptions conflict: Model 1 describes decoder line routing to EEPROM; Model 2 describes serial data recovery from pump/timing to MUX",
+          "Overall role differs: Model 1 acts as address decode interface to EEPROM; Model 2 acts as serial data recovery block for output"
+        ],
+        "reasoning": "Model 1 describes DATA RECOVERY purely as a pass‐through of X and Y decoder lines into the EEPROM, interfacing with the serial control logic and data word address/counter. Model 2 instead describes it taking a high‐voltage pump/timing signal and an X_DEC input to produce serial data for a serial multiplexer. The number of ports, their connection partners, and the stated functionality do not align, indicating these analyses refer to different behaviors or labeling conventions rather than a consistent view of the same component."
+      },
+      {
+        "component_pair": "EEPROM (Model 1) & EEPROM (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 20,
+        "inconsistencies": [
+          "Model 1 lists only X DEC and Y DEC as inputs, while Model 2 lists power rails (VCC, GND), control line (WP) and I2C signals (SCL, SDA) as inputs",
+          "Model 1 reports no outputs, whereas Model 2 reports SDA as a bidirectional output",
+          "Model 1 focuses on internal decoding blocks (DATA RECOVERY, SERIAL MUX) connections but omits the I2C interface, power pins and write-protect functionality described in Model 2",
+          "The functional descriptions are at different abstraction levels: Model 1 centers on address decoding control signals, Model 2 centers on the EEPROM’s I2C interface and power connections"
+        ],
+        "reasoning": "The two analyses cover completely different sets of pins and signals. Model 1 treats the EEPROM purely as a target of internal decoder outputs (X DEC, Y DEC) and omits any power or I2C interface details. Model 2 treats it as a standalone I2C device with VCC, GND, WP, SCL and SDA pins, including SDA as an output. Because the inputs, outputs, connected components and described roles do not match, the analyses are not consistent."
+      },
+      {
+        "component_pair": "SERIAL MUX (Model 1) & SERIAL MUX (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 80,
+        "inconsistencies": [
+          "Model 2 analysis lists input Y DEC as connected_to 'Y DEC' rather than the DATA WORD ADDR/COUNTER block as in Model 1 and the circuit diagram",
+          "Model 2 output is named 'D_OUT' while Model 1 names it 'DOUT/ACK', a signal naming discrepancy",
+          "Model 2 does not clearly identify DATA WORD ADDR/COUNTER as the source for Y DEC, reducing clarity on that connection"
+        ],
+        "reasoning": "Both analyses describe a two‐input multiplexer receiving X DEC from the Data Recovery/EEPROM and Y DEC from the address counter, and outputting to the DOUT/ACK logic. However, Model 2 mislabels the Y DEC input connection and uses a different output signal name. These naming inconsistencies prevent full alignment, though the overall functionality and role remain consistent with the schematic."
+      },
+      {
+        "component_pair": "DOUT/ACK LOGIC (Model 1) & DOUT/ACK LOGIC (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 30,
+        "inconsistencies": [
+          "Model 1 lists inputs DIN, R/W, Y DEC, whereas Model 2 lists Serial MUX data bus, ACK control signal, and SCL clock—only one input (from Serial MUX) matches.",
+          "Model 1’s output is DOUT to an External Output, while Model 2’s output is D_OUT on the External SDA line; the signal roles and connection points differ."
+        ],
+        "reasoning": "Model 1 describes DOUT/ACK LOGIC as processing the recovered data (DIN), read/write control, and Y DEC signals to produce DOUT, interfacing primarily with the EEPROM’s internal buses and word address counter. Model 2 describes it as handling a parallel data bus output from the Serial MUX, an ACK control signal from Serial Control Logic, and the I2C clock (SCL), producing D_OUT on the SDA pin. Aside from the general component name and a connection to the Serial MUX, the inputs, outputs, and functional roles do not align, indicating inconsistent analyses."
+      },
+      {
+        "component_pair": "None & X DEC",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      },
+      {
+        "component_pair": "None & Y DEC",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      }
+    ],
+    "reason": "1/11 组件分析一致"
+  },
+  "block_circuit_train_15k_0321_011967.jpg": {
+    "image_id": "block_circuit_train_15k_0321_011967.jpg",
+    "overall_consistent": false,
+    "overall_score": 23.636363636363637,
+    "component_count": 22,
+    "consistent_count": 1,
+    "component_results": [
+      {
+        "component_pair": "Duty Cycle Controller (Model 1) & Duty Cycle Controller (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 20,
+        "inconsistencies": [
+          "Different number of inputs/outputs: Model 1 describes 2 inputs and 1 output, while Model 2 describes 1 input and 2 outputs",
+          "Line naming mismatches: Model 1 mentions DCFD and DGEN, which are absent in Model 2; Model 2 mentions 10-MHz REF and DCEN, absent in Model 1",
+          "Connection points and targets differ: Model 1 connects DCCLK and DCFD to Counter (CKV and retiming inputs) and outputs DGEN to Floor input, whereas Model 2 uses DCCLK to 'Retiming and Counter block' (clock input) and DCEN to 'Floor comparator' (enable input) from a 10-MHz REF input",
+          "Functional roles are inconsistent: Model 1 treats DCCLK and DCFD as inputs to the controller, while Model 2 treats DCCLK and DCEN as outputs"
+        ],
+        "reasoning": "The two analyses diverge on basic I/O definitions, signal names, connection points, and functional descriptions of the Duty Cycle Controller. Model 1’s I/O and naming do not align with Model 2’s real circuit roles, indicating the descriptions are not consistent."
+      },
+      {
+        "component_pair": "Counter (Model 1) & Counter (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 70,
+        "inconsistencies": [
+          "Different representation of clock inputs: Model 1 lists CKV and DCCLK as separate inputs, whereas Model 2 describes CKV gated by DCCLK via an AND gate.",
+          "Mismatch in outputs: Model 1 describes a single CNT output feeding one DFF, while Model 2 shows CNT feeding two DFFs producing C0 and C1."
+        ],
+        "reasoning": "Both analyses agree the Counter drives flip-flops via the CNT line, fulfilling the same overall role. However, Model 1 omits the explicit gating of CKV by DCCLK and treats them as distinct inputs, whereas Model 2 accurately captures the AND gate combining these signals. Additionally, Model 1 mentions only one DFF output, but the actual design and Model 2 show two outputs (C0 and C1). These differences in input handling and output count reduce the consistency between the models."
+      },
+      {
+        "component_pair": "Retiming (Model 1) & Retiming (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 15,
+        "inconsistencies": [
+          "Model 1 describes two inputs (DCCLK, CNT) but Model 2 describes only one (Gated CKV)",
+          "Model 1’s outputs send DCFD to the Floor block, whereas Model 2’s output sends DCFD to the Duty Cycle Controller",
+          "Model 1 lists CNT as an input whereas Model 2 omits CNT entirely",
+          "Model 2 introduces a Gated CKV input not mentioned in Model 1"
+        ],
+        "reasoning": "The two analyses disagree on both the number and identity of input signals: Model 1 claims separate DCCLK and CNT inputs, while Model 2 claims a single gated CKV input. They also disagree on where the DCFD output is delivered (Floor vs. Duty Cycle Controller). These discrepancies indicate their descriptions of the Retiming block’s connectivity and role are not aligned."
+      },
+      {
+        "component_pair": "DFF (Flip-Flop) (Model 1) & DFF (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 30,
+        "inconsistencies": [
+          "Model 1 analysis lists C0 and C1 as inputs to the DFF, whereas Model 2 and the schematic show C0 and C1 as outputs of the two flip-flops.",
+          "Model 1 omits the clock input (CKV) entirely, but Model 2 correctly identifies CKV (retimed) as the clock input.",
+          "Model 1 reports three inputs (CNT, C0, C1) while Model 2 (and the circuit diagram) correctly report two inputs (CNT data and CKV clock)."
+        ],
+        "reasoning": "In the circuit, there are two DFFs each taking CNT as data and CKV as the clock, and producing outputs C0 and C1 which feed the XOR/floor block. Model 2 aligns with this structure by listing CNT and CKV as inputs and C0/C1 as outputs. Model 1 mislabels the feedback/output lines C0 and C1 as inputs and fails to mention the clock input, leading to a clear mismatch in both connection roles and port counts."
+      },
+      {
+        "component_pair": "Floor (Model 1) & Floor (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 30,
+        "inconsistencies": [
+          "Input signal mismatch: Model 1 declares inputs C0 and C1-C0, while Model 2 declares C1-C0 and 4*FCW, so the second input differs.",
+          "Incorrect logic element for C1-C0: Model 1 describes it as the output of an XOR gate, but the diagram and Model 2 show it as the result of an adder/subtractor (C1 minus C0).",
+          "Output routing discrepancy: Model 1 reports an FE line feeding the State Machine; Model 2 reports a Floor output feeding a Comparator, not directly the State Machine."
+        ],
+        "reasoning": "The two analyses name the same component but disagree on which signals feed it and where its output goes. Model 1 omits the 4*FCW control input present in the schematic and Model 2, and Model 1 misidentifies the C1-C0 arithmetic block as an XOR gate. Finally, the downstream connection of the Floor output is inconsistently described (State Machine vs Comparator). These mismatches in inputs, functionality, and output routing indicate that the descriptions are not consistent."
+      },
+      {
+        "component_pair": "State Machine (Model 1) & State Machine (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 20,
+        "inconsistencies": [
+          "Input signals differ: Model 1 lists inputs REF and ODZ, Model 2 lists REF and FE",
+          "Connected targets for inputs differ: ODZ→DZ Delay vs FE→DCFD front-end comparator",
+          "REF input source differs: Model 1 describes it from the Transformer-based Stacked-gm DCO output, Model 2 from the 10-MHz REF oscillator",
+          "EN output destination differs: Model 1 drives the Transformer-based Stacked-gm DCO enable pin, Model 2 drives the Switching Feedback MUX control pin"
+        ],
+        "reasoning": "The two analyses describe different input sets (ODZ vs FE), different source and sink components for those signals, and a mismatched connection for the shared REF and EN lines. In the original diagram the State Machine receives the REF from the 10-MHz oscillator and ODZ from the DZ Delay, and its EN output goes into the feedback mux/DCO control. Model 1 mislabels the REF source and FE/ODZ mapping. Model 2 correctly shows REF from the oscillator but replaces ODZ with FE. The divergent signal names, targets, and described roles indicate the analyses are not consistent."
+      },
+      {
+        "component_pair": "PFD (Phase Frequency Detector) (Model 1) & PFD (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 40,
+        "inconsistencies": [
+          "Model 1 lists only one output to the DZ Delay, while Model 2 specifies two distinct outputs (Up pulse and Down pulse) feeding an OR gate and the Coarse TDC before the DZ Delay.",
+          "Model 1 names the second input connection point as 'CKG', whereas Model 2 refers to it as the 'CKV output pin'.",
+          "Model 1 omits the OR gate and Coarse TDC interconnection on the output path described in Model 2."
+        ],
+        "reasoning": "Both analyses agree that the PFD has two inputs sourced from the 8-bit truncated CS-DTC (REFA) and the Transformer-based Stacked-gm DCO. However, they diverge on the naming of the DCO-derived input (CKG vs CKV) and disagree dramatically on the number and routing of outputs. Model 1 oversimplifies the PFD as a single output driving the DZ Delay, while Model 2 correctly identifies separate Up and Down pulse outputs feeding an OR gate and the Coarse TDC, consistent with the original diagram. These discrepancies in pin naming, output count, and downstream connections result in a low consistency score."
+      },
+      {
+        "component_pair": "DZ Delay (Model 1) & DZ Delay (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 40,
+        "inconsistencies": [
+          "Model 1 describes two inputs (PFD Output and Coarse TDC Output) while Model 2 describes only one (OR gate output)",
+          "Model 2 omits any connection to the Coarse TDC present in Model 1",
+          "Model 1 output goes directly to the State Machine as ‘ODZ Output’, whereas Model 2 output goes to an AND gate generating ODZ before any downstream block",
+          "Model 2 input naming (‘Input 1’) and description (OR gate merging PFD UP and DOWN) does not match Model 1’s explicit PFD output connection"
+        ],
+        "reasoning": "The two analyses differ in both the number and identity of inputs: Model 1 shows separate PFD and Coarse TDC inputs, but Model 2 only shows an OR gate combining PFD signals and no TDC input. The output path in Model 2 is described as feeding an AND gate to generate ODZ, whereas Model 1 directly connects the ODZ output to the State Machine. These mismatches in connection count, source components, and signal flow indicate the descriptions are not consistent."
+      },
+      {
+        "component_pair": "Coarse TDC (Model 1) & Coarse TDC (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 40,
+        "inconsistencies": [
+          "Model 1’s second input is REFA from the 8 bit CS-DTC, whereas Model 2 replaces this with a Phase error pulse from the PFD",
+          "CKG is sourced from the DCO output in Model 1 but from the MMD (switching feedback) input in Model 2",
+          "Model 2 introduces an additional functional role of detecting a PFD phase pulse that Model 1 does not mention",
+          "While both agree on a single 11 bit coarse output to the DLF, the input types and origin components do not match"
+        ],
+        "reasoning": "Both analyses agree that the Coarse TDC produces an 11 bit coarse code fed into the digital loop filter. However, Model 1 lists its inputs as CKG (from the transformer-based stacked-gm DCO) and REFA (from the 8 bit truncated CS-DTC), while Model 2 lists CKG (from the MMD switching feedback) and a phase error pulse (from the PFD). These diverging input signals and connection points indicate that the two models are describing different signal flows into the same-named block, making the overall descriptions inconsistent despite the common output function."
+      },
+      {
+        "component_pair": "DLF (Digital Loop Filter) (Model 1) & DLF (Model 2)",
+        "is_consistent": true,
+        "consistency_score": 95,
+        "inconsistencies": [],
+        "reasoning": "Both models describe the same two inputs (Coarse TDC output and 4-bit TDC output) and the same two outputs (coarse and fine control words) feeding the transformer-based stacked-gm DCO. The bit widths match (11 bits for coarse, 9 bits for fine), and both connect to identical upstream and downstream components. The only differences are minor naming conventions (e.g., “Fine Output” vs. “Fine Control Word” and generic vs. detailed bus descriptions), which do not affect functionality or connectivity. Overall, the analyses are fully aligned."
+      },
+      {
+        "component_pair": "8bit Truncated CS-DTC (Model 1) & 8bit Truncated CS-DTC (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 20,
+        "inconsistencies": [
+          "Mismatch in inputs: Model 1 lists REFA (10-MHz REF) and REFB (Sampler) as inputs, while Model 2 lists a REF input pin and a DTC Gain Calibration interface, omitting REFB.",
+          "Mismatch in outputs: Model 1 defines a single FB output to the Coarse TDC, whereas Model 2 defines two outputs (REFA to Sampler/PFD and an 8-bit code to the DSM-based Controller)."
+        ],
+        "reasoning": "Although both analyses reference the 10-MHz reference signal and the block name, they disagree on pin count, signal naming, and connectivity. Model 1 treats REFA and REFB as inputs and exposes FB as the only output to the Coarse TDC; Model 2 treats the REF pin and a calibration interface as inputs and exposes REFA and the DTC code as outputs to different downstream blocks. These fundamental mismatches indicate that the two descriptions are not consistent."
+      },
+      {
+        "component_pair": "Sampler (Model 1) & Sampler (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 20,
+        "inconsistencies": [
+          "Model 1 describes three inputs (REFA, CKV, EN) while Model 2 only mentions a single 'Selected feedback signal' input from a MUX",
+          "Model 1 output is 'τSAM' to the 8bit Truncated CS-DTC, whereas Model 2 output is 'Sampled feedback signal' to the REFA input of the same block",
+          "Model 1 focuses on timing sampling functionality and control signals, but Model 2 only addresses signal selection for feedback, omitting the timing aspect and key control lines",
+          "Model 2's description lacks the clock (CKV) and enable (EN) lines that are central to Model 1’s description, indicating mismatched functional details"
+        ],
+        "reasoning": "The two analyses reference different facets of the Sampler block. Model 1 captures the timing-sampling path with inputs REFA, CKV, and EN producing a τSAM output into the 8bit Truncated CS-DTC. Model 2 describes only the feedback-selection path via a MUX, omitting the timing function and control signals entirely. Because their described inputs, outputs, and functional emphasis do not align, the descriptions are inconsistent."
+      },
+      {
+        "component_pair": "Transformer-based Stacked-gm DCO & Transformer-based Stacked-gm DCO",
+        "is_consistent": false,
+        "consistency_score": 50,
+        "inconsistencies": [],
+        "reasoning": "解析失败，基于文本内容分析可能的一致性"
+      },
+      {
+        "component_pair": "DSM-based Controller (Model 1) & DSM-based Controller (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 30,
+        "inconsistencies": [
+          "Model 1 treats Switching Feedback as an input, but in the schematic Switching Feedback is the controller’s output",
+          "Model 1 lists DTC Code (8bit) as the controller’s output, whereas both the schematic and Model 2 show DTC Code as an input",
+          "Model 1 connects FCW to the Transformer-based Stacked-gm DCO, but the schematic (and Model 2) show FCW coming from the Digital Loop Filter output"
+        ],
+        "reasoning": "The two analyses diverge on the number and roles of signals: Model 1 has inputs [FCW, Switching Feedback] and output [DTC Code], whereas Model 2 (and the circuit diagram) use inputs [FCW, DTC Code] and output [9-bit Switching Feedback]. Model 2’s description of connections (FCW from DLF, DTC Code from 8-bit truncated CS-DTC, 9-bit out to MMD) aligns with the original schematic, while Model 1 swaps inputs and outputs and misattributes the FCW source."
+      },
+      {
+        "component_pair": "None & Subtracter (C1–C0)",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      },
+      {
+        "component_pair": "None & FE",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      },
+      {
+        "component_pair": "None & DTC Gain Calibration",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      },
+      {
+        "component_pair": "None & 4bit TDC",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      },
+      {
+        "component_pair": "None & OR gate",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      },
+      {
+        "component_pair": "None & AND gate",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      },
+      {
+        "component_pair": "None & MUX",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      },
+      {
+        "component_pair": "None & MMD",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      }
+    ],
+    "reason": "1/22 组件分析一致"
+  },
+  "20250609103211_42.jpg": {
+    "image_id": "20250609103211_42.jpg",
+    "overall_consistent": false,
+    "overall_score": 53.57142857142857,
+    "component_count": 7,
+    "consistent_count": 3,
+    "component_results": [
+      {
+        "component_pair": "VCO (Model 1) & VCO (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 60,
+        "inconsistencies": [
+          "Model 2 omits the FCW tuning input that Model 1 shows as connected to DSM",
+          "Model 2 lists no inputs while Model 1 includes a critical FCW input",
+          "Model 1 names the output line \"f_VCO\" and describes its pin, Model 2 uses lowercase \"f_vco\" and a different connection descriptor"
+        ],
+        "reasoning": "Both analyses correctly identify a single frequency output sent to the DMD block, indicating they see the VCO's core role. However, Model 2 fails to capture the FCW tuning input path through the DSM, which is essential to the VCO's functionality. The discrepancy in input description and minor naming differences reduce confidence in consistency."
+      },
+      {
+        "component_pair": "DMD (Model 1) & DMD (Model 2)",
+        "is_consistent": true,
+        "consistency_score": 100,
+        "inconsistencies": [],
+        "reasoning": "Both analyses describe two inputs (f_VCO/f_vco from VCO and MC from DSM) and one output (f_DSM to PG) with identical connections. The minor differences in line name casing and phrasing of connection points do not change their meaning. The described functionality and overall role of DMD in forwarding the VCO frequency and modulator control to produce the DSM-modulated output for the phase generator are fully aligned."
+      },
+      {
+        "component_pair": "DSM & DSM",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "评估出错"
+        ],
+        "reasoning": "评估时出错: 生成时出错: "
+      },
+      {
+        "component_pair": "PG (Model 1) & PG (Model 2)",
+        "is_consistent": true,
+        "consistency_score": 90,
+        "inconsistencies": [
+          "Model 2 labels the input connection_point as \"DSM output pin\" whereas Model 1 calls it \"Output of DMD\"; both refer to the same DMD output but use different terminology"
+        ],
+        "reasoning": "Both analyses describe the same single input line f_DSM from the DMD block and the same single output line f_INJ to the ILO injection port. The component roles, number and types of ports, and connections to DMD and ILO are identical. The only minor discrepancy is in how the DMD output is named in the connection_point field, which does not affect the described functionality or topology."
+      },
+      {
+        "component_pair": "ILO (Model 1) & ILO (Model 2)",
+        "is_consistent": true,
+        "consistency_score": 100,
+        "inconsistencies": [],
+        "reasoning": "Both analyses describe one input f_INJ from PG (output of PG) and one output f_ILO to DIV (input of DIV). The connection points, signal names, and functional role as an injection oscillator feeding the divider are identical, indicating full consistency."
+      },
+      {
+        "component_pair": "DIV (Model 1) & DIV (Model 2)",
+        "is_consistent": false,
+        "consistency_score": 25,
+        "inconsistencies": [
+          "Model 1 names the input line as 'f_INJ', but the DIV input should be 'f_ILO'.",
+          "Model 1 indicates the DIV output has no connection, while Model 2 correctly shows it connecting to the Phase/Frequency Detector."
+        ],
+        "reasoning": "Model 1 mislabels the input and omits the actual downstream connection. Model 2 aligns with the diagram showing input f_ILO from the ILO output and output f_DIV to the Phase/Frequency Detector. Due to these discrepancies, the analyses are inconsistent."
+      },
+      {
+        "component_pair": "MC & None",
+        "is_consistent": false,
+        "consistency_score": 0,
+        "inconsistencies": [
+          "组件不匹配"
+        ],
+        "reasoning": "一个模型未识别出此组件"
+      }
+    ],
+    "reason": "3/7 组件分析一致"
+  }
+}
