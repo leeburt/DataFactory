@@ -9,13 +9,14 @@ from src.config import Config
 from src.image_processor import ImageProcessor
 from src.model_client import ModelClient
 from src.utils import get_image_files
+import traceback
 
 class ComponentAnalyzer:
     """电路组件分析器，实现两步评估的第一步"""
     
     def __init__(self, config: Config):
         self.config = config
-        self.prompts_data = self._load_prompts()
+        self.prompts_data = self.config.prompts
         
         # 初始化两个模型客户端
         self.model1_client = ModelClient(
@@ -36,16 +37,9 @@ class ComponentAnalyzer:
         
         # 确保输出目录存在
         os.makedirs(self.config.output_dir, exist_ok=True)
+
     
-    def _load_prompts(self) -> Dict[str, str]:
-        """加载提示词"""
-        try:
-            with open(self.config.prompts_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except Exception as e:
-            raise Exception(f"加载提示词失败: {str(e)}")
-    
-    async def _get_component_list(self, session, image_path: str, model_client: ModelClient, model_name: str) -> List[str]:
+    async def _get_component_list(self, session, image_path: str, model_client: ModelClient, model_name: str,prompt: str) -> List[str]:
         """获取电路图中的组件列表"""
         try:
             # 获取完整图像路径
@@ -58,14 +52,12 @@ class ComponentAnalyzer:
                 
             # 编码图像
             image_base64 = ImageProcessor.encode_image(full_image_path)
-            
-            # 获取提示词
-            components_list_prompt = self.prompts_data["components_list_prompt"]
+        
             
             # 调用模型获取组件列表
             result = await model_client.generate(
                 session,
-                components_list_prompt,
+                prompt,
                 "请列出电路图中的所有组件",
                 image_base64,
                 temperature=self.config.temperature,
@@ -140,7 +132,7 @@ class ComponentAnalyzer:
             print(f"获取组件列表时出错 ({model_name}): {str(e)}")
             return []
     
-    async def _get_component_io(self, session, image_path: str, component: str, model_client: ModelClient) -> Dict:
+    async def _get_component_io(self, session, image_path: str, component: str, model_client: ModelClient,prompt: str) -> Dict:
         """获取特定组件的输入输出信息"""
         try:
             # 获取完整图像路径
@@ -150,7 +142,7 @@ class ComponentAnalyzer:
             image_base64 = ImageProcessor.encode_image(full_image_path)
             
             # 获取提示词并替换组件名称
-            component_io_prompt = self.prompts_data["component_io_prompt"].replace("{{component_name}}", component)
+            component_io_prompt = prompt.format(component_name=component)
             
             # 调用模型获取组件IO信息
             result = await model_client.generate(
@@ -170,42 +162,12 @@ class ComponentAnalyzer:
             if not result.get("content"):
                 return {"error": "模型返回的内容为空"}
             
-            # 提取JSON对象
-            # 首先尝试从JSON代码块中提取
-            json_pattern = r'```(?:json)?\s*(\{.*?\})\s*```'
-            json_matches = re.search(json_pattern, result["content"], re.DOTALL)
-            
-            if json_matches:
-                try:
-                    json_str = json_matches.group(1)
-                    json_obj = json.loads(json_str)
-                    return {"description": json.dumps(json_obj, ensure_ascii=False)}
-                except json.JSONDecodeError:
-                    pass
-            
-            # 如果上面失败，尝试从整个文本中提取JSON对象
-            try:
-                # 直接尝试解析整个响应
-                json_obj = json.loads(result["content"])
-                return {"description": json.dumps(json_obj, ensure_ascii=False)}
-            except json.JSONDecodeError:
-                # 尝试从文本中找到JSON对象
-                obj_match = re.search(r'(\{.*\})', result["content"], re.DOTALL)
-                if obj_match:
-                    try:
-                        json_str = obj_match.group(1)
-                        json_obj = json.loads(json_str)
-                        return {"description": json.dumps(json_obj, ensure_ascii=False)}
-                    except json.JSONDecodeError:
-                        pass
-            
-            # 如果以上都失败，返回原始内容
-            print(f"警告: 无法将组件 {component} 的描述解析为JSON格式")
             return {"description": result["content"], "warning": "非JSON格式"}
             
         except Exception as e:
-            print(f"获取组件IO信息时出错 ({component}): {str(e)}")
+            print(f"获取组件IO信息时出错 ({component}): {str(traceback.format_exc())}")
             return {"error": str(e)}
+        
     
     async def _process_image(self, session, image_path: str) -> None:
         """处理单张图像，获取组件列表和IO分析"""
@@ -215,9 +177,15 @@ class ComponentAnalyzer:
         # 第一步，获取两个模型的组件列表
         print(f"  获取组件列表...")
         
-        model1_components = await self._get_component_list(session, image_path, self.model1_client, "模型1")
+        model1_components = await self._get_component_list(session, image_path, self.model2_client, "模型1",self.prompts_data["components_list_prompt_model1"])
         print(f"  模型1找到 {len(model1_components)} 个组件")
+
+        # 将model1_components转为json
         
+        
+        # model2_components = await self._get_component_list(session, image_path, self.model2_client, "模型2",self.prompts_data["components_list_prompt_model2"])
+        # print(f"  模型2找到 {len(model2_components)} 个组件")
+
         model2_components = model1_components
         
         # 初始化分析结果
@@ -235,14 +203,15 @@ class ComponentAnalyzer:
         if model1_components:
             print(f"  分析模型1识别的组件IO信息...")
             for component in tqdm(model1_components, desc=f"  模型1组件分析"):
-                io_info = await self._get_component_io(session, image_path, component, self.model1_client)
+                io_info = await self._get_component_io(session, image_path, component, self.model1_client,self.prompts_data["component_io_prompt_model1"])
                 model1_analysis["component_details"][component] = io_info
         
         # 对模型2的组件进行IO分析
+        # print(self.prompts_data["component_io_prompt_model2"])
         if model2_components:
             print(f"  分析模型2识别的组件IO信息...")
             for component in tqdm(model2_components, desc=f"  模型2组件分析"):
-                io_info = await self._get_component_io(session, image_path, component, self.model2_client)
+                io_info = await self._get_component_io(session, image_path, component, self.model2_client,self.prompts_data["component_io_prompt_model2"])
                 model2_analysis["component_details"][component] = io_info
         
         # 保存模型分析结果
@@ -287,20 +256,30 @@ class ComponentAnalyzer:
     def _save_results(self) -> Dict[str, str]:
         """保存分析结果，仅保存最终分析结果，不保存components列表"""
         # 保存模型1分析结果
-        model1_analysis_path = os.path.join(self.config.output_dir, "model1_analysis.json")
-        with open(model1_analysis_path, 'w', encoding='utf-8') as f:
-            json.dump(self.model1_circuit_analyses, f, ensure_ascii=False, indent=2)
-        
-        # 保存模型2分析结果
-        model2_analysis_path = os.path.join(self.config.output_dir, "model2_analysis.json")
-        with open(model2_analysis_path, 'w', encoding='utf-8') as f:
-            json.dump(self.model2_circuit_analyses, f, ensure_ascii=False, indent=2)
+        model_analysis_path = os.path.join(self.config.output_dir, "model_analysis.json")
+
+        model_analysis = {}
+        for image_id, analysis in self.model1_circuit_analyses.items():
+            model_analysis[image_id] = {}
+            model_analysis[image_id]["components"] = analysis["components"]
+            model_analysis[image_id]["component_details"] = {}
+            for component in analysis["components"]:
+                if self.model1_client.model == self.model2_client.model:
+                    model1_name = self.model1_client.model
+                    model2_name = self.model2_client.model+"_2"
+                else:
+                    model1_name = self.model1_client.model
+                    model2_name = self.model2_client.model
+                model_analysis[image_id]["component_details"][component] = {
+                    model1_name: analysis["component_details"][component],
+                    model2_name: self.model2_circuit_analyses[image_id]["component_details"][component]
+                }
+
+        with open(model_analysis_path, 'w', encoding='utf-8') as f:
+            json.dump(model_analysis, f, ensure_ascii=False, indent=2)
         
         print(f"\n分析结果保存完成:")
-        print(f"- 模型1分析结果: {model1_analysis_path}")
-        print(f"- 模型2分析结果: {model2_analysis_path}")
-        
+        print(f"- 模型分析结果: {model_analysis_path}")
         return {
-            "model1_analysis": model1_analysis_path,
-            "model2_analysis": model2_analysis_path
+            "model_analysis": model_analysis_path,
         } 

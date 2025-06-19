@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组件一致性分析结果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .search-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-form {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .search-btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.2s ease;
+        }
+        
+        .search-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        
+        .image-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .image-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .overall-score {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .score-high {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+        }
+        
+        .score-medium {
+            background: linear-gradient(135deg, #FF9800, #F57C00);
+            color: white;
+        }
+        
+        .score-low {
+            background: linear-gradient(135deg, #f44336, #d32f2f);
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        
+        .stat-number {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .stat-label {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 2px;
+        }
+        
+        .view-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+        
+        .view-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .clear-search {
+            display: inline-block;
+            margin-top: 10px;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .clear-search:hover {
+            text-decoration: underline;
+        }
+        
+        .file-path-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .file-path-form {
+            display: flex;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        
+        .file-path-input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .file-path-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .set-path-btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.2s ease;
+        }
+        
+        .set-path-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .reset-path-btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #6c757d, #495057);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.2s ease;
+        }
+        
+        .reset-path-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .current-path-info {
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e8f4fd;
+            border-radius: 5px;
+            color: #2c3e50;
+            font-size: 0.9em;
+        }
+        
+        .message {
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        @media (max-width: 768px) {
+            .images-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-form {
+                flex-direction: column;
+            }
+            
+            .file-path-form {
+                flex-direction: column;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 组件一致性分析结果</h1>
+            <p>多模型组件识别一致性评估报告</p>
+        </div>
+        
+        <div class="file-path-section">
+            <form class="file-path-form" id="filePathForm">
+                <input type="text" name="json_path" class="file-path-input" 
+                       placeholder="请输入JSON数据文件路径..." 
+                       value="{{ current_json_path }}">
+                <button type="submit" class="set-path-btn">📁 设置路径</button>
+                <a href="/reset_json_path" class="reset-path-btn" style="text-decoration: none;">🔄 重置</a>
+            </form>
+            <div class="current-path-info">
+                📂 当前文件路径: <strong>{{ current_json_path }}</strong>
+            </div>
+            <div id="message"></div>
+        </div>
+        
+        <div class="search-section">
+            <form class="search-form" method="GET" action="/search">
+                <input type="text" name="query" class="search-input" 
+                       placeholder="搜索图像名称..." 
+                       value="{{ search_query if search_query else '' }}">
+                <button type="submit" class="search-btn">🔍 搜索</button>
+            </form>
+            {% if search_query %}
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="/" class="clear-search">清除搜索</a>
+            </div>
+            {% endif %}
+        </div>
+        
+        {% if images %}
+        <div class="images-grid">
+            {% for image in images %}
+            <div class="image-card" onclick="window.location.href='/view_image/{{ image.name.replace('.jpg', '') }}'">
+                <div class="image-header">
+                    <div class="image-name">📷 {{ image.name }}</div>
+                    <div class="overall-score 
+                        {% if image.overall_score >= 90 %}score-high
+                        {% elif image.overall_score >= 70 %}score-medium
+                        {% else %}score-low{% endif %}">
+                        {{ "%.1f"|format(image.overall_score) }}%
+                    </div>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">{{ image.component_count }}</div>
+                        <div class="stat-label">总组件</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">{{ image.consistent_count }}</div>
+                        <div class="stat-label">一致组件</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">{{ "%.0f"|format(image.consistent_count / image.component_count * 100) if image.component_count > 0 else 0 }}%</div>
+                        <div class="stat-label">一致性</div>
+                    </div>
+                </div>
+                
+                <a href="/view_image/{{ image.name.replace('.jpg', '') }}" class="view-btn">
+                    👁️ 查看详情
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="no-results">
+            {% if search_query %}
+            <p>没有找到包含 "{{ search_query }}" 的图像</p>
+            <a href="/" class="clear-search">返回所有结果</a>
+            {% else %}
+            <p>暂无分析结果</p>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+    
+    <script>
+        document.getElementById('filePathForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const messageDiv = document.getElementById('message');
+            
+            fetch('/set_json_path', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    messageDiv.innerHTML = '<div class="message success">' + data.message + '</div>';
+                    // 更新当前路径显示
+                    document.querySelector('.current-path-info strong').textContent = formData.get('json_path');
+                    // 3秒后刷新页面
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 3000);
+                } else {
+                    messageDiv.innerHTML = '<div class="message error">' + data.message + '</div>';
+                }
+            })
+            .catch(error => {
+                messageDiv.innerHTML = '<div class="message error">设置路径时出错: ' + error.message + '</div>';
+            });
+        });
+    </script>
+</body>
+</html> 

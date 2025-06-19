@@ -27,12 +27,4 @@ class Config:
         # 并发与生成参数
         self.num_workers = kwargs.get('num_workers', 4)
         self.temperature = kwargs.get('temperature', 0.1)
-        self.max_tokens = kwargs.get('max_tokens', 2048) 
-
-        self.save_dir = kwargs.get('result_dir', './result')
-        if not os.path.exists(self.save_dir):
-            os.makedirs(self.save_dir)
-        self.save_dir = os.path.join(self.save_dir,'node_io_result', datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))
-        if not os.path.exists(self.save_dir):
-            os.makedirs(self.save_dir)
-
+        self.max_tokens = kwargs.get('max_tokens', 2048)

@@ -2,43 +2,43 @@ import aiohttp
 from typing import Dict, Any
 
 class ModelClient:
-    """模型API客户端"""
+    """Model API Client"""
     
     def __init__(self, api_base: str, api_key: str, model: str):
         self.api_base = api_base
         self.api_key = api_key
         self.model = model
-        # 检查API基础URL以确定供应商
+        # Check API base URL to determine provider
         self.is_openai = "openai" in api_base.lower()
         self.is_anthropic = "anthropic" in api_base.lower()
     
     async def generate(self, session, prompt: str, query: str, 
                       image_base64: str = None, temperature=0.1, 
-                      max_tokens=2048, enforce_json=True) -> Dict[str, Any]:
-        """调用模型生成回答"""
+                      max_tokens=2048, enforce_json=False) -> Dict[str, Any]:
+        """Call model to generate response"""
         try:
-            # 构建API请求
+            # Build API request
             headers = {
                 "Content-Type": "application/json",
                 "Authorization": f"Bearer {self.api_key}"
             }
             
-            # 构建消息
+            # Build messages
             content = []
             
-            # 添加文本内容
+            # Add text content
             content.append({"type": "text", "text": f"{prompt}\n\n{query}"})
             
-            # 如果提供了图像，添加图像内容
+            # If image is provided, add image content
             if image_base64:
                 content.append({
                     "type": "image_url",
                     "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"}
                 })
             
-            system_message = "你是一个专业的电路图分析助手。请按照用户指定的格式回答问题"
+            system_message = "You are a professional circuit diagram analysis assistant. Please answer questions according to the user-specified format"
             if enforce_json:
-                system_message = "你是一个专业的电路图分析助手，总是以纯JSON格式回复。不要使用Markdown代码块，不要添加任何前缀或后缀文本，只返回原始JSON。你的输出应该可以直接被JSON解析器解析，不需要任何预处理。"
+                system_message = "You are a professional circuit diagram analysis assistant, always reply in pure JSON format. Do not use Markdown code blocks, do not add any prefix or suffix text, only return raw JSON. Your output should be directly parseable by JSON parsers without any preprocessing."
             
             messages = [
                 {
@@ -51,7 +51,7 @@ class ModelClient:
                 }
             ]
             
-            # 构建请求体
+            # Build request payload
             payload = {
                 "model": self.model,
                 "messages": messages,
@@ -59,16 +59,16 @@ class ModelClient:
                 "max_tokens": max_tokens
             }
             
-            # 根据不同的API提供商添加response_format
+            # Add response_format based on different API providers
             if enforce_json:
                 if self.is_openai:
                     payload["response_format"] = {"type": "json_object"}
                 elif self.is_anthropic:
-                    # Anthropic的JSON响应格式可能有所不同
-                    # 对于Claude，通过system message强制执行
-                    messages[0]["content"] += " 切记，你必须只输出纯JSON格式，不要使用代码块，不要有任何额外的文本。"
+                    # Anthropic's JSON response format may be different
+                    # For Claude, enforce through system message
+                    messages[0]["content"] += " Remember, you must only output pure JSON format, do not use code blocks, do not have any additional text."
             
-            # 适配不同API端点
+            # Adapt to different API endpoints
             api_endpoint = f"{self.api_base}/chat/completions"
             if self.is_anthropic:
                 api_endpoint = f"{self.api_base}/messages"
@@ -154,7 +154,7 @@ class ModelClient:
             temperature: 温度参数
             
         Returns:
-            评估结果字典
+            evaluation result dictionary
         """
         try:
             # 构建一致性评估提示词

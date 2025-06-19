@@ -1,6 +1,10 @@
 config/run_config.json
-result/
-src/__pycache__/
+results/
+__pycache__/
+*/__pycache__/
+**/__pycache__/
+/images
+
 *.pyc
 *.pyo
 *.pyd
@@ -20,3 +24,5 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
+.cache/
