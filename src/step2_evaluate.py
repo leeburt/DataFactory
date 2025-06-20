@@ -29,10 +29,15 @@ class ConsistencyEvaluator:
         self.consistency_results = []
         self.component_consistency_results = {}  # 按组件的一致性结果
 
-        self.all_results = self._load_model_analyses()
+        self.step1_results = self._load_model_analyses()
+        self.step2_results = {}
         
         # 确保输出目录存在
         os.makedirs(self.config.output_dir, exist_ok=True)
+        self.component_consistency_path = os.path.join(self.config.output_dir, "component_consistency_results.json")
+
+        if os.path.exists(self.component_consistency_path):
+            self.load_results()
     
     def _load_prompts(self) -> Dict[str, str]:
         """加载提示词"""
@@ -434,9 +439,12 @@ class ConsistencyEvaluator:
     
     async def _evaluate_component_consistency(self, session, image_id: str) -> Dict:
         """评估同一图像中每个组件的分析一致性"""
-        model_analysis = self.all_results[image_id]
+        model_analysis = self.step1_results[image_id]
+        if image_id not in self.step2_results:
+            return 
         try:
-            print(f"\n评估图像 {image_id} 的组件级一致性")
+            # print(f"\n评估图像 {image_id} 的组件级一致性")
+
             
             # 获取图像完整路径
             image_path = self._get_image_path(image_id)
@@ -486,12 +494,13 @@ class ConsistencyEvaluator:
         
 
         model_analysis['total_eval_result'] = result
-        self.all_results[image_id] = model_analysis
+        self.step2_results[image_id] = model_analysis
+        return 
     
     async def run(self) -> None:
         """运行一致性评估流程"""        
         # 获取共同的图像ID列表
-        common_image_ids = set(self.all_results.keys())
+        common_image_ids = set(self.step1_results.keys())
         
         if not common_image_ids:
             raise Exception("没有找到两个模型共同分析的图像")
@@ -508,13 +517,21 @@ class ConsistencyEvaluator:
             # 组件级评估
             print("\n使用组件级别一致性评估...")
 
+            completed_count = 0  # 新增：已完成数量
+            save_interval = 10   # 新增：每多少次保存一次
+
             async def evaluate_components_with_semaphore(image_id):
+                nonlocal completed_count
                 async with semaphore:
                     result = await self._evaluate_component_consistency(
                         session, 
                         image_id,
                     )
+                    completed_count += 1
                     print(f"  完成图像 {image_id} 的组件级一致性评估")
+                    # 每save_interval次保存一次
+                    if completed_count % save_interval == 0:
+                        self._save_results()
             
             # 创建所有任务
             tasks = []
@@ -536,11 +553,14 @@ class ConsistencyEvaluator:
     def _save_results(self) -> None:
         """保存评估结果"""
         # 判断使用哪种结果
-        if self.all_results:
+        if self.step2_results:
             # 保存组件级一致性评估结果
-            component_consistency_path = os.path.join(self.config.output_dir, "component_consistency_results.json")
+            with open(self.component_consistency_path, 'w', encoding='utf-8') as f:
+                json.dump(self.step2_results, f, ensure_ascii=False, indent=2)
+            print(f"组件级一致性评估结果已保存到 {self.component_consistency_path}")
 
-            with open(component_consistency_path, 'w', encoding='utf-8') as f:
-                json.dump(self.all_results, f, ensure_ascii=False, indent=2)
-            print(f"组件级一致性评估结果已保存到 {component_consistency_path}")
+    def load_results(self) -> None:
+        """加载评估结果"""
+        with open(self.component_consistency_path, 'r', encoding='utf-8') as f:
+            self.step2_results = json.load(f)
         

@@ -66,7 +66,7 @@ The JSON structure must be as follows:
 }}
 """.strip()
 
-COMPONENT_IO_PROMPT_MODEL1 = """
+COMPONENT_IO_PROMPT_MODEL1_v2 = """
 # Role
 You are a professional electronic circuit analysis AI assistant.
 
@@ -94,6 +94,71 @@ Your response must start with the component name as a title, followed by a bulle
     * Describe the second output connection...
 """.strip()
 
+
+COMPONENT_IO_PROMPT_MODEL1_v3 = """
+# Role
+You are an AI assistant specializing in describing connections in system block diagrams.
+
+# Task
+Your task is to analyze the specified block `{component_name}` within the provided system block diagram and generate a clear, structured, and comprehensive description of its connections. Your entire output must be based **exclusively** on the visual information (blocks, lines, arrows, and labels) present in the diagram.
+
+# Instructions
+1.  Precisely locate the block named `{component_name}`.
+2.  For each line connecting to `{component_name}`, identify the other block it connects to and the label on the connecting line (if any).
+3.  **CRITICAL RULE FOR CATEGORIZATION**: Your categorization of a connection MUST follow these rules:
+    * If a line has an **arrow pointing TOWARDS** `{component_name}`, list it under `Inputs`.
+    * If a line has an **arrow pointing AWAY FROM** `{component_name}`, list it under `Outputs`.
+    * If a line has **NO ARROWHEAD** or has **arrows on both ends**, list it under `Bidirectional / Unspecified Connections`.
+4.  **CRITICAL RULE FOR UNLABELED LINES**: If a connecting line has **no text label**, you MUST use the standard phrase "**Unnamed Connection**" as the line's description. **DO NOT** invent a name or describe the potential function of the line.
+5.  You are strictly forbidden from using your external domain knowledge to guess or infer any information not visually present.
+6.  Strictly follow the format provided below. Do not add any introductory text or extraneous comments.
+
+
+# Output Format and Example
+```markdown
+##Connections of {component_name}
+* **Inputs**:
+    * ADC:Describe the first input connection, including the source module, signal content, and key properties
+    * H(s):Describe the second input connection...
+* **Outputs**:
+    * COM_CLK:Describe the first output connection, including the destination module, signal content, and key properties
+    * COM_DATA:Describe the second output connection...
+* **Bidirectional**:
+    * I2C Bus:Describe the first bidirectional connection...
+    * SPI Bus:Describe the second bidirectional connection...
+""".strip()
+
+
+COMPONENT_IO_PROMPT_MODEL1 = """
+# Role
+You are an AI assistant specializing in describing connections in system block diagrams.
+
+# Task
+Your task is to analyze the specified block `{component_name}` within the provided system block diagram and generate a clear, structured, and comprehensive description of its connections. Your entire output must be based **exclusively** on the visual information (blocks, lines, arrows, and labels) present in the diagram.
+
+# Instructions
+1.  Precisely locate the block named `{component_name}`.
+2.  For each line connecting to `{component_name}`, identify the other block it connects to and the label on the connecting line (if any).
+3.  **CRITICAL RULE FOR CATEGORIZATION**: Your categorization of a connection MUST follow these rules:
+    * If a line has an **arrow pointing TOWARDS** `{component_name}`, list it under `Inputs`.
+    * If a line has an **arrow pointing AWAY FROM** `{component_name}`, list it under `Outputs`.
+    * If a line has **NO ARROWHEAD** or has **arrows on both ends**, list it under `Bidirectional`.
+4.  You are strictly forbidden from using your external domain knowledge to guess or infer any information not visually present.
+5.  Strictly follow the format provided below. Do not add any introductory text or extraneous comments.
+
+# Output Format and Example
+```markdown
+##Connections of {component_name}
+* **Inputs**:
+    * ADC:Describe connection
+    * H(s):Describe connection
+* **Outputs**:
+    * COM_CLK:Describe connection
+    * COM_DATA:Describe connection
+* **Bidirectional**:
+    * I2C Bus:Describe connection
+    * SPI Bus:Describe connection
+""".strip()
 
 
 COMPONENT_IO_PROMPT_MODEL2 = COMPONENT_IO_PROMPT_MODEL1

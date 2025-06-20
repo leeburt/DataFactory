@@ -29,6 +29,8 @@ def get_prompts(config: Config):
 
 async def main():
     """主程序入口"""
+    import time 
+    st = time.time()
     print("电路图两步评估工具")
     print("=" * 50)
     
@@ -65,6 +67,8 @@ async def main():
     except Exception as e:
         print(f"\n执行过程出错: {str(traceback.format_exc())}")
         return 1
+    
+    print(f"执行时间: {round(time.time() - st, 2)}秒")
     
     return 0
 
