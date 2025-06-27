@@ -10,6 +10,9 @@ class Config:
         self.image_root_dir = kwargs.get('image_root_dir', '')
         self.prompts_path = kwargs.get('prompts_path', '')
         self.output_dir = kwargs.get('output_dir', '')
+
+        self.old_results_path = kwargs.get('old_results_path', '')
+        self.rerun = kwargs.get('rerun', False)
         
         # 模型配置
         self.model1_api = kwargs.get('model1_api', '')

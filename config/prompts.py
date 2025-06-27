@@ -230,7 +230,7 @@ Remember to only return the raw JSON object without any code block formatting.
 """.strip()
 
 
-COMPONENT_CONSISTENCY_PROMPT = """
+COMPONENT_CONSISTENCY_PROMPT_v1 = """
 You are an expert AI assistant specializing in electronic circuit analysis. Your task is to perform a sophisticated consistency evaluation of two AI models' analyses for a single component, using a provided circuit diagram as the ground truth.
 
 A key challenge is that the models might use slightly different names for connected components (e.g., Model 1 refers to "U1_ADC" while Model 2 refers to "ADC_Module"). Your evaluation must look beyond simple name matching and focus on functional equivalence.
@@ -286,5 +286,66 @@ Provide your evaluation as a raw JSON object, without any markdown formatting or
   "score_details": [N_{{\\text{{consistent}}}},N_{{\\text{{total\\_model1}}}},N_{{\\text{{total\\_model2}}}},base_score],
   "better_model": "model1/model2",
   "reasoning": "（用中文回答原因。请在解释中明确展示你的计分过程，包括一致的I/O数量、两个模型的总I/O数量、计算出的base_score，以及你是如何根据功能描述的质量将base_score调整为最终分数的。）"
+}}
+""".strip()
+
+
+COMPONENT_CONSISTENCY_PROMPT = """
+You are an expert AI assistant specializing in electronic circuit analysis. Your task is to perform a sophisticated consistency evaluation of two AI models' analyses for a single component, using a provided circuit diagram as the ground truth.
+
+A key challenge is that the models might use slightly different names for connected components (e.g., Model 1 refers to "U1_ADC" while Model 2 refers to "ADC_Module"). Your evaluation must look beyond simple name matching and focus on functional equivalence.
+
+Component from Model 1: "{component1_name}"
+Model 1 Analysis: 
+{component1_details}
+
+Matched Component from Model 2: "{component2_name}"
+Model 2 Analysis: 
+{component2_details}
+
+You must use the original circuit diagram image as the primary source of truth to resolve ambiguities.
+
+Please evaluate the consistency based on the following prioritized criteria:
+
+1.  **Functional and Structural Equivalence (Primary Criterion):**
+    * **Verify against the Diagram:** Do the connections described by both models correspond to actual connections shown in the circuit diagram?
+    * **Semantic Matching:** Even if the names of connected components differ, determine if they refer to the *same entity* in the diagram based on their location, function, or signal path. A connection is only "consistent" if both models describe the same link, regardless of naming.
+    * **Connection/Signal Functionality:** Compare the *described purpose* of each consistent connection (e.g., "input for clock signal", "I2C data line", "5V power supply").
+
+2.  **Overall Component Role:**
+    * Based on the connections, do both models arrive at a consistent conclusion about the component's overall purpose in the circuit (e.g., "microcontroller", "power management IC", "sensor interface")?
+
+**Scoring Methodology:**
+
+Your final `consistency_score` will be determined by a two-step process: calculating a quantitative base score and then adjusting it based on qualitative functional analysis.
+
+**Step 1: I/O Matching and Counting**
+First, carefully analyze both models' descriptions and use the circuit diagram to match the inputs and outputs. For this step, a pin is considered "consistent" only if it is described by both models and refers to the same physical pin/function (after resolving any name differences). From this analysis, determine three key numbers:
+* $N_{{\\text{{consistent}}}}$: The number of consistent inputs and outputs that are correctly matched between both models.
+* $N_{{\\text{{total\\_model1}}}}$: The total number of inputs and outputs listed in the analysis for Model 1.
+* $N_{{\\text{{total\\_model2}}}}$: The total number of inputs and outputs listed in the analysis for Model 2.
+
+**Step 2: Calculate Base Score and Adjust for Final Score**
+Next, calculate a quantitative `base_score` using the provided formula, which measures the structural overlap:
+$$ \\text{{base\\_score}} = 100 \\times \\frac{{2 \\times N_{{\\text{{consistent}}}}}}{{N_{{\\text{{total\\_model1}}}} + N_{{\\text{{total\\_model2}}}}}} $$
+
+
+Finally, **adjust this `base_score` to determine the final `consistency_score`** based on the quality of the functional descriptions (from Primary Criterion 1) and the overall role consistency (Criterion 2):
+* **High Consistency(90-100):** If the functional descriptions for the consistent pins and the overall component role are highly aligned, the final score should be close to the `base_score`.
+* **Moderate Inconsistency(70-89):** If there are minor but noticeable differences in the functional descriptions of some pins, slightly lower the final score from the `base_score`.
+* **Major Inconsistency(0-69):** If the core function of the component or its critical pins is described in a contradictory way (e.g., one says a pin is a reset, the other says it's an output), significantly lower the final score, even if the `base_score` is high.
+
+**Edge Case:**
+* If either analysis (`component1_details` or `component2_details`) is null, empty, or clearly irrelevant, `is_consistent` must be `false`, `consistency_score` must be `0`, and the reason should be "The compared context is null or empty".
+
+Provide your evaluation as a raw JSON object, without any markdown formatting or surrounding text.
+
+{{
+  "component_pair": "{component1_name}",
+  "is_consistent": true/false,
+  "consistency_score": 0-100,
+  "score_details": [N_{{\\text{{consistent}}}},N_{{\\text{{total\\_model1}}}},N_{{\\text{{total\\_model2}}}},base_score],
+  "reasoning": "（用中文回答原因。请在解释你是如何根据功能描述的质量将base_score调整为最终分数的。）"
+  "right_model": "model1/model2/both/none",(which model is right according to the connections in the diagram)
 }}
 """.strip()

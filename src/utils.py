@@ -44,6 +44,11 @@ def parse_args():
                       help="输出目录路径")
     parser.add_argument("--workers", type=int,
                       help="并发工作线程数")
+
+    parser.add_argument("--old-results-path", type=str,
+                      help="旧结果路径")    
+    parser.add_argument("--rerun", type=bool,
+                      help="是否重新运行")
     
     return parser.parse_args()
 
@@ -61,6 +66,12 @@ def create_config_from_args(args):
     
     if args.workers:
         config_data["workers"] = args.workers
+
+    if args.old_results_path:
+        config_data["old_results_path"] = args.old_results_path
+
+    if args.rerun:
+        config_data["rerun"] = args.rerun
     
     # 创建配置对象
     config = Config(
@@ -87,7 +98,11 @@ def create_config_from_args(args):
         
         # 生成参数
         temperature=config_data["temperature"],
-        max_tokens=config_data["max_tokens"]
+        max_tokens=config_data["max_tokens"],
+
+        # 重跑参数
+        old_results_path=config_data["old_results_path"],
+        rerun=config_data["rerun"]
     )
     
     # 创建输出目录

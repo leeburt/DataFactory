@@ -5,6 +5,7 @@ import traceback
 from src.config import Config
 from src.step1_generate import ComponentAnalyzer
 from src.step2_evaluate import ConsistencyEvaluator
+from src.step1_rerun import ComponentAnalyzer as ComponentAnalyzerRerun
 from src.utils import parse_args, create_config_from_args
 from config.prompts import (COMPONENTS_LIST_PROMPT_MODEL1
                             , COMPONENTS_LIST_PROMPT_MODEL2
@@ -53,7 +54,12 @@ async def main():
         # 第一步：组件识别和IO分析
         print("\n第一步：组件识别和IO分析")
         print("-" * 50)
-        analyzer = ComponentAnalyzer(config)
+        print(config.rerun)
+        if config.rerun:
+            print('rerun mode')
+            analyzer = ComponentAnalyzerRerun(config)
+        else:
+            analyzer = ComponentAnalyzer(config)
         result_paths = await analyzer.run()
         
         # 第二步：一致性评估

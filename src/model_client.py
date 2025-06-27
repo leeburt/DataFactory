@@ -1,5 +1,7 @@
 import aiohttp
+import asyncio
 from typing import Dict, Any
+import traceback
 
 class ModelClient:
     """Model API Client"""
@@ -16,107 +18,125 @@ class ModelClient:
                       image_base64: str = None, temperature=0.1, 
                       max_tokens=2048, enforce_json=False) -> Dict[str, Any]:
         """Call model to generate response"""
-        try:
-            # Build API request
-            headers = {
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {self.api_key}"
-            }
-            
-            # Build messages
-            content = []
-            
-            # Add text content
-            content.append({"type": "text", "text": f"{prompt}\n\n{query}"})
-            
-            # If image is provided, add image content
-            if image_base64:
-                content.append({
-                    "type": "image_url",
-                    "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"}
-                })
-            
-            system_message = "You are a professional circuit diagram analysis assistant. Please answer questions according to the user-specified format"
-            if enforce_json:
-                system_message = "You are a professional circuit diagram analysis assistant, always reply in pure JSON format. Do not use Markdown code blocks, do not add any prefix or suffix text, only return raw JSON. Your output should be directly parseable by JSON parsers without any preprocessing."
-            
-            messages = [
-                {
-                    "role": "system",
-                    "content": system_message
-                },
-                {
-                    "role": "user",
-                    "content": content
+        
+        retries = 3
+        backoff_factor = 2.0
+        
+        for attempt in range(retries):
+            try:
+                # Build API request
+                headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {self.api_key}"
                 }
-            ]
-            
-            # Build request payload
-            payload = {
-                "model": self.model,
-                "messages": messages,
-                "temperature": temperature,
-                "max_tokens": max_tokens
-            }
-            
-            # Add response_format based on different API providers
-            if enforce_json:
-                if self.is_openai:
-                    payload["response_format"] = {"type": "json_object"}
-                elif self.is_anthropic:
-                    # Anthropic's JSON response format may be different
-                    # For Claude, enforce through system message
-                    messages[0]["content"] += " Remember, you must only output pure JSON format, do not use code blocks, do not have any additional text."
-            
-            # Adapt to different API endpoints
-            api_endpoint = f"{self.api_base}/chat/completions"
-            if self.is_anthropic:
-                api_endpoint = f"{self.api_base}/messages"
-                # Anthropic API需要特殊处理
+                
+                # Build messages
+                content = []
+                
+                # Add text content
+                content.append({"type": "text", "text": f"{prompt}\n\n{query}"})
+                
+                # If image is provided, add image content
+                if image_base64:
+                    content.append({
+                        "type": "image_url",
+                        "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"}
+                    })
+                
+                system_message = "You are a professional circuit diagram analysis assistant. Please answer questions according to the user-specified format"
+                if enforce_json:
+                    system_message = "You are a professional circuit diagram analysis assistant, always reply in pure JSON format. Do not use Markdown code blocks, do not add any prefix or suffix text, only return raw JSON. Your output should be directly parseable by JSON parsers without any preprocessing."
+                
+                messages = [
+                    {
+                        "role": "system",
+                        "content": system_message
+                    },
+                    {
+                        "role": "user",
+                        "content": content
+                    }
+                ]
+                
+                # Build request payload
                 payload = {
                     "model": self.model,
                     "messages": messages,
                     "temperature": temperature,
                     "max_tokens": max_tokens
                 }
-            
-            # 发送请求
-            async with session.post(
-                api_endpoint,
-                headers=headers,
-                json=payload
-            ) as response:
-                if response.status != 200:
-                    error_text = await response.text()
-                    return {"error": f"API请求失败: {response.status}, {error_text}"}
                 
-                result = await response.json()
+                # Add response_format based on different API providers
+                if enforce_json:
+                    if self.is_openai:
+                        payload["response_format"] = {"type": "json_object"}
+                    elif self.is_anthropic:
+                        # Anthropic's JSON response format may be different
+                        # For Claude, enforce through system message
+                        messages[0]["content"] += " Remember, you must only output pure JSON format, do not use code blocks, do not have any additional text."
                 
-                # 解析响应 (针对不同API提供商)
-                if self.is_openai:
-                    if "choices" in result and len(result["choices"]) > 0:
-                        content = result["choices"][0]["message"]["content"]
-                        return {"content": content, "usage": result.get("usage", {})}
+                # Adapt to different API endpoints
+                api_endpoint = f"{self.api_base}/chat/completions"
+                if self.is_anthropic:
+                    api_endpoint = f"{self.api_base}/messages"
+                    # Anthropic API需要特殊处理
+                    payload = {
+                        "model": self.model,
+                        "messages": messages,
+                        "temperature": temperature,
+                        "max_tokens": max_tokens
+                    }
+                
+                # 发送请求
+                timeout = aiohttp.ClientTimeout(total=180.0) # 180-second timeout
+                async with session.post(
+                    api_endpoint,
+                    headers=headers,
+                    json=payload,
+                    timeout=timeout
+                ) as response:
+                    if response.status != 200:
+                        error_text = await response.text()
+                        if response.status >= 500:
+                            print(f"Server error {response.status}, retrying...")
+                            response.raise_for_status() # Will be caught by ClientError
+                        return {"error": f"API请求失败: {response.status}, {error_text}"}
+                    
+                    result = await response.json()
+                    
+                    # 解析响应 (针对不同API提供商)
+                    if self.is_openai:
+                        if "choices" in result and len(result["choices"]) > 0:
+                            content = result["choices"][0]["message"]["content"]
+                            return {"content": content, "usage": result.get("usage", {})}
+                        else:
+                            return {"error": "无效的OpenAI API响应"}
+                    elif self.is_anthropic:
+                        if "content" in result and len(result["content"]) > 0:
+                            # Anthropic API返回格式不同
+                            text_contents = [block["text"] for block in result["content"] if block["type"] == "text"]
+                            content = "".join(text_contents)
+                            return {"content": content, "usage": result.get("usage", {})}
+                        else:
+                            return {"error": "无效的Anthropic API响应"}
                     else:
-                        return {"error": "无效的OpenAI API响应"}
-                elif self.is_anthropic:
-                    if "content" in result and len(result["content"]) > 0:
-                        # Anthropic API返回格式不同
-                        text_contents = [block["text"] for block in result["content"] if block["type"] == "text"]
-                        content = "".join(text_contents)
-                        return {"content": content, "usage": result.get("usage", {})}
-                    else:
-                        return {"error": "无效的Anthropic API响应"}
+                        # 通用解析逻辑
+                        if "choices" in result and len(result["choices"]) > 0:
+                            content = result["choices"][0]["message"]["content"]
+                            return {"content": content, "usage": result.get("usage", {})}
+                        else:
+                            return {"error": "无效的API响应"}
+            except (aiohttp.ClientError, asyncio.TimeoutError) as e:
+                if attempt < retries - 1:
+                    sleep_time = backoff_factor * (2 ** attempt)
+                    print(f"Request failed with {type(e).__name__}: {e}. Retrying in {sleep_time}s... (Attempt {attempt+1}/{retries})")
+                    await asyncio.sleep(sleep_time)
                 else:
-                    # 通用解析逻辑
-                    if "choices" in result and len(result["choices"]) > 0:
-                        content = result["choices"][0]["message"]["content"]
-                        return {"content": content, "usage": result.get("usage", {})}
-                    else:
-                        return {"error": "无效的API响应"}
-                
-        except Exception as e:
-            return {"error": f"生成时出错: {str(e)}"}
+                    print(f"Request failed after {retries} attempts.")
+                    return {"error": f"API request failed after {retries} retries: {traceback.format_exc()}"}
+            except Exception as e:
+                return {"error": f"生成时出错: {traceback.format_exc()}"}
+        return {"error": f"API请求在 {retries} 次尝试后失败。"}
     
     async def evaluate_consistency(self, session, prompt: str, query: str,
                                  model1_json: str, model2_json: str, 

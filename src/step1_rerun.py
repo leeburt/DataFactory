@@ -43,99 +43,15 @@ class ComponentAnalyzer:
         if os.path.exists(self.model_analysis_path):
             self.load_results()
 
-    
-    async def _get_component_list(self, session, image_path: str, model_client: ModelClient, model_name: str,prompt: str) -> List[str]:
-        """获取电路图中的组件列表"""
-        try:
-            # 获取完整图像路径
-            full_image_path = os.path.join(self.config.image_root_dir, image_path)
-            
-            # 检查文件是否存在
-            if not os.path.exists(full_image_path):
-                print(f"图像不存在: {full_image_path}")
-                return []
-                
-            # 编码图像
-            image_base64 = ImageProcessor.encode_image(full_image_path)
+        self.old_results_path = self.config.old_results_path
+        self.old_results = {}
+        if os.path.exists(self.old_results_path):
+            with open(self.old_results_path, 'r', encoding='utf-8') as f:
+                self.old_results = json.load(f)
+        else:
+            print(f"[error] {self.old_results_path} 不存在")
         
-            
-            # 调用模型获取组件列表
-            result = await model_client.generate(
-                session,
-                prompt,
-                "请列出电路图中的所有组件",
-                image_base64,
-                temperature=self.config.temperature,
-                max_tokens=self.config.max_tokens
-            )
-            
-            if "error" in result:
-                print(f"获取组件列表时出错 ({model_name}): {result['error']}")
-                return []
-            
-            # 检查响应内容是否为空
-            if not result.get("content"):
-                print(f"模型返回的内容为空 ({model_name})")
-                return []
-            
-            # 尝试从响应中提取JSON数组
-            try:
-                # 显示响应内容的前100个字符，用于调试
-                content_preview = result["content"][:100] + "..." if len(result["content"]) > 100 else result["content"]
-                # print(f"模型响应预览 ({model_name}): {content_preview}")
-                
-                # 尝试直接解析整个响应
-                try:
-                    components = json.loads(result["content"])
-                    if isinstance(components, list):
-                        return components
-                    elif isinstance(components, dict) and "components" in components:
-                        # 有时模型可能会返回 {"components": [...]} 格式
-                        return components["components"] if isinstance(components["components"], list) else []
-                except json.JSONDecodeError:
-                    pass
-                
-                # 如果上面失败，尝试从文本中提取JSON数组
-                match = re.search(r'\[.*\]', result["content"], re.DOTALL)
-                if match:
-                    try:
-                        json_str = match.group(0)
-                        components = json.loads(json_str)
-                        if isinstance(components, list):
-                            return components
-                    except json.JSONDecodeError:
-                        pass
-                
-                # 如果依然无法解析，尝试使用更复杂的正则表达式
-                # 寻找类似 ["元件1", "元件2", ...] 的模式
-                match = re.search(r'\[\s*"[^"]*"(?:\s*,\s*"[^"]*")*\s*\]', result["content"], re.DOTALL)
-                if match:
-                    try:
-                        json_str = match.group(0)
-                        components = json.loads(json_str)
-                        if isinstance(components, list):
-                            return components
-                    except json.JSONDecodeError:
-                        pass
-                
-                # 如果都失败了，尝试创建一个简单的解析器来提取引号括起来的内容作为组件
-                # 适用于类似 ["组件1", "组件2"] 的内容
-                components = []
-                matches = re.findall(r'"([^"]+)"', result["content"])
-                if matches:
-                    components = matches
-                    return components
-                
-                print(f"无法解析组件列表 ({model_name}): {result['content']}")
-                return []
-                
-            except Exception as e:
-                print(f"解析组件列表时出错 ({model_name}): {str(e)}")
-                return []
-            
-        except Exception as e:
-            print(f"获取组件列表时出错 ({model_name}): {str(e)}")
-            return []
+
     
     async def _get_component_io(self, session, image_path: str, component: str, model_client: ModelClient,prompt: str) -> Dict:
         """获取特定组件的输入输出信息"""
@@ -185,14 +101,11 @@ class ComponentAnalyzer:
             if image_id in self.all_results:
                 print(f"  图像 {image_id} 已处理过")
                 return
-
-            model1_components = await self._get_component_list(session, image_path, self.model2_client, "模型1",self.prompts_data["components_list_prompt_model1"])
-            # print(f"  模型1找到 {len(model1_components)} 个组件")
-
-            # 将model1_components转为json
-            
-            # model2_components = await self._get_component_list(session, image_path, self.model2_client, "模型2",self.prompts_data["components_list_prompt_model2"])
-            # print(f"  模型2找到 {len(model2_components)} 个组件")
+            if self.config.rerun and image_id in self.old_results:
+                model1_components = self.old_results[image_id]["components"]
+            else:
+                print(f"[error] {image_id} 未处理过")
+                return 
 
             model2_components = model1_components
             
@@ -202,29 +115,21 @@ class ComponentAnalyzer:
                 "component_details": {}
             }
             
-            model2_analysis = {
-                "components": model2_components,
-                "component_details": {}
-            }
-            
             # 并行分析所有组件的IO信息
             async def analyze_component_io(component):
                 # 并行获取模型1和模型2的IO信息
                 io1_task = self._get_component_io(session, image_path, component, self.model1_client, self.prompts_data["component_io_prompt_model1"])
-                io2_task = self._get_component_io(session, image_path, component, self.model2_client, self.prompts_data["component_io_prompt_model2"])
-                io1, io2 = await asyncio.gather(io1_task, io2_task)
-                return component, io1, io2
+                io1= await asyncio.gather(io1_task)
+                return component, io1
 
             tasks = [analyze_component_io(component) for component in model1_components]
             results = await asyncio.gather(*tasks)
 
-            for component, io1, io2 in results:
+            for component, io1 in results:
                 model1_analysis["component_details"][component] = io1
-                model2_analysis["component_details"][component] = io2
             
             # 保存模型分析结果
             self.model1_circuit_analyses[image_id] = model1_analysis
-            self.model2_circuit_analyses[image_id] = model2_analysis
             self.convert_model_results()
             
             print(f"  完成图像 {image_id} 处理")
@@ -246,7 +151,7 @@ class ComponentAnalyzer:
                     model2_name = self.model2_client.model
                 self.all_results[image_id]["component_details"][component] = {
                     model1_name: analysis["component_details"][component],
-                    model2_name: self.model2_circuit_analyses[image_id]["component_details"][component]
+                    model2_name: self.old_results[image_id]["component_details"][component][model2_name]
                 }
         return
         

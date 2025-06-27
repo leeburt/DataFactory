@@ -296,17 +296,19 @@ class ConsistencyEvaluator:
         try:
             # 加载两个模型的组件详情
             image_id = os.path.basename(image_path)
-            
-            # 检查是否有详情
-            if not model1_details or not model2_details:
-                return {
+            result_tmp = {
                     "component": f"{component}",
                     "is_consistent": False,
                     "consistency_score": 0,
-                    "score_details": ["缺少组件详情"],
+                    "score_details": [],
+                    "right_connections": "",
                     "better_model": "",
-                    "reasoning": "至少一个模型未提供此组件的详细分析"
+                    "reasoning": ""
                 }
+            
+            # 检查是否有详情
+            if not model1_details or not model2_details:
+                return result_tmp.update({"reasoning": "至少一个模型未提供此组件的详细分析"})
             
             # 编码图像
             try:
@@ -333,19 +335,13 @@ class ConsistencyEvaluator:
                 f"评估组件 {component} 连接关系的一致性",
                 image_base64,
                 temperature=0.1,
-                enforce_json=True
+                enforce_json=True,
+                max_tokens=self.config.max_tokens
             )
             
             if "error" in result:
                 print(f"组件一致性评估时出错: {result['error']}")
-                return {
-                    "component": f"{component}",
-                    "is_consistent": False,
-                    "consistency_score": 0,
-                    "score_details": ["评估出错"],
-                    "better_model": "",
-                    "reasoning": f"评估时出错: {result['error']}"
-                }
+                return result_tmp.update({"reasoning": f"评估时出错: {result['error']}"})
             
             # 解析评估结果
             try:
@@ -405,42 +401,29 @@ class ConsistencyEvaluator:
                 score_match = re.search(r'(?:consistency_score|score)[\s:"]*(\d+)', content)
                 score = int(score_match.group(1)) if score_match else 50
                 
-                return {
-                    "component": f"{component}",
-                    "is_consistent": is_consistent,
-                    "consistency_score": score,
-                    "score_details": [],
-                    "better_model": "",
-                    "reasoning": f"解析失败，基于文本内容分析可能的一致性:{content}"
-                }
-                
+                return result_tmp.update({"is_consistent": is_consistent,
+                                           "consistency_score": score,
+                                           "reasoning": f"解析失败，基于文本内容分析可能的一致性:{content}"})
+            
+    
             except Exception as e:
                 print(f"解析组件一致性评估结果时出错: {str(traceback.format_exc())}")
                 
-                return {
-                    "component": f"{component}",
-                    "is_consistent": False,
-                    "consistency_score": 0,
-                    "score_details": ["解析错误"],
-                    "better_model": "",
-                    "reasoning": f"解析评估结果时出错: {str(traceback.format_exc())}"
-                }
+                return result_tmp.update({"is_consistent": False,
+                                           "consistency_score": 0,
+                                           "reasoning": f"解析评估结果时出错: {str(traceback.format_exc())}"})
             
         except Exception as e:
             print(f"评估组件对时出错: {str(traceback.format_exc())}")
-            return {
-                "component": f"{component}",
-                "is_consistent": False,
-                "consistency_score": 0,
-                "score_details": ["处理错误"],
-                "better_model": "",
-                "reasoning": f"处理组件对时出错: {str(traceback.format_exc())}"
-            }
+            return result_tmp.update({"is_consistent": False,
+                                       "consistency_score": 0,
+                                       "reasoning": f"处理组件对时出错: {str(traceback.format_exc())}"})
     
     async def _evaluate_component_consistency(self, session, image_id: str) -> Dict:
         """评估同一图像中每个组件的分析一致性"""
         model_analysis = self.step1_results[image_id]
-        if image_id not in self.step2_results:
+        if image_id in self.step2_results and self.step2_results[image_id].get("score_details") and len(self.step2_results[image_id].get("score_details"))>0:
+            print(f"图像 {image_id} 的组件级一致性评估结果已存在,{self.step2_results[image_id].get('score_details')}")
             return 
         try:
             # print(f"\n评估图像 {image_id} 的组件级一致性")
@@ -518,26 +501,28 @@ class ConsistencyEvaluator:
             print("\n使用组件级别一致性评估...")
 
             completed_count = 0  # 新增：已完成数量
-            save_interval = 10   # 新增：每多少次保存一次
+            save_interval = 5   # 新增：每多少次保存一次
+            lock = asyncio.Lock()  # 新增：用于保护 completed_count 的锁
 
-            async def evaluate_components_with_semaphore(image_id):
-                nonlocal completed_count
-                async with semaphore:
-                    result = await self._evaluate_component_consistency(
-                        session, 
-                        image_id,
-                    )
-                    completed_count += 1
-                    print(f"  完成图像 {image_id} 的组件级一致性评估")
-                    # 每save_interval次保存一次
-                    if completed_count % save_interval == 0:
-                        self._save_results()
-            
-            # 创建所有任务
             tasks = []
             
             # 异步处理所有图像
             async with aiohttp.ClientSession() as session:
+                async def evaluate_components_with_semaphore(image_id):
+                    nonlocal completed_count
+                    async with semaphore:
+                        await self._evaluate_component_consistency(
+                            session, 
+                            image_id,
+                        )
+                        async with lock:
+                            completed_count += 1
+                            total_images = len(common_image_ids)
+                            print(f"  完成图像 {image_id} 的组件级一致性评估 ({completed_count}/{total_images})")
+                            # 每save_interval次保存一次
+                            if completed_count % save_interval == 0:
+                                self._save_results()
+
                 for image_id in common_image_ids:
                     tasks.append(evaluate_components_with_semaphore(image_id))
                 
@@ -553,6 +538,7 @@ class ConsistencyEvaluator:
     def _save_results(self) -> None:
         """保存评估结果"""
         # 判断使用哪种结果
+        print("save results to",self.component_consistency_path)
         if self.step2_results:
             # 保存组件级一致性评估结果
             with open(self.component_consistency_path, 'w', encoding='utf-8') as f:

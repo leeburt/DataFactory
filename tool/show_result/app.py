@@ -297,6 +297,32 @@ def create_image_html(image_name, image_data):
             margin-top: 15px;
         }}
         
+        .right-connections {{
+            margin-top: 15px;
+        }}
+        
+        .right-connections-title {{
+            font-weight: bold;
+            color: #1a7f37;
+            margin-bottom: 10px;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }}
+
+        .markdown-content {{
+            background-color: #f0fff4;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }}
+        
         .inconsistencies {{
             background-color: #fff5f5;
             border-left: 4px solid #e53e3e;
@@ -431,7 +457,8 @@ def create_image_html(image_name, image_data):
             is_consistent = eval_result.get('is_consistent', False)
             reasoning = eval_result.get('reasoning', '')
             inconsistencies = eval_result.get('inconsistencies', [])
-            better_model = eval_result.get('better_model', '')
+            right_model = eval_result.get('right_model') or eval_result.get('better_model', '')
+            right_connections = eval_result.get('right_connections', '')
             
             # 获取模型描述并格式化
             # 动态获取模型名称，排除eval_result键
@@ -441,8 +468,14 @@ def create_image_html(image_name, image_data):
             if len(model_names) >= 2:
                 model1_name = model_names[0]
                 model2_name = model_names[1]
-                model1_desc = component_data.get(model1_name, {}).get('description', 'N/A')
-                model2_desc = component_data.get(model2_name, {}).get('description', 'N/A')
+                if isinstance(component_data.get(model1_name, {}), list):
+                    model1_desc = component_data.get(model1_name, {})[0].get('description', 'N/A')
+                else:   
+                    model1_desc = component_data.get(model1_name, {}).get('description', 'N/A')
+                if isinstance(component_data.get(model2_name, {}), list):
+                    model2_desc = component_data.get(model2_name, {})[0].get('description', 'N/A')
+                else:
+                    model2_desc = component_data.get(model2_name, {}).get('description', 'N/A')
             else:
                 # 如果模型数量不足，使用默认值
                 model1_name = "模型1"
@@ -491,14 +524,23 @@ def create_image_html(image_name, image_data):
                     {f'''
                     <div class="better-model">
                         <div class="better-model-title">
-                            🏆 更佳模型: {better_model}
+                            🏆 更佳模型: {right_model}
                         </div>
                     </div>
-                    ''' if better_model else ''}
+                    ''' if right_model else ''}
                     
                     <div class="reasoning">
                         <strong>一致性分析:</strong> {reasoning}
                     </div>
+
+                    {f'''
+                    <div class="right-connections">
+                        <div class="right-connections-title">
+                            🔗 正确连接
+                        </div>
+                        <div class="markdown-content">{right_connections}</div>
+                    </div>
+                    ''' if right_connections else ''}
                 </div>
             </div>
 """
