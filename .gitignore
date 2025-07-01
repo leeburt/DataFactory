@@ -29,3 +29,7 @@ wheels/
 *.egg
 
 .cache/
+
+*.pt
+
+results/*

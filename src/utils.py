@@ -99,10 +99,6 @@ def create_config_from_args(args):
         # 生成参数
         temperature=config_data["temperature"],
         max_tokens=config_data["max_tokens"],
-
-        # 重跑参数
-        old_results_path=config_data["old_results_path"],
-        rerun=config_data["rerun"]
     )
     
     # 创建输出目录
