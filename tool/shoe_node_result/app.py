@@ -203,7 +203,22 @@ def create_image_html(image_name, image_data):
     # 为每个组件创建HTML卡片
     components_html_list = []
     component_index = 0
-    for component_coords, detail_info in component_details.items():
+
+    # 排序组件：IO匹配的在前，然后按位置排序
+    def sort_key(item):
+        coords_str, detail_info = item
+        io_match = detail_info.get('io_num_match', False)
+        try:
+            # 根据坐标排序，确保顺序稳定
+            coords = eval(coords_str)
+            y1, x1 = coords[1], coords[0]
+        except Exception:
+            y1, x1 = 0, 0
+        return (not io_match, y1, x1)
+    
+    sorted_component_items = sorted(list(component_details.items()), key=sort_key)
+
+    for component_coords, detail_info in sorted_component_items:
         component_index += 1
         description = detail_info.get('description', {})
         warning = detail_info.get('warning', '')
