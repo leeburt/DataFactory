@@ -31,3 +31,5 @@ class Config:
         self.num_workers = kwargs.get('num_workers', 4)
         self.temperature = kwargs.get('temperature', 0.1)
         self.max_tokens = kwargs.get('max_tokens', 2048)
+
+        self.node_sample_rate = kwargs.get('node_sample_rate', 0.5)

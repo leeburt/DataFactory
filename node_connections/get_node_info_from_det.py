@@ -29,9 +29,9 @@ class ComponentAnalyzer:
         
         # 初始化模型客户端
         self.model_client = ModelClient(
-            api_base=config.model2_api,
-            api_key=config.model2_key,
-            model=config.model2_model
+            api_base=config.model1_api,
+            api_key=config.model1_key,
+            model=config.model1_model
         )
         
         # 结果存储
@@ -45,6 +45,8 @@ class ComponentAnalyzer:
             self.load_results()
 
         self.NodeIO = NodeIO()
+
+        self.sample_rate = self.config.node_sample_rate
 
     
     async def _get_component_list(self, session, image_path: str) -> List:
@@ -92,7 +94,7 @@ class ComponentAnalyzer:
             # 生成调试图片文件名
             image_name = os.path.basename(full_image_path)
             name_without_ext = os.path.splitext(image_name)[0]
-            debug_image_path = os.path.join(debug_dir, f"{name_without_ext}_with_boxes.jpg")
+            debug_image_path = os.path.join(debug_dir, f"{name_without_ext}_{str(node_box)}_with_boxes.jpg")
             
             # 保存调试图片
             image.save(debug_image_path, 'JPEG', quality=95)
@@ -164,12 +166,19 @@ class ComponentAnalyzer:
                 return
 
             # 第一步：使用模型获取组件列表
-            components = await self._get_component_list(session, image_path)
+            components_origin = await self._get_component_list(session, image_path)
             # print(f"  模型找到 {len(components)} 个组件")
-            print(components)
+            
+            import random 
+            ## 从components的key中随机选择一部分
+            components_keys = list(components_origin.keys())
+            selected_keys = random.sample(components_keys, int(max(1, len(components_origin) * self.sample_rate))) #至少取一个值
+            components = {k: components_origin[k] for k in selected_keys}
+            print(f"  随机选择 {len(components)} 个组件 ,from {len(components_origin)} 个组件")
+
             # 初始化分析结果
             analysis_result = {
-                "components": components,
+                "components": components_origin,
                 "component_details": {}
             }
             
@@ -193,16 +202,16 @@ class ComponentAnalyzer:
                     io_num_match = False
                     if (len(node_io_detail["connections"]["input"]) == len(det_io_input)) and ((len(node_io_detail["connections"]["output"])+len(node_io_detail["connections"]["bidirectional"])) == len(det_io_output)):
                         io_num_match=True
-                    if not io_num_match: 
-                        print(f"IO数量不匹配: {component}")
-                        print(f"len(node_io_detail['connections']['input']): {len(node_io_detail['connections']['input'])}")
-                        print(f"len(det_io_input): {len(det_io_input)}")
-                        print(f"len(node_io_detail['connections']['output']): {len(node_io_detail['connections']['output'])}")
-                        print(f"len(node_io_detail['connections']['bidirectional']): {len(node_io_detail['connections']['bidirectional'])}")
-                        print(f"len(det_io_output): {len(det_io_output)}")
-                        print(f"node_io_detail: {node_io_detail}")
-                        print(f"det_io_input: {det_io_input}")
-                        print(f"det_io_output: {det_io_output}")
+                    # if not io_num_match: 
+                    #     print(f"IO数量不匹配: {component}")
+                    #     print(f"len(node_io_detail['connections']['input']): {len(node_io_detail['connections']['input'])}")
+                    #     print(f"len(det_io_input): {len(det_io_input)}")
+                    #     print(f"len(node_io_detail['connections']['output']): {len(node_io_detail['connections']['output'])}")
+                    #     print(f"len(node_io_detail['connections']['bidirectional']): {len(node_io_detail['connections']['bidirectional'])}")
+                    #     print(f"len(det_io_output): {len(det_io_output)}")
+                    #     print(f"node_io_detail: {node_io_detail}")
+                    #     print(f"det_io_input: {det_io_input}")
+                    #     print(f"det_io_output: {det_io_output}")
 
                 io_info["io_num_match"] = io_num_match
                 io_info["det_io_info"] = components[component]

@@ -99,6 +99,9 @@ def create_config_from_args(args):
         # 生成参数
         temperature=config_data["temperature"],
         max_tokens=config_data["max_tokens"],
+
+        ##sample node rate 
+        node_sample_rate=config_data["node_sample_rate"],
     )
     
     # 创建输出目录
