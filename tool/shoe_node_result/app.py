@@ -5,6 +5,7 @@ import json
 import base64
 from PIL import Image, ImageDraw, ImageFont
 import io
+import html
 
 app = Flask(__name__)
 app.secret_key = 'your-secret-key-here'
@@ -36,6 +37,10 @@ def format_description(description):
         return json.dumps(description, indent=2, ensure_ascii=False)
     else:
         return str(description)
+
+def escape_html_attr(text):
+    """转义HTML属性中的特殊字符"""
+    return html.escape(str(text), quote=True)
 
 def get_image_list():
     """获取图像列表"""
@@ -102,8 +107,12 @@ def draw_boxes_on_image(image_path, component_details):
             coords = eval(component_coords)  # [x1, y1, x2, y2]
             x1, y1, x2, y2 = coords
             
-            # 画组件边框（蓝色）
-            draw.rectangle([x1, y1, x2, y2], outline='blue', width=3)
+            # 根据IO是否匹配设置组件颜色
+            io_num_match = detail_info.get('io_num_match', False)
+            component_color = 'blue' if io_num_match else 'goldenrod'
+
+            # 画组件边框
+            draw.rectangle([x1, y1, x2, y2], outline=component_color, width=3)
             
             # 获取组件名称
             description = detail_info.get('description', {})
@@ -115,28 +124,28 @@ def draw_boxes_on_image(image_path, component_details):
             # 在组件上方写组件名称
             name_x = x1
             name_y = max(0, y1 - 20)
-            draw.text((name_x, name_y), component_name, fill='blue', font=font)
+            draw.text((name_x, name_y), component_name, fill=component_color, font=font)
             
             # 获取det_io_info
             det_io_info = detail_info.get('det_io_info', {})
             
-            # 画输入端口（绿色）
+            # 画输入端口（紫色）
             input_ports = det_io_info.get('input', [])
             for input_port in input_ports:
                 if len(input_port) == 4:
                     ix1, iy1, ix2, iy2 = input_port
-                    draw.rectangle([ix1, iy1, ix2, iy2], outline='green', width=2)
+                    draw.rectangle([ix1, iy1, ix2, iy2], outline='purple', width=2)
                     # 在端口旁边标注"IN"
-                    draw.text((ix1, iy1-15), "IN", fill='green', font=font)
+                    draw.text((ix1, iy1-15), "IN", fill='purple', font=font)
             
-            # 画输出端口（红色）
+            # 画输出端口（青色）
             output_ports = det_io_info.get('output', [])
             for output_port in output_ports:
                 if len(output_port) == 4:
                     ox1, oy1, ox2, oy2 = output_port
-                    draw.rectangle([ox1, oy1, ox2, oy2], outline='red', width=2)
+                    draw.rectangle([ox1, oy1, ox2, oy2], outline='cyan', width=2)
                     # 在端口旁边标注"OUT"
-                    draw.text((ox1, oy1-15), "OUT", fill='red', font=font)
+                    draw.text((ox1, oy1-15), "OUT", fill='cyan', font=font)
         
         # 将图像转换为base64编码
         buffer = io.BytesIO()
@@ -166,7 +175,118 @@ def create_image_html(image_name, image_data):
     image_path = os.path.join(image_root_dir, image_name)
     annotated_image_base64 = draw_boxes_on_image(image_path, component_details)
     
-    html_content = f"""
+    # 为带标注的图像创建HTML
+    annotated_image_html = f'''
+    <div class="image-display">
+        <img src="data:image/png;base64,{annotated_image_base64}" alt="Annotated {image_name}" class="annotated-image" id="main-image">
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: blue;"></div>
+                <span>IO匹配组件</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: goldenrod;"></div>
+                <span>IO未匹配组件</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: purple;"></div>
+                <span>输入端口</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: cyan;"></div>
+                <span>输出端口</span>
+            </div>
+        </div>
+    </div>
+    ''' if annotated_image_base64 else '<div class="image-display"><p>图片加载失败</p></div>'
+
+    # 为每个组件创建HTML卡片
+    components_html_list = []
+    component_index = 0
+    for component_coords, detail_info in component_details.items():
+        component_index += 1
+        description = detail_info.get('description', {})
+        warning = detail_info.get('warning', '')
+        io_num_match = detail_info.get('io_num_match', False)
+        det_io_info = detail_info.get('det_io_info', {})
+        current_label = detail_info.get('label', 'correct')
+        
+        if isinstance(description, dict):
+            component_name = description.get('component_name', '未知组件')
+        else:
+            component_name = '未知组件'
+        
+        description_formatted = format_description(description)
+        
+        status_badges = []
+        if warning == 'JSON格式正确':
+            status_badges.append('<span class="badge badge-success">✓ JSON格式正确</span>')
+        else:
+            status_badges.append('<span class="badge badge-danger">✗ JSON格式错误</span>')
+        
+        if io_num_match:
+            status_badges.append('<span class="badge badge-success">✓ IO端口匹配</span>')
+        else:
+            status_badges.append('<span class="badge badge-warning">⚠ IO端口不匹配</span>')
+            
+        det_inputs = det_io_info.get('input', [])
+        det_outputs = det_io_info.get('output', [])
+        
+        status_icons = {'correct': '✓', 'incorrect': '✗', 'pending': '?'}
+        status_texts = {'correct': '正确', 'incorrect': '错误', 'pending': '待确定'}
+        current_status_icon = status_icons[current_label]
+        current_status_text = status_texts[current_label]
+
+        components_html_list.append(f"""
+            <div class="component-card" data-coords="{escape_html_attr(component_coords)}" data-label="{current_label}" id="component-{component_index}">
+                <button class="expand-btn" onclick="toggleComponent(this)" title="展开/收起">−</button>
+                <div class="component-header">
+                    <div>
+                        <div class="component-name">🔧 {component_name}</div>
+                        <div class="component-coords">{escape_html_attr(component_coords)}</div>
+                        <div class="status-badges">{''.join(status_badges)}</div>
+                    </div>
+                </div>
+                <div class="annotation-section">
+                    <div class="annotation-header">
+                        <div class="annotation-title">🏷️ 人工标注</div>
+                        <div class="annotation-status">
+                            <div class="status-icon {current_label}" id="status-icon-{component_index}">{current_status_icon}</div>
+                            <span id="status-text-{component_index}">{current_status_text}</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <select class="annotation-select {current_label}" 
+                                data-component-index="{component_index}"
+                                data-coords="{escape_html_attr(component_coords)}"
+                                onchange="updateAnnotation(this)">
+                            <option value="correct" {'selected' if current_label == 'correct' else ''}>正确</option>
+                            <option value="incorrect" {'selected' if current_label == 'incorrect' else ''}>错误</option>
+                            <option value="pending" {'selected' if current_label == 'pending' else ''}>待确定</option>
+                        </select>
+                        <div class="save-indicator" id="save-indicator-{component_index}">已保存</div>
+                    </div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail-title">📝 组件描述</div>
+                    <div class="detail-content">{description_formatted}</div>
+                </div>
+                <div class="coordinates-grid">
+                    <div class="coordinates-section">
+                        <div class="coordinates-title">🎯 输入端口 ({len(det_inputs)})</div>
+                        {''.join([f'<div class="coordinate-item input">[{coord[0]}, {coord[1]}, {coord[2]}, {coord[3]}]</div>' for coord in det_inputs])}
+                    </div>
+                    <div class="coordinates-section">
+                        <div class="coordinates-title">🎯 输出端口 ({len(det_outputs)})</div>
+                        {''.join([f'<div class="coordinate-item output">[{coord[0]}, {coord[1]}, {coord[2]}, {coord[3]}]</div>' for coord in det_outputs])}
+                    </div>
+                </div>
+            </div>
+        """)
+    
+    components_html = "".join(components_html_list)
+
+    html_template = """
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -185,10 +305,11 @@ def create_image_html(image_name, image_data):
             line-height: 1.6;
             color: #333;
             background-color: #f5f5f5;
+            overflow-x: hidden;
         }}
         
         .container {{
-            max-width: 1400px;
+            max-width: 100vw;
             margin: 0 auto;
             padding: 20px;
         }}
@@ -196,19 +317,19 @@ def create_image_html(image_name, image_data):
         .header {{
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 30px;
+            padding: 20px 30px;
             border-radius: 10px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-align: center;
         }}
         
         .header h1 {{
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2em;
+            margin-bottom: 5px;
         }}
         
         .header p {{
-            font-size: 1.1em;
+            font-size: 1em;
             opacity: 0.9;
         }}
         
@@ -241,33 +362,51 @@ def create_image_html(image_name, image_data):
             cursor: not-allowed;
         }}
         
-        .image-section {{
-            background: white;
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .main-content {{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            height: calc(100vh - 200px);
+            min-height: 600px;
         }}
         
-        .image-header {{
+        .left-panel {{
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            max-height: calc(100vh - 220px);
+        }}
+        
+        .right-panel {{
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            max-height: calc(100vh - 220px);
+        }}
+        
+        .image-section {{
+            text-align: center;
             margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #eee;
         }}
         
         .image-title {{
-            font-size: 1.8em;
+            font-size: 1.5em;
             color: #2c3e50;
             font-weight: bold;
+            margin-bottom: 15px;
         }}
         
         .image-display {{
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 20px;
+            margin-bottom: 20px;
+            padding: 15px;
             background: #f8f9fa;
             border-radius: 10px;
         }}
@@ -278,112 +417,125 @@ def create_image_html(image_name, image_data):
             border: 2px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: crosshair;
         }}
         
         .legend {{
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 15px;
+            gap: 15px;
+            margin-top: 10px;
             flex-wrap: wrap;
         }}
         
         .legend-item {{
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
+            font-size: 0.9em;
         }}
         
         .legend-color {{
-            width: 20px;
+            width: 16px;
             height: 3px;
             border-radius: 2px;
         }}
         
-        .legend-blue {{ background-color: blue; }}
-        .legend-green {{ background-color: green; }}
-        .legend-red {{ background-color: red; }}
-        
         .summary-stats {{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
         }}
         
         .stat-card {{
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
             text-align: center;
         }}
         
         .stat-number {{
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: bold;
             margin-bottom: 5px;
         }}
         
         .stat-label {{
-            font-size: 0.9em;
+            font-size: 0.8em;
             opacity: 0.9;
         }}
         
-        .components-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+        .components-list {{
+            padding-right: 10px;
+        }}
+        
+        .components-header {{
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
         }}
         
         .component-card {{
-            background: white;
+            background: #f8f9fa;
             border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 15px;
             border-left: 4px solid #3498db;
-            transition: transform 0.2s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
         }}
         
         .component-card:hover {{
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            background: #e3f2fd;
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }}
+        
+        .component-card.highlighted {{
+            background: #fff3e0;
+            border-left-color: #ff9800;
+            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
         }}
         
         .component-header {{
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
+            align-items: flex-start;
+            margin-bottom: 15px;
         }}
         
         .component-name {{
-            font-size: 1.4em;
+            font-size: 1.2em;
             font-weight: bold;
             color: #2c3e50;
+            margin-bottom: 5px;
         }}
         
         .component-coords {{
             background: #e3f2fd;
             color: #1976d2;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.8em;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
             font-family: monospace;
         }}
         
         .status-badges {{
             display: flex;
-            gap: 8px;
+            gap: 6px;
             margin-top: 8px;
+            flex-wrap: wrap;
         }}
         
         .badge {{
-            padding: 4px 8px;
-            border-radius: 12px;
+            padding: 3px 8px;
+            border-radius: 10px;
             font-size: 0.7em;
             font-weight: bold;
         }}
@@ -404,27 +556,27 @@ def create_image_html(image_name, image_data):
         }}
         
         .detail-section {{
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }}
         
         .detail-title {{
             font-weight: bold;
             color: #34495e;
-            margin-bottom: 10px;
-            font-size: 1em;
+            margin-bottom: 8px;
+            font-size: 0.9em;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }}
         
         .detail-content {{
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
+            background-color: white;
+            padding: 12px;
+            border-radius: 6px;
             font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-            line-height: 1.5;
-            max-height: 400px;
+            font-size: 0.8em;
+            line-height: 1.4;
+            max-height: 600px;
             overflow-y: auto;
             border: 1px solid #e9ecef;
             white-space: pre-wrap;
@@ -434,45 +586,79 @@ def create_image_html(image_name, image_data):
         .coordinates-grid {{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 15px;
+            gap: 10px;
+            margin-top: 10px;
         }}
         
         .coordinates-section {{
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
             border: 1px solid #e9ecef;
         }}
         
         .coordinates-title {{
             font-weight: bold;
             color: #495057;
-            margin-bottom: 10px;
-            font-size: 0.9em;
+            margin-bottom: 8px;
+            font-size: 0.8em;
         }}
         
         .coordinate-item {{
-            background: white;
-            padding: 8px;
+            background: #f8f9fa;
+            padding: 6px 8px;
             border-radius: 4px;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             font-family: monospace;
-            font-size: 0.8em;
+            font-size: 0.75em;
             border: 1px solid #dee2e6;
         }}
         
         .coordinate-item.input {{
-            border-left: 4px solid green;
+            border-left: 3px solid purple;
         }}
         
         .coordinate-item.output {{
-            border-left: 4px solid red;
+            border-left: 3px solid cyan;
         }}
         
-        @media (max-width: 1024px) {{
-            .components-grid {{
+        .expand-btn {{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }}
+        
+        .component-card.collapsed .detail-section,
+        .component-card.collapsed .coordinates-grid {{
+            display: none;
+        }}
+        
+        /* 响应式设计 */
+        @media (max-width: 1200px) {{
+            .main-content {{
                 grid-template-columns: 1fr;
+                height: auto;
+            }}
+            
+            .left-panel {{
+                position: static;
+                max-height: none;
+                margin-bottom: 20px;
+            }}
+            
+            .right-panel {{
+                max-height: none;
             }}
             
             .coordinates-grid {{
@@ -481,14 +667,189 @@ def create_image_html(image_name, image_data):
         }}
         
         @media (max-width: 768px) {{
-            .image-header {{
+            .container {{
+                padding: 10px;
+            }}
+            
+            .header h1 {{
+                font-size: 1.5em;
+            }}
+            
+            .navigation {{
                 flex-direction: column;
                 gap: 10px;
             }}
             
-            .header h1 {{
-                font-size: 2em;
+            .summary-stats {{
+                grid-template-columns: 1fr;
+                gap: 8px;
             }}
+        }}
+        
+        /* 滚动条样式 */
+        .right-panel::-webkit-scrollbar,
+        .detail-content::-webkit-scrollbar {{
+            width: 6px;
+        }}
+        
+        .right-panel::-webkit-scrollbar-track,
+        .detail-content::-webkit-scrollbar-track {{
+            background: #f1f1f1;
+            border-radius: 3px;
+        }}
+        
+        .right-panel::-webkit-scrollbar-thumb,
+        .detail-content::-webkit-scrollbar-thumb {{
+            background: #c1c1c1;
+            border-radius: 3px;
+        }}
+        
+        .right-panel::-webkit-scrollbar-thumb:hover,
+        .detail-content::-webkit-scrollbar-thumb:hover {{
+            background: #a8a8a8;
+        }}
+        
+        /* 标注功能样式 */
+        .annotation-section {{
+            background: #f0f8ff;
+            border: 1px solid #b3d9ff;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 15px;
+        }}
+        
+        .annotation-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }}
+        
+        .annotation-title {{
+            font-weight: bold;
+            color: #1976d2;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }}
+        
+        .annotation-select {{
+            padding: 6px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }}
+        
+        .annotation-select:focus {{
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+        }}
+        
+        .annotation-select.correct {{
+            border-color: #28a745;
+            background-color: #f8fff9;
+        }}
+        
+        .annotation-select.incorrect {{
+            border-color: #dc3545;
+            background-color: #fff8f8;
+        }}
+        
+        .annotation-select.pending {{
+            border-color: #ffc107;
+            background-color: #fffdf5;
+        }}
+        
+        .annotation-status {{
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8em;
+        }}
+        
+        .status-icon {{
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }}
+        
+        .status-icon.correct {{
+            background: #28a745;
+            color: white;
+        }}
+        
+        .status-icon.incorrect {{
+            background: #dc3545;
+            color: white;
+        }}
+        
+        .status-icon.pending {{
+            background: #ffc107;
+            color: #333;
+        }}
+        
+        .save-indicator {{
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: #28a745;
+            font-size: 0.7em;
+            font-weight: bold;
+        }}
+        
+        .save-indicator.show {{
+            opacity: 1;
+        }}
+        
+        .annotation-stats {{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-bottom: 15px;
+        }}
+        
+        .annotation-stat {{
+            background: white;
+            padding: 8px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }}
+        
+        .annotation-stat-number {{
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }}
+        
+        .annotation-stat-label {{
+            font-size: 0.7em;
+            color: #666;
+        }}
+        
+        .annotation-stat.correct .annotation-stat-number {{
+            color: #28a745;
+        }}
+        
+        .annotation-stat.incorrect .annotation-stat-number {{
+            color: #dc3545;
+        }}
+        
+        .annotation-stat.pending .annotation-stat-number {{
+            color: #ffc107;
+        }}
+        
+        .annotation-stat.total .annotation-stat-number {{
+            color: #6c757d;
         }}
     </style>
 </head>
@@ -500,128 +861,327 @@ def create_image_html(image_name, image_data):
         </div>
         
         <div class="navigation">
-            <a href="/view_image/{image_name.replace('.jpg', '')}" class="nav-btn">← 上一个</a>
+            <a href="/view_image/{image_name_no_ext}" class="nav-btn">← 上一个</a>
             <a href="/" class="nav-btn">🏠 返回首页</a>
-            <a href="/view_image/{image_name.replace('.jpg', '')}" class="nav-btn">下一个 →</a>
+            <a href="/view_image/{image_name_no_ext}" class="nav-btn">下一个 →</a>
         </div>
         
-        <div class="image-section">
-            <div class="image-header">
-                <div class="image-title">📷 {image_name}</div>
-            </div>
-            
-            {f'''
-            <div class="image-display">
-                <img src="data:image/png;base64,{annotated_image_base64}" alt="Annotated {image_name}" class="annotated-image">
-                <div class="legend">
-                    <div class="legend-item">
-                        <div class="legend-color legend-blue"></div>
-                        <span>组件边框</span>
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="image-section">
+                    <div class="image-title">📷 {image_name}</div>
+                    {annotated_image_html}
+                </div>
+                
+                <div class="summary-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">{total_components}</div>
+                        <div class="stat-label">检测组件</div>
                     </div>
-                    <div class="legend-item">
-                        <div class="legend-color legend-green"></div>
-                        <span>输入端口</span>
+                    <div class="stat-card">
+                        <div class="stat-number">{json_format_correct}</div>
+                        <div class="stat-label">格式正确</div>
                     </div>
-                    <div class="legend-item">
-                        <div class="legend-color legend-red"></div>
-                        <span>输出端口</span>
-                    </div>
-                </div>
-            </div>
-            ''' if annotated_image_base64 else '<div class="image-display"><p>图片加载失败</p></div>'}
-            
-            <div class="summary-stats">
-                <div class="stat-card">
-                    <div class="stat-number">{total_components}</div>
-                    <div class="stat-label">检测到的组件</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">{json_format_correct}</div>
-                    <div class="stat-label">JSON格式正确</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">{io_matches}</div>
-                    <div class="stat-label">IO匹配</div>
-                </div>
-            </div>
-            
-            <div class="components-grid">
-"""
-    
-    # 遍历每个组件
-    for component_coords, detail_info in component_details.items():
-        # 获取组件详细信息
-        description = detail_info.get('description', {})
-        warning = detail_info.get('warning', '')
-        io_num_match = detail_info.get('io_num_match', False)
-        det_io_info = detail_info.get('det_io_info', {})
-        
-        # 获取组件名称
-        if isinstance(description, dict):
-            component_name = description.get('component_name', '未知组件')
-        else:
-            component_name = '未知组件'
-        
-        # 格式化描述信息
-        description_formatted = format_description(description)
-        
-        # 确定状态徽章
-        status_badges = []
-        if warning == 'JSON格式正确':
-            status_badges.append('<span class="badge badge-success">✓ JSON格式正确</span>')
-        else:
-            status_badges.append('<span class="badge badge-danger">✗ JSON格式错误</span>')
-        
-        if io_num_match:
-            status_badges.append('<span class="badge badge-success">✓ IO端口匹配</span>')
-        else:
-            status_badges.append('<span class="badge badge-warning">⚠ IO端口不匹配</span>')
-        
-        # 获取坐标信息（只显示det_io_info）
-        det_inputs = det_io_info.get('input', [])
-        det_outputs = det_io_info.get('output', [])
-        
-        html_content += f"""
-            <div class="component-card">
-                <div class="component-header">
-                    <div>
-                        <div class="component-name">🔧 {component_name}</div>
-                        <div class="component-coords">{component_coords}</div>
-                        <div class="status-badges">
-                            {''.join(status_badges)}
-                        </div>
+                    <div class="stat-card">
+                        <div class="stat-number">{io_matches}</div>
+                        <div class="stat-label">IO匹配</div>
                     </div>
                 </div>
                 
-                <div class="detail-section">
-                    <div class="detail-title">
-                        📝 组件描述
+                <!-- 标注统计区域 -->
+                <div class="annotation-stats" id="annotation-stats">
+                    <div class="annotation-stat correct">
+                        <div class="annotation-stat-number" id="correct-count">0</div>
+                        <div class="annotation-stat-label">正确</div>
                     </div>
-                    <div class="detail-content">{description_formatted}</div>
-                </div>
-                
-                <div class="coordinates-grid">
-                    <div class="coordinates-section">
-                        <div class="coordinates-title">🎯 检测的输入端口 ({len(det_inputs)})</div>
-                        {''.join([f'<div class="coordinate-item input">[{coord[0]}, {coord[1]}, {coord[2]}, {coord[3]}]</div>' for coord in det_inputs])}
+                    <div class="annotation-stat incorrect">
+                        <div class="annotation-stat-number" id="incorrect-count">0</div>
+                        <div class="annotation-stat-label">错误</div>
                     </div>
-                    <div class="coordinates-section">
-                        <div class="coordinates-title">🎯 检测的输出端口 ({len(det_outputs)})</div>
-                        {''.join([f'<div class="coordinate-item output">[{coord[0]}, {coord[1]}, {coord[2]}, {coord[3]}]</div>' for coord in det_outputs])}
+                    <div class="annotation-stat pending">
+                        <div class="annotation-stat-number" id="pending-count">0</div>
+                        <div class="annotation-stat-label">待确定</div>
+                    </div>
+                    <div class="annotation-stat total">
+                        <div class="annotation-stat-number" id="total-count">{total_components}</div>
+                        <div class="annotation-stat-label">总计</div>
                     </div>
                 </div>
             </div>
-"""
-    
-    html_content += """
+            
+            <div class="right-panel">
+                <div class="components-list">
+                    <div class="components-header">🔧 组件详情列表 ({total_components}个)</div>
+                    {components_html}
+                </div>
             </div>
         </div>
     </div>
+    
+    <script>
+        // 全局变量
+        const IMAGE_NAME = '{image_name}';
+        
+        // 简化的updateAnnotation函数 - 确保在全局作用域
+        function updateAnnotation(selectElement) {{
+            console.log('=== updateAnnotation被调用 ===');
+            console.log('selectElement:', selectElement);
+            console.log('selectElement.value:', selectElement.value);
+            
+            try {{
+                const componentIndex = selectElement.getAttribute('data-component-index');
+                const coords = selectElement.getAttribute('data-coords');
+                const newLabel = selectElement.value;
+                
+                console.log('componentIndex:', componentIndex);
+                console.log('coords:', coords);
+                console.log('newLabel:', newLabel);
+                
+                // 更新UI状态
+                updateComponentUI(componentIndex, newLabel);
+                
+                // 保存到服务器
+                saveAnnotation(coords, newLabel, componentIndex);
+                
+            }} catch (error) {{
+                console.error('updateAnnotation执行出错:', error);
+                alert('updateAnnotation执行出错: ' + error.message);
+            }}
+        }}
+        
+        // 确保函数在window对象上也可用
+        window.updateAnnotation = updateAnnotation;
+        
+        // 更新组件UI状态
+        function updateComponentUI(componentIndex, label) {{
+            try {{
+                console.log('updateComponentUI被调用:', componentIndex, label);
+                
+                const card = document.getElementById('component-' + componentIndex);
+                if (!card) {{
+                    console.error('找不到组件卡片:', componentIndex);
+                    return;
+                }}
+                
+                const select = card.querySelector('.annotation-select');
+                const statusIcon = document.getElementById('status-icon-' + componentIndex);
+                const statusText = document.getElementById('status-text-' + componentIndex);
+                
+                // 更新选择框样式
+                if (select) {{
+                    select.className = 'annotation-select ' + label;
+                }}
+                
+                // 更新状态图标
+                const icons = {{'correct': '✓', 'incorrect': '✗', 'pending': '?'}};
+                const texts = {{'correct': '正确', 'incorrect': '错误', 'pending': '待确定'}};
+                
+                if (statusIcon) {{
+                    statusIcon.className = 'status-icon ' + label;
+                    statusIcon.textContent = icons[label];
+                }}
+                
+                if (statusText) {{
+                    statusText.textContent = texts[label];
+                }}
+                
+                // 更新卡片的data-label属性
+                card.setAttribute('data-label', label);
+                
+            }} catch (error) {{
+                console.error('updateComponentUI执行出错:', error);
+            }}
+        }}
+        
+        // 保存标注到服务器
+        function saveAnnotation(coords, label, componentIndex) {{
+            console.log('=== saveAnnotation被调用 ===');
+            console.log('图像名称:', IMAGE_NAME);
+            console.log('组件坐标:', coords);
+            console.log('标注标签:', label);
+            console.log('组件索引:', componentIndex);
+            
+            try {{
+                const saveIndicator = document.getElementById('save-indicator-' + componentIndex);
+                
+                const requestData = {{
+                    image_name: IMAGE_NAME,
+                    component_coords: coords,
+                    label: label
+                }};
+                
+                console.log('发送的请求数据:', requestData);
+                
+                fetch('/save_annotation', {{
+                    method: 'POST',
+                    headers: {{
+                        'Content-Type': 'application/json',
+                    }},
+                    body: JSON.stringify(requestData)
+                }})
+                .then(response => {{
+                    console.log('收到响应状态:', response.status);
+                    if (!response.ok) {{
+                        throw new Error('HTTP ' + response.status);
+                    }}
+                    return response.json();
+                }})
+                .then(data => {{
+                    console.log('收到响应数据:', data);
+                    if (data.success) {{
+                        console.log('保存成功');
+                        
+                        // 显示保存成功指示器
+                        if (saveIndicator) {{
+                            saveIndicator.classList.add('show');
+                            setTimeout(() => {{
+                                saveIndicator.classList.remove('show');
+                            }}, 2000);
+                        }}
+                        
+                        // 更新统计信息
+                        updateAnnotationStats();
+                    }} else {{
+                        console.error('保存失败:', data.message);
+                        alert('保存失败: ' + data.message);
+                    }}
+                }})
+                .catch(error => {{
+                    console.error('网络错误:', error);
+                    alert('保存失败: 网络错误 - ' + error.message);
+                }});
+                
+            }} catch (error) {{
+                console.error('saveAnnotation执行出错:', error);
+                alert('saveAnnotation执行出错: ' + error.message);
+            }}
+        }}
+        
+        // 更新标注统计信息
+        function updateAnnotationStats() {{
+            try {{
+                const imageNameForStats = IMAGE_NAME.replace('.jpg', '');
+                fetch('/get_annotation_stats/' + imageNameForStats)
+                .then(response => {{
+                    if (!response.ok) {{
+                        throw new Error('HTTP ' + response.status);
+                    }}
+                    return response.json();
+                }})
+                .then(stats => {{
+                    const correctCount = document.getElementById('correct-count');
+                    const incorrectCount = document.getElementById('incorrect-count');
+                    const pendingCount = document.getElementById('pending-count');
+                    const totalCount = document.getElementById('total-count');
+                    
+                    if (correctCount) correctCount.textContent = stats.correct;
+                    if (incorrectCount) incorrectCount.textContent = stats.incorrect;
+                    if (pendingCount) pendingCount.textContent = stats.pending;
+                    if (totalCount) totalCount.textContent = stats.total;
+                }})
+                .catch(error => {{
+                    console.error('更新统计信息出错:', error);
+                }});
+            }} catch (error) {{
+                console.error('updateAnnotationStats执行出错:', error);
+            }}
+        }}
+        
+        // 展开/收起组件详情
+        function toggleComponent(btn) {{
+            const card = btn.closest('.component-card');
+            if (card.classList.contains('collapsed')) {{
+                card.classList.remove('collapsed');
+                btn.textContent = '−';
+            }} else {{
+                card.classList.add('collapsed');
+                btn.textContent = '+';
+            }}
+        }}
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {{
+            console.log('=== 页面加载完成 ===');
+            console.log('IMAGE_NAME:', IMAGE_NAME);
+            
+            try {{
+                // 验证所有下拉框
+                const selects = document.querySelectorAll('.annotation-select');
+                console.log('找到', selects.length, '个下拉框');
+                
+                selects.forEach((select, index) => {{
+                    console.log('下拉框', index + 1 + ':', select);
+                    console.log('  - data-component-index:', select.getAttribute('data-component-index'));
+                    console.log('  - data-coords:', select.getAttribute('data-coords'));
+                    console.log('  - onchange属性:', select.getAttribute('onchange'));
+                    
+                    // 手动添加事件监听器作为备份
+                    select.addEventListener('change', function(e) {{
+                        console.log('addEventListener change事件触发');
+                        updateAnnotation(this);
+                    }});
+                }});
+                
+                // 自动选中第一个组件
+                const firstCard = document.querySelector('.component-card');
+                if (firstCard) {{
+                    firstCard.click();
+                }}
+                
+                // 加载标注统计信息
+                updateAnnotationStats();
+                
+                console.log('初始化完成');
+                
+            }} catch (error) {{
+                console.error('初始化出错:', error);
+                alert('页面初始化出错: ' + error.message);
+            }}
+        }});
+        
+        // 简化的卡片点击事件
+        document.addEventListener('click', function(e) {{
+            if (e.target.classList.contains('component-card') || 
+                e.target.closest('.component-card')) {{
+                
+                const card = e.target.classList.contains('component-card') ? 
+                           e.target : e.target.closest('.component-card');
+                
+                // 移除其他卡片的高亮
+                document.querySelectorAll('.component-card').forEach(c => c.classList.remove('highlighted'));
+                
+                // 高亮当前卡片
+                card.classList.add('highlighted');
+            }}
+        }});
+        
+        // 测试函数 - 可以在控制台中调用
+        window.testUpdateAnnotation = function() {{
+            const firstSelect = document.querySelector('.annotation-select');
+            if (firstSelect) {{
+                console.log('测试updateAnnotation函数');
+                updateAnnotation(firstSelect);
+            }} else {{
+                console.log('没有找到下拉框');
+            }}
+        }};
+        
+        console.log('所有JavaScript代码加载完成');
+    </script>
 </body>
 </html>
-"""
-    
-    return html_content
+    """
+
+    # 填充模板
+    return html_template.format(
+        image_name=image_name,
+        image_name_no_ext=image_name.replace('.jpg', ''),
+        annotated_image_html=annotated_image_html,
+        total_components=total_components,
+        json_format_correct=json_format_correct,
+        io_matches=io_matches,
+        components_html=components_html,
+    )
 
 @app.route('/set_json_path', methods=['POST'])
 def set_json_path():
@@ -702,6 +1262,11 @@ def index():
         .header h1 {{
             font-size: 2.5em;
             margin-bottom: 10px;
+        }}
+        
+        .header p {{
+            font-size: 1.1em;
+            opacity: 0.9;
         }}
         
         .config-section {{
@@ -998,6 +1563,92 @@ def search():
     
     # 返回简化的搜索结果页面
     return redirect(url_for('index'))
+
+@app.route('/save_annotation', methods=['POST'])
+def save_annotation():
+    """保存组件标注结果"""
+    try:
+        print("=== 开始保存标注 ===")
+        data = request.get_json()
+        print(f"接收到的数据: {data}")
+        
+        image_name = data.get('image_name')
+        component_coords = data.get('component_coords')
+        label = data.get('label')
+        
+        print(f"图像名称: {image_name}")
+        print(f"组件坐标: {component_coords}")
+        print(f"标注标签: {label}")
+        
+        if not all([image_name, component_coords, label]):
+            print("参数不完整")
+            return jsonify({'success': False, 'message': '参数不完整'})
+        
+        # 加载当前JSON数据
+        json_file = get_json_data_file()
+        print(f"JSON文件路径: {json_file}")
+        
+        json_data = load_json_data()
+        print(f"加载的JSON数据键: {list(json_data.keys())}")
+        
+        if image_name not in json_data:
+            print(f"图像不存在: {image_name}")
+            return jsonify({'success': False, 'message': '图像不存在'})
+        
+        component_details = json_data[image_name].get('component_details', {})
+        print(f"组件详情键: {list(component_details.keys())}")
+        
+        if component_coords not in component_details:
+            print(f"组件不存在: {component_coords}")
+            return jsonify({'success': False, 'message': '组件不存在'})
+        
+        # 更新标注结果
+        print(f"更新前的组件数据: {component_details[component_coords]}")
+        component_details[component_coords]['label'] = label
+        print(f"更新后的组件数据: {component_details[component_coords]}")
+        
+        # 保存到文件
+        print(f"准备保存到文件: {json_file}")
+        with open(json_file, 'w', encoding='utf-8') as f:
+            json.dump(json_data, f, ensure_ascii=False, indent=2)
+        print("文件保存成功")
+        
+        return jsonify({'success': True, 'message': f'已保存标注: {label}'})
+        
+    except Exception as e:
+        print(f"保存失败，错误: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({'success': False, 'message': f'保存失败: {str(e)}'})
+
+@app.route('/get_annotation_stats/<image_name>')
+def get_annotation_stats(image_name):
+    """获取图像的标注统计信息"""
+    if not image_name.endswith('.jpg'):
+        image_name += '.jpg'
+    
+    data = load_json_data()
+    if image_name not in data:
+        return jsonify({'error': '图像不存在'})
+    
+    component_details = data[image_name].get('component_details', {})
+    stats = {
+        'correct': 0,
+        'incorrect': 0,
+        'pending': 0,
+        'total': len(component_details)
+    }
+    
+    for detail in component_details.values():
+        label = detail.get('label', 'correct')  # 默认为正确
+        if label == 'correct':
+            stats['correct'] += 1
+        elif label == 'incorrect':
+            stats['incorrect'] += 1
+        else:
+            stats['pending'] += 1
+    
+    return jsonify(stats)
 
 if __name__ == '__main__':
     app.run(debug=True, host='192.168.99.119', port=5001) 
