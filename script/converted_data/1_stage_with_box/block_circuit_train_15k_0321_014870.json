@@ -1,0 +1,98 @@
+{
+  "DCO": {
+    "component_box": [
+      584.0,
+      17.0,
+      710.0,
+      153.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Feedback Path / Divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Filter": {
+    "component_box": [
+      367.0,
+      17.0,
+      495.0,
+      153.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD": {
+    "component_box": [
+      151.0,
+      17.0,
+      277.0,
+      154.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ref",
+          "count": 1
+        },
+        {
+          "name": "Feedback Path / Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Feedback Path / Divider": {
+    "component_box": [
+      266.0,
+      248.0,
+      587.0,
+      384.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

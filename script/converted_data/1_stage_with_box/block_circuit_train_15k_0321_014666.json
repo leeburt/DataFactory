@@ -1,0 +1,195 @@
+{
+  "IB": {
+    "component_box": [
+      403.0,
+      433.0,
+      453.0,
+      461.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Ground",
+          "count": 1
+        },
+        {
+          "name": "Attenuation-adaptive noise control circuit",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RB": {
+    "component_box": [
+      245.0,
+      321.0,
+      340.0,
+      386.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Input stage",
+          "count": 1
+        },
+        {
+          "name": "VCM",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Attenuation-adaptive noise control circuit": {
+    "component_box": [
+      537.0,
+      321.0,
+      738.0,
+      457.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "IB",
+          "count": 1
+        },
+        {
+          "name": "V_AANC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Ground": {
+    "component_box": [
+      147.0,
+      309.0,
+      196.0,
+      338.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C_BYPASS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Ultrasound transducer": {
+    "component_box": [
+      50.0,
+      251.0,
+      112.0,
+      284.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CIN",
+          "count": 1
+        },
+        {
+          "name": "GND",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Input stage": {
+    "component_box": [
+      385.0,
+      140.0,
+      539.0,
+      297.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RM",
+          "count": 1
+        },
+        {
+          "name": "CIN",
+          "count": 1
+        },
+        {
+          "name": "CBYPASS",
+          "count": 1
+        },
+        {
+          "name": "RB",
+          "count": 1
+        },
+        {
+          "name": "IB",
+          "count": 1
+        },
+        {
+          "name": "Output stage",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Output stage": {
+    "component_box": [
+      548.0,
+      140.0,
+      703.0,
+      296.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input stage",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VOP",
+          "count": 1
+        },
+        {
+          "name": "VON",
+          "count": 1
+        },
+        {
+          "name": "R_M",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "GND": {
+    "component_box": [
+      57.0,
+      309.0,
+      106.0,
+      338.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Ultrasound transducer",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

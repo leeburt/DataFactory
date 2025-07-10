@@ -1,0 +1,155 @@
+{
+  "Register A": {
+    "component_box": [
+      106.0,
+      217.0,
+      158.0,
+      407.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "T",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Unit A",
+          "count": 1
+        },
+        {
+          "name": "Register B",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Power Management Unit": {
+    "component_box": [
+      28.0,
+      12.0,
+      234.0,
+      160.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Register A",
+          "count": 1
+        },
+        {
+          "name": "Register B",
+          "count": 1
+        },
+        {
+          "name": "MUX",
+          "count": 1
+        },
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Unit A": {
+    "component_box": [
+      194.0,
+      216.0,
+      329.0,
+      408.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Register A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Unit B": {
+    "component_box": [
+      192.0,
+      443.0,
+      329.0,
+      636.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Register B",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TSC checker tree": {
+    "component_box": [
+      477.0,
+      218.0,
+      565.0,
+      633.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MUX",
+          "count": 1
+        },
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "error indication",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Register B": {
+    "component_box": [
+      104.0,
+      445.0,
+      158.0,
+      631.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "T",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Unit B",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

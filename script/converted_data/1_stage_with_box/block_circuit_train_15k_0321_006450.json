@@ -1,0 +1,290 @@
+{
+  "2b TDC": {
+    "component_box": [
+      440.0,
+      170.0,
+      573.0,
+      426.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        },
+        {
+          "name": "Subtractor",
+          "count": 1
+        },
+        {
+          "name": "C-3C Pseudo DAC",
+          "count": 1
+        },
+        {
+          "name": "C-3C Pseudo DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2b/step SA Reg.",
+          "count": 1
+        },
+        {
+          "name": "2b/step SA Reg.",
+          "count": 1
+        },
+        {
+          "name": "Asynchronous Logic",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "2b/step SA Reg.",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Summer": {
+    "component_box": [
+      287.0,
+      191.0,
+      319.0,
+      222.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S&H",
+          "count": 1
+        },
+        {
+          "name": "R-2R DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2b TDC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Hybrid DAC": {
+    "component_box": [
+      23.0,
+      185.0,
+      240.0,
+      443.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_REF",
+          "count": 1
+        },
+        {
+          "name": "Asynchronous Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        },
+        {
+          "name": "2b TDC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "C-3C Pseudo DAC": {
+    "component_box": [
+      83.0,
+      303.0,
+      205.0,
+      399.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Asynchronous Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2b TDC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "S&H": {
+    "component_box": [
+      272.0,
+      68.0,
+      368.0,
+      128.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vinp",
+          "count": 1
+        },
+        {
+          "name": "Vinn",
+          "count": 1
+        },
+        {
+          "name": "Asynchronous Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        },
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Subtractor": {
+    "component_box": [
+      322.0,
+      232.0,
+      355.0,
+      263.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summer",
+          "count": 1
+        },
+        {
+          "name": "S&H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2b TDC",
+          "count": 1
+        },
+        {
+          "name": "2b TDC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Asynchronous Logic": {
+    "component_box": [
+      436.0,
+      67.0,
+      767.0,
+      129.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLKs",
+          "count": 1
+        },
+        {
+          "name": "2b TDC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "φS",
+          "count": 1
+        },
+        {
+          "name": "φK",
+          "count": 1
+        },
+        {
+          "name": "2b/step SA Reg.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2b/step SA Reg.": {
+    "component_box": [
+      633.0,
+      238.0,
+      766.0,
+      335.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2b TDC",
+          "count": 1
+        },
+        {
+          "name": "Asynchronous Logic",
+          "count": 1
+        },
+        {
+          "name": "SLEEP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DATA[9:0]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "R-2R DAC": {
+    "component_box": [
+      106.0,
+      188.0,
+      208.0,
+      266.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_REF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        },
+        {
+          "name": "C-3C Pseudo DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

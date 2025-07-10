@@ -1,0 +1,111 @@
+{
+  "Charge Pump": {
+    "component_box": [
+      151.0,
+      257.0,
+      293.0,
+      360.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "Ring Oscillator",
+          "count": 1
+        },
+        {
+          "name": "C_CP1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Ring Oscillator": {
+    "component_box": [
+      151.0,
+      125.0,
+      294.0,
+      227.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RST",
+          "count": 1
+        },
+        {
+          "name": "Level Shifter",
+          "count": 1
+        },
+        {
+          "name": "Charge Pump",
+          "count": 1
+        },
+        {
+          "name": "Charge Pump",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Level Shifter": {
+    "component_box": [
+      371.0,
+      125.0,
+      513.0,
+      226.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "EN switch",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Ring Oscillator",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      702.0,
+      274.0,
+      763.0,
+      351.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_IN",
+          "count": 1
+        },
+        {
+          "name": "V_OUT",
+          "count": 1
+        },
+        {
+          "name": "EN",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "AD6644": {
+    "component_box": [
+      127.0,
+      345.0,
+      222.0,
+      401.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Supply",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Logic Analyzer",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "AD6644",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Logic Analyzer": {
+    "component_box": [
+      13.0,
+      135.0,
+      126.0,
+      214.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PC",
+          "count": 1
+        },
+        {
+          "name": "AD6644",
+          "count": 1
+        },
+        {
+          "name": "AD6644",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Splitter": {
+    "component_box": [
+      302.0,
+      224.0,
+      342.0,
+      247.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Supply",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Capacitor",
+          "count": 1
+        },
+        {
+          "name": "AD6644",
+          "count": 1
+        },
+        {
+          "name": "Phase Shifter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Capacitor": {
+    "component_box": [
+      398.0,
+      258.0,
+      439.0,
+      282.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Splitter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "AD6644",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Signal Generator": {
+    "component_box": [
+      465.0,
+      100.0,
+      667.0,
+      248.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Splitter",
+          "count": 1
+        },
+        {
+          "name": "Synch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Power Supply": {
+    "component_box": [
+      196.0,
+      134.0,
+      308.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "AD6644",
+          "count": 1
+        },
+        {
+          "name": "AD6644",
+          "count": 1
+        },
+        {
+          "name": "Splitter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PC": {
+    "component_box": [
+      205.0,
+      13.0,
+      317.0,
+      91.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Logic Analyzer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Logic Analyzer",
+          "count": 1
+        },
+        {
+          "name": "Power Supply",
+          "count": 1
+        },
+        {
+          "name": "Signal Generator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

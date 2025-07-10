@@ -1,0 +1,94 @@
+{
+  "电流源": {
+    "component_box": [
+      388.0,
+      127.0,
+      440.0,
+      187.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FREQUENCY DETECTOR",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "A",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RING OSCILLATOR VCO": {
+    "component_box": [
+      672.0,
+      124.0,
+      864.0,
+      225.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FREQUENCY DETECTOR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "A": {
+    "component_box": [
+      558.0,
+      55.0,
+      615.0,
+      130.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "电流源",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RING OSCILLATOR VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FREQUENCY DETECTOR": {
+    "component_box": [
+      10.0,
+      128.0,
+      219.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RING OSCILLATOR VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "电流源",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

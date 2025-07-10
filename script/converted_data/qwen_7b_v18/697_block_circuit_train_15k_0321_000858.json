@@ -1,0 +1,172 @@
+{
+  "Vdd": {
+    "component_box": [
+      68.0,
+      6.0,
+      137.0,
+      74.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Reg./Switch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Output": {
+    "component_box": [
+      1066.0,
+      365.0,
+      1134.0,
+      431.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Offset Cancelling": {
+    "component_box": [
+      405.0,
+      258.0,
+      496.0,
+      465.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Reg./Switch",
+          "count": 1
+        },
+        {
+          "name": "Amp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Reg./Switch": {
+    "component_box": [
+      8.0,
+      127.0,
+      198.0,
+      226.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vdd",
+          "count": 1
+        },
+        {
+          "name": "Hall Plate",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Schmitt触发比较器": {
+    "component_box": [
+      684.0,
+      268.0,
+      782.0,
+      452.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Amp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Logical",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Amp": {
+    "component_box": [
+      531.0,
+      268.0,
+      627.0,
+      452.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Offset Cancelling",
+          "count": 1
+        },
+        {
+          "name": "Schmitt触发比较器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Hall Plate": {
+    "component_box": [
+      213.0,
+      219.0,
+      379.0,
+      364.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Reg./Switch",
+          "count": 1
+        },
+        {
+          "name": "Offset Cancelling",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Logical": {
+    "component_box": [
+      829.0,
+      258.0,
+      906.0,
+      465.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Schmitt触发比较器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Reg./Switch",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

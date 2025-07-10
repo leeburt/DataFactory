@@ -1,0 +1,132 @@
+{
+  "CMOS Flash": {
+    "component_box": [
+      471.0,
+      556.0,
+      613.0,
+      620.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "Common",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "A2": {
+    "component_box": [
+      555.0,
+      97.0,
+      627.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Common Mode Voltage",
+          "count": 1
+        },
+        {
+          "name": "Summing Junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output",
+          "count": 1
+        },
+        {
+          "name": "Rfb",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Hold Switch (non-inverting input)",
+          "count": 1
+        },
+        {
+          "name": "Hold Switch (inverting input)",
+          "count": 1
+        },
+        {
+          "name": "Hold Capacitor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "A1": {
+    "component_box": [
+      143.0,
+      246.0,
+      219.0,
+      315.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "1.25 V ref",
+          "count": 1
+        },
+        {
+          "name": "Switch",
+          "count": 1
+        },
+        {
+          "name": "Q2",
+          "count": 1
+        },
+        {
+          "name": "Q1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DAC": {
+    "component_box": [
+      480.0,
+      333.0,
+      655.0,
+      465.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CMOS Flash",
+          "count": 1
+        },
+        {
+          "name": "Summing Junction",
+          "count": 1
+        },
+        {
+          "name": "1.25 V",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

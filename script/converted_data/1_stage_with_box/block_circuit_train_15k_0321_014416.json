@@ -1,0 +1,203 @@
+{
+  "Summing junction": {
+    "component_box": [
+      337.0,
+      37.0,
+      366.0,
+      67.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Integrator 1",
+          "count": 1
+        },
+        {
+          "name": "k2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator 2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "k2": {
+    "component_box": [
+      328.0,
+      120.0,
+      375.0,
+      158.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "k1": {
+    "component_box": [
+      91.0,
+      120.0,
+      138.0,
+      159.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Integrator 2": {
+    "component_box": [
+      385.0,
+      27.0,
+      534.0,
+      76.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RTD Quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      100.0,
+      38.0,
+      130.0,
+      67.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input",
+          "count": 1
+        },
+        {
+          "name": "k1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator 1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RTD Quantizer": {
+    "component_box": [
+      561.0,
+      11.0,
+      724.0,
+      93.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Integrator 2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Integrator 1": {
+    "component_box": [
+      158.0,
+      27.0,
+      306.0,
+      77.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      473.0,
+      165.0,
+      629.0,
+      215.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RTD Quantizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "k2",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "k1",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

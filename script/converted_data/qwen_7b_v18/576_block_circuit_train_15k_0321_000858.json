@@ -1,0 +1,166 @@
+{
+  "Timing Error Detection": {
+    "component_box": [
+      775.0,
+      425.0,
+      1004.0,
+      546.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Matched Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Loop Filter and Controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Matched Filter": {
+    "component_box": [
+      721.0,
+      236.0,
+      951.0,
+      355.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Timing Error Detection",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Carrier Recovery": {
+    "component_box": [
+      693.0,
+      46.0,
+      979.0,
+      164.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Matched Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Interpolator": {
+    "component_box": [
+      312.0,
+      236.0,
+      542.0,
+      355.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "Loop Filter and Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Mixer": {
+    "component_box": [
+      587.0,
+      267.0,
+      647.0,
+      325.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Interpolator",
+          "count": 1
+        },
+        {
+          "name": "Carrier Recovery",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Matched Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Loop Filter and Controller": {
+    "component_box": [
+      475.0,
+      427.0,
+      704.0,
+      546.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Timing Error Detection",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Interpolator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      122.0,
+      237.0,
+      242.0,
+      355.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Interpolator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

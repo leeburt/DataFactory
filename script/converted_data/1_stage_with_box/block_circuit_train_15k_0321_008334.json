@@ -1,0 +1,416 @@
+{
+  "I_n2": {
+    "component_box": [
+      511.0,
+      519.0,
+      546.0,
+      552.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "En0  \nEn2",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I_n1": {
+    "component_box": [
+      512.0,
+      296.0,
+      545.0,
+      329.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Voltage Amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Enₙ₁": {
+    "component_box": [
+      555.0,
+      257.0,
+      582.0,
+      285.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "X4",
+          "count": 1
+        },
+        {
+          "name": "Voltage Amplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Inₙ0": {
+    "component_box": [
+      510.0,
+      136.0,
+      544.0,
+      168.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Voltage Amplifier",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "E_n4": {
+    "component_box": [
+      108.0,
+      146.0,
+      136.0,
+      174.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "OA4",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Voltage Amplifier": {
+    "component_box": [
+      624.0,
+      63.0,
+      715.0,
+      157.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Inₙ₀",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Enₙ₀  \nEnₙ₁  \nEnₙ₂  \nEnₙ₄",
+          "count": 1
+        },
+        {
+          "name": "X0",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Enₙ₀  \nEnₙ₁  \nEnₙ₂  \nEnₙ₄": {
+    "component_box": [
+      553.0,
+      97.0,
+      580.0,
+      124.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Inₙ0",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Voltage Amplifier",
+          "count": 1
+        },
+        {
+          "name": "X4",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "En0  \nEn2": {
+    "component_box": [
+      555.0,
+      480.0,
+      582.0,
+      507.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "I_n2",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "X4",
+          "count": 1
+        },
+        {
+          "name": "Voltage Amplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Er2": {
+    "component_box": [
+      703.0,
+      680.0,
+      730.0,
+      707.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "X3",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I_n3": {
+    "component_box": [
+      560.0,
+      763.0,
+      594.0,
+      796.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "E_R1",
+          "count": 1
+        },
+        {
+          "name": "Er2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "OA4": {
+    "component_box": [
+      144.0,
+      136.0,
+      240.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "E_n4",
+          "count": 1
+        },
+        {
+          "name": "I_n4",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "X4",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "E_ZF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "E_ZF": {
+    "component_box": [
+      223.0,
+      94.0,
+      251.0,
+      122.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Z_F",
+          "count": 1
+        },
+        {
+          "name": "Enₙ₀",
+          "count": 1
+        },
+        {
+          "name": "Inₙ0",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "En4\nEn3": {
+    "component_box": [
+      588.0,
+      731.0,
+      616.0,
+      760.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "I_n3",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I_n3^+": {
+    "component_box": [
+      598.0,
+      857.0,
+      632.0,
+      889.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "OA3",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "I_n4": {
+    "component_box": [
+      81.0,
+      171.0,
+      115.0,
+      204.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "OA4",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "E_R1": {
+    "component_box": [
+      462.0,
+      731.0,
+      489.0,
+      760.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "OA3": {
+    "component_box": [
+      624.0,
+      722.0,
+      719.0,
+      818.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "En4\nEn3",
+          "count": 1
+        },
+        {
+          "name": "I_n3",
+          "count": 1
+        },
+        {
+          "name": "I_n3^+",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "X3",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

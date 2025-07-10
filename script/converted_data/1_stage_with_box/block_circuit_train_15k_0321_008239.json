@@ -1,0 +1,199 @@
+{
+  "RF PA": {
+    "component_box": [
+      109.0,
+      227.0,
+      245.0,
+      371.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "antenna",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "RF TRX+SX",
+          "count": 1
+        },
+        {
+          "name": "Power Management Buck / LDOs",
+          "count": 1
+        },
+        {
+          "name": "Battery",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Audio Codec": {
+    "component_box": [
+      484.0,
+      244.0,
+      638.0,
+      356.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Management Buck / LDOs",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ClassD",
+          "count": 1
+        },
+        {
+          "name": "ClassAB",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Analog Baseband + Modem + AP",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RF TRX+SX": {
+    "component_box": [
+      274.0,
+      243.0,
+      426.0,
+      356.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Management Buck / LDOs",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RF PA",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Analog Baseband + Modem + AP",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ClassAB": {
+    "component_box": [
+      684.0,
+      378.0,
+      824.0,
+      521.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_BAT",
+          "count": 1
+        },
+        {
+          "name": "Analog Baseband + Modem + AP",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "ClassD": {
+    "component_box": [
+      685.0,
+      227.0,
+      824.0,
+      370.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Power Management Buck / LDOs",
+          "count": 1
+        },
+        {
+          "name": "Audio Codec",
+          "count": 1
+        },
+        {
+          "name": "Battery+",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Analog Baseband + Modem + AP": {
+    "component_box": [
+      274.0,
+      383.0,
+      639.0,
+      513.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Management Buck / LDOs",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "RF TRX+SX",
+          "count": 1
+        },
+        {
+          "name": "Audio Codec",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Power Management Buck / LDOs": {
+    "component_box": [
+      275.0,
+      102.0,
+      639.0,
+      194.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_BAT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RF TRX+SX",
+          "count": 1
+        },
+        {
+          "name": "Audio Codec",
+          "count": 1
+        },
+        {
+          "name": "Analog Baseband + Modem + AP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

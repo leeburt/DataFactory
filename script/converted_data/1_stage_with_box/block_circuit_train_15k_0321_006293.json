@@ -1,0 +1,229 @@
+{
+  "Coherent Rake Reciever": {
+    "component_box": [
+      1491.0,
+      255.0,
+      1663.0,
+      372.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Data Out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RF Front-End": {
+    "component_box": [
+      449.0,
+      176.0,
+      622.0,
+      292.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Power Amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Power Amplifier": {
+    "component_box": [
+      611.0,
+      124.0,
+      672.0,
+      155.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RF Front-End",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Antenna",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Quadrature Deodulator": {
+    "component_box": [
+      1010.0,
+      176.0,
+      1181.0,
+      292.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RF Front-End",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MF (Synch.)",
+          "count": 1
+        },
+        {
+          "name": "DLL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      346.0,
+      205.0,
+      403.0,
+      262.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Quadrature Modulator",
+          "count": 1
+        },
+        {
+          "name": "PN Code",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RF Front-End",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DLL": {
+    "component_box": [
+      1277.0,
+      255.0,
+      1450.0,
+      371.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MF (Synch.)",
+          "count": 1
+        },
+        {
+          "name": "Quadrature Deodulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Coherent Rake Reciever",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Quadrature Modulator": {
+    "component_box": [
+      129.0,
+      175.0,
+      301.0,
+      292.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Data In",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Antenna": {
+    "component_box": [
+      744.0,
+      123.0,
+      806.0,
+      155.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Antenna",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RF Front-End",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MF (Synch.)": {
+    "component_box": [
+      1277.0,
+      96.0,
+      1450.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Quadrature Deodulator",
+          "count": 1
+        },
+        {
+          "name": "Quadrature Deodulator",
+          "count": 1
+        },
+        {
+          "name": "PN Code",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DLL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

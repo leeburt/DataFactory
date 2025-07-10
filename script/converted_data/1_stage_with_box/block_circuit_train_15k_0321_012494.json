@@ -1,0 +1,108 @@
+{
+  "Oscillator": {
+    "component_box": [
+      121.0,
+      296.0,
+      226.0,
+      422.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "5V电源 rail",
+          "count": 1
+        },
+        {
+          "name": "Driver",
+          "count": 1
+        },
+        {
+          "name": "To LV Enable",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Driver": {
+    "component_box": [
+      264.0,
+      334.0,
+      301.0,
+      385.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Oscillator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "N-Ch Switch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "N-Ch Switch": {
+    "component_box": [
+      300.0,
+      1.0,
+      817.0,
+      508.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "High Voltage",
+          "count": 1
+        },
+        {
+          "name": "To Flying Cap",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Driver",
+          "count": 1
+        },
+        {
+          "name": "380V",
+          "count": 1
+        },
+        {
+          "name": "375V",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "5V电源 rail": {
+    "component_box": [
+      38.0,
+      328.0,
+      86.0,
+      386.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Oscillator",
+          "count": 1
+        },
+        {
+          "name": "LV Enable",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

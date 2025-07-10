@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉框事件测试</title>
+</head>
+<body>
+    <h1>下拉框事件测试</h1>
+    
+    <div>
+        <h2>测试1：使用onchange属性</h2>
+        <select onchange="testFunction1(this)" data-test="test1">
+            <option value="correct">正确</option>
+            <option value="incorrect">错误</option>
+            <option value="pending">待确定</option>
+        </select>
+    </div>
+    
+    <div>
+        <h2>测试2：使用addEventListener</h2>
+        <select id="test2" data-test="test2">
+            <option value="correct">正确</option>
+            <option value="incorrect">错误</option>
+            <option value="pending">待确定</option>
+        </select>
+    </div>
+    
+    <div>
+        <h2>测试3：模拟实际情况</h2>
+        <div class="component-card" data-coords="[100, 200, 300, 400]">
+            <select class="annotation-select" 
+                    data-component-index="1"
+                    data-coords="[100, 200, 300, 400]"
+                    onchange="updateAnnotation(this)">
+                <option value="correct">正确</option>
+                <option value="incorrect">错误</option>
+                <option value="pending">待确定</option>
+            </select>
+        </div>
+    </div>
+    
+    <div id="log" style="margin-top: 20px; padding: 10px; background: #f0f0f0;">
+        <h3>日志输出：</h3>
+    </div>
+
+    <script>
+        function log(message) {
+            const logDiv = document.getElementById('log');
+            logDiv.innerHTML += '<div>' + new Date().toLocaleTimeString() + ': ' + message + '</div>';
+            console.log(message);
+        }
+        
+        function testFunction1(selectElement) {
+            log('testFunction1被调用，值：' + selectElement.value);
+        }
+        
+        window.updateAnnotation = function(selectElement) {
+            log('updateAnnotation被调用，值：' + selectElement.value);
+            log('data-coords: ' + selectElement.dataset.coords);
+            log('data-component-index: ' + selectElement.dataset.componentIndex);
+        };
+        
+        // 为test2添加事件监听器
+        document.addEventListener('DOMContentLoaded', function() {
+            const test2 = document.getElementById('test2');
+            test2.addEventListener('change', function() {
+                log('test2 addEventListener被调用，值：' + this.value);
+            });
+            
+            // 为所有annotation-select添加事件监听器
+            document.querySelectorAll('.annotation-select').forEach(select => {
+                log('为annotation-select添加事件监听器');
+                select.addEventListener('change', function(e) {
+                    log('annotation-select addEventListener被调用，值：' + this.value);
+                    e.stopPropagation();
+                });
+            });
+            
+            log('页面加载完成，事件监听器已添加');
+        });
+    </script>
+</body>
+</html> 

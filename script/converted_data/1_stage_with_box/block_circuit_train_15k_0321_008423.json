@@ -1,0 +1,225 @@
+{
+  "Adder": {
+    "component_box": [
+      614.0,
+      200.0,
+      653.0,
+      224.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "K_P",
+          "count": 1
+        },
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "z⁻ᴰ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z⁻¹": {
+    "component_box": [
+      482.0,
+      84.0,
+      563.0,
+      138.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BBPD": {
+    "component_box": [
+      112.0,
+      119.0,
+      245.0,
+      227.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ref",
+          "count": 1
+        },
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "K_I",
+          "count": 1
+        },
+        {
+          "name": "K_DP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_I": {
+    "component_box": [
+      329.0,
+      128.0,
+      416.0,
+      218.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_P": {
+    "component_box": [
+      329.0,
+      16.0,
+      415.0,
+      106.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z⁻ᴰ": {
+    "component_box": [
+      672.0,
+      147.0,
+      753.0,
+      200.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_DP": {
+    "component_box": [
+      329.0,
+      226.0,
+      416.0,
+      316.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "oscillator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "oscillator": {
+    "component_box": [
+      417.0,
+      319.0,
+      503.0,
+      406.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K_DP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Divider": {
+    "component_box": [
+      101.0,
+      321.0,
+      257.0,
+      404.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "oscillator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

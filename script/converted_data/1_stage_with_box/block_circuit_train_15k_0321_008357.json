@@ -1,0 +1,229 @@
+{
+  "Peak Detector": {
+    "component_box": [
+      609.0,
+      358.0,
+      745.0,
+      445.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Post Amplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Integrator": {
+    "component_box": [
+      369.0,
+      371.0,
+      432.0,
+      430.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "exp(-Vctrl)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Post Amplifier": {
+    "component_box": [
+      457.0,
+      253.0,
+      527.0,
+      332.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VGA",
+          "count": 1
+        },
+        {
+          "name": "Driver",
+          "count": 1
+        },
+        {
+          "name": "DCOC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "exp(-Vctrl)": {
+    "component_box": [
+      66.0,
+      367.0,
+      212.0,
+      437.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VGA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      503.0,
+      387.0,
+      530.0,
+      415.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Peak Detector",
+          "count": 1
+        },
+        {
+          "name": "Integrator",
+          "count": 1
+        },
+        {
+          "name": "V_REF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VGA": {
+    "component_box": [
+      144.0,
+      252.0,
+      227.0,
+      332.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "exp(-Vctrl)",
+          "count": 1
+        },
+        {
+          "name": "Post Amplifier",
+          "count": 1
+        },
+        {
+          "name": "Coupling capacitor",
+          "count": 1
+        },
+        {
+          "name": "DCOC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Driver": {
+    "component_box": [
+      745.0,
+      253.0,
+      815.0,
+      333.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Post Amplifier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Vout",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "DCOC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Coupling capacitor": {
+    "component_box": [
+      418.0,
+      253.0,
+      451.0,
+      332.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VGA",
+          "count": 1
+        },
+        {
+          "name": "Post Amplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DCOC": {
+    "component_box": [
+      321.0,
+      83.0,
+      390.0,
+      162.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VGA",
+          "count": 1
+        },
+        {
+          "name": "Driver",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

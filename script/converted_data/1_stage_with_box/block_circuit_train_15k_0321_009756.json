@@ -1,0 +1,401 @@
+{
+  "CP Mismatch compensation": {
+    "component_box": [
+      565.0,
+      27.0,
+      812.0,
+      112.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VTC  \nTDC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWAM Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VTC  \nTDC": {
+    "component_box": [
+      160.0,
+      145.0,
+      454.0,
+      258.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_ref",
+          "count": 1
+        },
+        {
+          "name": "V_fb",
+          "count": 1
+        },
+        {
+          "name": "Clk",
+          "count": 1
+        },
+        {
+          "name": "DLL & Timing & Counters",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP Mismatch compensation",
+          "count": 1
+        },
+        {
+          "name": "PWAM Logic",
+          "count": 1
+        },
+        {
+          "name": "PWAM Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PWAM Logic": {
+    "component_box": [
+      591.0,
+      146.0,
+      739.0,
+      257.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VTC  \n TDC",
+          "count": 1
+        },
+        {
+          "name": "VTC  \n TDC",
+          "count": 1
+        },
+        {
+          "name": "DLL & Timing & Counters",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP1 [0:31]",
+          "count": 1
+        },
+        {
+          "name": "CP1 [0:31]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP2 [0:31]": {
+    "component_box": [
+      789.0,
+      289.0,
+      899.0,
+      395.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWAM Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "IL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      1631.0,
+      162.0,
+      1683.0,
+      208.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Gm",
+          "count": 1
+        },
+        {
+          "name": "Icp * Z2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DLL & Timing & Counters": {
+    "component_box": [
+      348.0,
+      414.0,
+      896.0,
+      488.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clk",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWAM Logic",
+          "count": 1
+        },
+        {
+          "name": "PWAM Logic",
+          "count": 1
+        },
+        {
+          "name": "VTC  TDC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Transmission Gate": {
+    "component_box": [
+      1018.0,
+      220.0,
+      1065.0,
+      235.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C_LP",
+          "count": 1
+        },
+        {
+          "name": "C_FF",
+          "count": 1
+        },
+        {
+          "name": "MOSFET",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "e^{-sT_s}": {
+    "component_box": [
+      1349.0,
+      201.0,
+      1472.0,
+      262.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K_adc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "K_fb",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_fb": {
+    "component_box": [
+      1499.0,
+      214.0,
+      1567.0,
+      260.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "e^{-sT_s}",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Icp*Z1": {
+    "component_box": [
+      1499.0,
+      75.0,
+      1600.0,
+      131.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Kadc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Gm",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Kadc": {
+    "component_box": [
+      1372.0,
+      121.0,
+      1439.0,
+      181.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Icp*Z1",
+          "count": 1
+        },
+        {
+          "name": "Icp * Z2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Icp * Z2": {
+    "component_box": [
+      1498.0,
+      161.0,
+      1600.0,
+      215.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Kadc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Gm": {
+    "component_box": [
+      1622.0,
+      73.0,
+      1691.0,
+      133.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Icp*Z1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "IL": {
+    "component_box": [
+      1087.0,
+      310.0,
+      1130.0,
+      350.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CP1 [0:31]": {
+    "component_box": [
+      793.0,
+      147.0,
+      903.0,
+      257.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWAM Logic",
+          "count": 1
+        },
+        {
+          "name": "CP Mismatch compensation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Transmission Gate",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

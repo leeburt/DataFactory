@@ -1,0 +1,156 @@
+{
+  "RZ DAC": {
+    "component_box": [
+      330.0,
+      246.0,
+      488.0,
+      350.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Switch",
+          "count": 1
+        },
+        {
+          "name": "f_s=1/T_s",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "α_m computation": {
+    "component_box": [
+      538.0,
+      19.0,
+      660.0,
+      86.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "u[n]",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      689.0,
+      116.0,
+      739.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "α_m computation",
+          "count": 1
+        },
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RZ DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Quantizer": {
+    "component_box": [
+      541.0,
+      102.0,
+      605.0,
+      181.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "sampling switch",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        },
+        {
+          "name": "RZ DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H(s)": {
+    "component_box": [
+      183.0,
+      91.0,
+      340.0,
+      194.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "u(t)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "summing junction": {
+    "component_box": [
+      81.0,
+      117.0,
+      131.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x(t)",
+          "count": 1
+        },
+        {
+          "name": "RZ DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H(s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

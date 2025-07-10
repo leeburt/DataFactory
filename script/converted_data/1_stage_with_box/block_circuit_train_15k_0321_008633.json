@@ -1,0 +1,151 @@
+{
+  "x8": {
+    "component_box": [
+      214.0,
+      379.0,
+      264.0,
+      439.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Signal Generator N5183B",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "20dB coupler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Spectrum Analyzer N9030B": {
+    "component_box": [
+      133.0,
+      300.0,
+      317.0,
+      362.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Harmonic Mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "~8dB Attenuation": {
+    "component_box": [
+      505.0,
+      378.0,
+      625.0,
+      440.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "20dB coupler",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "GGB probes",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "20dB coupler": {
+    "component_box": [
+      349.0,
+      378.0,
+      490.0,
+      440.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x8",
+          "count": 1
+        },
+        {
+          "name": "Harmonic Mixer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "~8dB Attenuation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PM4": {
+    "component_box": [
+      711.0,
+      379.0,
+      772.0,
+      439.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LNA",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Harmonic Mixer": {
+    "component_box": [
+      341.0,
+      310.0,
+      385.0,
+      353.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Spectrum Analyzer N9030B",
+          "count": 1
+        },
+        {
+          "name": "20dB coupler",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Signal Generator N5183B": {
+    "component_box": [
+      44.0,
+      126.0,
+      227.0,
+      188.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "x8",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

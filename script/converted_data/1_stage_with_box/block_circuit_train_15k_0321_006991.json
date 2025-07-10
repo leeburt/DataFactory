@@ -1,0 +1,301 @@
+{
+  "FIR(z)": {
+    "component_box": [
+      117.0,
+      159.0,
+      223.0,
+      223.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "IIR(z)",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "求和节点": {
+    "component_box": [
+      406.0,
+      77.0,
+      445.0,
+      115.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "IIR(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ": {
+    "component_box": [
+      702.0,
+      70.0,
+      766.0,
+      122.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_out1(z)",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LMS Engine": {
+    "component_box": [
+      674.0,
+      192.0,
+      797.0,
+      286.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Wi",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Adaptive LMS filter": {
+    "component_box": [
+      1009.0,
+      262.0,
+      1177.0,
+      355.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Averaging filter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "加法器": {
+    "component_box": [
+      407.0,
+      359.0,
+      444.0,
+      397.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      492.0,
+      77.0,
+      530.0,
+      115.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "求和节点",
+          "count": 1
+        },
+        {
+          "name": "Q1(z)+ε1(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      580.0,
+      358.0,
+      618.0,
+      395.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "Wi",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "IIR(z)": {
+    "component_box": [
+      286.0,
+      159.0,
+      392.0,
+      223.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "FIR(z)",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Quantizer": {
+    "component_box": [
+      580.0,
+      77.0,
+      619.0,
+      114.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Wi": {
+    "component_box": [
+      567.0,
+      212.0,
+      631.0,
+      264.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "LMS Engine",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Averaging filter": {
+    "component_box": [
+      1010.0,
+      122.0,
+      1176.0,
+      216.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adaptive LMS filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Wi",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

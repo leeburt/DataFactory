@@ -1,0 +1,399 @@
+{
+  "Buffer": {
+    "component_box": [
+      455.0,
+      458.0,
+      511.0,
+      511.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparators",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Control Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sampling switch": {
+    "component_box": [
+      94.0,
+      179.0,
+      133.0,
+      241.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Tunable filter",
+          "count": 1
+        },
+        {
+          "name": "C_hold1",
+          "count": 1
+        },
+        {
+          "name": "Ramp Generator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Tunable filter": {
+    "component_box": [
+      102.0,
+      48.0,
+      208.0,
+      136.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Sine wave generator",
+          "count": 1
+        },
+        {
+          "name": "Sampling switch",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Tunable Bandpass Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "analog switch": {
+    "component_box": [
+      389.0,
+      179.0,
+      429.0,
+      240.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Tunable Filter",
+          "count": 1
+        },
+        {
+          "name": "C_hold3",
+          "count": 1
+        },
+        {
+          "name": "Ramp Generator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Tunable Filter": {
+    "component_box": [
+      397.0,
+      48.0,
+      503.0,
+      135.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Tunable Bandpass Filter",
+          "count": 1
+        },
+        {
+          "name": "Tunable Bandpass Filter",
+          "count": 1
+        },
+        {
+          "name": "analog switch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Control Logic": {
+    "component_box": [
+      546.0,
+      392.0,
+      652.0,
+      480.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparators",
+          "count": 1
+        },
+        {
+          "name": "Comparators",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sampling switch",
+          "count": 1
+        },
+        {
+          "name": "SWITCH",
+          "count": 1
+        },
+        {
+          "name": "analog switch",
+          "count": 1
+        },
+        {
+          "name": "Analog switch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SWITCH": {
+    "component_box": [
+      241.0,
+      179.0,
+      281.0,
+      240.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Tunable Bandpass Filter",
+          "count": 1
+        },
+        {
+          "name": "Ramp Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "C hold2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparators": {
+    "component_box": [
+      456.0,
+      359.0,
+      513.0,
+      413.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Peak Detector",
+          "count": 1
+        },
+        {
+          "name": "Amplifier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Control Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Analog switch": {
+    "component_box": [
+      579.0,
+      179.0,
+      619.0,
+      240.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Tunable Bandpass Filter",
+          "count": 1
+        },
+        {
+          "name": "Ramp Generator",
+          "count": 1
+        },
+        {
+          "name": "C_holdN",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Minimum Detector": {
+    "component_box": [
+      315.0,
+      466.0,
+      404.0,
+      519.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Diode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparators",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Diode": {
+    "component_box": [
+      200.0,
+      350.0,
+      281.0,
+      405.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Ramp Generator",
+          "count": 1
+        },
+        {
+          "name": "Peak Detector",
+          "count": 1
+        },
+        {
+          "name": "Minimum Detector",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Tunable Bandpass Filter": {
+    "component_box": [
+      249.0,
+      48.0,
+      356.0,
+      136.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Tunable filter",
+          "count": 1
+        },
+        {
+          "name": "Tunable Filter",
+          "count": 1
+        },
+        {
+          "name": "SWITCH",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Sine wave generator": {
+    "component_box": [
+      13.0,
+      89.0,
+      65.0,
+      143.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Tunable filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Ramp Generator": {
+    "component_box": [
+      12.0,
+      229.0,
+      65.0,
+      282.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Sampling switch",
+          "count": 1
+        },
+        {
+          "name": "SWITCH",
+          "count": 1
+        },
+        {
+          "name": "analog switch",
+          "count": 1
+        },
+        {
+          "name": "Analog switch",
+          "count": 1
+        },
+        {
+          "name": "Diode",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Peak Detector": {
+    "component_box": [
+      316.0,
+      350.0,
+      404.0,
+      405.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Diode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparators",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

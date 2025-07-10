@@ -1,0 +1,327 @@
+{
+  "Summing junction": {
+    "component_box": [
+      89.0,
+      292.0,
+      113.0,
+      324.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x_d",
+          "count": 1
+        },
+        {
+          "name": "x",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Equivalent controller",
+          "count": 1
+        },
+        {
+          "name": "Fractional sliding mode",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Integrator": {
+    "component_box": [
+      180.0,
+      409.0,
+      198.0,
+      438.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Fractional sliding mode",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Equivalent controller": {
+    "component_box": [
+      221.0,
+      259.0,
+      340.0,
+      358.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "D^α J",
+          "count": 1
+        },
+        {
+          "name": "D^(α−1)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adaptive control law": {
+    "component_box": [
+      483.0,
+      28.0,
+      585.0,
+      126.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Fractional Sliding mode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Fractional dual RBF NNs Controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "APF": {
+    "component_box": [
+      719.0,
+      258.0,
+      837.0,
+      359.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Fractional dual RBF NNs Controller",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Differentiator": {
+    "component_box": [
+      99.0,
+      257.0,
+      117.0,
+      286.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "x_d",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Fractional dual RBF NNs Controller": {
+    "component_box": [
+      445.0,
+      259.0,
+      624.0,
+      359.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Adaptive control law",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "APF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D^α\nJ": {
+    "component_box": [
+      164.0,
+      148.0,
+      195.0,
+      177.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Fractional Sliding mode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D^(α−1)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Switching function": {
+    "component_box": [
+      357.0,
+      395.0,
+      478.0,
+      494.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Fractional sliding mode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D^(α−1)": {
+    "component_box": [
+      197.0,
+      147.0,
+      216.0,
+      177.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Equivalent controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Fractional sliding mode": {
+    "component_box": [
+      221.0,
+      395.0,
+      340.0,
+      494.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "D^α\nJ",
+          "count": 1
+        },
+        {
+          "name": "D^(α−1)",
+          "count": 1
+        },
+        {
+          "name": "D^α",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Switching function",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D^α": {
+    "component_box": [
+      176.0,
+      452.0,
+      208.0,
+      481.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Fractional sliding mode",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Fractional Sliding mode": {
+    "component_box": [
+      132.0,
+      28.0,
+      228.0,
+      125.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "D^α\nJ",
+          "count": 1
+        },
+        {
+          "name": "D^(α−1)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adaptive control law",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

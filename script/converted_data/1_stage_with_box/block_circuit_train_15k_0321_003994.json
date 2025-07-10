@@ -1,0 +1,368 @@
+{
+  "S/H": {
+    "component_box": [
+      340.0,
+      351.0,
+      373.0,
+      370.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "vs": {
+    "component_box": [
+      119.0,
+      160.0,
+      148.0,
+      189.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Diode bridge",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "S/H",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Σ": {
+    "component_box": [
+      581.0,
+      553.0,
+      611.0,
+      582.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Controller": {
+    "component_box": [
+      270.0,
+      655.0,
+      394.0,
+      702.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ (summer)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      535.0,
+      510.0,
+      564.0,
+      539.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K_pi s + K_ii / s",
+          "count": 1
+        },
+        {
+          "name": "Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator1",
+          "count": 1
+        },
+        {
+          "name": "Comparator2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator2": {
+    "component_box": [
+      748.0,
+      507.0,
+      822.0,
+      594.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "v_tri2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "GT2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      343.0,
+      510.0,
+      372.0,
+      539.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage controller",
+          "count": 1
+        },
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Voltage controller": {
+    "component_box": [
+      134.0,
+      491.0,
+      252.0,
+      557.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/Vd*": {
+    "component_box": [
+      458.0,
+      370.0,
+      507.0,
+      444.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "S/H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      288.0,
+      509.0,
+      317.0,
+      538.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "1/Vd*",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ (summer)": {
+    "component_box": [
+      188.0,
+      665.0,
+      218.0,
+      694.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "S/H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_pi s + K_ii / s": {
+    "component_box": [
+      392.0,
+      491.0,
+      509.0,
+      557.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Load": {
+    "component_box": [
+      677.0,
+      83.0,
+      754.0,
+      246.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "D1",
+          "count": 1
+        },
+        {
+          "name": "C1",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "D2",
+          "count": 1
+        },
+        {
+          "name": "C2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comparator1": {
+    "component_box": [
+      747.0,
+      394.0,
+      821.0,
+      479.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "v_tri1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SW1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

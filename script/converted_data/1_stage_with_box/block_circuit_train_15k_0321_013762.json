@@ -1,0 +1,160 @@
+{
+  "Digital Filter": {
+    "component_box": [
+      133.0,
+      143.0,
+      206.0,
+      195.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TDC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCO",
+          "count": 1
+        },
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DCO": {
+    "component_box": [
+      670.0,
+      98.0,
+      720.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        },
+        {
+          "name": "Frequency Divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TDC": {
+    "component_box": [
+      57.0,
+      143.0,
+      116.0,
+      197.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ref",
+          "count": 1
+        },
+        {
+          "name": "Frequency Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Frequency Divider": {
+    "component_box": [
+      541.0,
+      291.0,
+      639.0,
+      347.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "out",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TDC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summer": {
+    "component_box": [
+      737.0,
+      163.0,
+      764.0,
+      192.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DCO",
+          "count": 1
+        },
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      334.0,
+      481.0,
+      362.0,
+      509.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

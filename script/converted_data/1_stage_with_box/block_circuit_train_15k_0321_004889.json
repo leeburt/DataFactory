@@ -1,0 +1,372 @@
+{
+  "PFC Controller  \nSSOC Modulator  \nCurrent Controller  \nSupervisory Controller  \nCAN-Interface  \nCAN-Connector": {
+    "component_box": [
+      430.0,
+      435.0,
+      1061.0,
+      501.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Transformer",
+          "count": 1
+        },
+        {
+          "name": "Reverse Polarity Protection",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Interleaved Boost PFC Converter",
+          "count": 1
+        },
+        {
+          "name": "Full-Bridge Inverter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFC Controller; SSOC Modulator; Current Controller; Supervisory Controller; CAN-Interface; CAN-Connector": {
+    "component_box": [
+      427.0,
+      321.0,
+      1050.0,
+      395.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Transformer",
+          "count": 1
+        },
+        {
+          "name": "Reverse Polarity Protection",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Interleaved Boost PFC Converter",
+          "count": 1
+        },
+        {
+          "name": "Full-Bridge Inverter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "EMI": {
+    "component_box": [
+      332.0,
+      44.0,
+      422.0,
+      128.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Inrush Current Protection",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Interleaved Boost PFC Converter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Interleaved Boost PFC Converter": {
+    "component_box": [
+      431.0,
+      30.0,
+      572.0,
+      140.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "EMI",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Input Filter",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "PFC Controller",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "EMI Filter": {
+    "component_box": [
+      1328.0,
+      45.0,
+      1421.0,
+      130.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Cp",
+          "count": 1
+        },
+        {
+          "name": "Lf",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Diode Rectifier": {
+    "component_box": [
+      1043.0,
+      44.0,
+      1193.0,
+      130.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Transformer",
+          "count": 1
+        },
+        {
+          "name": "Cp",
+          "count": 1
+        },
+        {
+          "name": "Lf",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Reverse Polarity Protection": {
+    "component_box": [
+      1420.0,
+      30.0,
+      1574.0,
+      139.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "EMI Filter",
+          "count": 1
+        },
+        {
+          "name": "Cf",
+          "count": 1
+        },
+        {
+          "name": "High Voltage Battery",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Input Filter": {
+    "component_box": [
+      580.0,
+      41.0,
+      675.0,
+      128.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Interleaved Boost PFC Converter",
+          "count": 1
+        },
+        {
+          "name": "Full-Bridge Inverter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PFC Controller": {
+    "component_box": [
+      431.0,
+      195.0,
+      576.0,
+      282.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Interleaved Boost PFC Converter",
+          "count": 1
+        },
+        {
+          "name": "Supervisory Controller",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Transformer": {
+    "component_box": [
+      921.0,
+      46.0,
+      1019.0,
+      130.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Ls",
+          "count": 1
+        },
+        {
+          "name": "Diode Rectifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Full-Bridge Inverter": {
+    "component_box": [
+      686.0,
+      30.0,
+      830.0,
+      140.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SSOC Modulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current Controller",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Input Filter",
+          "count": 1
+        },
+        {
+          "name": "Transformer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Current Controller": {
+    "component_box": [
+      914.0,
+      195.0,
+      1059.0,
+      282.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SSOC Modulator",
+          "count": 1
+        },
+        {
+          "name": "i_BAT",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Supervisory Controller",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SSOC Modulator": {
+    "component_box": [
+      686.0,
+      195.0,
+      829.0,
+      283.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Full-Bridge Inverter",
+          "count": 1
+        },
+        {
+          "name": "Current Controller",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Supervisory Controller",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Inrush Current Protection": {
+    "component_box": [
+      168.0,
+      30.0,
+      327.0,
+      140.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "AC1",
+          "count": 1
+        },
+        {
+          "name": "AC2",
+          "count": 1
+        },
+        {
+          "name": "EMI",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

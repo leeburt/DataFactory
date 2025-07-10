@@ -1,0 +1,129 @@
+{
+  "RMS-DC": {
+    "component_box": [
+      465.0,
+      426.0,
+      643.0,
+      506.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "transducer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H": {
+    "component_box": [
+      354.0,
+      236.0,
+      469.0,
+      390.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "output",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G": {
+    "component_box": [
+      239.0,
+      47.0,
+      355.0,
+      204.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "transducer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "transducer": {
+    "component_box": [
+      411.0,
+      47.0,
+      673.0,
+      205.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "G",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "output",
+          "count": 1
+        },
+        {
+          "name": "RMS-DC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ": {
+    "component_box": [
+      99.0,
+      73.0,
+      198.0,
+      168.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "input",
+          "count": 1
+        },
+        {
+          "name": "H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "G",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

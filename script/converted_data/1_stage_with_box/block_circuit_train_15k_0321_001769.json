@@ -1,0 +1,224 @@
+{
+  "Navigation Filter": {
+    "component_box": [
+      593.0,
+      107.0,
+      713.0,
+      369.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "channel 1",
+          "count": 1
+        },
+        {
+          "name": "channel 2",
+          "count": 1
+        },
+        {
+          "name": "channel i",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      402.0,
+      338.0,
+      430.0,
+      366.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Carrier NCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Carrier Phase Discriminator": {
+    "component_box": [
+      341.0,
+      452.0,
+      490.0,
+      510.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Compensation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Prediction": {
+    "component_box": [
+      357.0,
+      207.0,
+      476.0,
+      265.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Carrier frequency Discriminator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Carrier NCO",
+          "count": 1
+        },
+        {
+          "name": "Navigation Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Compensation": {
+    "component_box": [
+      105.0,
+      543.0,
+      265.0,
+      600.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Correlation",
+          "count": 1
+        },
+        {
+          "name": "Carrier Phase Discriminator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "I*_proposed",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Carrier NCO": {
+    "component_box": [
+      131.0,
+      208.0,
+      240.0,
+      265.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Prediction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Correlation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Carrier frequency Discriminator": {
+    "component_box": [
+      341.0,
+      104.0,
+      494.0,
+      186.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Correlation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Navigation Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Correlation": {
+    "component_box": [
+      118.0,
+      452.0,
+      252.0,
+      510.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Carrier NCO",
+          "count": 1
+        },
+        {
+          "name": "IF Signal",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Compensation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Loop Filter": {
+    "component_box": [
+      362.0,
+      389.0,
+      472.0,
+      439.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Carrier NCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

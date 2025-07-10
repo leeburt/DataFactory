@@ -1,0 +1,264 @@
+{
+  "(m+1) bit Sub-ADC": {
+    "component_box": [
+      118.0,
+      154.0,
+      266.0,
+      249.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "X",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "(m+1) bit sub-DAC",
+          "count": 1
+        },
+        {
+          "name": "ERROR CORRECTION",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ERROR CORRECTION": {
+    "component_box": [
+      208.0,
+      539.0,
+      787.0,
+      595.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "STAGE 1",
+          "count": 1
+        },
+        {
+          "name": "STAGE 2",
+          "count": 1
+        },
+        {
+          "name": "STAGE N-1",
+          "count": 1
+        },
+        {
+          "name": "Flash ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OUT(n:1)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "STAGE 1": {
+    "component_box": [
+      230.0,
+      419.0,
+      337.0,
+      495.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "IN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "STAGE 2",
+          "count": 1
+        },
+        {
+          "name": "ERROR CORRECTION",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "STAGE N-1": {
+    "component_box": [
+      529.0,
+      419.0,
+      637.0,
+      495.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "STAGE 2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Flash ADC",
+          "count": 1
+        },
+        {
+          "name": "ERROR CORRECTION",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "(m+1) bit sub-DAC": {
+    "component_box": [
+      324.0,
+      150.0,
+      474.0,
+      250.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "(m+1) bit Sub-ADC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "2^m": {
+    "component_box": [
+      510.0,
+      30.0,
+      588.0,
+      109.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "r",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplying DAC (MDAC)": {
+    "component_box": [
+      15.0,
+      16.0,
+      508.0,
+      379.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "IN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "STAGE 2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "STAGE 2": {
+    "component_box": [
+      380.0,
+      420.0,
+      486.0,
+      495.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "STAGE 1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "STAGE N-1",
+          "count": 1
+        },
+        {
+          "name": "ERROR CORRECTION",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Flash ADC": {
+    "component_box": [
+      675.0,
+      418.0,
+      772.0,
+      496.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "ERROR CORRECTION",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "STAGE N-1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Subtractor": {
+    "component_box": [
+      460.0,
+      52.0,
+      495.0,
+      87.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x",
+          "count": 1
+        },
+        {
+          "name": "(m+1) bit sub-DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2^m",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "Clock Generation Circuitry": {
+    "component_box": [
+      310.0,
+      21.0,
+      793.0,
+      94.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Parallel to Serial Conversion",
+          "count": 1
+        },
+        {
+          "name": "Algorithmic DAFIC",
+          "count": 1
+        },
+        {
+          "name": "Sample & Hold",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Biasing and Reference Voltages Generation": {
+    "component_box": [
+      507.0,
+      348.0,
+      794.0,
+      424.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Bias Current Generation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Algorithmic DAFIC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MUX": {
+    "component_box": [
+      208.0,
+      130.0,
+      270.0,
+      307.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "8 bit Counter",
+          "count": 1
+        },
+        {
+          "name": "12 Bit ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Parallel to Serial Conversion",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Algorithmic DAFIC": {
+    "component_box": [
+      484.0,
+      158.0,
+      660.0,
+      278.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clock Generation Circuitry",
+          "count": 1
+        },
+        {
+          "name": "Parallel to Serial Conversion",
+          "count": 1
+        },
+        {
+          "name": "Bias Current Generation",
+          "count": 1
+        },
+        {
+          "name": "Biasing and Reference Voltages Generation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sample & Hold",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Parallel to Serial Conversion": {
+    "component_box": [
+      310.0,
+      161.0,
+      467.0,
+      275.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MUX",
+          "count": 1
+        },
+        {
+          "name": "Clock Generation Circuitry",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Algorithmic DAFIC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Bias Current Generation": {
+    "component_box": [
+      329.0,
+      348.0,
+      497.0,
+      424.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Algorithmic DAFIC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "8 bit Counter": {
+    "component_box": [
+      56.0,
+      108.0,
+      164.0,
+      204.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clock Generation Circuitry",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sample & Hold": {
+    "component_box": [
+      675.0,
+      161.0,
+      791.0,
+      275.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Algorithmic DAFIC",
+          "count": 1
+        },
+        {
+          "name": "Clock Generation Circuitry",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "12 Bit ADC": {
+    "component_box": [
+      72.0,
+      233.0,
+      164.0,
+      332.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input for Frequency Response Test",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

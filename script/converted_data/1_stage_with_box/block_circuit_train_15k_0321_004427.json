@@ -1,0 +1,136 @@
+{
+  "Gc": {
+    "component_box": [
+      1089.0,
+      144.0,
+      1198.0,
+      237.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Modulator and Gate Drivers",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Modulator and Gate Drivers": {
+    "component_box": [
+      1297.0,
+      17.0,
+      1453.0,
+      385.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Gc",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Inductor current reference generation": {
+    "component_box": [
+      563.0,
+      73.0,
+      873.0,
+      306.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Proposed estimation of the grid voltage and generation of unit vectors",
+          "count": 1
+        },
+        {
+          "name": "P_ref",
+          "count": 1
+        },
+        {
+          "name": "Q_ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Proposed estimation of the grid voltage and generation of unit vectors": {
+    "component_box": [
+      107.0,
+      52.0,
+      448.0,
+      337.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Modulator and Gate Drivers",
+          "count": 1
+        },
+        {
+          "name": "i_L",
+          "count": 1
+        },
+        {
+          "name": "r_e",
+          "count": 1
+        },
+        {
+          "name": "L_e",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Inductor current reference generation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      972.0,
+      154.0,
+      1045.0,
+      232.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Inductor current reference generation",
+          "count": 1
+        },
+        {
+          "name": "i_L",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Gc",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

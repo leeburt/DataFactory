@@ -1,0 +1,99 @@
+{
+  "I_REF": {
+    "component_box": [
+      510.0,
+      286.0,
+      542.0,
+      318.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "transistor",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Buffer": {
+    "component_box": [
+      123.0,
+      10.0,
+      251.0,
+      126.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_REF",
+          "count": 1
+        },
+        {
+          "name": "A1",
+          "count": 1
+        },
+        {
+          "name": "R_F1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "V-to-I": {
+    "component_box": [
+      379.0,
+      211.0,
+      472.0,
+      315.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "V_N",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "A1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "A1": {
+    "component_box": [
+      326.0,
+      36.0,
+      452.0,
+      153.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Buffer",
+          "count": 1
+        },
+        {
+          "name": "V-to-I",
+          "count": 1
+        },
+        {
+          "name": "Pass Element",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

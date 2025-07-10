@@ -1,0 +1,137 @@
+{
+  "DAC": {
+    "component_box": [
+      328.0,
+      115.0,
+      373.0,
+      190.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "3-bit VE",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "N/2-1 bit Flash": {
+    "component_box": [
+      187.0,
+      195.0,
+      282.0,
+      254.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DECODER",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DECODER": {
+    "component_box": [
+      569.0,
+      30.0,
+      636.0,
+      260.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "3-bit VE",
+          "count": 1
+        },
+        {
+          "name": "N/2-1 bit Flash",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "N-bits",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "3-bit VE": {
+    "component_box": [
+      186.0,
+      48.0,
+      280.0,
+      107.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "DECODER",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "DECODER",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Σ": {
+    "component_box": [
+      394.0,
+      129.0,
+      436.0,
+      170.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "Vin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "N/2-1 bit Flash",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

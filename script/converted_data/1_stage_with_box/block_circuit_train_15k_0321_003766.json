@@ -1,0 +1,97 @@
+{
+  "REFERENCE INPUT": {
+    "component_box": [
+      6.0,
+      7.0,
+      202.0,
+      119.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "PHASE DETECTOR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LOOP FILTER": {
+    "component_box": [
+      581.0,
+      6.0,
+      777.0,
+      120.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PHASE DETECTOR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VOLTAGE CONTROLLED OSCILLATOR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PHASE DETECTOR": {
+    "component_box": [
+      299.0,
+      7.0,
+      492.0,
+      119.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "REFERENCE INPUT",
+          "count": 1
+        },
+        {
+          "name": "VOLTAGE CONTROLLED OSCILLATOR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LOOP FILTER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VOLTAGE CONTROLLED OSCILLATOR": {
+    "component_box": [
+      299.0,
+      235.0,
+      493.0,
+      343.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LOOP FILTER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PHASE DETECTOR",
+          "count": 1
+        },
+        {
+          "name": "RF_OUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "Load Block": {
+    "component_box": [
+      651.0,
+      125.0,
+      776.0,
+      245.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LDO Regulator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "LDO Regulator": {
+    "component_box": [
+      356.0,
+      125.0,
+      546.0,
+      246.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DC-DC switching Converter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Load Block",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DC-DC switching Converter": {
+    "component_box": [
+      75.0,
+      102.0,
+      265.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LDO Regulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

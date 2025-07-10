@@ -1,0 +1,180 @@
+{
+  "Inverter": {
+    "component_box": [
+      182.0,
+      505.0,
+      231.0,
+      567.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "clock",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "AND gate",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Buffer": {
+    "component_box": [
+      416.0,
+      512.0,
+      454.0,
+      544.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "φ_N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Pre-driver": {
+    "component_box": [
+      609.0,
+      67.0,
+      734.0,
+      158.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital PWM Modulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MOSFET",
+          "count": 1
+        },
+        {
+          "name": "MOSFET",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "φ_P": {
+    "component_box": [
+      503.0,
+      428.0,
+      526.0,
+      451.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Pre-driver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital PWM Modulator": {
+    "component_box": [
+      212.0,
+      147.0,
+      407.0,
+      252.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital input",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Pre-driver",
+          "count": 1
+        },
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Low-side MOSFET": {
+    "component_box": [
+      859.0,
+      269.0,
+      877.0,
+      287.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Pre-driver",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Switching node",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "AND gate": {
+    "component_box": [
+      183.0,
+      396.0,
+      232.0,
+      458.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1-bit",
+          "count": 1
+        },
+        {
+          "name": "clock",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "OR gate",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "D2": {
+    "component_box": [
+      568.0,
+      149.0,
+      608.0,
+      216.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Matlab": {
+    "component_box": [
+      569.0,
+      20.0,
+      709.0,
+      70.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TDC Array",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "DDG": {
+    "component_box": [
+      76.0,
+      156.0,
+      169.0,
+      226.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "TDC Array",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Pulse Generator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Pulse Generator": {
+    "component_box": [
+      6.0,
+      11.0,
+      82.0,
+      86.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "TDC Array",
+          "count": 1
+        },
+        {
+          "name": "DDG",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TDC Array": {
+    "component_box": [
+      269.0,
+      9.0,
+      409.0,
+      105.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Pulse Generator",
+          "count": 1
+        },
+        {
+          "name": "DDG",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Matlab",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

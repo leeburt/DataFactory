@@ -1,0 +1,197 @@
+{
+  "DC/DC CONVERTER": {
+    "component_box": [
+      170.0,
+      51.0,
+      505.0,
+      320.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VOUT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RC Load",
+          "count": 1
+        },
+        {
+          "name": "电容",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "ground",
+          "count": 1
+        },
+        {
+          "name": "电容器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RC Load": {
+    "component_box": [
+      467.0,
+      106.0,
+      547.0,
+      227.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DC/DC CONVERTER",
+          "count": 1
+        },
+        {
+          "name": "V2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "V1": {
+    "component_box": [
+      44.0,
+      128.0,
+      114.0,
+      200.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DC/DC CONVERTER",
+          "count": 1
+        },
+        {
+          "name": "RC Load",
+          "count": 1
+        },
+        {
+          "name": "电容",
+          "count": 1
+        },
+        {
+          "name": "电容器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "电容": {
+    "component_box": [
+      469.0,
+      172.0,
+      542.0,
+      226.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V2",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "DC/DC CONVERTER",
+          "count": 1
+        },
+        {
+          "name": "V1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "V2": {
+    "component_box": [
+      469.0,
+      106.0,
+      542.0,
+      164.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RC Load",
+          "count": 1
+        },
+        {
+          "name": "电容器",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "电容器": {
+    "component_box": [
+      437.0,
+      132.0,
+      510.0,
+      175.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DC/DC CONVERTER",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "V2",
+          "count": 1
+        },
+        {
+          "name": "电容",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VOUT": {
+    "component_box": [
+      148.0,
+      124.0,
+      186.0,
+      230.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DC/DC CONVERTER",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

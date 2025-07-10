@@ -1,0 +1,156 @@
+{
+  "rem": {
+    "component_box": [
+      667.0,
+      83.0,
+      740.0,
+      135.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/s",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "θ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      456.0,
+      94.0,
+      487.0,
+      124.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PIᵃ",
+          "count": 1
+        },
+        {
+          "name": "ω_B",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/s",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "abc/αβ": {
+    "component_box": [
+      55.0,
+      22.0,
+      123.0,
+      139.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "e_a",
+          "count": 1
+        },
+        {
+          "name": "e_b",
+          "count": 1
+        },
+        {
+          "name": "e_c",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "αβ→dq变换",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "αβ→dq变换": {
+    "component_box": [
+      160.0,
+      22.0,
+      227.0,
+      139.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "abc/αβ",
+          "count": 1
+        },
+        {
+          "name": "rem",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PIᵃ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/s": {
+    "component_box": [
+      555.0,
+      74.0,
+      628.0,
+      143.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "rem",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PIᵃ": {
+    "component_box": [
+      309.0,
+      82.0,
+      390.0,
+      141.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "αβ→dq变换",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

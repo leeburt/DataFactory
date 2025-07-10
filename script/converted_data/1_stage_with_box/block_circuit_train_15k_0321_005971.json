@@ -1,0 +1,344 @@
+{
+  "D/A": {
+    "component_box": [
+      642.0,
+      9.0,
+      773.0,
+      107.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VREF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "AMPL ∅": {
+    "component_box": [
+      479.0,
+      371.0,
+      612.0,
+      466.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "POS. COMPARATOR",
+          "count": 1
+        },
+        {
+          "name": "NEG. COMPARATOR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "S/H": {
+    "component_box": [
+      478.0,
+      192.0,
+      579.0,
+      275.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RX FILTER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SCALER": {
+    "component_box": [
+      932.0,
+      155.0,
+      1034.0,
+      301.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "POS. COMPARATOR": {
+    "component_box": [
+      677.0,
+      342.0,
+      777.0,
+      435.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AMPL ∅",
+          "count": 1
+        },
+        {
+          "name": "SCALER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "POS. COMPARATOR\nNEG. COMPARATOR": {
+    "component_box": [
+      663.0,
+      324.0,
+      994.0,
+      452.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AMPL ∅",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "WAKE UP": {
+    "component_box": [
+      115.0,
+      344.0,
+      263.0,
+      441.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LINE DRIVER",
+          "count": 1
+        },
+        {
+          "name": "RIF",
+          "count": 1
+        },
+        {
+          "name": "4 STEP EQUAL",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "4 STEP EQUAL": {
+    "component_box": [
+      235.0,
+      194.0,
+      336.0,
+      277.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PRECANCELING",
+          "count": 1
+        },
+        {
+          "name": "RX FILTER",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Σ": {
+    "component_box": [
+      600.0,
+      190.0,
+      700.0,
+      273.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "D/A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Operational amplifier": {
+    "component_box": [
+      735.0,
+      156.0,
+      866.0,
+      306.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SCALER",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PRECANCELING": {
+    "component_box": [
+      114.0,
+      195.0,
+      214.0,
+      278.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SUBSCRIBER LINE",
+          "count": 1
+        },
+        {
+          "name": "LINE DRIVER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "4 STEP EQUAL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VREF": {
+    "component_box": [
+      793.0,
+      8.0,
+      926.0,
+      106.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "D/A",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "NEG. COMPARATOR": {
+    "component_box": [
+      678.0,
+      457.0,
+      778.0,
+      553.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AMPL ∅",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SCALER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RX FILTER": {
+    "component_box": [
+      357.0,
+      193.0,
+      456.0,
+      275.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "4 STEP EQUAL",
+          "count": 1
+        },
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "AMPL ∅",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "IGBT": {
+    "component_box": [
+      82.0,
+      20.0,
+      177.0,
+      151.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "U_dc+",
+          "count": 1
+        },
+        {
+          "name": "U_dc-",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "L",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Grid-Emulator": {
+    "component_box": [
+      659.0,
+      50.0,
+      752.0,
+      118.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "dq/abc 변환기",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "PCC",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "dq/abc 변환기": {
+    "component_box": [
+      671.0,
+      160.0,
+      742.0,
+      212.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Excitation Generation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Grid-Emulator",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "abc/dq转换器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Converter Under Test": {
+    "component_box": [
+      2.0,
+      7.0,
+      301.0,
+      195.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "abc/dq转换器",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Udc",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "abc/dq转换器": {
+    "component_box": [
+      347.0,
+      161.0,
+      430.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "I_abc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Impedance Calculation Algorithm",
+          "count": 1
+        },
+        {
+          "name": "Impedance Calculation Algorithm",
+          "count": 1
+        },
+        {
+          "name": "abc/dq",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Impedance Calculation Algorithm": {
+    "component_box": [
+      336.0,
+      273.0,
+      603.0,
+      361.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "abc/dq转换器",
+          "count": 1
+        },
+        {
+          "name": "abc/dq",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "[Zdd Zdq; Zqd Zqq]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "abc/dq\nabc/dq\nImpedance Calculation Algorithm": {
+    "component_box": [
+      302.0,
+      7.0,
+      614.0,
+      368.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Converter Under Test",
+          "count": 1
+        },
+        {
+          "name": "dq/abc 변환기",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Grid-Emulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "abc/dq": {
+    "component_box": [
+      497.0,
+      161.0,
+      579.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "U_abc",
+          "count": 1
+        },
+        {
+          "name": "θ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Impedance Calculation Algorithm",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Excitation Generation": {
+    "component_box": [
+      643.0,
+      275.0,
+      787.0,
+      356.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "dq/abc 변환기",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

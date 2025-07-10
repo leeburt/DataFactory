@@ -1,0 +1,153 @@
+{
+  "BGR": {
+    "component_box": [
+      382.0,
+      400.0,
+      460.0,
+      440.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "EA2",
+          "count": 1
+        },
+        {
+          "name": "GND",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "EA1": {
+    "component_box": [
+      257.0,
+      310.0,
+      334.0,
+      386.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Compensation network",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "EA2",
+          "count": 1
+        },
+        {
+          "name": "M_n",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "11-Stage NORI Converter": {
+    "component_box": [
+      357.0,
+      74.0,
+      472.0,
+      170.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "VDD",
+          "count": 1
+        },
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Compensation network": {
+    "component_box": [
+      130.0,
+      328.0,
+      208.0,
+      405.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "EA1",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "Unlabeled capacitor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "EA2": {
+    "component_box": [
+      556.0,
+      309.0,
+      633.0,
+      386.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "EA1",
+          "count": 1
+        },
+        {
+          "name": "Resistor divider (R1-R2)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Dynamic leaker transistor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      237.0,
+      73.0,
+      327.0,
+      170.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "11-Stage NORI Converter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

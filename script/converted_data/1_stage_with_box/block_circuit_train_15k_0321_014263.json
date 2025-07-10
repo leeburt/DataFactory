@@ -1,0 +1,342 @@
+{
+  "CONTROL UNIT & PROGR. DEAD TIME": {
+    "component_box": [
+      179.0,
+      150.0,
+      343.0,
+      386.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VMOD",
+          "count": 1
+        },
+        {
+          "name": "S<0:4>",
+          "count": 1
+        },
+        {
+          "name": "d<0:7>",
+          "count": 1
+        },
+        {
+          "name": "PHASE-LOCKED LOOP",
+          "count": 1
+        },
+        {
+          "name": "TEMPERATURE SENSOR",
+          "count": 1
+        },
+        {
+          "name": "OVERCURRENT DETECTOR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "HIGH SIDE DRIVER",
+          "count": 1
+        },
+        {
+          "name": "LOW SIDE DRIVER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Temperature Sensor, Overcurrent Detector, Phase-Locked Loop, Phase Detector": {
+    "component_box": [
+      113.0,
+      296.0,
+      649.0,
+      785.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CONTROL UNIT & PROGR. DEAD TIME",
+          "count": 1
+        },
+        {
+          "name": "HIGH SIDE DRIVER",
+          "count": 1
+        },
+        {
+          "name": "LOW SIDE DRIVER",
+          "count": 1
+        },
+        {
+          "name": "PSOUT",
+          "count": 1
+        },
+        {
+          "name": "XTAL",
+          "count": 1
+        },
+        {
+          "name": "PSIN",
+          "count": 1
+        },
+        {
+          "name": "VPD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CONTROL UNIT & PROGR. DEAD TIME",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PHASE-LOCKED LOOP": {
+    "component_box": [
+      129.0,
+      589.0,
+      353.0,
+      695.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TEMPERATURE SENSOR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PHASE DETECTOR",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "XTAL",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "OVERCURRENT DETECTOR": {
+    "component_box": [
+      322.0,
+      447.0,
+      620.0,
+      559.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LOW SIDE DRIVER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "HIGH SIDE DRIVER",
+          "count": 1
+        },
+        {
+          "name": "VPS",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "HCC": {
+    "component_box": [
+      505.0,
+      66.0,
+      598.0,
+      130.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VDDH",
+          "count": 1
+        },
+        {
+          "name": "VSSH",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "BANDGAP": {
+    "component_box": [
+      178.0,
+      65.0,
+      482.0,
+      133.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "EN band",
+          "count": 1
+        },
+        {
+          "name": "VDD",
+          "count": 1
+        },
+        {
+          "name": "CONTROL UNIT & PROGR. DEAD TIME",
+          "count": 1
+        },
+        {
+          "name": "HCC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LOW SIDE DRIVER": {
+    "component_box": [
+      409.0,
+      293.0,
+      557.0,
+      416.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CONTROL UNIT & PROGR. DEAD TIME",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OVERCURRENT DETECTOR",
+          "count": 1
+        },
+        {
+          "name": "POWER STAGE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "S2PI": {
+    "component_box": [
+      204.0,
+      638.0,
+      306.0,
+      689.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LP",
+          "count": 1
+        },
+        {
+          "name": "CLK",
+          "count": 1
+        },
+        {
+          "name": "LATCH",
+          "count": 1
+        },
+        {
+          "name": "DATA",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PHASE DETECTOR": {
+    "component_box": [
+      421.0,
+      588.0,
+      644.0,
+      693.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PHASE-LOCKED LOOP",
+          "count": 1
+        },
+        {
+          "name": "PSIN",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "VPD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "TEMPERATURE SENSOR": {
+    "component_box": [
+      188.0,
+      408.0,
+      262.0,
+      570.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CONTROL UNIT & PROGR. DEAD TIME",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "HIGH SIDE DRIVER": {
+    "component_box": [
+      409.0,
+      145.0,
+      557.0,
+      267.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CONTROL UNIT & PROGR. DEAD TIME",
+          "count": 1
+        },
+        {
+          "name": "OVERCURRENT DETECTOR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "POWER STAGE",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "HCC",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

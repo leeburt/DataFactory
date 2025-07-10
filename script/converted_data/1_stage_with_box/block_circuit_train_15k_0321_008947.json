@@ -1,0 +1,46 @@
+{
+  "Vcm Detector": {
+    "component_box": [
+      210.0,
+      189.0,
+      368.0,
+      293.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vo",
+          "count": 1
+        },
+        {
+          "name": "Vo",
+          "count": 1
+        },
+        {
+          "name": "φstop",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I_B": {
+    "component_box": [
+      262.0,
+      429.0,
+      316.0,
+      483.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "switch",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  }
+}

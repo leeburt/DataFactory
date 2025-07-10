@@ -1,0 +1,90 @@
+{
+  "Rpulse gen.": {
+    "component_box": [
+      34.0,
+      317.0,
+      71.0,
+      356.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Rpulse gen. 50Ω",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Rpulse gen. 50Ω": {
+    "component_box": [
+      117.0,
+      725.0,
+      154.0,
+      763.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Rpulse gen.",
+          "count": 1
+        },
+        {
+          "name": "IRFZ24N",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VDC_main": {
+    "component_box": [
+      129.0,
+      25.0,
+      167.0,
+      63.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RF choke",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "V_DC inj": {
+    "component_box": [
+      215.0,
+      581.0,
+      253.0,
+      618.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RF choke ≈100 μH",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "DAC^(1,g)": {
+    "component_box": [
+      259.0,
+      200.0,
+      447.0,
+      294.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S^(1,g,N)",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "S^(1,g,N)": {
+    "component_box": [
+      0.0,
+      1.0,
+      257.0,
+      293.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "c[n]",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC^(g+1,N)",
+          "count": 1
+        },
+        {
+          "name": "DAC^(1,g)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      488.0,
+      133.0,
+      532.0,
+      177.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC^(g+1,N)",
+          "count": 1
+        },
+        {
+          "name": "DAC^(1,g)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y(t)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC^(g+1,N)": {
+    "component_box": [
+      258.0,
+      15.0,
+      446.0,
+      108.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S^(1,g,N)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

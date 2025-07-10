@@ -1,0 +1,84 @@
+{
+  "VIN": {
+    "component_box": [
+      633.0,
+      49.0,
+      670.0,
+      103.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "MN",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "IB₂": {
+    "component_box": [
+      295.0,
+      90.0,
+      353.0,
+      148.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_DD",
+          "count": 1
+        },
+        {
+          "name": "NFL_IN",
+          "count": 1
+        },
+        {
+          "name": "MC2",
+          "count": 1
+        },
+        {
+          "name": "M_N",
+          "count": 1
+        },
+        {
+          "name": "C_gp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "NFL_IN": {
+    "component_box": [
+      230.0,
+      187.0,
+      413.0,
+      341.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "IB2",
+          "count": 1
+        },
+        {
+          "name": "MC1",
+          "count": 1
+        },
+        {
+          "name": "MC2",
+          "count": 1
+        },
+        {
+          "name": "VG",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

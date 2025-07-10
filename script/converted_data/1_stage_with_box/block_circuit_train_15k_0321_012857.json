@@ -1,0 +1,263 @@
+{
+  "Q1": {
+    "component_box": [
+      344.0,
+      130.0,
+      404.0,
+      170.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "↓M",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "↑M",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G0(z)": {
+    "component_box": [
+      486.0,
+      34.0,
+      570.0,
+      92.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "↑M",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "↑M": {
+    "component_box": [
+      425.0,
+      253.0,
+      467.0,
+      293.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Q_{M-1}",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "GM-1(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      591.0,
+      131.0,
+      629.0,
+      170.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "G0(z)",
+          "count": 1
+        },
+        {
+          "name": "G1(z)",
+          "count": 1
+        },
+        {
+          "name": "GM-1(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y(n)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G1(z)": {
+    "component_box": [
+      487.0,
+      121.0,
+      570.0,
+      179.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "↑M",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H0(s)": {
+    "component_box": [
+      115.0,
+      35.0,
+      200.0,
+      93.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "xa(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Q0",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H1(s)": {
+    "component_box": [
+      116.0,
+      122.0,
+      200.0,
+      180.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x_a(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "t = mMT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Q_{M-1}": {
+    "component_box": [
+      345.0,
+      253.0,
+      405.0,
+      294.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H_{M-1}(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "↑M",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H_{M-1}(s)": {
+    "component_box": [
+      116.0,
+      245.0,
+      201.0,
+      303.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x_a(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "downsampler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "GM-1(z)": {
+    "component_box": [
+      487.0,
+      243.0,
+      571.0,
+      302.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "↑M",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Q0": {
+    "component_box": [
+      344.0,
+      42.0,
+      403.0,
+      83.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "↓M",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "↑M",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

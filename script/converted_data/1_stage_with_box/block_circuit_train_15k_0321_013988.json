@@ -1,0 +1,242 @@
+{
+  "Up LS": {
+    "component_box": [
+      351.0,
+      350.0,
+      498.0,
+      409.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SP<k",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CLK & UD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "M_ser,N,k": {
+    "component_box": [
+      471.0,
+      85.0,
+      520.0,
+      137.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "M_par,P,k",
+          "count": 1
+        },
+        {
+          "name": "Anti-X",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "M_ser,P,k": {
+    "component_box": [
+      426.0,
+      186.0,
+      475.0,
+      239.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LDO k",
+          "count": 1
+        },
+        {
+          "name": "LDO k+1",
+          "count": 1
+        },
+        {
+          "name": "Anti-X",
+          "count": 1
+        },
+        {
+          "name": "Up LS",
+          "count": 1
+        },
+        {
+          "name": "M_par,P,k",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LDO k": {
+    "component_box": [
+      74.0,
+      98.0,
+      147.0,
+      177.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_P,k",
+          "count": 1
+        },
+        {
+          "name": "V_N,k",
+          "count": 1
+        },
+        {
+          "name": "FSM_k",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VREGP,k",
+          "count": 1
+        },
+        {
+          "name": "VREGN,k",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FSM_k+1": {
+    "component_box": [
+      715.0,
+      187.0,
+      816.0,
+      237.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LDO k+1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Down LS",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Anti-X": {
+    "component_box": [
+      505.0,
+      188.0,
+      606.0,
+      237.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "LDO k+1",
+          "count": 1
+        },
+        {
+          "name": "FSM_k+1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "FSM_k": {
+    "component_box": [
+      154.0,
+      172.0,
+      236.0,
+      222.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LDO k",
+          "count": 1
+        },
+        {
+          "name": "M_ser,N,k",
+          "count": 1
+        },
+        {
+          "name": "Up LS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LDO k+1": {
+    "component_box": [
+      637.0,
+      98.0,
+      712.0,
+      177.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "FSM_k+1",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "V_P,k+1",
+          "count": 1
+        },
+        {
+          "name": "V_N,k+1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Down LS": {
+    "component_box": [
+      359.0,
+      415.0,
+      498.0,
+      466.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "SP<k+1>",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Up LS",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

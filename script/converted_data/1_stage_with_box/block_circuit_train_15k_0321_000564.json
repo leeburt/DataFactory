@@ -1,0 +1,222 @@
+{
+  "1/2": {
+    "component_box": [
+      370.0,
+      177.0,
+      417.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "e^{j2πl/m}",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DSC^k_8",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DSC^k_{16}": {
+    "component_box": [
+      390.0,
+      96.0,
+      485.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DSC^k_8",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DSC^k_{32}",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DSC^k_{32}": {
+    "component_box": [
+      523.0,
+      96.0,
+      618.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DSC^k_{16}",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "DSC^k_8": {
+    "component_box": [
+      263.0,
+      96.0,
+      351.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DSC_4^k",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DSC^k_{16}",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DSC_2^k": {
+    "component_box": [
+      11.0,
+      95.0,
+      100.0,
+      150.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DSC_4^k",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "adder": {
+    "component_box": [
+      324.0,
+      193.0,
+      347.0,
+      217.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "e^{j2πl/m}",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DSC_4^k": {
+    "component_box": [
+      137.0,
+      97.0,
+      226.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DSC_2^k",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DSC^k_8",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "e^{j2πl/m}": {
+    "component_box": [
+      322.0,
+      248.0,
+      349.0,
+      273.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z^(-N/m)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CDSC^k": {
+    "component_box": [
+      254.0,
+      11.0,
+      362.0,
+      66.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x_{αβ}(n)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y_{αβ}(n)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z^(-N/m)": {
+    "component_box": [
+      228.0,
+      227.0,
+      289.0,
+      294.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "PWM": {
+    "component_box": [
+      278.0,
+      212.0,
+      402.0,
+      264.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "3-bit Q": {
+    "component_box": [
+      440.0,
+      25.0,
+      540.0,
+      97.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SC 2-Integrator Loop",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "output",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SC 2-Integrator Loop": {
+    "component_box": [
+      116.0,
+      8.0,
+      356.0,
+      114.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "input",
+          "count": 1
+        },
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3-bit Q",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      440.0,
+      205.0,
+      518.0,
+      271.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SC 2-Integrator Loop",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LPF": {
+    "component_box": [
+      141.0,
+      205.0,
+      217.0,
+      272.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SC 2-Integrator Loop",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

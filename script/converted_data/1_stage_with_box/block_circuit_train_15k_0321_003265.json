@@ -1,0 +1,88 @@
+{
+  "AER Retina": {
+    "component_box": [
+      6.0,
+      4.0,
+      145.0,
+      142.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Merger",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Constant Image": {
+    "component_box": [
+      6.0,
+      164.0,
+      146.0,
+      302.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Merger",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Convolution Chip": {
+    "component_box": [
+      483.0,
+      85.0,
+      663.0,
+      223.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Merger",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "AER Channel-4",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Merger": {
+    "component_box": [
+      229.0,
+      85.0,
+      368.0,
+      223.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AER Retina",
+          "count": 1
+        },
+        {
+          "name": "Constant Image",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Convolution Chip",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "Low-Noise CMP": {
+    "component_box": [
+      705.0,
+      257.0,
+      750.0,
+      297.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "STL & SAR Logic",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Fine Cap Array",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Low-Power CMP": {
+    "component_box": [
+      197.0,
+      257.0,
+      242.0,
+      298.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "STL & SAR Logic",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Coarse Stage": {
+    "component_box": [
+      43.0,
+      64.0,
+      291.0,
+      259.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Low-Skew de-MUX",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Charge-Sharing Switch",
+          "count": 1
+        },
+        {
+          "name": "STL & SAR Logic",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "STL Logic 2": {
+    "component_box": [
+      444.0,
+      431.0,
+      483.0,
+      549.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "STL Logic 1",
+          "count": 1
+        },
+        {
+          "name": "Cmp_io",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "STL Logic 3",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Control Cap Array",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "STL Logic 3": {
+    "component_box": [
+      500.0,
+      431.0,
+      539.0,
+      549.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "STL Logic 2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "STL Logic N",
+          "count": 1
+        },
+        {
+          "name": "control Cap Array",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Cmp_io",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "N Stage STL Logic": {
+    "component_box": [
+      189.0,
+      373.0,
+      762.0,
+      581.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "To control Cap Array",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "STL & SAR Logic",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Fine Stage": {
+    "component_box": [
+      550.0,
+      15.0,
+      762.0,
+      257.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Charge-Sharing Switch",
+          "count": 1
+        },
+        {
+          "name": "Vref",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Low-Noise CMP",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Charge-Sharing Switch": {
+    "component_box": [
+      306.0,
+      82.0,
+      507.0,
+      256.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CSTC Logic",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Coarse Stage",
+          "count": 1
+        },
+        {
+          "name": "Fine Stage",
+          "count": 1
+        },
+        {
+          "name": "V_DD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "STL Logic 1": {
+    "component_box": [
+      256.0,
+      431.0,
+      427.0,
+      549.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "φ_i",
+          "count": 1
+        },
+        {
+          "name": "STL & SAR Logic",
+          "count": 1
+        },
+        {
+          "name": "Transmission gate",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Coarse Stage",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "STL & SAR Logic": {
+    "component_box": [
+      548.0,
+      309.0,
+      764.0,
+      360.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Low-Noise CMP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "B_out[9:1]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CSTC Logic": {
+    "component_box": [
+      306.0,
+      308.0,
+      506.0,
+      361.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "STL & SAR Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Charge-Sharing Switch",
+          "count": 1
+        },
+        {
+          "name": "STL & SAR Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "STL Logic N": {
+    "component_box": [
+      566.0,
+      430.0,
+      605.0,
+      549.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "φ_i",
+          "count": 1
+        },
+        {
+          "name": "C_mp_io",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Transmission gate",
+          "count": 1
+        },
+        {
+          "name": "To control Cap Array",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Transmission gate": {
+    "component_box": [
+      265.0,
+      470.0,
+      307.0,
+      537.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "phi_i",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Cmp_io",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

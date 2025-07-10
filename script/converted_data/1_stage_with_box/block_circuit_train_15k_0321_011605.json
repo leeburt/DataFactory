@@ -1,0 +1,197 @@
+{
+  "p_in": {
+    "component_box": [
+      204.0,
+      10.0,
+      253.0,
+      58.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/z",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Limiter": {
+    "component_box": [
+      420.0,
+      109.0,
+      492.0,
+      180.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SLEW",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/z",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SLEW": {
+    "component_box": [
+      302.0,
+      109.0,
+      393.0,
+      180.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Limiter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ": {
+    "component_box": [
+      155.0,
+      170.0,
+      190.0,
+      206.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "g_yf",
+          "count": 1
+        },
+        {
+          "name": "p_f",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SLEW",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SLEW  \nLimiter  \n1/z": {
+    "component_box": [
+      259.0,
+      31.0,
+      603.0,
+      259.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "p_in",
+          "count": 1
+        },
+        {
+          "name": "p_f",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "p_f": {
+    "component_box": [
+      204.0,
+      232.0,
+      252.0,
+      278.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/z",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/z": {
+    "component_box": [
+      520.0,
+      120.0,
+      568.0,
+      168.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Limiter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "p_in",
+          "count": 1
+        },
+        {
+          "name": "Vo",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "g_yf": {
+    "component_box": [
+      76.0,
+      164.0,
+      121.0,
+      211.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vi",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

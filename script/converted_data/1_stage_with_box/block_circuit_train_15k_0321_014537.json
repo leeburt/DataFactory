@@ -1,0 +1,200 @@
+{
+  "Storage Buffer": {
+    "component_box": [
+      644.0,
+      39.0,
+      745.0,
+      114.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Power System",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TEG": {
+    "component_box": [
+      39.0,
+      141.0,
+      122.0,
+      179.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        },
+        {
+          "name": "Aux. circuitry",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Power System": {
+    "component_box": [
+      644.0,
+      130.0,
+      744.0,
+      205.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Aux. circuitry": {
+    "component_box": [
+      266.0,
+      183.0,
+      386.0,
+      259.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PZT": {
+    "component_box": [
+      39.0,
+      209.0,
+      122.0,
+      250.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      419.0,
+      185.0,
+      492.0,
+      260.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        },
+        {
+          "name": "V_REF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Aux. circuitry",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PV": {
+    "component_box": [
+      39.0,
+      71.0,
+      122.0,
+      110.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "N-stages Charge Pump": {
+    "component_box": [
+      249.0,
+      34.0,
+      411.0,
+      122.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Transducers",
+          "count": 1
+        },
+        {
+          "name": "Aux. circuitry",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Storage Buffer",
+          "count": 1
+        },
+        {
+          "name": "Power System",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Transducers": {
+    "component_box": [
+      9.0,
+      6.0,
+      155.0,
+      283.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

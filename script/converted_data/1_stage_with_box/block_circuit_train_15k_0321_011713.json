@@ -1,0 +1,156 @@
+{
+  "加法器": {
+    "component_box": [
+      266.0,
+      177.0,
+      290.0,
+      201.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "G_PI(z)",
+          "count": 1
+        },
+        {
+          "name": "G_OR(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "G_C(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G_PI(z)": {
+    "component_box": [
+      131.0,
+      165.0,
+      231.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      638.0,
+      177.0,
+      661.0,
+      201.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "G_PWM(z)",
+          "count": 1
+        },
+        {
+          "name": "G_B(z)/K_PWM·G_B(z)",
+          "count": 1
+        },
+        {
+          "name": "e_d(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "G_OR(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G_PWM(z)": {
+    "component_box": [
+      446.0,
+      165.0,
+      561.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "G_C(z)",
+          "count": 1
+        },
+        {
+          "name": "G_OR(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G_OR(z)": {
+    "component_box": [
+      72.0,
+      177.0,
+      96.0,
+      201.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "G_OR(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G_C(z)": {
+    "component_box": [
+      319.0,
+      165.0,
+      419.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "G_PWM(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

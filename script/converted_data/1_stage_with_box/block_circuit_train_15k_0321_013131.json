@@ -1,0 +1,269 @@
+{
+  "Inverter": {
+    "component_box": [
+      453.0,
+      464.0,
+      488.0,
+      507.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Inverter",
+          "count": 1
+        },
+        {
+          "name": "Delay Control #2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "inverter": {
+    "component_box": [
+      382.0,
+      477.0,
+      398.0,
+      494.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DFF": {
+    "component_box": [
+      521.0,
+      99.0,
+      669.0,
+      210.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "Digital Pattern Input",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Delay Control #1",
+          "count": 1
+        },
+        {
+          "name": "Delay Control #2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Transmission gate": {
+    "component_box": [
+      148.0,
+      355.0,
+      183.0,
+      397.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "tri-state buffer",
+          "count": 1
+        },
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Buffer": {
+    "component_box": [
+      281.0,
+      356.0,
+      316.0,
+      399.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "tri-state buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "INV",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Inductor": {
+    "component_box": [
+      302.0,
+      160.0,
+      332.0,
+      201.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Negative Gm",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "INV": {
+    "component_box": [
+      338.0,
+      356.0,
+      372.0,
+      398.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Variable delay buffer": {
+    "component_box": [
+      133.0,
+      368.0,
+      149.0,
+      383.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "tri-state buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Transmission gate",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      382.0,
+      126.0,
+      483.0,
+      236.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "main LC tank",
+          "count": 1
+        },
+        {
+          "name": "Digital Pattern Input",
+          "count": 1
+        },
+        {
+          "name": "DFF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Negative Gm": {
+    "component_box": [
+      115.0,
+      15.0,
+      237.0,
+      102.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Transmission gate",
+          "count": 1
+        },
+        {
+          "name": "Inductor",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "tri-state buffer": {
+    "component_box": [
+      148.0,
+      461.0,
+      185.0,
+      505.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Transmission gate",
+          "count": 1
+        },
+        {
+          "name": "Delay Control #1",
+          "count": 1
+        },
+        {
+          "name": "Delay Control #2",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

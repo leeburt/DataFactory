@@ -1,0 +1,202 @@
+{
+  "Time Delay/Power Alignment": {
+    "component_box": [
+      215.0,
+      267.0,
+      407.0,
+      350.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Splitter",
+          "count": 1
+        },
+        {
+          "name": "Circulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Substractor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Controllable Integrator": {
+    "component_box": [
+      531.0,
+      159.0,
+      655.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Peak Detector",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Linearizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PA": {
+    "component_box": [
+      519.0,
+      49.0,
+      595.0,
+      127.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Linearizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Circulator",
+          "count": 1
+        },
+        {
+          "name": "Time Delay/Power Alignment",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Power Splitter": {
+    "component_box": [
+      112.0,
+      45.0,
+      236.0,
+      127.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RF input",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Linearizer",
+          "count": 1
+        },
+        {
+          "name": "Time Delay/Power Alignment",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Substractor": {
+    "component_box": [
+      215.0,
+      159.0,
+      339.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Time Delay/Power Alignment",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Peak Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Peak Detector": {
+    "component_box": [
+      363.0,
+      159.0,
+      477.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Substractor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Controllable Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Circulator": {
+    "component_box": [
+      690.0,
+      15.0,
+      727.0,
+      43.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Time Delay/Power Alignment",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Linearizer": {
+    "component_box": [
+      318.0,
+      47.0,
+      434.0,
+      128.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Splitter",
+          "count": 1
+        },
+        {
+          "name": "Controllable Integrator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

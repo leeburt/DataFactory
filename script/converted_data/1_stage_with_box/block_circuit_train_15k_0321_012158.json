@@ -1,0 +1,114 @@
+{
+  "S/H": {
+    "component_box": [
+      153.0,
+      424.0,
+      260.0,
+      512.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Analog Input x(t)",
+          "count": 1
+        },
+        {
+          "name": "CLK3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Counter": {
+    "component_box": [
+      481.0,
+      426.0,
+      633.0,
+      514.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        },
+        {
+          "name": "Reset (CLK3)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      314.0,
+      411.0,
+      431.0,
+      528.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MUX": {
+    "component_box": [
+      677.0,
+      108.0,
+      782.0,
+      770.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Output y[n]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

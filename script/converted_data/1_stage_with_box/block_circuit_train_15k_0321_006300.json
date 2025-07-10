@@ -1,0 +1,169 @@
+{
+  "Transconductance Amplifier": {
+    "component_box": [
+      530.0,
+      72.0,
+      610.0,
+      130.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Level Shifter",
+          "count": 1
+        },
+        {
+          "name": "Bias",
+          "count": 1
+        },
+        {
+          "name": "Out",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Differential Pair": {
+    "component_box": [
+      157.0,
+      114.0,
+      297.0,
+      158.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "In-",
+          "count": 1
+        },
+        {
+          "name": "In+",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Current Mirror",
+          "count": 1
+        },
+        {
+          "name": "Bias",
+          "count": 1
+        },
+        {
+          "name": "Level Shifter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Bias": {
+    "component_box": [
+      546.0,
+      185.0,
+      592.0,
+      231.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Transconductance Amplifier",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Bias Generator": {
+    "component_box": [
+      17.0,
+      157.0,
+      132.0,
+      255.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Bias",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Current Mirror": {
+    "component_box": [
+      145.0,
+      40.0,
+      314.0,
+      84.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Differential Pair",
+          "count": 1
+        },
+        {
+          "name": "Power Rail",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Feedback Compensation": {
+    "component_box": [
+      391.0,
+      143.0,
+      495.0,
+      189.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Level Shifter",
+          "count": 1
+        },
+        {
+          "name": "Transconductance Amplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Level Shifter": {
+    "component_box": [
+      402.0,
+      73.0,
+      481.0,
+      131.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Differential Pair",
+          "count": 1
+        },
+        {
+          "name": "Transconductance Amplifier",
+          "count": 1
+        },
+        {
+          "name": "Feedback Compensation",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "State Register: Latch 1": {
+    "component_box": [
+      119.0,
+      109.0,
+      475.0,
+      178.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK",
+          "count": 1
+        },
+        {
+          "name": "State Register",
+          "count": 1
+        },
+        {
+          "name": "Vode_glitch",
+          "count": 1
+        },
+        {
+          "name": "Vocount",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "De-glitch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Inverter": {
+    "component_box": [
+      913.0,
+      179.0,
+      971.0,
+      258.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Intermediate transistor node",
+          "count": 1
+        },
+        {
+          "name": "De-glitch",
+          "count": 1
+        },
+        {
+          "name": "VDD",
+          "count": 1
+        },
+        {
+          "name": "VSS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Counter": {
+    "component_box": [
+      515.0,
+      332.0,
+      657.0,
+      398.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "De-glitch",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "De-glitch": {
+    "component_box": [
+      515.0,
+      236.0,
+      657.0,
+      304.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "State Register: Latch 1",
+          "count": 1
+        },
+        {
+          "name": "State Register",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "State Register": {
+    "component_box": [
+      118.0,
+      233.0,
+      475.0,
+      303.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK",
+          "count": 1
+        },
+        {
+          "name": "State Register: Latch 1",
+          "count": 1
+        },
+        {
+          "name": "State Register: Latch 1",
+          "count": 1
+        },
+        {
+          "name": "State Register: Latch 1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "De-glitch",
+          "count": 1
+        },
+        {
+          "name": "De-glitch",
+          "count": 1
+        },
+        {
+          "name": "state-to-phase logic",
+          "count": 1
+        },
+        {
+          "name": "state-to-phase logic",
+          "count": 1
+        },
+        {
+          "name": "state-to-phase logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

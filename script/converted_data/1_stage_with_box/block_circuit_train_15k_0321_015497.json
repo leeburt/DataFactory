@@ -1,0 +1,114 @@
+{
+  "PWM Modulator": {
+    "component_box": [
+      153.0,
+      75.0,
+      268.0,
+      156.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Source",
+          "count": 1
+        },
+        {
+          "name": "Red LD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Optical Receiver & Audio Driver": {
+    "component_box": [
+      525.0,
+      62.0,
+      650.0,
+      196.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Actuator",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Cac",
+          "count": 1
+        },
+        {
+          "name": "Rec.",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Actuator": {
+    "component_box": [
+      673.0,
+      63.0,
+      728.0,
+      196.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Optical Receiver & Audio Driver",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Vibration",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Rec.": {
+    "component_box": [
+      527.0,
+      16.0,
+      551.0,
+      44.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Red PD Array",
+          "count": 1
+        },
+        {
+          "name": "Supply",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Source": {
+    "component_box": [
+      100.0,
+      126.0,
+      139.0,
+      166.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "PWM Modulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

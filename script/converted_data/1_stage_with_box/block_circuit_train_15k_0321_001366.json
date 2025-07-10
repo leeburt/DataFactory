@@ -1,0 +1,329 @@
+{
+  "MUX": {
+    "component_box": [
+      197.0,
+      53.0,
+      300.0,
+      84.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mode Fixed",
+          "count": 1
+        },
+        {
+          "name": "Mode Adaptive",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "IrefGen",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DSM": {
+    "component_box": [
+      96.0,
+      361.0,
+      176.0,
+      409.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "frac-N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD-Charge Pumps": {
+    "component_box": [
+      154.0,
+      149.0,
+      277.0,
+      263.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK IN",
+          "count": 1
+        },
+        {
+          "name": "÷ M",
+          "count": 1
+        },
+        {
+          "name": "IrefGen",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        },
+        {
+          "name": "Lock Detect",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "÷N": {
+    "component_box": [
+      249.0,
+      315.0,
+      328.0,
+      363.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD-Charge Pumps",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Lock Detect": {
+    "component_box": [
+      32.0,
+      243.0,
+      131.0,
+      321.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD-Charge Pumps",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "÷N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "÷ M": {
+    "component_box": [
+      408.0,
+      13.0,
+      487.0,
+      59.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PVA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PVA": {
+    "component_box": [
+      611.0,
+      171.0,
+      708.0,
+      218.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "÷ M",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Loop Filter": {
+    "component_box": [
+      302.0,
+      149.0,
+      383.0,
+      263.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD-Charge Pumps",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Add’l R-C",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CLK IN": {
+    "component_box": [
+      32.0,
+      178.0,
+      130.0,
+      224.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "PFD-Charge Pumps",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Start-up": {
+    "component_box": [
+      512.0,
+      243.0,
+      626.0,
+      290.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      513.0,
+      152.0,
+      601.0,
+      237.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Add’l R-C",
+          "count": 1
+        },
+        {
+          "name": "Start-up",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PVA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Loop Filter  \nAdd’l R-C  \nVCO  \nPVA  \nStart-up": {
+    "component_box": [
+      218.0,
+      28.0,
+      718.0,
+      347.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD-Charge Pumps",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "÷N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "IrefGen": {
+    "component_box": [
+      187.0,
+      93.0,
+      309.0,
+      140.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD-Charge Pumps",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Add’l R-C": {
+    "component_box": [
+      405.0,
+      149.0,
+      488.0,
+      263.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

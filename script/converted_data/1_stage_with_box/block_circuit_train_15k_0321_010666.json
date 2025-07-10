@@ -1,0 +1,162 @@
+{
+  "Sensor input terminal": {
+    "component_box": [
+      117.0,
+      183.0,
+      162.0,
+      230.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Sensor ±500mV",
+          "count": 1
+        },
+        {
+          "name": "Implemented Isolated ADC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Power": {
+    "component_box": [
+      642.0,
+      49.0,
+      832.0,
+      103.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Micro Controller",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Print Circuit Board (PCB)",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Micro Controller": {
+    "component_box": [
+      642.0,
+      129.0,
+      834.0,
+      282.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Implemented Isolated ADC",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ADC负输入端": {
+    "component_box": [
+      179.0,
+      252.0,
+      197.0,
+      271.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Implemented Isolated ADC",
+          "count": 1
+        },
+        {
+          "name": "Sensor input terminal",
+          "count": 1
+        },
+        {
+          "name": "~400Vrms",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "~400Vrms": {
+    "component_box": [
+      117.0,
+      290.0,
+      161.0,
+      339.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Sensor input terminal",
+          "count": 1
+        },
+        {
+          "name": "ADC负输入端",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Implemented Isolated ADC": {
+    "component_box": [
+      211.0,
+      130.0,
+      498.0,
+      283.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Micro Controller",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Sensor input terminal",
+          "count": 1
+        },
+        {
+          "name": "Sensor input terminal",
+          "count": 1
+        },
+        {
+          "name": "~400Vrms",
+          "count": 1
+        },
+        {
+          "name": "Micro Controller",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

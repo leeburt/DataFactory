@@ -1,0 +1,97 @@
+{
+  "k": {
+    "component_box": [
+      583.0,
+      82.0,
+      637.0,
+      146.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "L",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "APR_I(S)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "F_mi": {
+    "component_box": [
+      188.0,
+      127.0,
+      253.0,
+      191.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Power stage (Gvd)",
+          "count": 1
+        },
+        {
+          "name": "APR_I(S)",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Power stage (Gvd)": {
+    "component_box": [
+      68.0,
+      20.0,
+      321.0,
+      103.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "d_hat",
+          "count": 1
+        },
+        {
+          "name": "F_mi",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "L",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "APR_I(S)": {
+    "component_box": [
+      368.0,
+      126.0,
+      496.0,
+      194.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "k",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing Junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

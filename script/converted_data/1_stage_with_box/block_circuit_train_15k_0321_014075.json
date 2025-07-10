@@ -1,0 +1,166 @@
+{
+  "DC-DC Buck Converter": {
+    "component_box": [
+      533.0,
+      106.0,
+      677.0,
+      166.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM Driver",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Voltage Sensor",
+          "count": 1
+        },
+        {
+          "name": "Current Sensor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sampling Circuit": {
+    "component_box": [
+      363.0,
+      280.0,
+      507.0,
+      340.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage Sensor",
+          "count": 1
+        },
+        {
+          "name": "Current Sensor",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "External Data Bus",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Voltage Sensor": {
+    "component_box": [
+      508.0,
+      210.0,
+      613.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DC-DC Buck Converter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sampling Circuit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current Sensor": {
+    "component_box": [
+      614.0,
+      209.0,
+      720.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DC-DC Buck Converter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sampling Circuit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PC-Simulink": {
+    "component_box": [
+      54.0,
+      148.0,
+      199.0,
+      184.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "dSPACE DS1103",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "PWM Driver": {
+    "component_box": [
+      363.0,
+      106.0,
+      483.0,
+      165.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "External Data Bus",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DC-DC Buck Converter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "dSPACE DS1103": {
+    "component_box": [
+      55.0,
+      282.0,
+      199.0,
+      340.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "PC-Simulink",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "External Data Bus",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

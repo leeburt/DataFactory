@@ -1,0 +1,222 @@
+{
+  "3rd Order Delta–Sigma Modulator": {
+    "component_box": [
+      243.0,
+      5.0,
+      393.0,
+      127.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vref+",
+          "count": 1
+        },
+        {
+          "name": "Vref-",
+          "count": 1
+        },
+        {
+          "name": "Bandgap Ref.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplexed FIR Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "3rd Order Delta-Sigma Modulator": {
+    "component_box": [
+      245.0,
+      194.0,
+      394.0,
+      313.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "25X",
+          "count": 1
+        },
+        {
+          "name": "Bandgap Ref.",
+          "count": 1
+        },
+        {
+          "name": "SC DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplexed FIR Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Bandgap Ref.": {
+    "component_box": [
+      245.0,
+      143.0,
+      391.0,
+      181.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "3rd Order Delta–Sigma Modulator",
+          "count": 1
+        },
+        {
+          "name": "3rd Order Delta-Sigma Modulator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Digital Calibration & Serial I/O": {
+    "component_box": [
+      618.0,
+      36.0,
+      727.0,
+      282.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "X/Y",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "SC DAC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SC DAC": {
+    "component_box": [
+      457.0,
+      323.0,
+      536.0,
+      386.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital Calibration & Serial I/O",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Demodulators",
+          "count": 1
+        },
+        {
+          "name": "3rd Order Delta-Sigma Modulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplexed FIR Filter": {
+    "component_box": [
+      419.0,
+      39.0,
+      532.0,
+      285.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "3rd Order Delta–Sigma Modulator",
+          "count": 1
+        },
+        {
+          "name": "3rd Order Delta-Sigma Modulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "X/Y",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "X/Y": {
+    "component_box": [
+      535.0,
+      134.0,
+      591.0,
+      190.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplexed FIR Filter",
+          "count": 1
+        },
+        {
+          "name": "Multiplexed FIR Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Calibration & Serial I/O",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "25X": {
+    "component_box": [
+      75.0,
+      218.0,
+      144.0,
+      282.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ain+",
+          "count": 1
+        },
+        {
+          "name": "Ain-",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3rd Order Delta-Sigma Modulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

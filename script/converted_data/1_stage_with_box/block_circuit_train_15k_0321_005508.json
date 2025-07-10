@@ -1,0 +1,194 @@
+{
+  "÷2": {
+    "component_box": [
+      108.0,
+      224.0,
+      168.0,
+      298.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "f_ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD/CP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      728.0,
+      37.0,
+      813.0,
+      123.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "÷32/÷2 分频器",
+          "count": 1
+        },
+        {
+          "name": "f_out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Operational amplifier": {
+    "component_box": [
+      424.0,
+      37.0,
+      510.0,
+      125.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "R3",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Lock Indicator": {
+    "component_box": [
+      177.0,
+      324.0,
+      279.0,
+      399.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Switch",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "÷2",
+          "count": 1
+        },
+        {
+          "name": "÷32/÷2 分频器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PFD/CP": {
+    "component_box": [
+      187.0,
+      231.0,
+      316.0,
+      291.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "÷2",
+          "count": 1
+        },
+        {
+          "name": "÷32/÷2 分频器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Lock Indicator",
+          "count": 1
+        },
+        {
+          "name": "R4",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "÷32/÷2 分频器": {
+    "component_box": [
+      497.0,
+      418.0,
+      755.0,
+      507.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD/CP",
+          "count": 1
+        },
+        {
+          "name": "PFD/CP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Mixer": {
+    "component_box": [
+      112.0,
+      57.0,
+      197.0,
+      143.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "f_ref",
+          "count": 1
+        },
+        {
+          "name": "÷32/÷2 分频器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

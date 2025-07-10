@@ -1,0 +1,79 @@
+{
+  "VCO": {
+    "component_box": [
+      587.0,
+      80.0,
+      713.0,
+      174.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Passive LPF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Devider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Devider": {
+    "component_box": [
+      325.0,
+      371.0,
+      450.0,
+      464.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD": {
+    "component_box": [
+      85.0,
+      51.0,
+      196.0,
+      196.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Devider",
+          "count": 1
+        },
+        {
+          "name": "F1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DN",
+          "count": 1
+        },
+        {
+          "name": "UP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

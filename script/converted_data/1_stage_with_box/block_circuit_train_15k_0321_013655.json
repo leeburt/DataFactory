@@ -1,0 +1,205 @@
+{
+  "αβ/dq转换器": {
+    "component_box": [
+      90.0,
+      150.0,
+      171.0,
+      211.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CC",
+          "count": 1
+        },
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VSC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "AVC": {
+    "component_box": [
+      497.0,
+      276.0,
+      578.0,
+      338.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "αβ/dq 转换器": {
+    "component_box": [
+      316.0,
+      151.0,
+      397.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i^s",
+          "count": 1
+        },
+        {
+          "name": "E^s",
+          "count": 1
+        },
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CC",
+          "count": 1
+        },
+        {
+          "name": "AVC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PLL": {
+    "component_box": [
+      206.0,
+      150.0,
+      288.0,
+      211.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "αβ/dq转换器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "αβ/dq 转换器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      527.0,
+      357.0,
+      546.0,
+      377.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AVC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Grid": {
+    "component_box": [
+      557.0,
+      57.0,
+      601.0,
+      103.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Zg",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "CC": {
+    "component_box": [
+      92.0,
+      238.0,
+      174.0,
+      332.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "αβ/dq转换器",
+          "count": 1
+        },
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VSC": {
+    "component_box": [
+      79.0,
+      37.0,
+      185.0,
+      132.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "αβ/dq转换器",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_dc",
+          "count": 1
+        },
+        {
+          "name": "L",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

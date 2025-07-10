@@ -1,0 +1,98 @@
+{
+  "A_q": {
+    "component_box": [
+      532.0,
+      62.0,
+      619.0,
+      158.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      684.0,
+      88.0,
+      732.0,
+      132.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "A_q",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      66.0,
+      88.0,
+      114.0,
+      132.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "vin",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Proposed loop filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Proposed loop filter": {
+    "component_box": [
+      208.0,
+      57.0,
+      325.0,
+      165.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

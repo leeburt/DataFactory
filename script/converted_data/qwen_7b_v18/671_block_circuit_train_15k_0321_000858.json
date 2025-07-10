@@ -1,0 +1,147 @@
+{
+  "Drive": {
+    "component_box": [
+      1054.0,
+      46.0,
+      1219.0,
+      121.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current Control",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Enc",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Motor": {
+    "component_box": [
+      1449.0,
+      45.0,
+      1615.0,
+      121.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Drive",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Enc",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Trajectory Generator": {
+    "component_box": [
+      15.0,
+      13.0,
+      244.0,
+      155.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Position Loop",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current Control": {
+    "component_box": [
+      713.0,
+      13.0,
+      946.0,
+      155.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Position Loop",
+          "count": 1
+        },
+        {
+          "name": "Drive",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Drive",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Position Loop": {
+    "component_box": [
+      365.0,
+      13.0,
+      594.0,
+      155.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Trajectory Generator",
+          "count": 1
+        },
+        {
+          "name": "Current Control",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Enc": {
+    "component_box": [
+      1387.0,
+      61.0,
+      1454.0,
+      106.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Drive",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current Control",
+          "count": 1
+        },
+        {
+          "name": "Motor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

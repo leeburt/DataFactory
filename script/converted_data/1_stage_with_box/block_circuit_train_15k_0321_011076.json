@@ -1,0 +1,187 @@
+{
+  "Cc": {
+    "component_box": [
+      172.0,
+      502.0,
+      434.0,
+      592.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "3.5-Bit Flash ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3.5-Bit Flash ADC",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Input switch network",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CF1p CF2p CF3p CF4p CF5p CF1n CF2n CF3n CF4n CF5n": {
+    "component_box": [
+      205.0,
+      349.0,
+      464.0,
+      418.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "3.5-Bit Flash ADC",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Vinp",
+          "count": 1
+        },
+        {
+          "name": "Vrefp",
+          "count": 1
+        },
+        {
+          "name": "Vrefn",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CF电容阵列": {
+    "component_box": [
+      636.0,
+      349.0,
+      754.0,
+      418.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_clkr",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SAR",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "V_refp",
+          "count": 1
+        },
+        {
+          "name": "V_refn",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CF1n CF2n CF3n CF4n CF5n": {
+    "component_box": [
+      432.0,
+      502.0,
+      757.0,
+      591.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DEC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SAR",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Vrefp",
+          "count": 1
+        },
+        {
+          "name": "Vrefn",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CF capacitor阵列": {
+    "component_box": [
+      498.0,
+      349.0,
+      600.0,
+      418.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "3.5-Bit Flash ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SAR",
+          "count": 1
+        },
+        {
+          "name": "CF电容阵列",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CF1p  CF2p  CF3p  CF4p  CF5p  CF1n  CF2n  CF3n  CF4n  CF5n": {
+    "component_box": [
+      434.0,
+      178.0,
+      758.0,
+      264.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SAR",
+          "count": 1
+        },
+        {
+          "name": "V_clkr",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "CF1p  CF2p  CF3p  CF4p  CF5p  CF1n  CF2n  CF3n  CF4n  CF5n",
+          "count": 1
+        },
+        {
+          "name": "Vrefp",
+          "count": 1
+        },
+        {
+          "name": "Vrefn",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

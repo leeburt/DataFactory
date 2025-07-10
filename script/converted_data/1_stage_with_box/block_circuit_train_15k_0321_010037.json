@@ -1,0 +1,312 @@
+{
+  "TR  H_GES(z)": {
+    "component_box": [
+      707.0,
+      243.0,
+      807.0,
+      289.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_out adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SAR": {
+    "component_box": [
+      534.0,
+      502.0,
+      621.0,
+      567.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "GES DAC1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TR": {
+    "component_box": [
+      686.0,
+      506.0,
+      726.0,
+      545.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2nd-Stage SAR ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_out summing block",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      520.0,
+      72.0,
+      559.0,
+      111.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RA",
+          "count": 1
+        },
+        {
+          "name": "GES DAC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2nd-Stage SAR ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/G": {
+    "component_box": [
+      297.0,
+      218.0,
+      377.0,
+      316.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "GES DAC1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RA": {
+    "component_box": [
+      373.0,
+      45.0,
+      450.0,
+      137.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "GES DAC2": {
+    "component_box": [
+      544.0,
+      165.0,
+      663.0,
+      245.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TR  H_GES(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      144.0,
+      150.0,
+      219.0,
+      250.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "adder": {
+    "component_box": [
+      162.0,
+      72.0,
+      201.0,
+      111.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "summing junction": {
+    "component_box": [
+      270.0,
+      71.0,
+      309.0,
+      111.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Q1",
+          "count": 1
+        },
+        {
+          "name": "1/G",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "GES DAC1": {
+    "component_box": [
+      390.0,
+      225.0,
+      509.0,
+      306.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/G",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      62.0,
+      150.0,
+      138.0,
+      250.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "2nd-Stage SAR ADC": {
+    "component_box": [
+      641.0,
+      35.0,
+      808.0,
+      147.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

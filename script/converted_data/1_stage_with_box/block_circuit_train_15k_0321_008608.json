@@ -1,0 +1,159 @@
+{
+  "DSP": {
+    "component_box": [
+      727.0,
+      210.0,
+      825.0,
+      295.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Sub-Sampler",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "LNA": {
+    "component_box": [
+      142.0,
+      195.0,
+      254.0,
+      310.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Switch",
+          "count": 1
+        },
+        {
+          "name": "Off-chip ADC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Off-chip Controller": {
+    "component_box": [
+      292.0,
+      21.0,
+      435.0,
+      106.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Pulser",
+          "count": 1
+        },
+        {
+          "name": "Sub-Sampler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Off-chip ADC": {
+    "component_box": [
+      285.0,
+      205.0,
+      392.0,
+      303.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LNA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Band pass",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Pulser": {
+    "component_box": [
+      141.0,
+      6.0,
+      256.0,
+      121.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Off-chip Controller",
+          "count": 1
+        },
+        {
+          "name": "Transducer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Sub-Sampler": {
+    "component_box": [
+      557.0,
+      209.0,
+      699.0,
+      294.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Band pass",
+          "count": 1
+        },
+        {
+          "name": "PRF Synchronization Signal",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DSP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Band pass": {
+    "component_box": [
+      429.0,
+      216.0,
+      519.0,
+      290.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Off-chip ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sub-Sampler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

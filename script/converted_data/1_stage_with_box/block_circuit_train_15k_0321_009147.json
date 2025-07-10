@@ -1,0 +1,163 @@
+{
+  "Minimization of J(s(k))": {
+    "component_box": [
+      455.0,
+      160.0,
+      665.0,
+      316.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference Design",
+          "count": 1
+        },
+        {
+          "name": "Voltage sensor",
+          "count": 1
+        },
+        {
+          "name": "IGBT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "IGBT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "v_sb": {
+    "component_box": [
+      717.0,
+      40.0,
+      741.0,
+      63.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "i_sb\nv_sc",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "i_sb\nv_sc": {
+    "component_box": [
+      771.0,
+      40.0,
+      794.0,
+      63.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Minimization of J(s(k))",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "IGBT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "IGBT": {
+    "component_box": [
+      708.0,
+      160.0,
+      864.0,
+      316.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Minimization of J(s(k))",
+          "count": 1
+        },
+        {
+          "name": "v_dc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "v_sb",
+          "count": 1
+        },
+        {
+          "name": "i_sb\nv_sc",
+          "count": 1
+        },
+        {
+          "name": "Voltage sensor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Voltage sensor": {
+    "component_box": [
+      825.0,
+      40.0,
+      848.0,
+      63.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Minimization of J(s(k))",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "AFE",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Reference Design": {
+    "component_box": [
+      151.0,
+      161.0,
+      328.0,
+      317.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Qₛ* (k+1)",
+          "count": 1
+        },
+        {
+          "name": "v_dc (k+1)",
+          "count": 1
+        },
+        {
+          "name": "v_dc (k)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Minimization of J(s(k))",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

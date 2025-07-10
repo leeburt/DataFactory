@@ -1,0 +1,200 @@
+{
+  "Rectifier": {
+    "component_box": [
+      271.0,
+      43.0,
+      423.0,
+      119.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LC tank",
+          "count": 1
+        },
+        {
+          "name": "Onchip DC voltage regulators",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Rectifier  \nOnchip DC voltage regulators  \nClock recovery  \nLSK back telemetry  \nParallel to Serial interface  \nCapacitance to digital converter": {
+    "component_box": [
+      222.0,
+      7.0,
+      775.0,
+      477.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "LC tank",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "LC tank",
+          "count": 1
+        },
+        {
+          "name": "Capacitive sensor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LSK back telemetry": {
+    "component_box": [
+      271.0,
+      268.0,
+      413.0,
+      350.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Parallel to Serial interface",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LC tank",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Clock recovery",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LC tank": {
+    "component_box": [
+      82.0,
+      80.0,
+      187.0,
+      160.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RF power",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Rectifier",
+          "count": 1
+        },
+        {
+          "name": "Clock recovery",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Capacitance to digital converter": {
+    "component_box": [
+      509.0,
+      365.0,
+      694.0,
+      450.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Parallel to Serial interface",
+          "count": 1
+        },
+        {
+          "name": "Capacitive sensor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Onchip DC voltage regulators": {
+    "component_box": [
+      515.0,
+      43.0,
+      724.0,
+      119.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Rectifier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Parallel to Serial interface",
+          "count": 1
+        },
+        {
+          "name": "Capacitance to digital converter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Parallel to Serial interface": {
+    "component_box": [
+      509.0,
+      271.0,
+      690.0,
+      347.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Capacitance to digital converter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LSK back telemetry",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock recovery": {
+    "component_box": [
+      271.0,
+      165.0,
+      413.0,
+      237.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LC tank",
+          "count": 1
+        },
+        {
+          "name": "LSK back telemetry",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "Voltage Reference": {
+    "component_box": [
+      59.0,
+      20.0,
+      374.0,
+      178.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VDD",
+          "count": 1
+        },
+        {
+          "name": "TI-OPA129",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "TI-OPA129": {
+    "component_box": [
+      459.0,
+      97.0,
+      589.0,
+      221.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Voltage Reference",
+          "count": 1
+        },
+        {
+          "name": "V_REF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Agilent 34401A 6½ Digit Multimeter": {
+    "component_box": [
+      432.0,
+      5.0,
+      743.0,
+      89.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "V_REF",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Voltage Reference",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

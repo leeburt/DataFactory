@@ -1,0 +1,231 @@
+{
+  "OLO": {
+    "component_box": [
+      19.0,
+      281.0,
+      81.0,
+      359.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Polarization-diversity optical hybrid",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VGA": {
+    "component_box": [
+      432.0,
+      248.0,
+      491.0,
+      309.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TIA",
+          "count": 1
+        },
+        {
+          "name": "DSP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "THA、ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "THA": {
+    "component_box": [
+      510.0,
+      346.0,
+      636.0,
+      395.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VGA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TIA": {
+    "component_box": [
+      358.0,
+      341.0,
+      412.0,
+      402.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Photodiode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VGA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Photodiode": {
+    "component_box": [
+      261.0,
+      69.0,
+      299.0,
+      115.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Polarization-diversity optical hybrid",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TIA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      512.0,
+      68.0,
+      636.0,
+      116.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "THA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DSP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "THA、ADC": {
+    "component_box": [
+      512.0,
+      254.0,
+      636.0,
+      304.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VGA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DSP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Polarization-diversity optical hybrid": {
+    "component_box": [
+      120.0,
+      71.0,
+      240.0,
+      399.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Received channel",
+          "count": 1
+        },
+        {
+          "name": "OLO",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Photodiode",
+          "count": 1
+        },
+        {
+          "name": "Photodiode",
+          "count": 1
+        },
+        {
+          "name": "Photodiode",
+          "count": 1
+        },
+        {
+          "name": "Photodiode",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DSP": {
+    "component_box": [
+      667.0,
+      64.0,
+      828.0,
+      397.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "THA",
+          "count": 1
+        },
+        {
+          "name": "THA、ADC",
+          "count": 1
+        },
+        {
+          "name": "THA",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "6th-order elliptic filter": {
+    "component_box": [
+      15.0,
+      117.0,
+      168.0,
+      193.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      206.0,
+      111.0,
+      267.0,
+      149.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "6th-order elliptic filter",
+          "count": 1
+        },
+        {
+          "name": "Loop filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Phase-frequency detector": {
+    "component_box": [
+      411.0,
+      75.0,
+      525.0,
+      174.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Divider",
+          "count": 1
+        },
+        {
+          "name": "Reference frequency",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Charge pump",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Divider": {
+    "component_box": [
+      292.0,
+      113.0,
+      384.0,
+      159.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Phase-frequency detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Loop filter": {
+    "component_box": [
+      558.0,
+      195.0,
+      652.0,
+      259.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Charge pump",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "6th-order elliptic filter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Charge pump": {
+    "component_box": [
+      558.0,
+      98.0,
+      645.0,
+      170.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Phase-frequency detector",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Loop filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

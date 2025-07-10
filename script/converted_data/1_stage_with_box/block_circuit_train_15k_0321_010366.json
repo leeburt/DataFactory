@@ -1,0 +1,263 @@
+{
+  "Subtractor": {
+    "component_box": [
+      385.0,
+      114.0,
+      415.0,
+      143.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2^{m-1}",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC1": {
+    "component_box": [
+      225.0,
+      134.0,
+      322.0,
+      205.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "MSB DAC",
+          "count": 1
+        },
+        {
+          "name": "LSB DAC",
+          "count": 1
+        },
+        {
+          "name": "Delay",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DAC": {
+    "component_box": [
+      335.0,
+      138.0,
+      393.0,
+      198.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LSB DAC": {
+    "component_box": [
+      73.0,
+      262.0,
+      165.0,
+      339.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC2": {
+    "component_box": [
+      540.0,
+      98.0,
+      643.0,
+      167.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2^{m-1}",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MSB DAC": {
+    "component_box": [
+      66.0,
+      181.0,
+      158.0,
+      258.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Loop Filter": {
+    "component_box": [
+      62.0,
+      12.0,
+      213.0,
+      138.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "X_in",
+          "count": 1
+        },
+        {
+          "name": "MSB DAC",
+          "count": 1
+        },
+        {
+          "name": "LSB DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC1",
+          "count": 1
+        },
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Delay": {
+    "component_box": [
+      303.0,
+      315.0,
+      355.0,
+      358.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LSB DAC",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "加法器": {
+    "component_box": [
+      480.0,
+      367.0,
+      510.0,
+      397.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Delay",
+          "count": 1
+        },
+        {
+          "name": "ADC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Yout (Digital Output)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2^{m-1}": {
+    "component_box": [
+      424.0,
+      72.0,
+      519.0,
+      184.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

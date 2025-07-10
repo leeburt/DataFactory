@@ -1,0 +1,325 @@
+{
+  "RS-FF": {
+    "component_box": [
+      405.0,
+      544.0,
+      516.0,
+      632.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Delay",
+          "count": 1
+        },
+        {
+          "name": "dCLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Rising Edge Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Delay": {
+    "component_box": [
+      320.0,
+      423.0,
+      422.0,
+      461.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "COMP3",
+          "count": 1
+        },
+        {
+          "name": "RS-FF",
+          "count": 1
+        },
+        {
+          "name": "Delay",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "COMP2": {
+    "component_box": [
+      156.0,
+      168.0,
+      216.0,
+      256.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_SEN",
+          "count": 1
+        },
+        {
+          "name": "V_Peak",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX Array",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MUX Array": {
+    "component_box": [
+      627.0,
+      162.0,
+      826.0,
+      241.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Up/Down Counter",
+          "count": 1
+        },
+        {
+          "name": "Up/Down Counter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADDER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "COMP3": {
+    "component_box": [
+      154.0,
+      286.0,
+      215.0,
+      374.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_IN",
+          "count": 1
+        },
+        {
+          "name": "V_X",
+          "count": 1
+        },
+        {
+          "name": "Delay",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Up/Down Counter": {
+    "component_box": [
+      629.0,
+      32.0,
+      830.0,
+      135.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RS-FF",
+          "count": 1
+        },
+        {
+          "name": "COMP3",
+          "count": 1
+        },
+        {
+          "name": "clr",
+          "count": 1
+        },
+        {
+          "name": "UD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX Array",
+          "count": 1
+        },
+        {
+          "name": "ADDER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Ring OSC": {
+    "component_box": [
+      69.0,
+      522.0,
+      169.0,
+      624.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "AND门",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "AND门": {
+    "component_box": [
+      135.0,
+      430.0,
+      193.0,
+      491.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ring OSC",
+          "count": 1
+        },
+        {
+          "name": "Dimming",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Delay",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Rising Edge Detector": {
+    "component_box": [
+      630.0,
+      543.0,
+      774.0,
+      632.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RS-FF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RS-FF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "COMP1": {
+    "component_box": [
+      156.0,
+      67.0,
+      216.0,
+      155.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vavg,OPT",
+          "count": 1
+        },
+        {
+          "name": "Vsen",
+          "count": 1
+        },
+        {
+          "name": "RS-FF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Down Counter": {
+    "component_box": [
+      629.0,
+      408.0,
+      823.0,
+      501.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RS-FF",
+          "count": 1
+        },
+        {
+          "name": "Delay",
+          "count": 1
+        },
+        {
+          "name": "ADDER",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "ADDER": {
+    "component_box": [
+      629.0,
+      275.0,
+      830.0,
+      366.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MUX Array",
+          "count": 1
+        },
+        {
+          "name": "MUX Array",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Down Counter",
+          "count": 1
+        },
+        {
+          "name": "Down Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "PC Path": {
+    "component_box": [
+      426.0,
+      149.0,
+      471.0,
+      191.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C2",
+          "count": 1
+        },
+        {
+          "name": "SCA Path  \nPC Path  \nSCA Path",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Biquad Q=1.62": {
+    "component_box": [
+      567.0,
+      408.0,
+      717.0,
+      519.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Biquad Q=0.62",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Vop",
+          "count": 1
+        },
+        {
+          "name": "Von",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SCA Path  \nPC Path": {
+    "component_box": [
+      440.0,
+      74.0,
+      673.0,
+      141.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "φ1",
+          "count": 1
+        },
+        {
+          "name": "φ2",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "C2",
+          "count": 1
+        },
+        {
+          "name": "Vcm",
+          "count": 1
+        },
+        {
+          "name": "SCA Path  \nPC Path  \nSCA Path",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Main OTA": {
+    "component_box": [
+      285.0,
+      228.0,
+      374.0,
+      327.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C_Q",
+          "count": 1
+        },
+        {
+          "name": "C_S",
+          "count": 1
+        },
+        {
+          "name": "V_cm",
+          "count": 1
+        },
+        {
+          "name": "Vip",
+          "count": 1
+        },
+        {
+          "name": "SCA Path  \nPC Path",
+          "count": 1
+        },
+        {
+          "name": "PC Path",
+          "count": 1
+        },
+        {
+          "name": "PC Path",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SCA Path  \nΔ": {
+    "component_box": [
+      650.0,
+      125.0,
+      691.0,
+      169.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C2",
+          "count": 1
+        },
+        {
+          "name": "C1",
+          "count": 1
+        },
+        {
+          "name": "Cint",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Biquad Q=0.62": {
+    "component_box": [
+      353.0,
+      409.0,
+      503.0,
+      520.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Uniquad",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Biquad Q=1.62",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SCA Path  PC Path  SCA Path": {
+    "component_box": [
+      509.0,
+      153.0,
+      596.0,
+      186.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C2",
+          "count": 1
+        },
+        {
+          "name": "Cint",
+          "count": 1
+        },
+        {
+          "name": "Main OTA",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Uniquad": {
+    "component_box": [
+      137.0,
+      408.0,
+      288.0,
+      519.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vinp",
+          "count": 1
+        },
+        {
+          "name": "Vinn",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Biquad Q=0.62",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

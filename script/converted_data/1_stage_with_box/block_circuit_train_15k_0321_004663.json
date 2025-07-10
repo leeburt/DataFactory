@@ -1,0 +1,316 @@
+{
+  "MUX": {
+    "component_box": [
+      148.0,
+      163.0,
+      291.0,
+      306.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PRBS Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FFE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      536.0,
+      208.0,
+      565.0,
+      239.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FFE",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Driver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BUFFER": {
+    "component_box": [
+      247.0,
+      186.0,
+      279.0,
+      208.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FFE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PRBS Generator": {
+    "component_box": [
+      22.0,
+      185.0,
+      146.0,
+      263.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Driver": {
+    "component_box": [
+      622.0,
+      195.0,
+      683.0,
+      251.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Dout",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "VDD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VRef": {
+    "component_box": [
+      683.0,
+      60.0,
+      724.0,
+      110.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "0.99 V_L",
+          "count": 1
+        },
+        {
+          "name": "0.9 V",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "BJT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FFE": {
+    "component_box": [
+      294.0,
+      188.0,
+      448.0,
+      297.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BUFFER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Inverter": {
+    "component_box": [
+      234.0,
+      240.0,
+      266.0,
+      264.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FFE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PRBS Generator  \nMUX": {
+    "component_box": [
+      13.0,
+      139.0,
+      291.0,
+      312.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MSB",
+          "count": 1
+        },
+        {
+          "name": "LSB",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FFE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Transmission Gate": {
+    "component_box": [
+      191.0,
+      168.0,
+      241.0,
+      213.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PRBS Generator",
+          "count": 1
+        },
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "transmission gate": {
+    "component_box": [
+      185.0,
+      199.0,
+      233.0,
+      244.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PRBS Generator",
+          "count": 1
+        },
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Buffer": {
+    "component_box": [
+      240.0,
+      215.0,
+      274.0,
+      238.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Transmission Gate",
+          "count": 1
+        },
+        {
+          "name": "transmission gate",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FFE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BJT": {
+    "component_box": [
+      635.0,
+      160.0,
+      697.0,
+      211.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Driver",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Dout",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "LDO",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

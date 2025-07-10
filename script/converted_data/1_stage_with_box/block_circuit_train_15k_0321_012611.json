@@ -1,0 +1,83 @@
+{
+  "Control Unit": {
+    "component_box": [
+      160.0,
+      189.0,
+      308.0,
+      359.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PRNG",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PRNG",
+          "count": 1
+        },
+        {
+          "name": "DCDL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PRNG": {
+    "component_box": [
+      160.0,
+      8.0,
+      305.0,
+      182.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "START/STOP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCDL",
+          "count": 1
+        },
+        {
+          "name": "Control Unit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DCDL": {
+    "component_box": [
+      500.0,
+      8.0,
+      645.0,
+      132.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PRNG",
+          "count": 1
+        },
+        {
+          "name": "Control Unit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SAMP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

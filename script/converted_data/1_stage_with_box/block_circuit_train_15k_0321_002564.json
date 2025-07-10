@@ -1,0 +1,175 @@
+{
+  "Rigol DL3021A": {
+    "component_box": [
+      183.0,
+      247.0,
+      325.0,
+      328.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Agilent E3647A",
+          "count": 1
+        },
+        {
+          "name": "Current probe",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Agilent E3647A": {
+    "component_box": [
+      11.0,
+      56.0,
+      125.0,
+      168.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "LDO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BNC连接器": {
+    "component_box": [
+      647.0,
+      115.0,
+      677.0,
+      136.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current probe",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "BNC接口",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LDO": {
+    "component_box": [
+      187.0,
+      82.0,
+      301.0,
+      195.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Current probe",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Agilent E3647A",
+          "count": 1
+        },
+        {
+          "name": "Agilent E3647A",
+          "count": 1
+        },
+        {
+          "name": "BNC接口",
+          "count": 1
+        },
+        {
+          "name": "ESR",
+          "count": 1
+        },
+        {
+          "name": "MLCC",
+          "count": 1
+        },
+        {
+          "name": "CL",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Current probe": {
+    "component_box": [
+      320.0,
+      202.0,
+      492.0,
+      244.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LDO",
+          "count": 1
+        },
+        {
+          "name": "Rigol DL3021A",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "BNC接口": {
+    "component_box": [
+      612.0,
+      114.0,
+      643.0,
+      136.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "BNC连接器",
+          "count": 1
+        },
+        {
+          "name": "Vout",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Keysight CX3324A": {
+    "component_box": [
+      550.0,
+      31.0,
+      693.0,
+      144.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "BNC连接器",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

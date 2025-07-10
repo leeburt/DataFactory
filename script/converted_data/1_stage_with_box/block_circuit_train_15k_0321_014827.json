@@ -1,0 +1,133 @@
+{
+  "RC Lowpass filter": {
+    "component_box": [
+      98.0,
+      221.0,
+      282.0,
+      319.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input signal",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CCD Input",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Main-filter": {
+    "component_box": [
+      773.0,
+      218.0,
+      958.0,
+      315.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Transversal + Recursive CCD",
+          "count": 1
+        },
+        {
+          "name": "Clock-generation and biasing circuitry (on chip)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output signal",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock-generation and biasing circuitry (on chip)": {
+    "component_box": [
+      597.0,
+      4.0,
+      905.0,
+      101.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "I_CIN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Transversal + Recursive CCD",
+          "count": 1
+        },
+        {
+          "name": "Main-filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Transversal + Recursive CCD": {
+    "component_box": [
+      549.0,
+      219.0,
+      732.0,
+      317.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CCD Input",
+          "count": 1
+        },
+        {
+          "name": "Clock-generation and biasing circuitry (on chip)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Main-filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CCD Input": {
+    "component_box": [
+      322.0,
+      220.0,
+      507.0,
+      319.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RC Lowpass filter",
+          "count": 1
+        },
+        {
+          "name": "Clock-generation and biasing circuitry (on chip)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Transversal + Recursive CCD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

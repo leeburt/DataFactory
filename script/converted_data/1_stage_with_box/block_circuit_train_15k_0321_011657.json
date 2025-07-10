@@ -1,0 +1,324 @@
+{
+  "Main Path: A": {
+    "component_box": [
+      262.0,
+      25.0,
+      521.0,
+      105.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "P_out\nAdder\nActive Part:β/α",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P_out  \nPassive Part  \nSumming junction",
+          "count": 1
+        },
+        {
+          "name": "Active Part",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out  \nPassive Part  \nSumming junction": {
+    "component_box": [
+      630.0,
+      130.0,
+      671.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Main Path: A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "η",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out\nSumming junction\nActive Part: β/α": {
+    "component_box": [
+      712.0,
+      70.0,
+      725.0,
+      109.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Main Path: A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P_out  \nPassive Part  \nSumming junction",
+          "count": 1
+        },
+        {
+          "name": "P_out\nSumming junction\nFeedback path",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out  \nMultiplier  \nFeedback path": {
+    "component_box": [
+      275.0,
+      229.0,
+      332.0,
+      285.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Active Part",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P_out\nSumming junction\nFeedback path",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out  \nAttenuator  \nFeedback path": {
+    "component_box": [
+      388.0,
+      306.0,
+      430.0,
+      349.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "P_out\nSumming junction\nFeedback path",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "η",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out Summing junction Feedback path": {
+    "component_box": [
+      388.0,
+      239.0,
+      430.0,
+      281.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "P_out Multiplier Feedback path",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P_out Attenuator Feedback path",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Pout Adder Feedback path": {
+    "component_box": [
+      195.0,
+      222.0,
+      260.0,
+      291.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "P_out Σ Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P_out Multiplier Feedback path",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out  \nAdder  \nActive Part: β/α": {
+    "component_box": [
+      54.0,
+      344.0,
+      85.0,
+      375.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Active Part",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P_out  \nAdder\nActive Part: β/α",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out Σ Active Part: β/α": {
+    "component_box": [
+      170.0,
+      123.0,
+      212.0,
+      165.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "P_out Adder Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P_out Adder Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "η": {
+    "component_box": [
+      476.0,
+      224.0,
+      539.0,
+      291.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "P_out  Passive Part  Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P_out  Attenuator  Feedback path",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Active Part": {
+    "component_box": [
+      181.0,
+      216.0,
+      350.0,
+      296.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "P_out  Σ  Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "η",
+          "count": 1
+        },
+        {
+          "name": "P_out  Adder  Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out Adder Active Part: β/α": {
+    "component_box": [
+      62.0,
+      36.0,
+      121.0,
+      95.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "External Input",
+          "count": 1
+        },
+        {
+          "name": "P_out Adder Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Main Path: A",
+          "count": 1
+        },
+        {
+          "name": "P_out Σ Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out  \nSumming junction  \nActive Part:β/α": {
+    "component_box": [
+      579.0,
+      9.0,
+      622.0,
+      51.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Main Path: A",
+          "count": 1
+        },
+        {
+          "name": "P_out  \nPassive Part  \nSumming junction",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "C-DAC": {
+    "component_box": [
+      121.0,
+      197.0,
+      245.0,
+      292.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "3-stage dynamic comparator",
+          "count": 1
+        },
+        {
+          "name": "Strong arm latch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "3-stage dynamic comparator": {
+    "component_box": [
+      292.0,
+      199.0,
+      373.0,
+      290.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "C-DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Strong arm latch",
+          "count": 1
+        },
+        {
+          "name": "Statistical estimation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Common gate stage": {
+    "component_box": [
+      219.0,
+      521.0,
+      270.0,
+      592.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CMOS input stage",
+          "count": 1
+        },
+        {
+          "name": "3-stage dynamic comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "D flip-flop": {
+    "component_box": [
+      557.0,
+      69.0,
+      595.0,
+      134.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clock booster",
+          "count": 1
+        },
+        {
+          "name": "CLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Statistical estimation",
+          "count": 1
+        },
+        {
+          "name": "Strong arm latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Statistical estimation": {
+    "component_box": [
+      591.0,
+      210.0,
+      722.0,
+      282.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Switch",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Clock generator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Shared DFF chain": {
+    "component_box": [
+      509.0,
+      37.0,
+      629.0,
+      154.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Clock booster",
+          "count": 1
+        },
+        {
+          "name": "Statistical estimation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Strong arm latch": {
+    "component_box": [
+      362.0,
+      344.0,
+      509.0,
+      431.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "3-stage dynamic comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Shared DFF chain",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock booster": {
+    "component_box": [
+      138.0,
+      45.0,
+      357.0,
+      99.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Shared DFF chain",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3-stage dynamic comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CMOS input stage": {
+    "component_box": [
+      115.0,
+      521.0,
+      165.0,
+      593.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Common gate stage",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

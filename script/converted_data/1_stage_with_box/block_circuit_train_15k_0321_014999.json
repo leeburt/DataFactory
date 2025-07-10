@@ -1,0 +1,136 @@
+{
+  "DCO": {
+    "component_box": [
+      433.0,
+      159.0,
+      475.0,
+      203.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital Filter",
+          "count": 1
+        },
+        {
+          "name": "Frequency Aid",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "BBPD",
+          "count": 1
+        },
+        {
+          "name": "Frequency Aid",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BBPD": {
+    "component_box": [
+      136.0,
+      148.0,
+      246.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ref",
+          "count": 1
+        },
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Ref": {
+    "component_box": [
+      11.0,
+      139.0,
+      54.0,
+      183.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "BBPD",
+          "count": 1
+        },
+        {
+          "name": "Frequency Aid",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital Filter": {
+    "component_box": [
+      279.0,
+      148.0,
+      363.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Frequency Aid": {
+    "component_box": [
+      213.0,
+      64.0,
+      385.0,
+      117.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FCW",
+          "count": 1
+        },
+        {
+          "name": "Ref",
+          "count": 1
+        },
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

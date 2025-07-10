@@ -1,0 +1,155 @@
+{
+  "Summer": {
+    "component_box": [
+      463.0,
+      155.0,
+      507.0,
+      200.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "G",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MSB",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Uniform Random Noise": {
+    "component_box": [
+      130.0,
+      243.0,
+      299.0,
+      341.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "f_clk",
+          "count": 1
+        },
+        {
+          "name": "G",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MSB": {
+    "component_box": [
+      545.0,
+      143.0,
+      687.0,
+      212.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y_k",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G": {
+    "component_box": [
+      370.0,
+      251.0,
+      453.0,
+      336.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Uniform Random Noise",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Register": {
+    "component_box": [
+      185.0,
+      8.0,
+      359.0,
+      77.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "f_clk",
+          "count": 1
+        },
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      226.0,
+      131.0,
+      319.0,
+      223.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Register",
+          "count": 1
+        },
+        {
+          "name": "w",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Register",
+          "count": 1
+        },
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

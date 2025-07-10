@@ -1,0 +1,141 @@
+{
+  "Inverter": {
+    "component_box": [
+      532.0,
+      318.0,
+      649.0,
+      461.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PFD",
+          "count": 1
+        },
+        {
+          "name": "I1  \nI2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I1  \nI2": {
+    "component_box": [
+      753.0,
+      74.0,
+      840.0,
+      159.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "S1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD": {
+    "component_box": [
+      210.0,
+      305.0,
+      388.0,
+      474.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "clk_in",
+          "count": 1
+        },
+        {
+          "name": "fb_clk",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "I2": {
+    "component_box": [
+      901.0,
+      483.0,
+      990.0,
+      568.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "S2",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "counter": {
+    "component_box": [
+      1395.0,
+      218.0,
+      1627.0,
+      494.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comp",
+          "count": 1
+        },
+        {
+          "name": "polarity",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TD[9:0]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comp": {
+    "component_box": [
+      1125.0,
+      219.0,
+      1272.0,
+      389.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "counter",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Vc",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

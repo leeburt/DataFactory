@@ -1,0 +1,209 @@
+{
+  "Band-Pass Filter": {
+    "component_box": [
+      81.0,
+      43.0,
+      140.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V-mode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Peak Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "vmm_wta": {
+    "component_box": [
+      567.0,
+      434.0,
+      775.0,
+      516.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Peak Detector",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Out1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VMM": {
+    "component_box": [
+      470.0,
+      61.0,
+      653.0,
+      245.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V/I",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "WTA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "C4 Band Pass Filter\nPeak Detector\nClassifier": {
+    "component_box": [
+      9.0,
+      416.0,
+      708.0,
+      587.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "In1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Out1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "C4 Band Pass Filter": {
+    "component_box": [
+      90.0,
+      434.0,
+      297.0,
+      515.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "In1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Peak Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Peak Detector": {
+    "component_box": [
+      209.0,
+      43.0,
+      267.0,
+      241.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Band-Pass Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V/I",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "WTA": {
+    "component_box": [
+      470.0,
+      273.0,
+      653.0,
+      320.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VMM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Encoder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Encoder": {
+    "component_box": [
+      740.0,
+      164.0,
+      786.0,
+      359.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "WTA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V-mode log2(n)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "V/I": {
+    "component_box": [
+      362.0,
+      62.0,
+      409.0,
+      243.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Peak Detector",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VMM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

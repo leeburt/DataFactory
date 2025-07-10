@@ -1,0 +1,168 @@
+{
+  "Voltage Reference Circuit": {
+    "component_box": [
+      328.0,
+      248.0,
+      422.0,
+      342.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Sense Temperature Adjust Circuit",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Interface Circuit",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Sense Temperature Adjust Circuit": {
+    "component_box": [
+      445.0,
+      249.0,
+      568.0,
+      342.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Voltage Reference Circuit",
+          "count": 1
+        },
+        {
+          "name": "Sense Temp. Select",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      605.0,
+      176.0,
+      704.0,
+      298.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Temperature Dependent Circuit",
+          "count": 1
+        },
+        {
+          "name": "Sense Temperature Adjust Circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sensor Output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Interface Circuit": {
+    "component_box": [
+      135.0,
+      132.0,
+      218.0,
+      343.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Test Control Circuit",
+          "count": 1
+        },
+        {
+          "name": "Fuse or Non-Volatile Memory",
+          "count": 1
+        },
+        {
+          "name": "Temperature Dependent Circuit",
+          "count": 1
+        },
+        {
+          "name": "Voltage Reference Circuit",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Test Control Circuit": {
+    "component_box": [
+      77.0,
+      10.0,
+      163.0,
+      100.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Interface Circuit",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Fuse or Non-Volatile Memory": {
+    "component_box": [
+      15.0,
+      130.0,
+      102.0,
+      341.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Interface Circuit",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Temperature Dependent Circuit": {
+    "component_box": [
+      387.0,
+      131.0,
+      509.0,
+      225.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Interface Circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

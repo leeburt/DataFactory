@@ -1,0 +1,148 @@
+{
+  "1/s": {
+    "component_box": [
+      235.0,
+      272.0,
+      355.0,
+      341.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Phase Detect",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Phase Detect.": {
+    "component_box": [
+      150.0,
+      83.0,
+      201.0,
+      131.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "INPUT SIGNAL",
+          "count": 1
+        },
+        {
+          "name": "1/s",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Kd",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      414.0,
+      254.0,
+      531.0,
+      361.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LOWPASS FILTER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/s",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Kd": {
+    "component_box": [
+      228.0,
+      77.0,
+      280.0,
+      127.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Phase Detect.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LOWPASS FILTER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Phase Detect": {
+    "component_box": [
+      120.0,
+      45.0,
+      308.0,
+      165.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "INPUT SIGNAL",
+          "count": 1
+        },
+        {
+          "name": "1/s",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LOWPASS FILTER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LOWPASS FILTER": {
+    "component_box": [
+      389.0,
+      19.0,
+      552.0,
+      191.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Phase Detect.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output signal",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

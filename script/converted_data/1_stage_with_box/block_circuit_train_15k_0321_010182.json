@@ -1,0 +1,309 @@
+{
+  "Adder": {
+    "component_box": [
+      701.0,
+      171.0,
+      721.0,
+      192.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "F0",
+          "count": 1
+        },
+        {
+          "name": "F1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H1": {
+    "component_box": [
+      89.0,
+      210.0,
+      142.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      361.0,
+      210.0,
+      417.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G0": {
+    "component_box": [
+      555.0,
+      97.0,
+      602.0,
+      129.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2↑",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "F0",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2↑": {
+    "component_box": [
+      483.0,
+      97.0,
+      530.0,
+      129.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "G0",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "S/H": {
+    "component_box": [
+      288.0,
+      97.0,
+      341.0,
+      128.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Hc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Hc": {
+    "component_box": [
+      216.0,
+      210.0,
+      269.0,
+      243.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "S/H",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Mixer": {
+    "component_box": [
+      168.0,
+      102.0,
+      187.0,
+      123.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H0",
+          "count": 1
+        },
+        {
+          "name": "cosΩ0t",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Hc",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G1": {
+    "component_box": [
+      555.0,
+      211.0,
+      601.0,
+      243.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2↑",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "F1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H0": {
+    "component_box": [
+      89.0,
+      97.0,
+      142.0,
+      128.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "multiplier": {
+    "component_box": [
+      441.0,
+      215.0,
+      461.0,
+      237.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2↑",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "F0": {
+    "component_box": [
+      641.0,
+      97.0,
+      687.0,
+      129.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "G0",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "F1": {
+    "component_box": [
+      641.0,
+      211.0,
+      687.0,
+      243.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "G1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

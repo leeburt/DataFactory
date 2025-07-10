@@ -1,0 +1,289 @@
+{
+  "Adder": {
+    "component_box": [
+      635.0,
+      372.0,
+      665.0,
+      401.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "A1",
+          "count": 1
+        },
+        {
+          "name": "A3(...)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Backend ADC": {
+    "component_box": [
+      597.0,
+      96.0,
+      689.0,
+      168.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "A3(...)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "+δ": {
+    "component_box": [
+      260.0,
+      192.0,
+      308.0,
+      241.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "sub-ADC": {
+    "component_box": [
+      118.0,
+      262.0,
+      188.0,
+      334.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Summer": {
+    "component_box": [
+      269.0,
+      117.0,
+      298.0,
+      146.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2+δ",
+          "count": 1
+        },
+        {
+          "name": "+δ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "a1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "A1": {
+    "component_box": [
+      484.0,
+      361.0,
+      532.0,
+      410.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "sub-ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/2": {
+    "component_box": [
+      695.0,
+      361.0,
+      743.0,
+      410.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2+δ": {
+    "component_box": [
+      150.0,
+      106.0,
+      198.0,
+      156.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      270.0,
+      284.0,
+      299.0,
+      313.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "sub-ADC",
+          "count": 1
+        },
+        {
+          "name": "Vref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "+δ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "a₃(...)³": {
+    "component_box": [
+      412.0,
+      54.0,
+      480.0,
+      94.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2+δ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "A3(...)": {
+    "component_box": [
+      637.0,
+      242.0,
+      696.0,
+      298.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Backend ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "a1": {
+    "component_box": [
+      407.0,
+      107.0,
+      456.0,
+      156.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

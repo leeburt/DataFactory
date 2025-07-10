@@ -1,0 +1,202 @@
+{
+  "Oscillator(f₀)": {
+    "component_box": [
+      531.0,
+      47.0,
+      591.0,
+      108.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing Junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      312.0,
+      174.0,
+      348.0,
+      211.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Frequency Divider",
+          "count": 1
+        },
+        {
+          "name": "L4(f)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Phase Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing Junction": {
+    "component_box": [
+      620.0,
+      60.0,
+      656.0,
+      96.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Oscillator(f₀)",
+          "count": 1
+        },
+        {
+          "name": "L3(f)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "L(f)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Phase Detector": {
+    "component_box": [
+      114.0,
+      48.0,
+      225.0,
+      108.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "L1(f)",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Charge Pump",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      468.0,
+      60.0,
+      505.0,
+      96.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "L2(f)",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        },
+        {
+          "name": "Oscillator(f₀)",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Frequency Divider": {
+    "component_box": [
+      386.0,
+      162.0,
+      528.0,
+      223.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Oscillator(f₀)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Charge Pump": {
+    "component_box": [
+      245.0,
+      48.0,
+      344.0,
+      108.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Phase Detector",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Loop Filter": {
+    "component_box": [
+      367.0,
+      48.0,
+      444.0,
+      108.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Charge Pump",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

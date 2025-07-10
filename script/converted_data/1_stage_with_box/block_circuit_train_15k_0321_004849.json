@@ -1,0 +1,224 @@
+{
+  "j 旋转算子": {
+    "component_box": [
+      312.0,
+      165.0,
+      345.0,
+      197.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ωL_s",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      312.0,
+      61.0,
+      345.0,
+      93.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        },
+        {
+          "name": "i_s",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "quasi-PR",
+          "count": 1
+        },
+        {
+          "name": "ωL_s",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      81.0,
+      61.0,
+      114.0,
+      93.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "nU_Href",
+          "count": 1
+        },
+        {
+          "name": "K_m",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      238.0,
+      61.0,
+      270.0,
+      93.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI",
+          "count": 1
+        },
+        {
+          "name": "K_m",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI": {
+    "component_box": [
+      137.0,
+      54.0,
+      199.0,
+      100.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_m": {
+    "component_box": [
+      135.0,
+      112.0,
+      201.0,
+      151.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "U_Hi",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ωL_s": {
+    "component_box": [
+      394.0,
+      162.0,
+      452.0,
+      198.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "j 旋转算子",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "quasi-PR": {
+    "component_box": [
+      365.0,
+      53.0,
+      493.0,
+      100.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "U_Hi": {
+    "component_box": [
+      14.0,
+      128.0,
+      40.0,
+      156.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "K_m",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

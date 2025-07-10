@@ -1,0 +1,315 @@
+{
+  "control": {
+    "component_box": [
+      635.0,
+      436.0,
+      754.0,
+      520.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "comparator",
+          "count": 1
+        },
+        {
+          "name": "6.144MHz clock",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H-bridge",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "IDAC": {
+    "component_box": [
+      72.0,
+      10.0,
+      762.0,
+      619.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MOD3 DEM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      379.0,
+      161.0,
+      428.0,
+      208.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "INT1",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "IDAC",
+          "count": 1
+        },
+        {
+          "name": "INT45",
+          "count": 1
+        },
+        {
+          "name": "R_FB",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Sub-DAC": {
+    "component_box": [
+      285.0,
+      418.0,
+      431.0,
+      538.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "INT1",
+          "count": 1
+        },
+        {
+          "name": "INT2",
+          "count": 1
+        },
+        {
+          "name": "INT3",
+          "count": 1
+        },
+        {
+          "name": "INT45",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "comparator": {
+    "component_box": [
+      528.0,
+      452.0,
+      582.0,
+      506.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Sub-DAC",
+          "count": 1
+        },
+        {
+          "name": "control",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "INT2": {
+    "component_box": [
+      511.0,
+      160.0,
+      557.0,
+      209.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "INT3",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Loop Filter feedback resistor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "INT3": {
+    "component_box": [
+      641.0,
+      161.0,
+      688.0,
+      209.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "INT2",
+          "count": 1
+        },
+        {
+          "name": "INT45",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "INT45",
+          "count": 1
+        },
+        {
+          "name": "Sub-DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MOD3 DEM": {
+    "component_box": [
+      109.0,
+      146.0,
+      215.0,
+      222.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DIN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "IDAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "INT45": {
+    "component_box": [
+      774.0,
+      161.0,
+      821.0,
+      208.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Sub-DAC",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "INT3",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CMFB": {
+    "component_box": [
+      819.0,
+      544.0,
+      925.0,
+      621.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "H-bridge",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Speaker": {
+    "component_box": [
+      1033.0,
+      371.0,
+      1100.0,
+      545.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "H-bridge",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "H-bridge": {
+    "component_box": [
+      818.0,
+      385.0,
+      925.0,
+      529.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "control",
+          "count": 1
+        },
+        {
+          "name": "CMFB",
+          "count": 1
+        },
+        {
+          "name": "Speaker",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

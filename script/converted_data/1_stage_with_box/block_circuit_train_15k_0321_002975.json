@@ -1,0 +1,179 @@
+{
+  "S": {
+    "component_box": [
+      188.0,
+      34.0,
+      212.0,
+      59.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "sliding mode current controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "feed-forward": {
+    "component_box": [
+      64.0,
+      25.0,
+      140.0,
+      69.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "sliding mode current controller": {
+    "component_box": [
+      312.0,
+      20.0,
+      470.0,
+      73.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "boost converter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "boost converter": {
+    "component_box": [
+      326.0,
+      113.0,
+      437.0,
+      171.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "sliding mode current controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "output",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "source",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PI": {
+    "component_box": [
+      123.0,
+      120.0,
+      159.0,
+      155.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "S",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      57.0,
+      124.0,
+      81.0,
+      148.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vd",
+          "count": 1
+        },
+        {
+          "name": "boost converter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "sliding mode current controller  \nboost converter": {
+    "component_box": [
+      259.0,
+      4.0,
+      521.0,
+      207.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "E source",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "v",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

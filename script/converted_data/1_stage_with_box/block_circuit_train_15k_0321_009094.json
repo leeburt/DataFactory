@@ -1,0 +1,247 @@
+{
+  "Integrator": {
+    "component_box": [
+      1137.0,
+      109.0,
+      1207.0,
+      206.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "N-levels Quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Accumulation-based S/H circuit": {
+    "component_box": [
+      177.0,
+      78.0,
+      398.0,
+      237.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "k2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "k2": {
+    "component_box": [
+      510.0,
+      124.0,
+      575.0,
+      191.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Accumulation-based S/H circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P-bits SAR ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "N-levels Quantizer": {
+    "component_box": [
+      1258.0,
+      92.0,
+      1387.0,
+      221.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Integrator",
+          "count": 1
+        },
+        {
+          "name": "P",
+          "count": 1
+        },
+        {
+          "name": "reset2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Decimation filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Decimation filter": {
+    "component_box": [
+      1437.0,
+      124.0,
+      1566.0,
+      192.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "N-levels Quantizer",
+          "count": 1
+        },
+        {
+          "name": "reset2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MSBs",
+          "count": 1
+        },
+        {
+          "name": "LSBs",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "N-levels DAC": {
+    "component_box": [
+      1216.0,
+      272.0,
+      1389.0,
+      402.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "N-levels Quantizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "GΣΔ": {
+    "component_box": [
+      1139.0,
+      304.0,
+      1208.0,
+      371.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "N-levels DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P-bits DAC": {
+    "component_box": [
+      853.0,
+      93.0,
+      1024.0,
+      221.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "P-bits SAR ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P-bits SAR ADC": {
+    "component_box": [
+      633.0,
+      93.0,
+      804.0,
+      221.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "k2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P-bits DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ": {
+    "component_box": [
+      1058.0,
+      135.0,
+      1105.0,
+      182.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "P-bits DAC",
+          "count": 1
+        },
+        {
+          "name": "N-levels DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

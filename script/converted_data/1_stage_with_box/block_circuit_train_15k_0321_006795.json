@@ -1,0 +1,181 @@
+{
+  "Comparator": {
+    "component_box": [
+      309.0,
+      116.0,
+      453.0,
+      262.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage Reference",
+          "count": 1
+        },
+        {
+          "name": "Voltage Sense",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Voltage Reference": {
+    "component_box": [
+      102.0,
+      102.0,
+      248.0,
+      180.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_LDO_5V",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MOSFET": {
+    "component_box": [
+      642.0,
+      135.0,
+      685.0,
+      163.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "IN",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "74 HV transistors": {
+    "component_box": [
+      580.0,
+      1.0,
+      879.0,
+      409.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "IN",
+          "count": 1
+        },
+        {
+          "name": "V_START",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "HV transistor array": {
+    "component_box": [
+      702.0,
+      46.0,
+      767.0,
+      359.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MOSFET",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "IN",
+          "count": 1
+        },
+        {
+          "name": "OUT",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "comparator": {
+    "component_box": [
+      472.0,
+      165.0,
+      516.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage Reference",
+          "count": 1
+        },
+        {
+          "name": "Voltage Sense",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "74 HV transistors",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Voltage Sense": {
+    "component_box": [
+      101.0,
+      199.0,
+      249.0,
+      277.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_RECT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

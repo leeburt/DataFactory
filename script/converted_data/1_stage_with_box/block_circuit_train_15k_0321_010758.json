@@ -1,0 +1,156 @@
+{
+  "Adder": {
+    "component_box": [
+      316.0,
+      169.0,
+      367.0,
+      220.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        },
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Integrator": {
+    "component_box": [
+      243.0,
+      248.0,
+      297.0,
+      337.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DFE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      472.0,
+      224.0,
+      524.0,
+      276.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "D flip-flop",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D flip-flop": {
+    "component_box": [
+      459.0,
+      34.0,
+      537.0,
+      132.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Quantizer": {
+    "component_box": [
+      292.0,
+      33.0,
+      392.0,
+      155.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DFE",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D flip-flop",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DFE": {
+    "component_box": [
+      104.0,
+      16.0,
+      213.0,
+      105.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "rx_n",
+          "count": 1
+        },
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

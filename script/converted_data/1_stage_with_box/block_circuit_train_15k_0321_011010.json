@@ -1,0 +1,56 @@
+{
+  "Level Shifters and HV Gate Driver": {
+    "component_box": [
+      195.0,
+      189.0,
+      431.0,
+      331.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "M_P",
+          "count": 1
+        },
+        {
+          "name": "M_N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Peak Current Sensor": {
+    "component_box": [
+      516.0,
+      76.0,
+      668.0,
+      209.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "RSEN",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "Switch Node",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

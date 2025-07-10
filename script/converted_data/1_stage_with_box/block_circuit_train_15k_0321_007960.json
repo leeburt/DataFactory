@@ -1,0 +1,415 @@
+{
+  "Deserializer": {
+    "component_box": [
+      387.0,
+      278.0,
+      517.0,
+      382.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TI-ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Rx",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Rx": {
+    "component_box": [
+      78.0,
+      274.0,
+      237.0,
+      384.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Deserializer",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Diagnostic and Control Unit",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ADC Control Interface": {
+    "component_box": [
+      296.0,
+      460.0,
+      419.0,
+      512.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Calibration Algorithm",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Graphic User Interface",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Host PC": {
+    "component_box": [
+      126.0,
+      411.0,
+      549.0,
+      531.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ethernet Interface",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "USB Interface",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LPF": {
+    "component_box": [
+      826.0,
+      206.0,
+      863.0,
+      273.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TI-ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MUX": {
+    "component_box": [
+      254.0,
+      261.0,
+      282.0,
+      338.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Deserializer",
+          "count": 1
+        },
+        {
+          "name": "Loopback",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Rx",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PLL": {
+    "component_box": [
+      410.0,
+      140.0,
+      491.0,
+      182.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Tx",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1GHz": {
+    "component_box": [
+      798.0,
+      385.0,
+      841.0,
+      428.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "TI-ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Calibration Algorithm": {
+    "component_box": [
+      143.0,
+      458.0,
+      274.0,
+      514.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ethernet Interface",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC Control Interface",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Graphic User Interface": {
+    "component_box": [
+      441.0,
+      450.0,
+      536.0,
+      521.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC Control Interface",
+          "count": 1
+        },
+        {
+          "name": "USB Interface",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Loopback": {
+    "component_box": [
+      274.0,
+      206.0,
+      383.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Tx",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Rx",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TI-ADC": {
+    "component_box": [
+      658.0,
+      260.0,
+      807.0,
+      393.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LPF",
+          "count": 1
+        },
+        {
+          "name": "1GHz",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Deserializer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FPGA Altera Startix IV GX EP4SGX230": {
+    "component_box": [
+      24.0,
+      4.0,
+      546.0,
+      447.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ethernet Interface",
+          "count": 1
+        },
+        {
+          "name": "TI-ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      657.0,
+      70.0,
+      808.0,
+      210.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Serializer",
+          "count": 1
+        },
+        {
+          "name": "TI-ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Diagnostic and Control Unit": {
+    "component_box": [
+      79.0,
+      205.0,
+      232.0,
+      259.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ethernet Interface",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Tx",
+          "count": 1
+        },
+        {
+          "name": "Rx",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Tx": {
+    "component_box": [
+      77.0,
+      82.0,
+      235.0,
+      189.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Serializer",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Diagnostic and Control Unit",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Serializer": {
+    "component_box": [
+      387.0,
+      85.0,
+      516.0,
+      194.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Tx",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "Loopback",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "CS": {
+    "component_box": [
+      238.0,
+      213.0,
+      290.0,
+      242.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Charger",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "GND",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MPP": {
+    "component_box": [
+      465.0,
+      194.0,
+      557.0,
+      253.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Charger",
+          "count": 1
+        },
+        {
+          "name": "RCB",
+          "count": 1
+        },
+        {
+          "name": "CB",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Diode": {
+    "component_box": [
+      52.0,
+      149.0,
+      103.0,
+      199.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Photovoltaic or Thermoelectric Source",
+          "count": 1
+        },
+        {
+          "name": "R_S",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Ground": {
+    "component_box": [
+      798.0,
+      260.0,
+      848.0,
+      288.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Sensor DSP PA",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "GND": {
+    "component_box": [
+      311.0,
+      264.0,
+      362.0,
+      293.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R_CIN",
+          "count": 1
+        },
+        {
+          "name": "C_IN",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Charger": {
+    "component_box": [
+      405.0,
+      74.0,
+      525.0,
+      167.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Photovoltaic or Thermoelectric Source",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Power Supply",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "MPP",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Photovoltaic or Thermoelectric Source": {
+    "component_box": [
+      1.0,
+      8.0,
+      306.0,
+      272.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Diode",
+          "count": 1
+        },
+        {
+          "name": "RS",
+          "count": 1
+        },
+        {
+          "name": "GND",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Power Supply": {
+    "component_box": [
+      646.0,
+      74.0,
+      769.0,
+      167.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Charger",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sensor DSP PA",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "R_CB",
+          "count": 1
+        },
+        {
+          "name": "C_B",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Sensor DSP PA": {
+    "component_box": [
+      771.0,
+      142.0,
+      875.0,
+      252.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Supply",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  }
+}

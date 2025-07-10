@@ -1,0 +1,244 @@
+{
+  "DSP": {
+    "component_box": [
+      675.0,
+      299.0,
+      766.0,
+      362.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Sample-and-Hold",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1-b DAC",
+          "count": 1
+        },
+        {
+          "name": "OUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCM  \\nGND": {
+    "component_box": [
+      628.0,
+      151.0,
+      766.0,
+      252.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Sample-and-Hold": {
+    "component_box": [
+      532.0,
+      280.0,
+      630.0,
+      380.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Chopper Amplifier",
+          "count": 1
+        },
+        {
+          "name": "DSP",
+          "count": 1
+        },
+        {
+          "name": "VCM  GND",
+          "count": 1
+        },
+        {
+          "name": "Ø_latch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "C_ch,i": {
+    "component_box": [
+      284.0,
+      27.0,
+      516.0,
+      154.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Ø_inj,1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Chopper Amplifier": {
+    "component_box": [
+      316.0,
+      240.0,
+      456.0,
+      393.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "C_P1",
+          "count": 1
+        },
+        {
+          "name": "C_P2",
+          "count": 1
+        },
+        {
+          "name": "C_SAR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sample-and-Hold",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1-b DAC": {
+    "component_box": [
+      583.0,
+      412.0,
+      665.0,
+      476.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DSP",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "+VR/2",
+          "count": 1
+        },
+        {
+          "name": "-VR/2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "HV SELECTOR": {
+    "component_box": [
+      13.0,
+      94.0,
+      171.0,
+      469.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "φ_S",
+          "count": 1
+        },
+        {
+          "name": "φ_ch,2",
+          "count": 1
+        },
+        {
+          "name": "φ_ch,3",
+          "count": 1
+        },
+        {
+          "name": "φ_ch,4",
+          "count": 1
+        },
+        {
+          "name": "φ_ch,5",
+          "count": 1
+        },
+        {
+          "name": "φ_ch,6",
+          "count": 1
+        },
+        {
+          "name": "φ_ch,7",
+          "count": 1
+        },
+        {
+          "name": "φ_ch,8",
+          "count": 1
+        },
+        {
+          "name": "φ_cm",
+          "count": 1
+        },
+        {
+          "name": "φ_inj",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "C_S",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "B1+",
+          "count": 1
+        },
+        {
+          "name": "B2+",
+          "count": 1
+        },
+        {
+          "name": "B3+",
+          "count": 1
+        },
+        {
+          "name": "B4+",
+          "count": 1
+        },
+        {
+          "name": "B5+",
+          "count": 1
+        },
+        {
+          "name": "B6+",
+          "count": 1
+        },
+        {
+          "name": "B7+",
+          "count": 1
+        },
+        {
+          "name": "B8+",
+          "count": 1
+        },
+        {
+          "name": "GND",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

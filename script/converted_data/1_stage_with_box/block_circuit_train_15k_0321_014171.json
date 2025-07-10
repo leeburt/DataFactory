@@ -1,0 +1,156 @@
+{
+  "μ": {
+    "component_box": [
+      444.0,
+      150.0,
+      503.0,
+      219.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "timing skew detection",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "timing skew detection": {
+    "component_box": [
+      587.0,
+      265.0,
+      682.0,
+      545.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC k",
+          "count": 1
+        },
+        {
+          "name": "ADC 1",
+          "count": 1
+        },
+        {
+          "name": "ADC N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "μ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "digitally programmable delay": {
+    "component_box": [
+      73.0,
+      83.0,
+      193.0,
+      288.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "clk",
+          "count": 1
+        },
+        {
+          "name": "z⁻¹",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC k",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC k": {
+    "component_box": [
+      212.0,
+      376.0,
+      392.0,
+      449.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "digitally programmable delay",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "timing skew detection",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      362.0,
+      158.0,
+      414.0,
+      211.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z⁻¹",
+          "count": 1
+        },
+        {
+          "name": "digitally programmable delay",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "μ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z⁻¹": {
+    "component_box": [
+      217.0,
+      153.0,
+      286.0,
+      216.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "digitally programmable delay",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

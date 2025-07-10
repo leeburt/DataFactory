@@ -1,0 +1,271 @@
+{
+  "VTC": {
+    "component_box": [
+      115.0,
+      64.0,
+      165.0,
+      105.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_INP",
+          "count": 1
+        },
+        {
+          "name": "V_INN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "α1": {
+    "component_box": [
+      251.0,
+      122.0,
+      293.0,
+      158.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DTC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Reconfigurable 2nd-order noise shaping TDC": {
+    "component_box": [
+      194.0,
+      0.0,
+      766.0,
+      188.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VTC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Selection code",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TDC  \nDTC": {
+    "component_box": [
+      586.0,
+      68.0,
+      647.0,
+      100.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/(1-z⁻¹)\nz⁻¹/(1-z⁻¹)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Selection Logic",
+          "count": 1
+        },
+        {
+          "name": "DTC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DTC": {
+    "component_box": [
+      546.0,
+      165.0,
+      607.0,
+      197.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TDC  \nDTC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "α1  \nα2",
+          "count": 1
+        },
+        {
+          "name": "α1\nα2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Selection Logic": {
+    "component_box": [
+      715.0,
+      52.0,
+      805.0,
+      116.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TDC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Selection code",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "α2": {
+    "component_box": [
+      416.0,
+      122.0,
+      459.0,
+      159.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DTC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      423.0,
+      71.0,
+      448.0,
+      96.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/(1-z⁻¹)",
+          "count": 1
+        },
+        {
+          "name": "a1\na2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/(1-z⁻¹)\nz⁻¹/(1-z⁻¹)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/(1-z⁻¹)\nz⁻¹/(1-z⁻¹)": {
+    "component_box": [
+      494.0,
+      57.0,
+      556.0,
+      108.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TDC  \nDTC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "α1\nα2": {
+    "component_box": [
+      260.0,
+      72.0,
+      285.0,
+      98.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "a1\na2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/(1-z⁻¹)": {
+    "component_box": [
+      326.0,
+      56.0,
+      386.0,
+      108.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

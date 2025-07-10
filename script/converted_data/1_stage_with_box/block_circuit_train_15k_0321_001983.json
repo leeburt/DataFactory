@@ -1,0 +1,324 @@
+{
+  "CCROs  \nRO  \nFREQ-TO-DIGITAL CONVERTERS  \nMODIFIED CIC FILTER  \nREFERENCE RO  \nFREQUENCY DIVISION  \nMEM  \nSPI": {
+    "component_box": [
+      329.0,
+      53.0,
+      868.0,
+      423.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "I/O Pad",
+          "count": 1
+        },
+        {
+          "name": "I/O pad",
+          "count": 1
+        },
+        {
+          "name": "GND",
+          "count": 1
+        },
+        {
+          "name": "VDD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "I/O Pads",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Reference RO": {
+    "component_box": [
+      374.0,
+      293.0,
+      438.0,
+      358.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "FREQUENCY DIVISION",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "COPPER SENSOR ELEMENTS": {
+    "component_box": [
+      91.0,
+      335.0,
+      183.0,
+      400.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "I/O Pad",
+          "count": 1
+        },
+        {
+          "name": "I/O pad",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I/O pad": {
+    "component_box": [
+      343.0,
+      190.0,
+      361.0,
+      206.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RO",
+          "count": 1
+        },
+        {
+          "name": "SENSOR ELEMENT MODELS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I/O Pad": {
+    "component_box": [
+      343.0,
+      166.0,
+      360.0,
+      182.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RO",
+          "count": 1
+        },
+        {
+          "name": "ESD保护二极管",
+          "count": 1
+        },
+        {
+          "name": "Sensor element models",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I/O Pads": {
+    "component_box": [
+      861.0,
+      335.0,
+      878.0,
+      388.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "MEM\nSPI",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "FREQUENCY DIVISION": {
+    "component_box": [
+      469.0,
+      292.0,
+      608.0,
+      359.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference RO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MODIFIED CIC FILTER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Copper sensor element": {
+    "component_box": [
+      126.0,
+      305.0,
+      155.0,
+      326.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "I/O Pad",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MEM\nSPI": {
+    "component_box": [
+      770.0,
+      292.0,
+      849.0,
+      395.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MODIFIED CIC FILTER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "I/O Pads",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "GND": {
+    "component_box": [
+      343.0,
+      383.0,
+      361.0,
+      399.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Reference RO",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RO": {
+    "component_box": [
+      392.0,
+      166.0,
+      456.0,
+      232.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "MODIFIED CIC FILTER",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "I/O Pad",
+          "count": 1
+        },
+        {
+          "name": "I/O Pad",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ESD保护二极管": {
+    "component_box": [
+      342.0,
+      70.0,
+      361.0,
+      123.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "VDD",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "I/O Pad",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MODIFIED CIC FILTER": {
+    "component_box": [
+      577.0,
+      166.0,
+      717.0,
+      232.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RO",
+          "count": 1
+        },
+        {
+          "name": "FREQUENCY DIVISION",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MEM\nSPI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Cs": {
+    "component_box": [
+      224.0,
+      305.0,
+      254.0,
+      327.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "I/O Pad",
+          "count": 1
+        },
+        {
+          "name": "I/O Pads",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

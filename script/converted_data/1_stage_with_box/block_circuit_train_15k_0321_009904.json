@@ -1,0 +1,133 @@
+{
+  "Tapped Buffer": {
+    "component_box": [
+      60.0,
+      11.0,
+      247.0,
+      65.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Two-phase clock generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "5-stage charge pump",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Op Amp": {
+    "component_box": [
+      522.0,
+      128.0,
+      613.0,
+      230.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_F2",
+          "count": 1
+        },
+        {
+          "name": "V_BGP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Two-phase clock generator": {
+    "component_box": [
+      59.0,
+      147.0,
+      269.0,
+      208.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Tapped Buffer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      309.0,
+      150.0,
+      449.0,
+      202.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "en",
+          "count": 1
+        },
+        {
+          "name": "Op Amp",
+          "count": 1
+        },
+        {
+          "name": "Two-phase clock generator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "5-stage charge pump": {
+    "component_box": [
+      341.0,
+      11.0,
+      615.0,
+      65.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Tapped Buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "R_F1",
+          "count": 1
+        },
+        {
+          "name": "Capacitor",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,421 @@
+{
+  "Delay-line discriminator PN extraction": {
+    "component_box": [
+      192.0,
+      15.0,
+      684.0,
+      212.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD  \nCP  \nLoop Filter",
+          "count": 1
+        },
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PNC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PNC": {
+    "component_box": [
+      647.0,
+      583.0,
+      735.0,
+      646.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        },
+        {
+          "name": "Calibration",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CLK_OUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      546.0,
+      583.0,
+      607.0,
+      644.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PNC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Loop Filter": {
+    "component_box": [
+      436.0,
+      583.0,
+      523.0,
+      645.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Gm",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Calibration": {
+    "component_box": [
+      622.0,
+      685.0,
+      759.0,
+      748.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD  \nCP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PNC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD  CP  Loop Filter": {
+    "component_box": [
+      182.0,
+      244.0,
+      428.0,
+      329.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK_REF",
+          "count": 1
+        },
+        {
+          "name": "/N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Phase Shifter",
+          "count": 1
+        },
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Mixer": {
+    "component_box": [
+      320.0,
+      104.0,
+      380.0,
+      165.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Phase Shifter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "BPF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "/Ｎ Divider": {
+    "component_box": [
+      99.0,
+      299.0,
+      140.0,
+      318.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD  \nCP  \nLoop Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Gm": {
+    "component_box": [
+      311.0,
+      582.0,
+      397.0,
+      645.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Switched-capacitor PN extraction",
+          "count": 1
+        },
+        {
+          "name": "PFD  \nCP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Loop Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Non‐overlap": {
+    "component_box": [
+      157.0,
+      518.0,
+      270.0,
+      582.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK_REF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "C1",
+          "count": 1
+        },
+        {
+          "name": "C2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "/ N": {
+    "component_box": [
+      118.0,
+      726.0,
+      205.0,
+      769.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PNC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD  \nCP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VGA": {
+    "component_box": [
+      560.0,
+      103.0,
+      622.0,
+      166.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BPF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PNC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "/Ｎ": {
+    "component_box": [
+      18.0,
+      613.0,
+      60.0,
+      629.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PNC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Non‐overlap",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "/Ν": {
+    "component_box": [
+      448.0,
+      325.0,
+      536.0,
+      389.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD  \nCP  \nLoop Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD  \nCP": {
+    "component_box": [
+      235.0,
+      700.0,
+      403.0,
+      770.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "/ N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Gm",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Phase Shifter": {
+    "component_box": [
+      163.0,
+      93.0,
+      271.0,
+      176.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        },
+        {
+          "name": "Unknown",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BPF": {
+    "component_box": [
+      437.0,
+      93.0,
+      525.0,
+      176.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VGA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

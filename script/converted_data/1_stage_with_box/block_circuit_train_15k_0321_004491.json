@@ -1,0 +1,209 @@
+{
+  "C2(z)": {
+    "component_box": [
+      97.0,
+      108.0,
+      192.0,
+      174.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Decoupling Equations",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      53.0,
+      132.0,
+      71.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i2*-d",
+          "count": 1
+        },
+        {
+          "name": "dq/abc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "C2(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      15.0,
+      61.0,
+      33.0,
+      78.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i2*-q",
+          "count": 1
+        },
+        {
+          "name": "dq/abc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "C2(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Phase Locked Loop": {
+    "component_box": [
+      764.0,
+      153.0,
+      860.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "u′g",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "dq/abc",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "dq/abc": {
+    "component_box": [
+      455.0,
+      203.0,
+      514.0,
+      262.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Phase Locked Loop",
+          "count": 1
+        },
+        {
+          "name": "i2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "u′g": {
+    "component_box": [
+      817.0,
+      79.0,
+      871.0,
+      133.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Lg(Rg)",
+          "count": 1
+        },
+        {
+          "name": "Phase Locked Loop",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Decoupling Equations": {
+    "component_box": [
+      213.0,
+      32.0,
+      341.0,
+      181.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "C2(z)",
+          "count": 1
+        },
+        {
+          "name": "C2(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "dq/abc",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "IGBT半桥模块": {
+    "component_box": [
+      445.0,
+      59.0,
+      540.0,
+      153.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "dq/abc",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "C_dc",
+          "count": 1
+        },
+        {
+          "name": "L1(R1)",
+          "count": 1
+        },
+        {
+          "name": "L2(R2)",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

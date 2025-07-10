@@ -1,0 +1,244 @@
+{
+  "Integrator": {
+    "component_box": [
+      423.0,
+      472.0,
+      534.0,
+      551.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "v_m",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Clock Generator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      197.0,
+      292.0,
+      276.0,
+      386.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "SR latch",
+          "count": 1
+        },
+        {
+          "name": "R_s iL",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Clock Generator": {
+    "component_box": [
+      226.0,
+      470.0,
+      339.0,
+      549.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SR latch",
+          "count": 1
+        },
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summer": {
+    "component_box": [
+      356.0,
+      415.0,
+      406.0,
+      464.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "Voltage Control",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Vref": {
+    "component_box": [
+      730.0,
+      305.0,
+      779.0,
+      354.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "vo",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Voltage Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "A": {
+    "component_box": [
+      263.0,
+      121.0,
+      356.0,
+      199.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Rs",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "v_g": {
+    "component_box": [
+      34.0,
+      116.0,
+      86.0,
+      170.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "L",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SR latch": {
+    "component_box": [
+      104.0,
+      312.0,
+      168.0,
+      403.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "Clock Generator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "u",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Adder": {
+    "component_box": [
+      409.0,
+      336.0,
+      454.0,
+      384.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "v_m",
+          "count": 1
+        },
+        {
+          "name": "Integrator",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "u": {
+    "component_box": [
+      427.0,
+      183.0,
+      451.0,
+      205.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "SR latch",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

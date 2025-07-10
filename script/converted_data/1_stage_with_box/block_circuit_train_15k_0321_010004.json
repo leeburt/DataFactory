@@ -1,0 +1,193 @@
+{
+  "Square root": {
+    "component_box": [
+      605.0,
+      230.0,
+      711.0,
+      335.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "×",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2^{2(N-M+1)}/12": {
+    "component_box": [
+      396.0,
+      300.0,
+      502.0,
+      405.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "×": {
+    "component_box": [
+      704.0,
+      110.0,
+      753.0,
+      159.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ_{i=0}^{N-M} 2^i b_i",
+          "count": 1
+        },
+        {
+          "name": "Square root",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      701.0,
+      34.0,
+      755.0,
+      88.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "∑_{i=N-M+1}^N 2^i b_i",
+          "count": 1
+        },
+        {
+          "name": "×",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_out,cal",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "∑_{i=N-M+1}^N 2^i b_i": {
+    "component_box": [
+      250.0,
+      9.0,
+      399.0,
+      114.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MSB path",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/var(·)": {
+    "component_box": [
+      393.0,
+      164.0,
+      500.0,
+      269.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ_{i=0}^{N-M} 2^i b_i",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      540.0,
+      259.0,
+      589.0,
+      309.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/var(·)",
+          "count": 1
+        },
+        {
+          "name": "2^{2(N-M+1)}/12",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Square root",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ_{i=0}^{N-M} 2^i b_i": {
+    "component_box": [
+      250.0,
+      163.0,
+      357.0,
+      270.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Flawed inputs",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/var(·)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

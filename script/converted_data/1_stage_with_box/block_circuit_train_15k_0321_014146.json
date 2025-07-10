@@ -1,0 +1,125 @@
+{
+  "G(s)": {
+    "component_box": [
+      600.0,
+      85.0,
+      725.0,
+      174.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "M(s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K(s)": {
+    "component_box": [
+      203.0,
+      85.0,
+      327.0,
+      174.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      512.0,
+      107.0,
+      557.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "summing junction",
+          "count": 1
+        },
+        {
+          "name": "w_d(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "G(s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "summing junction": {
+    "component_box": [
+      395.0,
+      107.0,
+      440.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K(s)",
+          "count": 1
+        },
+        {
+          "name": "v_N(s)/V_o",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "M(s)": {
+    "component_box": [
+      385.0,
+      219.0,
+      511.0,
+      309.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "G(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

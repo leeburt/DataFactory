@@ -1,0 +1,230 @@
+{
+  "Mp Mn": {
+    "component_box": [
+      237.0,
+      103.0,
+      331.0,
+      238.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "L",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Driver with Zero Current Detector",
+          "count": 1
+        },
+        {
+          "name": "V",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "V": {
+    "component_box": [
+      318.0,
+      282.0,
+      338.0,
+      307.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Mp Mn",
+          "count": 1
+        },
+        {
+          "name": "Proposed Digital Inductor Current Sensor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Proposed Digital Inductor Current Sensor": {
+    "component_box": [
+      203.0,
+      386.0,
+      486.0,
+      463.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Mp Mn",
+          "count": 1
+        },
+        {
+          "name": "Driver with Zero Current Detector",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      246.0,
+      480.0,
+      319.0,
+      554.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Proposed Digital Inductor Current Sensor",
+          "count": 1
+        },
+        {
+          "name": "Proportional Integral (PI) Compensator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Constant Ton Modulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Constant Ton Modulator": {
+    "component_box": [
+      76.0,
+      480.0,
+      192.0,
+      545.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Driver with Zero Current Detector",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ADC": {
+    "component_box": [
+      755.0,
+      328.0,
+      831.0,
+      404.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Proposed Digital Inductor Current Sensor",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Load",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Load": {
+    "component_box": [
+      740.0,
+      204.0,
+      775.0,
+      281.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vo",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Proportional Integral (PI) Compensator": {
+    "component_box": [
+      478.0,
+      470.0,
+      652.0,
+      567.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "Vref[n]",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Driver with Zero Current Detector": {
+    "component_box": [
+      46.0,
+      171.0,
+      223.0,
+      267.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Constant Ton Modulator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Mp Mn",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

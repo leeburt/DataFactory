@@ -1,0 +1,38 @@
+{
+  "VTE Circuit": {
+    "component_box": [
+      12.0,
+      12.0,
+      163.0,
+      142.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CTAT Current Generator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CTAT Current Generator": {
+    "component_box": [
+      207.0,
+      169.0,
+      452.0,
+      298.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "junction node",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

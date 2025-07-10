@@ -1,0 +1,126 @@
+{
+  "DAC": {
+    "component_box": [
+      485.0,
+      385.0,
+      608.0,
+      462.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3rd order CIFF loop filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Op Amp": {
+    "component_box": [
+      327.0,
+      172.0,
+      440.0,
+      287.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "ground",
+          "count": 1
+        },
+        {
+          "name": "R_IN",
+          "count": 1
+        },
+        {
+          "name": "-R_IN",
+          "count": 1
+        },
+        {
+          "name": "C_INT",
+          "count": 1
+        },
+        {
+          "name": "Rest of loop filter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Quantizer": {
+    "component_box": [
+      645.0,
+      177.0,
+      734.0,
+      283.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Rest of loop filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "D_OUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Rest of loop filter": {
+    "component_box": [
+      483.0,
+      190.0,
+      610.0,
+      270.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Op Amp",
+          "count": 1
+        },
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "3rd order CIFF loop filter": {
+    "component_box": [
+      36.0,
+      59.0,
+      281.0,
+      102.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  }
+}

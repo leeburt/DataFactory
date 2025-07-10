@@ -1,0 +1,221 @@
+{
+  "Ki": {
+    "component_box": [
+      418.0,
+      157.0,
+      457.0,
+      199.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "∫dt",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "∫dt": {
+    "component_box": [
+      474.0,
+      158.0,
+      513.0,
+      200.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ki",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "iL(s)/d(s)": {
+    "component_box": [
+      584.0,
+      80.0,
+      657.0,
+      161.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_out(s)/i_L(s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      527.0,
+      103.0,
+      559.0,
+      143.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "iL(s)/d(s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Kp": {
+    "component_box": [
+      195.0,
+      44.0,
+      234.0,
+      85.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "求和器": {
+    "component_box": [
+      325.0,
+      93.0,
+      373.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Outer Loop PI Controller",
+          "count": 1
+        },
+        {
+          "name": "iL(s)/d(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      55.0,
+      91.0,
+      103.0,
+      151.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_dc(s)",
+          "count": 1
+        },
+        {
+          "name": "V_out(s)/i_L(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Kp",
+          "count": 1
+        },
+        {
+          "name": "Ki",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "∫ dt": {
+    "component_box": [
+      227.0,
+      159.0,
+      268.0,
+      200.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ki",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "V_out(s)/i_L(s)": {
+    "component_box": [
+      680.0,
+      80.0,
+      752.0,
+      161.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_L(s)/d(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_out(s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

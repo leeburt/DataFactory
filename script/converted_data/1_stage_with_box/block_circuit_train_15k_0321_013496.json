@@ -1,0 +1,173 @@
+{
+  "E2PROM": {
+    "component_box": [
+      263.0,
+      151.0,
+      368.0,
+      218.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Programming",
+          "count": 1
+        },
+        {
+          "name": "Range",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PGA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RMS": {
+    "component_box": [
+      525.0,
+      154.0,
+      629.0,
+      198.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Serial Interface",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "I",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PGA": {
+    "component_box": [
+      288.0,
+      54.0,
+      342.0,
+      121.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Front End",
+          "count": 1
+        },
+        {
+          "name": "E2PROM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "A/D",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "A/D": {
+    "component_box": [
+      378.0,
+      54.0,
+      451.0,
+      121.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PGA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Serial Interface",
+          "count": 1
+        },
+        {
+          "name": "RMS",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Front End": {
+    "component_box": [
+      139.0,
+      53.0,
+      253.0,
+      121.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Sensor",
+          "count": 1
+        },
+        {
+          "name": "PGA",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Sensor": {
+    "component_box": [
+      11.0,
+      53.0,
+      107.0,
+      121.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Front End",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Serial Interface": {
+    "component_box": [
+      524.0,
+      55.0,
+      629.0,
+      121.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "A/D",
+          "count": 1
+        },
+        {
+          "name": "Address",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RMS",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

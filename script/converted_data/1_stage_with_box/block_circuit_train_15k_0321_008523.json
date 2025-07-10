@@ -1,0 +1,51 @@
+{
+  "LSB Capacitors": {
+    "component_box": [
+      595.0,
+      151.0,
+      632.0,
+      187.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "LSB Capacitors",
+          "count": 1
+        },
+        {
+          "name": "LSB Capacitors",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      641.0,
+      129.0,
+      745.0,
+      281.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "SAR & Cali. Logic",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "LSB Capacitors",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

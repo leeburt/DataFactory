@@ -1,0 +1,68 @@
+{
+  "DC-DC": {
+    "component_box": [
+      566.0,
+      102.0,
+      749.0,
+      225.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "AC-DC",
+          "count": 1
+        },
+        {
+          "name": "C_OUT",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "V_AC": {
+    "component_box": [
+      81.0,
+      132.0,
+      143.0,
+      194.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "AC-DC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "AC-DC": {
+    "component_box": [
+      192.0,
+      16.0,
+      373.0,
+      139.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_AC",
+          "count": 1
+        },
+        {
+          "name": "DC-DC",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

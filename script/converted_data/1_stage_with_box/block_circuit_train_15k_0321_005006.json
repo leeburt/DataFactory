@@ -1,0 +1,171 @@
+{
+  "Digital 5th order Polynomial Correction and Lowpass Filter": {
+    "component_box": [
+      310.0,
+      439.0,
+      569.0,
+      602.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Temperature to Digital Converter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Programmable Frequency Divider": {
+    "component_box": [
+      778.0,
+      181.0,
+      1014.0,
+      314.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Fractional-N Synthesizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "0.5-220 MHz",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Fractional-N Synthesizer": {
+    "component_box": [
+      475.0,
+      182.0,
+      680.0,
+      314.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Oscillator Sustaining Circuit, Charge Pump, and Freq. Doubler",
+          "count": 1
+        },
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Programmable Frequency Divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Thermistor  \nMEMS Resonator": {
+    "component_box": [
+      173.0,
+      315.0,
+      356.0,
+      440.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Temperature to Digital Converter",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Oscillator Sustaining Circuit, Charge Pump, and Freq. Doubler",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Oscillator Sustaining Circuit, Charge Pump, and Freq. Doubler": {
+    "component_box": [
+      17.0,
+      182.0,
+      359.0,
+      315.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Fractional-N Synthesizer",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Thermistor  \nMEMS Resonator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Temperature to Digital Converter": {
+    "component_box": [
+      66.0,
+      439.0,
+      276.0,
+      566.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Thermistor  MEMS Resonator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital 5th order Polynomial Correction and Lowpass Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      606.0,
+      453.0,
+      672.0,
+      520.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital 5th order Polynomial Correction and Lowpass Filter",
+          "count": 1
+        },
+        {
+          "name": "Programmable Synthesizer Setting",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Fractional-N Synthesizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

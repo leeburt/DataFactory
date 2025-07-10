@@ -1,0 +1,180 @@
+{
+  "MAIN MEMORY": {
+    "component_box": [
+      541.0,
+      101.0,
+      614.0,
+      263.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CPU",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SC type DETECTOR": {
+    "component_box": [
+      35.0,
+      195.0,
+      136.0,
+      274.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "SWITCH CONTROLLER",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "AC 100V",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CPU": {
+    "component_box": [
+      419.0,
+      158.0,
+      506.0,
+      261.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "POWER SUPPLY",
+          "count": 1
+        },
+        {
+          "name": "FIBONACCI typo SC TRANSFORMER",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "MAIN MEMORY",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SWITCH CONTROLLER": {
+    "component_box": [
+      162.0,
+      179.0,
+      261.0,
+      234.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SC type DETECTOR",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "AC 100V",
+          "count": 1
+        },
+        {
+          "name": "POWER SUPPLY",
+          "count": 1
+        },
+        {
+          "name": "FIBONACCI typo SC TRANSFORMER",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "FIBONACCI typo SC TRANSFORMER": {
+    "component_box": [
+      281.0,
+      196.0,
+      383.0,
+      276.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "SWITCH CONTROLLER",
+          "count": 1
+        },
+        {
+          "name": "Switch",
+          "count": 1
+        },
+        {
+          "name": "CPU",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DISK": {
+    "component_box": [
+      541.0,
+      25.0,
+      610.0,
+      94.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "POWER SUPPLY",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "POWER SUPPLY": {
+    "component_box": [
+      418.0,
+      19.0,
+      505.0,
+      139.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DISK",
+          "count": 1
+        },
+        {
+          "name": "MAIN MEMORY",
+          "count": 1
+        },
+        {
+          "name": "CPU",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Switch",
+          "count": 1
+        },
+        {
+          "name": "AC 100V",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

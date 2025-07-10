@@ -1,0 +1,338 @@
+{
+  "FIRDAC diff. mode": {
+    "component_box": [
+      240.0,
+      358.0,
+      376.0,
+      407.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FIRDAC dither",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RZ",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Rin",
+          "count": 1
+        },
+        {
+          "name": "采样开关",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "FIRDAC dither": {
+    "component_box": [
+      135.0,
+      474.0,
+      235.0,
+      524.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1b noise shaped dither input",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FIRDAC diff. mode",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "输入缓冲放大器": {
+    "component_box": [
+      396.0,
+      129.0,
+      459.0,
+      192.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Rin",
+          "count": 1
+        },
+        {
+          "name": "FIRDAC common mode",
+          "count": 1
+        },
+        {
+          "name": "Qdiff",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Qcmm": {
+    "component_box": [
+      695.0,
+      199.0,
+      776.0,
+      279.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "common mode output",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Qdiff",
+          "count": 1
+        },
+        {
+          "name": "bandgap",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RZ + bitstream conversion": {
+    "component_box": [
+      482.0,
+      43.0,
+      590.0,
+      111.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FIRDAC common mode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "common mode output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FIRDAC common mode": {
+    "component_box": [
+      239.0,
+      50.0,
+      376.0,
+      99.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RZ + bitstream conversion",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "输入缓冲放大器",
+          "count": 1
+        },
+        {
+          "name": "Op amp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Op amp": {
+    "component_box": [
+      396.0,
+      257.0,
+      459.0,
+      322.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Rin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Qdiff",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "bandgap",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "clip detect": {
+    "component_box": [
+      482.0,
+      437.0,
+      590.0,
+      487.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RZ",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Qdiff": {
+    "component_box": [
+      510.0,
+      186.0,
+      589.0,
+      265.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "输入缓冲放大器",
+          "count": 1
+        },
+        {
+          "name": "Op amp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Qcmm",
+          "count": 1
+        },
+        {
+          "name": "RZ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "bandgap": {
+    "component_box": [
+      696.0,
+      300.0,
+      775.0,
+      350.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Qcmm",
+          "count": 1
+        },
+        {
+          "name": "输入缓冲放大器",
+          "count": 1
+        },
+        {
+          "name": "Op amp",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Rin": {
+    "component_box": [
+      81.0,
+      268.0,
+      104.0,
+      281.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vinn",
+          "count": 1
+        },
+        {
+          "name": "Tinn",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RZ": {
+    "component_box": [
+      481.0,
+      350.0,
+      590.0,
+      415.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FIRDAC diff. mode",
+          "count": 1
+        },
+        {
+          "name": "clip detect",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "differential mode output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "采样开关": {
+    "component_box": [
+      58.0,
+      202.0,
+      81.0,
+      249.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Rin",
+          "count": 1
+        },
+        {
+          "name": "FIRDAC common mode",
+          "count": 1
+        },
+        {
+          "name": "输入缓冲放大器",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

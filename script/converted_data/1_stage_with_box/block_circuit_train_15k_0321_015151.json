@@ -1,0 +1,276 @@
+{
+  "Clk Generator": {
+    "component_box": [
+      508.0,
+      219.0,
+      664.0,
+      261.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Current Sensor",
+          "count": 1
+        },
+        {
+          "name": "DSC Generator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SMS": {
+    "component_box": [
+      90.0,
+      249.0,
+      188.0,
+      317.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Driver And Dead Time Control",
+          "count": 1
+        },
+        {
+          "name": "Clk Generator",
+          "count": 1
+        },
+        {
+          "name": "V_DS",
+          "count": 1
+        },
+        {
+          "name": "V_IN",
+          "count": 1
+        },
+        {
+          "name": "V_OUT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current Sensor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Driver And Dead Time Control": {
+    "component_box": [
+      90.0,
+      418.0,
+      227.0,
+      545.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MAX Power Selector",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SW_A",
+          "count": 1
+        },
+        {
+          "name": "SW_D",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      300.0,
+      412.0,
+      363.0,
+      477.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DSC Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Driver And Dead Time Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clk Generator  Dynamic Slope Compensation": {
+    "component_box": [
+      477.0,
+      264.0,
+      666.0,
+      325.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current Sensor",
+          "count": 1
+        },
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "VOUT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SMS",
+          "count": 1
+        },
+        {
+          "name": "Current Sensor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current Sensor": {
+    "component_box": [
+      286.0,
+      221.0,
+      428.0,
+      287.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SMS",
+          "count": 1
+        },
+        {
+          "name": "Clk Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DSC Generator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MAX Power Selector": {
+    "component_box": [
+      91.0,
+      316.0,
+      188.0,
+      385.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_DS",
+          "count": 1
+        },
+        {
+          "name": "V_IN",
+          "count": 1
+        },
+        {
+          "name": "V_OUT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Driver And Dead Time Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Error Amplifier": {
+    "component_box": [
+      609.0,
+      395.0,
+      680.0,
+      470.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_FB",
+          "count": 1
+        },
+        {
+          "name": "V_BG",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DSC Generator": {
+    "component_box": [
+      264.0,
+      329.0,
+      666.0,
+      379.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current Sensor",
+          "count": 1
+        },
+        {
+          "name": "Clk Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

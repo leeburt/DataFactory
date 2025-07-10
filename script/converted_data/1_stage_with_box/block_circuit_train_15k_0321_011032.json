@@ -1,0 +1,169 @@
+{
+  "L  \\nR_s  \\nR_dcr  \\nC_s  \\nC  \\nR_esr  \\nR_L  \\nR_lpf  \\nC_lpf": {
+    "component_box": [
+      286.0,
+      51.0,
+      824.0,
+      428.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Low-side MOSFET",
+          "count": 1
+        },
+        {
+          "name": "DDA",
+          "count": 1
+        },
+        {
+          "name": "comparator",
+          "count": 1
+        },
+        {
+          "name": "Vsw",
+          "count": 1
+        },
+        {
+          "name": "Vout",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "COT Generator": {
+    "component_box": [
+      14.0,
+      305.0,
+      157.0,
+      420.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Dead Time Generator & Gate Drivers",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DDA": {
+    "component_box": [
+      264.0,
+      297.0,
+      393.0,
+      429.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "comparator",
+          "count": 1
+        },
+        {
+          "name": "L  \nR_s  \nR_dcr  \nC_s  \nC  \nR_esr  \nR_L  \nR_lpf  \nC_lpf",
+          "count": 1
+        },
+        {
+          "name": "V_ref",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Dead Time Generator & Gate Drivers": {
+    "component_box": [
+      18.0,
+      138.0,
+      235.0,
+      253.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "High-side MOSFET",
+          "count": 1
+        },
+        {
+          "name": "Low-side MOSFET",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "comparator": {
+    "component_box": [
+      164.0,
+      317.0,
+      254.0,
+      410.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "COT Generator",
+          "count": 1
+        },
+        {
+          "name": "DDA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Dead Time Generator & Gate Drivers",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Low-side MOSFET": {
+    "component_box": [
+      288.0,
+      250.0,
+      325.0,
+      277.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Dead Time Generator & Gate Drivers",
+          "count": 1
+        },
+        {
+          "name": "L  \nR_s  \nR_dcr  \nC_s  \nC  \nR_esr  \nR_L  \nR_lpf  \nC_lpf",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

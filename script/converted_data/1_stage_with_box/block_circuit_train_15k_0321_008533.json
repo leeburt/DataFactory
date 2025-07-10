@@ -1,0 +1,383 @@
+{
+  "adder": {
+    "component_box": [
+      167.0,
+      311.0,
+      194.0,
+      339.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Q3",
+          "count": 1
+        },
+        {
+          "name": "z⁻¹ H(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Q1": {
+    "component_box": [
+      114.0,
+      544.0,
+      179.0,
+      608.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC1",
+          "count": 1
+        },
+        {
+          "name": "y[n]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summer": {
+    "component_box": [
+      320.0,
+      565.0,
+      348.0,
+      593.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC1",
+          "count": 1
+        },
+        {
+          "name": "DAC2",
+          "count": 1
+        },
+        {
+          "name": "1 − z⁻¹",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "z⁻¹/(1–z⁻¹)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1 - z⁻¹": {
+    "component_box": [
+      436.0,
+      57.0,
+      527.0,
+      108.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Q1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H(z)": {
+    "component_box": [
+      358.0,
+      187.0,
+      429.0,
+      244.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Q2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z⁻¹ H(z)": {
+    "component_box": [
+      210.0,
+      297.0,
+      307.0,
+      354.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC1": {
+    "component_box": [
+      193.0,
+      544.0,
+      275.0,
+      615.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Q1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC3": {
+    "component_box": [
+      478.0,
+      788.0,
+      561.0,
+      859.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DIGITAL SIGNAL PROCESSING",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DIGITAL SIGNAL PROCESSING": {
+    "component_box": [
+      606.0,
+      530.0,
+      772.0,
+      630.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Q2",
+          "count": 1
+        },
+        {
+          "name": "DAC2",
+          "count": 1
+        },
+        {
+          "name": "DAC3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      659.0,
+      201.0,
+      687.0,
+      229.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z⁻¹/(1–z⁻¹)",
+          "count": 1
+        },
+        {
+          "name": "DAC1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "z⁻¹/(1–z⁻¹)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Q3": {
+    "component_box": [
+      101.0,
+      192.0,
+      157.0,
+      244.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z⁻¹/(1–z⁻¹)": {
+    "component_box": [
+      370.0,
+      530.0,
+      455.0,
+      629.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Q2",
+          "count": 1
+        },
+        {
+          "name": "1 − z⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC2": {
+    "component_box": [
+      478.0,
+      708.0,
+      561.0,
+      780.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DIGITAL SIGNAL PROCESSING",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Q2": {
+    "component_box": [
+      488.0,
+      544.0,
+      561.0,
+      615.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z⁻¹/(1–z⁻¹)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DIGITAL SIGNAL PROCESSING",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1 − z⁻¹": {
+    "component_box": [
+      370.0,
+      656.0,
+      442.0,
+      701.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z⁻¹/(1–z⁻¹)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

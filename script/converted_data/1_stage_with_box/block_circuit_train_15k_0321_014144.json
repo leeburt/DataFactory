@@ -1,0 +1,202 @@
+{
+  "inverter": {
+    "component_box": [
+      656.0,
+      82.0,
+      773.0,
+      199.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM modulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "output filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Tc": {
+    "component_box": [
+      143.0,
+      216.0,
+      207.0,
+      277.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "harmonic predictor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "harmonic predictor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "current controller": {
+    "component_box": [
+      333.0,
+      81.0,
+      450.0,
+      199.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "harmonic predictor",
+          "count": 1
+        },
+        {
+          "name": "output filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWM modulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "summing junction": {
+    "component_box": [
+      1007.0,
+      112.0,
+      1067.0,
+      176.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "load current",
+          "count": 1
+        },
+        {
+          "name": "output filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "grid current",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "output filter": {
+    "component_box": [
+      818.0,
+      82.0,
+      935.0,
+      199.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "inverter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "summing junction",
+          "count": 1
+        },
+        {
+          "name": "current controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "harmonic predictor": {
+    "component_box": [
+      116.0,
+      82.0,
+      234.0,
+      199.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Tc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "current controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PWM modulator": {
+    "component_box": [
+      493.0,
+      82.0,
+      611.0,
+      199.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "current controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "inverter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "current controller  \nPWM modulator  \ninverter  \noutput filter": {
+    "component_box": [
+      272.0,
+      40.0,
+      1079.0,
+      259.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "harmonic predictor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "summing junction",
+          "count": 1
+        },
+        {
+          "name": "harmonic predictor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

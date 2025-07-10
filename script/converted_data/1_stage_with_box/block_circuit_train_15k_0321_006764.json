@@ -1,0 +1,159 @@
+{
+  "Quantization leakage error": {
+    "component_box": [
+      481.0,
+      239.0,
+      521.0,
+      278.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "G(1-Δ)",
+          "count": 1
+        },
+        {
+          "name": "α2",
+          "count": 1
+        },
+        {
+          "name": "α3",
+          "count": 1
+        },
+        {
+          "name": "αn",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_out,RA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "(•)²  \\n(•)³": {
+    "component_box": [
+      193.0,
+      149.0,
+      288.0,
+      192.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin,RA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Quantization leakage error",
+          "count": 1
+        },
+        {
+          "name": "Quantization leakage error",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      248.0,
+      460.0,
+      288.0,
+      500.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Q1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Residue amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "(•)^2\n(•)^3": {
+    "component_box": [
+      193.0,
+      193.0,
+      288.0,
+      236.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin,RA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "α2",
+          "count": 1
+        },
+        {
+          "name": "α3",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "α3": {
+    "component_box": [
+      330.0,
+      149.0,
+      425.0,
+      192.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "(•)^3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing node",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Q2": {
+    "component_box": [
+      657.0,
+      460.0,
+      696.0,
+      500.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

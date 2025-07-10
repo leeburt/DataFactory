@@ -1,0 +1,283 @@
+{
+  "Viterbi Decoder & Linear equalizer & Tomlinson Operator": {
+    "component_box": [
+      303.0,
+      499.0,
+      539.0,
+      606.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Descrambler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Noise Shaper": {
+    "component_box": [
+      850.0,
+      72.0,
+      1030.0,
+      181.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Interpolation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Descrambler": {
+    "component_box": [
+      85.0,
+      499.0,
+      245.0,
+      606.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Viterbi Decoder & Linear equalizer & Tomlinson Operator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Trellis Precoder & Tomlinson Precoder": {
+    "component_box": [
+      349.0,
+      71.0,
+      585.0,
+      177.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Scrambler",
+          "count": 1
+        },
+        {
+          "name": "Activation Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Interpolation",
+          "count": 1
+        },
+        {
+          "name": "Echo Canceller (Adaptive)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock Recovery": {
+    "component_box": [
+      112.0,
+      220.0,
+      259.0,
+      376.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Descrambler",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Scrambler",
+          "count": 1
+        },
+        {
+          "name": "Activation Controller",
+          "count": 1
+        },
+        {
+          "name": "uC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Analog Control Interface": {
+    "component_box": [
+      828.0,
+      205.0,
+      996.0,
+      403.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Interpolation": {
+    "component_box": [
+      652.0,
+      74.0,
+      811.0,
+      180.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Trellis Precoder & Tomlinson Precoder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Noise Shaper",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Activation Controller": {
+    "component_box": [
+      276.0,
+      213.0,
+      422.0,
+      280.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clock Recovery",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Scrambler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      584.0,
+      536.0,
+      623.0,
+      577.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Echo Canceller (Adaptive)",
+          "count": 1
+        },
+        {
+          "name": "Decimator Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Viterbi Decoder & Linear equalizer & Tomlinson Operator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Echo Canceller (Adaptive)": {
+    "component_box": [
+      526.0,
+      208.0,
+      685.0,
+      390.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Interpolation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Scrambler": {
+    "component_box": [
+      125.0,
+      71.0,
+      297.0,
+      178.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clock Recovery",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Trellis Precoder & Tomlinson Precoder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Decimator Filter": {
+    "component_box": [
+      740.0,
+      493.0,
+      901.0,
+      600.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

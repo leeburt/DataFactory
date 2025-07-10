@@ -1,0 +1,283 @@
+{
+  "Switch Bank": {
+    "component_box": [
+      449.0,
+      304.0,
+      539.0,
+      389.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DACn Driver",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Capacitor Array",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DACp Driver": {
+    "component_box": [
+      222.0,
+      48.0,
+      435.0,
+      105.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Logic Core",
+          "count": 1
+        },
+        {
+          "name": "Level-Shifter Bank",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Switch Bank",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Analog Wrapper": {
+    "component_box": [
+      190.0,
+      8.0,
+      811.0,
+      153.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Level-Shifter Bank",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Logic Core",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "S/Hp": {
+    "component_box": [
+      350.0,
+      116.0,
+      435.0,
+      170.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clk S/H",
+          "count": 1
+        },
+        {
+          "name": "VINp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Switch Bank",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clk S/H": {
+    "component_box": [
+      223.0,
+      174.0,
+      309.0,
+      250.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Level-Shifter Bank",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "S/Hp",
+          "count": 1
+        },
+        {
+          "name": "S/Hn",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comp": {
+    "component_box": [
+      683.0,
+      171.0,
+      787.0,
+      251.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Capacitor Array",
+          "count": 1
+        },
+        {
+          "name": "Capacitor Array",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Switch Bank",
+          "count": 1
+        },
+        {
+          "name": "Switch Bank",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Capacitor Array": {
+    "component_box": [
+      554.0,
+      35.0,
+      689.0,
+      121.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Switch Bank",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comp",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "S/Hn": {
+    "component_box": [
+      350.0,
+      253.0,
+      436.0,
+      308.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clk S/H",
+          "count": 1
+        },
+        {
+          "name": "V_INn",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Switch Bank",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DACn Driver": {
+    "component_box": [
+      221.0,
+      320.0,
+      434.0,
+      376.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Level-Shifter Bank",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Switch Bank",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Level-Shifter Bank": {
+    "component_box": [
+      5.0,
+      165.0,
+      176.0,
+      258.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Logic Core",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DACp Driver",
+          "count": 1
+        },
+        {
+          "name": "DACn Driver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Logic Core": {
+    "component_box": [
+      43.0,
+      50.0,
+      136.0,
+      129.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Level-Shifter Bank",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Comp",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

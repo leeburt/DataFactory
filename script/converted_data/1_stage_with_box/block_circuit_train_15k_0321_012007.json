@@ -1,0 +1,178 @@
+{
+  "Slave Biquad": {
+    "component_box": [
+      240.0,
+      6.0,
+      359.0,
+      101.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Master Biquad",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "I/Q Gain adjustment  \nMaster Biquad  \nSlave Biquad": {
+    "component_box": [
+      26.0,
+      3.0,
+      430.0,
+      289.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Kf/sC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Vqout",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      381.0,
+      271.0,
+      414.0,
+      311.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Master Biquad",
+          "count": 1
+        },
+        {
+          "name": "Kf/sC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Km",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Km": {
+    "component_box": [
+      456.0,
+      270.0,
+      490.0,
+      309.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Kf/sC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Master Biquad": {
+    "component_box": [
+      240.0,
+      130.0,
+      360.0,
+      229.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "I/Q",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Slave Biquad",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Km",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "I/Q": {
+    "component_box": [
+      110.0,
+      152.0,
+      193.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference signal Vin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Master Biquad",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Kf/sC": {
+    "component_box": [
+      513.0,
+      262.0,
+      584.0,
+      314.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Km",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Slave Biquad",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "N_OP": {
+    "component_box": [
+      47.0,
+      426.0,
+      188.0,
+      519.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "M4",
+          "count": 1
+        },
+        {
+          "name": "R_T",
+          "count": 1
+        },
+        {
+          "name": "C_T",
+          "count": 1
+        },
+        {
+          "name": "C_B",
+          "count": 1
+        },
+        {
+          "name": "Dynamic Bias Circuit",
+          "count": 1
+        },
+        {
+          "name": "P_OP",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "P_OP": {
+    "component_box": [
+      402.0,
+      424.0,
+      540.0,
+      514.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "M3",
+          "count": 1
+        },
+        {
+          "name": "node between C_T and C_B",
+          "count": 1
+        },
+        {
+          "name": "R_B",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Dynamic Bias Circuit": {
+    "component_box": [
+      217.0,
+      365.0,
+      365.0,
+      472.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CT",
+          "count": 1
+        },
+        {
+          "name": "CB",
+          "count": 1
+        },
+        {
+          "name": "M2",
+          "count": 1
+        },
+        {
+          "name": "M3",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Linking Voltage": {
+    "component_box": [
+      454.0,
+      170.0,
+      591.0,
+      247.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "M1",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "Clock Generator": {
+    "component_box": [
+      376.0,
+      12.0,
+      805.0,
+      96.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "MDAC1",
+          "count": 1
+        },
+        {
+          "name": "MDAC2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Shared Resister Ladder": {
+    "component_box": [
+      108.0,
+      11.0,
+      340.0,
+      95.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "MDAC1",
+          "count": 1
+        },
+        {
+          "name": "MDAC2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MDAC1": {
+    "component_box": [
+      304.0,
+      134.0,
+      446.0,
+      241.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Shared Resister Ladder",
+          "count": 1
+        },
+        {
+          "name": "3b Flash CADC",
+          "count": 1
+        },
+        {
+          "name": "Vin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "4b Flash FADC1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MDAC2": {
+    "component_box": [
+      304.0,
+      475.0,
+      445.0,
+      582.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "3b Flash CADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "4b Flash FADC2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "3b Flash CADC": {
+    "component_box": [
+      130.0,
+      293.0,
+      239.0,
+      424.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MDAC1",
+          "count": 1
+        },
+        {
+          "name": "MDAC2",
+          "count": 1
+        },
+        {
+          "name": "Encoder and Digital Correction Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "4b Flash FADC2": {
+    "component_box": [
+      499.0,
+      463.0,
+      608.0,
+      594.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MDAC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Encoder and Digital Correction Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "4b Flash FADC1": {
+    "component_box": [
+      499.0,
+      121.0,
+      608.0,
+      253.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MDAC1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Encoder and Digital Correction Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Encoder and Digital Correction Logic": {
+    "component_box": [
+      669.0,
+      255.0,
+      804.0,
+      463.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "4b Flash FADC1",
+          "count": 1
+        },
+        {
+          "name": "4b Flash FADC2",
+          "count": 1
+        },
+        {
+          "name": "3b Flash CADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

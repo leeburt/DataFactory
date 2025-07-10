@@ -1,0 +1,134 @@
+{
+  "R2": {
+    "component_box": [
+      165.0,
+      126.0,
+      211.0,
+      149.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "开关",
+          "count": 1
+        },
+        {
+          "name": "opamp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "opamp": {
+    "component_box": [
+      267.0,
+      100.0,
+      339.0,
+      172.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "C",
+          "count": 1
+        },
+        {
+          "name": "comp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Lowpass Filter": {
+    "component_box": [
+      233.0,
+      232.0,
+      376.0,
+      303.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "comp",
+          "count": 1
+        },
+        {
+          "name": "开关",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "E_out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "开关": {
+    "component_box": [
+      165.0,
+      76.0,
+      211.0,
+      99.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Ex",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "comp": {
+    "component_box": [
+      417.0,
+      84.0,
+      489.0,
+      156.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "opamp",
+          "count": 1
+        },
+        {
+          "name": "C",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Lowpass Filter",
+          "count": 1
+        },
+        {
+          "name": "opamp",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

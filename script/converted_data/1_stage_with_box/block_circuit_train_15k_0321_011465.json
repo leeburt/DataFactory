@@ -1,0 +1,427 @@
+{
+  "MPPT controller": {
+    "component_box": [
+      515.0,
+      563.0,
+      702.0,
+      635.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "v_pv",
+          "count": 1
+        },
+        {
+          "name": "i_pv",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OCC controller of i_in1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Surge arrester": {
+    "component_box": [
+      168.0,
+      315.0,
+      197.0,
+      335.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Commercial Grid",
+          "count": 1
+        },
+        {
+          "name": "v_in2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Output voltage regulator": {
+    "component_box": [
+      515.0,
+      428.0,
+      701.0,
+      500.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OCC controller of v_AB",
+          "count": 1
+        },
+        {
+          "name": "MPPT controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "v_o_f",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Rectifier diode": {
+    "component_box": [
+      138.0,
+      316.0,
+      167.0,
+      335.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Commercial Grid",
+          "count": 1
+        },
+        {
+          "name": "Surge arrester",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "OCC controller of v_AB": {
+    "component_box": [
+      251.0,
+      428.0,
+      435.0,
+      499.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mode transition circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output voltage regulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PV Array": {
+    "component_box": [
+      117.0,
+      98.0,
+      189.0,
+      154.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "电流传感器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "电流传感器": {
+    "component_box": [
+      162.0,
+      42.0,
+      182.0,
+      71.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PV Array",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Q1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Diode bridge rectifier": {
+    "component_box": [
+      138.0,
+      220.0,
+      166.0,
+      239.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Commercial Grid",
+          "count": 1
+        },
+        {
+          "name": "v_in2",
+          "count": 1
+        },
+        {
+          "name": "Surge arrester",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "D2": {
+    "component_box": [
+      351.0,
+      259.0,
+      378.0,
+      278.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "B",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OCC controller of v_AB",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D1": {
+    "component_box": [
+      351.0,
+      113.0,
+      379.0,
+      133.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Node A",
+          "count": 1
+        },
+        {
+          "name": "Resistor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Diode": {
+    "component_box": [
+      168.0,
+      220.0,
+      197.0,
+      239.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Commercial Grid",
+          "count": 1
+        },
+        {
+          "name": "v_in2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Commercial Grid": {
+    "component_box": [
+      103.0,
+      257.0,
+      141.0,
+      294.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Diode bridge rectifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "OCC controller of i_in1": {
+    "component_box": [
+      251.0,
+      563.0,
+      436.0,
+      634.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MPPT controller",
+          "count": 1
+        },
+        {
+          "name": "i_in1_f",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Mode transition circuit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Cf": {
+    "component_box": [
+      608.0,
+      190.0,
+      651.0,
+      201.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R_cf",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Mode transition circuit": {
+    "component_box": [
+      72.0,
+      479.0,
+      197.0,
+      589.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OCC controller of v_AB",
+          "count": 1
+        },
+        {
+          "name": "OCC controller of i_in1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Gate Drive",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "v_in2": {
+    "component_box": [
+      197.0,
+      266.0,
+      239.0,
+      278.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Diode bridge rectifier",
+          "count": 1
+        },
+        {
+          "name": "Q2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "v_pv": {
+    "component_box": [
+      196.0,
+      111.0,
+      238.0,
+      122.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "MPPT controller",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "PV Array",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Gate Drive": {
+    "component_box": [
+      65.0,
+      402.0,
+      205.0,
+      449.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mode transition circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Q1",
+          "count": 1
+        },
+        {
+          "name": "Q2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

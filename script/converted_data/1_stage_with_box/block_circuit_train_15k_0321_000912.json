@@ -1,0 +1,129 @@
+{
+  "G_int": {
+    "component_box": [
+      594.0,
+      68.0,
+      698.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "G_DPWM",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Digital Controller": {
+    "component_box": [
+      12.0,
+      13.0,
+      152.0,
+      96.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "V^-1_dc.nom": {
+    "component_box": [
+      287.0,
+      68.0,
+      390.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "G_DPWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      193.0,
+      83.0,
+      247.0,
+      137.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital Controller",
+          "count": 1
+        },
+        {
+          "name": "DC Bus Variation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V^-1_dc.nom",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DC Bus Variation": {
+    "component_box": [
+      12.0,
+      126.0,
+      152.0,
+      208.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G_DPWM": {
+    "component_box": [
+      453.0,
+      69.0,
+      556.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V^-1_dc.nom",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "G_int",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

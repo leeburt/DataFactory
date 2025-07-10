@@ -1,0 +1,306 @@
+{
+  "Pin": {
+    "component_box": [
+      95.0,
+      115.0,
+      131.0,
+      157.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Filter": {
+    "component_box": [
+      149.0,
+      182.0,
+      213.0,
+      217.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Amplifier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LNA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Attenuator": {
+    "component_box": [
+      361.0,
+      181.0,
+      456.0,
+      217.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Splitter",
+          "count": 1
+        },
+        {
+          "name": "Power Control IN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LNA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LNA": {
+    "component_box": [
+      225.0,
+      179.0,
+      260.0,
+      220.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Power Splitter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Power Splitter": {
+    "component_box": [
+      275.0,
+      176.0,
+      354.0,
+      223.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LNA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Attenuator",
+          "count": 1
+        },
+        {
+          "name": "mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Antenna": {
+    "component_box": [
+      596.0,
+      96.0,
+      620.0,
+      113.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LO Input": {
+    "component_box": [
+      47.0,
+      186.0,
+      74.0,
+      214.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Local Oscillator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "线交叉": {
+    "component_box": [
+      318.0,
+      122.0,
+      346.0,
+      150.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "mixer": {
+    "component_box": [
+      268.0,
+      67.0,
+      324.0,
+      113.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "50Ω",
+          "count": 1
+        },
+        {
+          "name": "Power Splitter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Power Splitter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "REF OSC": {
+    "component_box": [
+      16.0,
+      226.0,
+      105.0,
+      262.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Buffer": {
+    "component_box": [
+      95.0,
+      15.0,
+      131.0,
+      57.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Q Out",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "50Ω": {
+    "component_box": [
+      318.0,
+      22.0,
+      346.0,
+      50.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LNA",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "mixer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PLL": {
+    "component_box": [
+      37.0,
+      277.0,
+      85.0,
+      305.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "REF OSC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Local Oscillator": {
+    "component_box": [
+      94.0,
+      179.0,
+      129.0,
+      221.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LO Input",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

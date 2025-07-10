@@ -1,0 +1,214 @@
+{
+  "I_load": {
+    "component_box": [
+      662.0,
+      397.0,
+      706.0,
+      442.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_out",
+          "count": 1
+        },
+        {
+          "name": "GND",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Rfb1": {
+    "component_box": [
+      467.0,
+      324.0,
+      503.0,
+      390.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Power Regulator",
+          "count": 1
+        },
+        {
+          "name": "Rfb2",
+          "count": 1
+        },
+        {
+          "name": "I_load",
+          "count": 1
+        },
+        {
+          "name": "EA",
+          "count": 1
+        },
+        {
+          "name": "C_load",
+          "count": 1
+        },
+        {
+          "name": "V_OUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I_Q": {
+    "component_box": [
+      296.0,
+      262.0,
+      339.0,
+      305.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "EA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Power Regulator": {
+    "component_box": [
+      422.0,
+      130.0,
+      549.0,
+      257.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "EA",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "Rfb1",
+          "count": 1
+        },
+        {
+          "name": "Rfb2",
+          "count": 1
+        },
+        {
+          "name": "I_load",
+          "count": 1
+        },
+        {
+          "name": "V_OUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "EA": {
+    "component_box": [
+      262.0,
+      129.0,
+      366.0,
+      253.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Bandgap",
+          "count": 1
+        },
+        {
+          "name": "Power Regulator",
+          "count": 1
+        },
+        {
+          "name": "I_Q",
+          "count": 1
+        },
+        {
+          "name": "Rfb1",
+          "count": 1
+        },
+        {
+          "name": "Rfb2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Bandgap": {
+    "component_box": [
+      12.0,
+      133.0,
+      164.0,
+      202.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "EA",
+          "count": 1
+        },
+        {
+          "name": "V_IN",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Rfb2": {
+    "component_box": [
+      467.0,
+      448.0,
+      503.0,
+      513.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Rfb1",
+          "count": 1
+        },
+        {
+          "name": "I_load",
+          "count": 1
+        },
+        {
+          "name": "C_load",
+          "count": 1
+        },
+        {
+          "name": "V_OUT",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

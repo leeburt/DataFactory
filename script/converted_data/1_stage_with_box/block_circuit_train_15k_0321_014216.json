@@ -1,0 +1,152 @@
+{
+  "ZOH": {
+    "component_box": [
+      438.0,
+      260.0,
+      527.0,
+      321.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power MOS Array & Load",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z⁻¹": {
+    "component_box": [
+      481.0,
+      104.0,
+      542.0,
+      164.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Power MOS Array & Load": {
+    "component_box": [
+      139.0,
+      242.0,
+      422.0,
+      332.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ZOH",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Subtractor": {
+    "component_box": [
+      98.0,
+      115.0,
+      137.0,
+      154.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_REF",
+          "count": 1
+        },
+        {
+          "name": "w(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      191.0,
+      77.0,
+      306.0,
+      191.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "z⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      575.0,
+      116.0,
+      613.0,
+      154.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z⁻¹",
+          "count": 1
+        },
+        {
+          "name": "z⁻¹",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "S(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

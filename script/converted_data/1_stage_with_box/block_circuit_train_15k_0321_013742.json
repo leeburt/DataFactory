@@ -1,0 +1,375 @@
+{
+  "CB-PWM method with single carrier": {
+    "component_box": [
+      652.0,
+      33.0,
+      783.0,
+      210.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Vienna rectifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      606.0,
+      33.0,
+      624.0,
+      52.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Duty Compensation TABLE IV",
+          "count": 1
+        },
+        {
+          "name": "Duty Calculation TABLE III",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CB-PWM method with single carrier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Bidirectional switch": {
+    "component_box": [
+      677.0,
+      333.0,
+      750.0,
+      395.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CB-PWM method with single carrier",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "AC input",
+          "count": 1
+        },
+        {
+          "name": "DC bus",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "vo Caculation Equation(12)": {
+    "component_box": [
+      27.0,
+      418.0,
+      193.0,
+      512.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "k Calculation Equation(6)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      184.0,
+      288.0,
+      203.0,
+      306.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Duty Calculation TABLE III",
+          "count": 1
+        },
+        {
+          "name": "vo Caculation Equation(12)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Duty Compensation TABLE IV",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Duty Calculation TABLE III": {
+    "component_box": [
+      281.0,
+      233.0,
+      431.0,
+      357.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "k Calculation Equation(6)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "T1 T2 Calculation Equation(32)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "T1 T2 Calculation Equation(32)": {
+    "component_box": [
+      453.0,
+      392.0,
+      615.0,
+      526.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "k Calculation Equation(6)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Duty Compensation TABLE IV",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Vienna rectifier": {
+    "component_box": [
+      453.0,
+      148.0,
+      638.0,
+      537.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CB-PWM method with single carrier",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Selection of region R (TABLE I)": {
+    "component_box": [
+      117.0,
+      34.0,
+      267.0,
+      130.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_a",
+          "count": 1
+        },
+        {
+          "name": "i_b",
+          "count": 1
+        },
+        {
+          "name": "i_c",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Duty Compensation TABLE IV",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Vienna rectification": {
+    "component_box": [
+      629.0,
+      281.0,
+      796.0,
+      473.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CB-PWM method with single carrier",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "k Calculation Equation(6)": {
+    "component_box": [
+      261.0,
+      407.0,
+      426.0,
+      506.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "vo Caculation Equation(12)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Duty Calculation TABLE III",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Duty Compensation TABLE IV": {
+    "component_box": [
+      315.0,
+      33.0,
+      511.0,
+      127.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Selection of region R (TABLE I)",
+          "count": 1
+        },
+        {
+          "name": "Duty Calculation TABLE III",
+          "count": 1
+        },
+        {
+          "name": "T1 T2 Calculation Equation(32)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "vo Calculation Equation(12)": {
+    "component_box": [
+      5.0,
+      136.0,
+      271.0,
+      531.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "k Calculation Equation(6)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

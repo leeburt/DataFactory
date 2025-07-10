@@ -1,0 +1,125 @@
+{
+  "Bow-tie Antenna": {
+    "component_box": [
+      75.0,
+      82.0,
+      111.0,
+      143.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Input interface",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Output interface": {
+    "component_box": [
+      404.0,
+      64.0,
+      501.0,
+      160.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SiGe LNA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Connector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Input interface": {
+    "component_box": [
+      150.0,
+      63.0,
+      248.0,
+      159.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Bow-tie Antenna",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SiGe LNA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SiGe LNA": {
+    "component_box": [
+      278.0,
+      63.0,
+      375.0,
+      160.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input interface",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output interface",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Connector": {
+    "component_box": [
+      529.0,
+      63.0,
+      625.0,
+      159.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Output interface",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Bow-tie Antenna\nInput interface\nSiGe LNA": {
+    "component_box": [
+      8.0,
+      17.0,
+      476.0,
+      229.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Output interface",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

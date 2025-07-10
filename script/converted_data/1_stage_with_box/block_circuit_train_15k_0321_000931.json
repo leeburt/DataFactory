@@ -1,0 +1,111 @@
+{
+  "VGA": {
+    "component_box": [
+      314.0,
+      177.0,
+      405.0,
+      229.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Magnetic media + Read heads + Preamp",
+          "count": 1
+        },
+        {
+          "name": "DSP Core",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DSP Core": {
+    "component_box": [
+      695.0,
+      158.0,
+      787.0,
+      246.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VGA",
+          "count": 1
+        },
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "μP Interface",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Filter": {
+    "component_box": [
+      440.0,
+      177.0,
+      531.0,
+      229.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VGA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      566.0,
+      175.0,
+      660.0,
+      230.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Filter",
+          "count": 1
+        },
+        {
+          "name": "DSP Core",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DSP Core",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

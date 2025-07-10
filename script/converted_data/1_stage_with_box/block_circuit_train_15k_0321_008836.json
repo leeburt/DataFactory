@@ -1,0 +1,131 @@
+{
+  "tin[2:0]": {
+    "component_box": [
+      126.0,
+      169.0,
+      147.0,
+      190.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Counters",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Delay": {
+    "component_box": [
+      128.0,
+      208.0,
+      149.0,
+      229.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "tin[2:0]",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Counters",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Interface Logic": {
+    "component_box": [
+      250.0,
+      328.0,
+      372.0,
+      404.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CPOUT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Counters",
+          "count": 1
+        },
+        {
+          "name": "Counters",
+          "count": 1
+        },
+        {
+          "name": "Clear",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Counters": {
+    "component_box": [
+      250.0,
+      157.0,
+      372.0,
+      239.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "tin[2:0]",
+          "count": 1
+        },
+        {
+          "name": "Delay",
+          "count": 1
+        },
+        {
+          "name": "Divide-by-two",
+          "count": 1
+        },
+        {
+          "name": "Interface Logic",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Divide-by-two": {
+    "component_box": [
+      252.0,
+      8.0,
+      374.0,
+      84.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Din[9:0]",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Counters",
+          "count": 1
+        },
+        {
+          "name": "DACs",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

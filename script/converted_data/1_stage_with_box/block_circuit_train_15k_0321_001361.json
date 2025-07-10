@@ -1,0 +1,110 @@
+{
+  "Adder": {
+    "component_box": [
+      188.0,
+      236.0,
+      231.0,
+      278.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Vdc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Pre Amp",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Line Driver": {
+    "component_box": [
+      536.0,
+      108.0,
+      639.0,
+      231.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Pre Amp",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Power Control",
+          "count": 1
+        },
+        {
+          "name": "Tip",
+          "count": 1
+        },
+        {
+          "name": "Current Sense",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Power Control": {
+    "component_box": [
+      230.0,
+      11.0,
+      361.0,
+      115.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vcnt",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Line Driver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Pre Amp": {
+    "component_box": [
+      284.0,
+      200.0,
+      388.0,
+      322.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Line Driver",
+          "count": 1
+        },
+        {
+          "name": "Line Driver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

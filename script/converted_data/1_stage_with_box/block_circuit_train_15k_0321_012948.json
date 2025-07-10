@@ -1,0 +1,147 @@
+{
+  "offset": {
+    "component_box": [
+      282.0,
+      428.0,
+      386.0,
+      532.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Window DL-ADC",
+          "count": 1
+        },
+        {
+          "name": "PI Compensator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI Compensator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Window DL-ADC": {
+    "component_box": [
+      457.0,
+      114.0,
+      617.0,
+      211.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI Compensator",
+          "count": 1
+        },
+        {
+          "name": "Reference Pulse V_ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "One-Shot",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "One-Shot": {
+    "component_box": [
+      671.0,
+      431.0,
+      829.0,
+      528.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Window DL-ADC",
+          "count": 1
+        },
+        {
+          "name": "i_L(t)",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "(m-k)-bit Reference Pulse Generator": {
+    "component_box": [
+      398.0,
+      241.0,
+      669.0,
+      332.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI Compensator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Window DL-ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI Compensator": {
+    "component_box": [
+      13.0,
+      431.0,
+      213.0,
+      528.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "offset",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DPWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DPWM": {
+    "component_box": [
+      25.0,
+      580.0,
+      184.0,
+      642.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI Compensator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "c(t)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

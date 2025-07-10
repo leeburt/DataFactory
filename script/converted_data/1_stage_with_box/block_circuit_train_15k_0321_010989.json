@@ -1,0 +1,277 @@
+{
+  "CMFB": {
+    "component_box": [
+      411.0,
+      1119.0,
+      851.0,
+      1252.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "MDAC1": {
+    "component_box": [
+      593.0,
+      428.0,
+      856.0,
+      842.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        },
+        {
+          "name": "sub ADC",
+          "count": 1
+        },
+        {
+          "name": "sub DAC",
+          "count": 1
+        },
+        {
+          "name": "CMFB",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "N2": {
+    "component_box": [
+      225.0,
+      209.0,
+      264.0,
+      248.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Φ2D",
+          "count": 1
+        },
+        {
+          "name": "C1a",
+          "count": 1
+        },
+        {
+          "name": "C2a",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "sub DAC": {
+    "component_box": [
+      611.0,
+      328.0,
+      658.0,
+      375.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "switch φ2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MDAC2": {
+    "component_box": [
+      516.0,
+      10.0,
+      857.0,
+      394.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        },
+        {
+          "name": "sub ADC",
+          "count": 1
+        },
+        {
+          "name": "sub DAC",
+          "count": 1
+        },
+        {
+          "name": "CMFB",
+          "count": 1
+        },
+        {
+          "name": "Voutp",
+          "count": 1
+        },
+        {
+          "name": "Voutn",
+          "count": 1
+        },
+        {
+          "name": "V_icm",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "sub ADC": {
+    "component_box": [
+      550.0,
+      327.0,
+      598.0,
+      375.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Φ2D",
+          "count": 1
+        },
+        {
+          "name": "sub DAC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "N2  \nN1": {
+    "component_box": [
+      123.0,
+      73.0,
+      162.0,
+      111.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "C1a",
+          "count": 1
+        },
+        {
+          "name": "C2a",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "φ1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Switched-op-amp": {
+    "component_box": [
+      0.0,
+      427.0,
+      595.0,
+      755.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vb",
+          "count": 1
+        },
+        {
+          "name": "Vinp,b",
+          "count": 1
+        },
+        {
+          "name": "Vinp,a",
+          "count": 1
+        },
+        {
+          "name": "Vinn,a",
+          "count": 1
+        },
+        {
+          "name": "Vinn,b",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Voutp",
+          "count": 1
+        },
+        {
+          "name": "Voutn",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Operational amplifier": {
+    "component_box": [
+      391.0,
+      173.0,
+      507.0,
+      321.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vinp,b",
+          "count": 1
+        },
+        {
+          "name": "Vinn,b",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MDAC2",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "N2\nN1": {
+    "component_box": [
+      291.0,
+      67.0,
+      329.0,
+      105.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

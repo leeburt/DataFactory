@@ -1,0 +1,96 @@
+{
+  "random pattern generator": {
+    "component_box": [
+      58.0,
+      156.0,
+      157.0,
+      234.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "proposed ADC in Dith. mode",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VIN": {
+    "component_box": [
+      53.0,
+      29.0,
+      92.0,
+      68.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "proposed ADC in Dith. mode",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      262.0,
+      157.0,
+      315.0,
+      209.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "random pattern generator",
+          "count": 1
+        },
+        {
+          "name": "proposed ADC in Dith. mode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "dithered ADC result",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "proposed ADC in Dith. mode": {
+    "component_box": [
+      132.0,
+      8.0,
+      265.0,
+      87.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "random pattern generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

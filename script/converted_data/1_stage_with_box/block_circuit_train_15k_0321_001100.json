@@ -1,0 +1,102 @@
+{
+  "Summing junction": {
+    "component_box": [
+      66.0,
+      195.0,
+      124.0,
+      254.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "v(t)",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Proposed System",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      442.0,
+      196.0,
+      501.0,
+      255.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Proposed System",
+          "count": 1
+        },
+        {
+          "name": "Harmonic Compensator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Proposed System": {
+    "component_box": [
+      189.0,
+      171.0,
+      381.0,
+      283.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Harmonic Compensator": {
+    "component_box": [
+      200.0,
+      8.0,
+      368.0,
+      136.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

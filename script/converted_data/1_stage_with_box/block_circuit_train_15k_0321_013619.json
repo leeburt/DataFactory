@@ -1,0 +1,326 @@
+{
+  "pulse density number": {
+    "component_box": [
+      109.0,
+      70.0,
+      213.0,
+      181.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "m",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "anti-windup": {
+    "component_box": [
+      349.0,
+      106.0,
+      390.0,
+      147.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "zerocross detection": {
+    "component_box": [
+      165.0,
+      396.0,
+      294.0,
+      467.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "phase correction",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "V_L": {
+    "component_box": [
+      663.0,
+      311.0,
+      680.0,
+      329.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "RL",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "phase correction": {
+    "component_box": [
+      155.0,
+      496.0,
+      289.0,
+      565.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "zerocross detection",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FPGA synchronous & interleaved gate signals",
+          "count": 1
+        },
+        {
+          "name": "pulse density number",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Ls1": {
+    "component_box": [
+      361.0,
+      315.0,
+      380.0,
+      333.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "L_p",
+          "count": 1
+        },
+        {
+          "name": "RMS calculation",
+          "count": 1
+        },
+        {
+          "name": "C_s1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SBAR": {
+    "component_box": [
+      451.0,
+      297.0,
+      575.0,
+      424.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FPGA synchronous & interleaved gate signals",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "C_s1",
+          "count": 1
+        },
+        {
+          "name": "C_o1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RL": {
+    "component_box": [
+      650.0,
+      315.0,
+      716.0,
+      405.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "SBAR",
+          "count": 1
+        },
+        {
+          "name": "SBAR",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PI": {
+    "component_box": [
+      551.0,
+      92.0,
+      621.0,
+      162.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "anti-windup",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "summing junction": {
+    "component_box": [
+      651.0,
+      107.0,
+      692.0,
+      148.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_ref",
+          "count": 1
+        },
+        {
+          "name": "V_L",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Inverter": {
+    "component_box": [
+      64.0,
+      307.0,
+      168.0,
+      411.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_dd",
+          "count": 1
+        },
+        {
+          "name": "C_p",
+          "count": 1
+        },
+        {
+          "name": "L_p",
+          "count": 1
+        },
+        {
+          "name": "zerocross detection",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RMS calculation": {
+    "component_box": [
+      300.0,
+      193.0,
+      443.0,
+      263.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ls1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FPGA synchronous & interleaved gate signals": {
+    "component_box": [
+      318.0,
+      455.0,
+      503.0,
+      604.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "phase correction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SBAR",
+          "count": 1
+        },
+        {
+          "name": "SBAR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

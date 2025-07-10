@@ -1,0 +1,220 @@
+{
+  "COMPARATOR": {
+    "component_box": [
+      394.0,
+      172.0,
+      481.0,
+      255.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DIGITAL PROCESSING CIRCUITRY",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Ø_A",
+          "count": 1
+        },
+        {
+          "name": "barØ_A",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I2  \nI1": {
+    "component_box": [
+      46.0,
+      288.0,
+      86.0,
+      324.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VDD",
+          "count": 1
+        },
+        {
+          "name": "Vo",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LATCH": {
+    "component_box": [
+      546.0,
+      388.0,
+      653.0,
+      455.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DIGITAL PROCESSING CIRCUITRY",
+          "count": 1
+        },
+        {
+          "name": "DIGITAL PROCESSING CIRCUITRY",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "filters",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "I1": {
+    "component_box": [
+      47.0,
+      313.0,
+      86.0,
+      346.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VDD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "R1": {
+    "component_box": [
+      202.0,
+      140.0,
+      232.0,
+      200.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "I2",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "COMPARATOR",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "sampling capacitor": {
+    "component_box": [
+      107.0,
+      478.0,
+      137.0,
+      539.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_O",
+          "count": 1
+        },
+        {
+          "name": "V_SS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I2": {
+    "component_box": [
+      197.0,
+      61.0,
+      237.0,
+      96.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VDD",
+          "count": 1
+        },
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "ØA",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "R2": {
+    "component_box": [
+      202.0,
+      226.0,
+      232.0,
+      286.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "VSS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DIGITAL PROCESSING CIRCUITRY": {
+    "component_box": [
+      536.0,
+      238.0,
+      707.0,
+      342.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "COMPARATOR",
+          "count": 1
+        },
+        {
+          "name": "REFERENCE CLOCK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LATCH",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "VCO BUF": {
+    "component_box": [
+      357.0,
+      16.0,
+      444.0,
+      118.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SSPD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP": {
+    "component_box": [
+      330.0,
+      261.0,
+      387.0,
+      302.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DZ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VIC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Divider": {
+    "component_box": [
+      372.0,
+      313.0,
+      472.0,
+      354.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PG": {
+    "component_box": [
+      202.0,
+      189.0,
+      258.0,
+      230.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "F_REF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VIC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LF": {
+    "component_box": [
+      456.0,
+      108.0,
+      508.0,
+      148.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VIC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD": {
+    "component_box": [
+      159.0,
+      261.0,
+      225.0,
+      302.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "F_REF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DZ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      584.0,
+      102.0,
+      643.0,
+      159.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO BUF",
+          "count": 1
+        },
+        {
+          "name": "Divider",
+          "count": 1
+        },
+        {
+          "name": "F_OUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VIC": {
+    "component_box": [
+      87.0,
+      210.0,
+      722.0,
+      346.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SSPD",
+          "count": 1
+        },
+        {
+          "name": "PG",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SSPD": {
+    "component_box": [
+      151.0,
+      91.0,
+      238.0,
+      178.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "F_REF",
+          "count": 1
+        },
+        {
+          "name": "VCO BUF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VIC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DZ": {
+    "component_box": [
+      250.0,
+      261.0,
+      303.0,
+      302.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

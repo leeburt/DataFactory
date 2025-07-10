@@ -1,0 +1,291 @@
+{
+  "VCO Quantizer": {
+    "component_box": [
+      957.0,
+      220.0,
+      1142.0,
+      318.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "phi_out",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "RX",
+          "count": 1
+        },
+        {
+          "name": "RZ DAC",
+          "count": 1
+        },
+        {
+          "name": "Implicit DWA",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "C3": {
+    "component_box": [
+      594.0,
+      320.0,
+      668.0,
+      379.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Op Amp",
+          "count": 1
+        },
+        {
+          "name": "RX",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "NRZ DAC2": {
+    "component_box": [
+      841.0,
+      440.0,
+      921.0,
+      531.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RZ DAC",
+          "count": 1
+        },
+        {
+          "name": "DEM Logic",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "NRZ DAC1": {
+    "component_box": [
+      142.0,
+      415.0,
+      222.0,
+      506.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Op Amp",
+          "count": 1
+        },
+        {
+          "name": "NRZ DAC2",
+          "count": 1
+        },
+        {
+          "name": "RZ DAC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Op Amp": {
+    "component_box": [
+      220.0,
+      229.0,
+      284.0,
+      309.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "C1",
+          "count": 1
+        },
+        {
+          "name": "C1",
+          "count": 1
+        },
+        {
+          "name": "积分器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Quantizer": {
+    "component_box": [
+      1061.0,
+      238.0,
+      1125.0,
+      300.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        },
+        {
+          "name": "CLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "phi_out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FF": {
+    "component_box": [
+      993.0,
+      564.0,
+      1038.0,
+      607.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "NRZ DAC1",
+          "count": 1
+        },
+        {
+          "name": "NRZ DAC2",
+          "count": 1
+        },
+        {
+          "name": "DEM Logic",
+          "count": 1
+        },
+        {
+          "name": "CLK",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "积分器": {
+    "component_box": [
+      422.0,
+      230.0,
+      486.0,
+      309.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Op Amp",
+          "count": 1
+        },
+        {
+          "name": "Op Amp",
+          "count": 1
+        },
+        {
+          "name": "C2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VCO": {
+    "component_box": [
+      987.0,
+      241.0,
+      1050.0,
+      302.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Resistor Network",
+          "count": 1
+        },
+        {
+          "name": "CLK",
+          "count": 1
+        },
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DEM Logic": {
+    "component_box": [
+      1061.0,
+      546.0,
+      1143.0,
+      624.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "FF",
+          "count": 1
+        },
+        {
+          "name": "RZ DAC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RZ DAC": {
+    "component_box": [
+      906.0,
+      378.0,
+      997.0,
+      458.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "NRZ DAC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "Modulator and Gate driver": {
+    "component_box": [
+      702.0,
+      79.0,
+      819.0,
+      300.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current controllers",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current reference generation": {
+    "component_box": [
+      229.0,
+      453.0,
+      395.0,
+      578.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PLL",
+          "count": 1
+        },
+        {
+          "name": "P_ref, Q_ref, v_g",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Cost function minimization and voltage vector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "System model and prediction": {
+    "component_box": [
+      190.0,
+      613.0,
+      415.0,
+      720.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "vg",
+          "count": 1
+        },
+        {
+          "name": "iL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Cost function minimization and voltage vector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Cost function minimization and voltage vector": {
+    "component_box": [
+      450.0,
+      442.0,
+      662.0,
+      591.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current reference generation",
+          "count": 1
+        },
+        {
+          "name": "System model and prediction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Modulator and Gate driver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PLL": {
+    "component_box": [
+      64.0,
+      160.0,
+      172.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "v_g",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "d-q axes current reference generator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "d-q axes current reference generator": {
+    "component_box": [
+      221.0,
+      121.0,
+      412.0,
+      286.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PLL",
+          "count": 1
+        },
+        {
+          "name": "P_ref",
+          "count": 1
+        },
+        {
+          "name": "Q_ref",
+          "count": 1
+        },
+        {
+          "name": "v_g",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current controllers",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current controllers": {
+    "component_box": [
+      475.0,
+      115.0,
+      653.0,
+      286.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "d-q axes current reference generator",
+          "count": 1
+        },
+        {
+          "name": "i_L, θ_g",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Modulator and Gate driver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

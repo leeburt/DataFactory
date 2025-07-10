@@ -1,0 +1,260 @@
+{
+  "Inverter": {
+    "component_box": [
+      199.0,
+      252.0,
+      223.0,
+      281.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Inverter",
+          "count": 1
+        },
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I_load": {
+    "component_box": [
+      630.0,
+      398.0,
+      667.0,
+      436.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "pass transistor array",
+          "count": 1
+        },
+        {
+          "name": "C_out",
+          "count": 1
+        },
+        {
+          "name": "Digital Controller",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Bang-Bang Phase Detector": {
+    "component_box": [
+      297.0,
+      249.0,
+      412.0,
+      324.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Internal Clock and Pulse Generator",
+          "count": 1
+        },
+        {
+          "name": "Buffer",
+          "count": 1
+        },
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "pass transistor array": {
+    "component_box": [
+      604.0,
+      236.0,
+      668.0,
+      309.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital Controller",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Vout",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Pass transistor": {
+    "component_box": [
+      632.0,
+      323.0,
+      669.0,
+      360.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_in",
+          "count": 1
+        },
+        {
+          "name": "pass transistor array",
+          "count": 1
+        },
+        {
+          "name": "I_load",
+          "count": 1
+        },
+        {
+          "name": "C_out",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Digital Controller": {
+    "component_box": [
+      418.0,
+      249.0,
+      534.0,
+      324.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Bang-Bang Phase Detector",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "pass transistor array",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "V_in",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Internal Clock and Pulse Generator": {
+    "component_box": [
+      163.0,
+      95.0,
+      335.0,
+      172.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Frequency Selection input",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_in",
+          "count": 1
+        },
+        {
+          "name": "Bang-Bang Phase Detector",
+          "count": 1
+        },
+        {
+          "name": "Digital Controller",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MOSFET": {
+    "component_box": [
+      621.0,
+      250.0,
+      697.0,
+      329.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_in",
+          "count": 1
+        },
+        {
+          "name": "V_out",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Vref": {
+    "component_box": [
+      131.0,
+      231.0,
+      168.0,
+      258.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Buffer": {
+    "component_box": [
+      256.0,
+      294.0,
+      281.0,
+      324.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Bang-Bang Phase Detector",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

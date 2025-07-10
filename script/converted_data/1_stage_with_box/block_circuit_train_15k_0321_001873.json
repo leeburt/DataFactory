@@ -1,0 +1,168 @@
+{
+  "HV pulser output pad": {
+    "component_box": [
+      447.0,
+      254.0,
+      463.0,
+      270.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "HV pulser",
+          "count": 1
+        },
+        {
+          "name": "Tx/Rx Beamformer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Transducer array": {
+    "component_box": [
+      16.0,
+      52.0,
+      66.0,
+      329.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "HV pulser",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "HV switch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Tx/Rx Beamformer": {
+    "component_box": [
+      548.0,
+      52.0,
+      611.0,
+      331.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Preamp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Tx/Rx Beamformer\nDisplay/Imaging",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Tx/Rx Beamformer\nDisplay/Imaging": {
+    "component_box": [
+      645.0,
+      52.0,
+      715.0,
+      330.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Preamp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "HV pulser",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Preamp": {
+    "component_box": [
+      365.0,
+      93.0,
+      416.0,
+      160.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "HV switch  \nPreamp  \nHV pulser",
+          "count": 1
+        },
+        {
+          "name": "Tx/Rx Beamformer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "HV switch  \nPreamp  \nHV pulser": {
+    "component_box": [
+      123.0,
+      16.0,
+      483.0,
+      332.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Transducer array",
+          "count": 1
+        },
+        {
+          "name": "Tx/Rx Beamformer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Transducer array",
+          "count": 1
+        },
+        {
+          "name": "Tx/Rx Beamformer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "HV pulser": {
+    "component_box": [
+      326.0,
+      230.0,
+      376.0,
+      296.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Transducer array",
+          "count": 1
+        },
+        {
+          "name": "HV pulser output pad",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "Counter\nAdder\nRegister": {
+    "component_box": [
+      541.0,
+      111.0,
+      604.0,
+      347.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Register",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Samp. Ctrl.",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Quantizer": {
+    "component_box": [
+      301.0,
+      130.0,
+      371.0,
+      189.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Gm",
+          "count": 1
+        },
+        {
+          "name": "Delay 元件",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Gm": {
+    "component_box": [
+      127.0,
+      231.0,
+      213.0,
+      367.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CDAC",
+          "count": 1
+        },
+        {
+          "name": "CDAC",
+          "count": 1
+        },
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Delay cell": {
+    "component_box": [
+      301.0,
+      333.0,
+      372.0,
+      392.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Counter": {
+    "component_box": [
+      461.0,
+      63.0,
+      524.0,
+      242.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        },
+        {
+          "name": "Counter\nAdder\nRegister",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Samp. Ctrl.": {
+    "component_box": [
+      539.0,
+      377.0,
+      698.0,
+      474.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clock",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "fs",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Integrator": {
+    "component_box": [
+      326.0,
+      315.0,
+      347.0,
+      335.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Delay 元件",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Delay 元件": {
+    "component_box": [
+      326.0,
+      213.0,
+      346.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Gm",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        },
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Buffer": {
+    "component_box": [
+      301.0,
+      231.0,
+      372.0,
+      291.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        },
+        {
+          "name": "Delay cell",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock": {
+    "component_box": [
+      643.0,
+      317.0,
+      679.0,
+      344.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Register",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Samp. Ctrl.",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Register": {
+    "component_box": [
+      625.0,
+      111.0,
+      698.0,
+      347.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "Clock",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_out",
+          "count": 1
+        },
+        {
+          "name": "DEM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

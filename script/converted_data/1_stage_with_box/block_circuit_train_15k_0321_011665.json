@@ -1,0 +1,126 @@
+{
+  "Comparator": {
+    "component_box": [
+      323.0,
+      88.0,
+      397.0,
+      192.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "ramp generator",
+          "count": 1
+        },
+        {
+          "name": "latch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ramp generator": {
+    "component_box": [
+      165.0,
+      551.0,
+      313.0,
+      678.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "comparator",
+          "count": 1
+        },
+        {
+          "name": "counter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "comparator": {
+    "component_box": [
+      323.0,
+      287.0,
+      396.0,
+      390.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "column in",
+          "count": 1
+        },
+        {
+          "name": "ramp generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "counter": {
+    "component_box": [
+      446.0,
+      551.0,
+      640.0,
+      678.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "ramp generator",
+          "count": 1
+        },
+        {
+          "name": "latch",
+          "count": 1
+        },
+        {
+          "name": "latch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "latch": {
+    "component_box": [
+      433.0,
+      83.0,
+      627.0,
+      194.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "counter",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

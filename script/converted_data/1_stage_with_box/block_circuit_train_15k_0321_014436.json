@@ -1,0 +1,371 @@
+{
+  "QSG #2": {
+    "component_box": [
+      592.0,
+      157.0,
+      711.0,
+      220.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Resonant controller #2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Kc2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "C1": {
+    "component_box": [
+      812.0,
+      275.0,
+      872.0,
+      338.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Kc1",
+          "count": 1
+        },
+        {
+          "name": "Kc2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PWM": {
+    "component_box": [
+      1347.0,
+      156.0,
+      1439.0,
+      221.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Deadtime compensation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_oh",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "R": {
+    "component_box": [
+      442.0,
+      356.0,
+      492.0,
+      407.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comb filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "C1",
+          "count": 1
+        },
+        {
+          "name": "C2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "e^{-T_fs}  \nK  \nResonant controller #1  \nResonant controller #2  \nQSG #1  \nQSG #2  \nK_c1  \nK_c2  \nC_1  \nC_2  \nV_ohref": {
+    "component_box": [
+      67.0,
+      7.0,
+      1047.0,
+      373.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "I_g",
+          "count": 1
+        },
+        {
+          "name": "R",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Deadtime compensation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Resonant controller #1  \nResonant controller #2": {
+    "component_box": [
+      379.0,
+      157.0,
+      566.0,
+      220.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "QSG #1",
+          "count": 1
+        },
+        {
+          "name": "QSG #2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "C2": {
+    "component_box": [
+      893.0,
+      274.0,
+      952.0,
+      337.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summation node",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Comb filter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "K": {
+    "component_box": [
+      295.0,
+      129.0,
+      345.0,
+      178.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing node",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Resonant controller #1  \nResonant controller #2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Deadtime compensation": {
+    "component_box": [
+      1123.0,
+      142.0,
+      1297.0,
+      236.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing block",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "QSG #1": {
+    "component_box": [
+      592.0,
+      89.0,
+      712.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Resonant controller #1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Kc1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Kc2": {
+    "component_box": [
+      729.0,
+      157.0,
+      792.0,
+      220.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "QSG #2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_ohref",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "e^{-T_s s}": {
+    "component_box": [
+      149.0,
+      128.0,
+      235.0,
+      179.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "K",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Kc1": {
+    "component_box": [
+      730.0,
+      88.0,
+      792.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "QSG #1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Resonant controller #1": {
+    "component_box": [
+      379.0,
+      88.0,
+      566.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "QSG #1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "V_ohref": {
+    "component_box": [
+      1001.0,
+      80.0,
+      1057.0,
+      297.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing circle",
+          "count": 1
+        },
+        {
+          "name": "Summing circle",
+          "count": 1
+        },
+        {
+          "name": "Summing circle",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Deadtime compensation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

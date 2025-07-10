@@ -1,0 +1,51 @@
+{
+  "AMUX": {
+    "component_box": [
+      112.0,
+      188.0,
+      216.0,
+      252.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "R-string",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "AMUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "S/H": {
+    "component_box": [
+      67.0,
+      21.0,
+      142.0,
+      59.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "AMUX",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "Adder": {
+    "component_box": [
+      397.0,
+      176.0,
+      444.0,
+      234.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K_FLL",
+          "count": 1
+        },
+        {
+          "name": "K_SS",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Loop filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      65.0,
+      176.0,
+      112.0,
+      234.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "θ_in",
+          "count": 1
+        },
+        {
+          "name": "÷N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD with HMDZ",
+          "count": 1
+        },
+        {
+          "name": "SSPD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD with HMDZ": {
+    "component_box": [
+      178.0,
+      157.0,
+      265.0,
+      252.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "K_FLL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_FLL": {
+    "component_box": [
+      300.0,
+      155.0,
+      369.0,
+      255.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD with HMDZ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "÷N": {
+    "component_box": [
+      477.0,
+      15.0,
+      586.0,
+      124.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K_VCO/s",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SSPD": {
+    "component_box": [
+      175.0,
+      299.0,
+      269.0,
+      388.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K_VCO/s",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "K_SS",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_SS": {
+    "component_box": [
+      300.0,
+      294.0,
+      372.0,
+      395.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SSPD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_VCO/s": {
+    "component_box": [
+      635.0,
+      140.0,
+      734.0,
+      269.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Loop filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "÷N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

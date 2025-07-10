@@ -1,0 +1,102 @@
+{
+  "Adder": {
+    "component_box": [
+      472.0,
+      180.0,
+      518.0,
+      225.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Stage i",
+          "count": 1
+        },
+        {
+          "name": "Back-end ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_gd",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Front-end ADC": {
+    "component_box": [
+      87.0,
+      15.0,
+      237.0,
+      108.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Stage i",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Back-end ADC": {
+    "component_box": [
+      534.0,
+      15.0,
+      684.0,
+      109.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Stage i",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Stage i": {
+    "component_box": [
+      308.0,
+      15.0,
+      460.0,
+      107.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Front-end ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Back-end ADC",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

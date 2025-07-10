@@ -1,0 +1,574 @@
+{
+  "Gate driver": {
+    "component_box": [
+      980.0,
+      64.0,
+      1043.0,
+      148.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input protection diodes",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "S1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Dither Generation": {
+    "component_box": [
+      79.0,
+      353.0,
+      233.0,
+      445.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Modular Prescalar",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2nd Order ΣΔ Modulator",
+          "count": 1
+        },
+        {
+          "name": "DCM/CCM Mode Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Level Shifter": {
+    "component_box": [
+      916.0,
+      83.0,
+      947.0,
+      128.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FSFS Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Input protection diodes",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Feedback电阻": {
+    "component_box": [
+      1501.0,
+      266.0,
+      1533.0,
+      325.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Feedback",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "VOUT",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Diode": {
+    "component_box": [
+      917.0,
+      199.0,
+      948.0,
+      243.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Dead Time Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital isolator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ΣΔFDC2": {
+    "component_box": [
+      988.0,
+      621.0,
+      1100.0,
+      666.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Matched VCOs",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ΣΔFDC3": {
+    "component_box": [
+      752.0,
+      329.0,
+      1206.0,
+      472.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ/N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      1133.0,
+      379.0,
+      1171.0,
+      420.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current Sensing",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ΣΔFDC3",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Input protection diodes": {
+    "component_box": [
+      944.0,
+      72.0,
+      985.0,
+      138.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Level Shifter",
+          "count": 1
+        },
+        {
+          "name": "Gate driver",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Digital isolator": {
+    "component_box": [
+      944.0,
+      189.0,
+      985.0,
+      254.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FSFS Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Gate driver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Feedback": {
+    "component_box": [
+      1502.0,
+      184.0,
+      1532.0,
+      245.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Current Sensing",
+          "count": 1
+        },
+        {
+          "name": "Feedback电阻",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CIC Decimator": {
+    "component_box": [
+      774.0,
+      565.0,
+      889.0,
+      648.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PID Compensator (IIR Filter)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ΣΔFDC1 ΣΔFDC2": {
+    "component_box": [
+      755.0,
+      532.0,
+      1211.0,
+      675.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "V_ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Matched VCOs",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current Sensing": {
+    "component_box": [
+      1248.0,
+      354.0,
+      1363.0,
+      446.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Stage and Drivers",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ΣΔFDC3",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ/N": {
+    "component_box": [
+      772.0,
+      359.0,
+      888.0,
+      440.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ΣΔFDC3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Modular Prescalar",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Dead Time Generator": {
+    "component_box": [
+      84.0,
+      46.0,
+      314.0,
+      163.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM Input",
+          "count": 1
+        },
+        {
+          "name": "2nd Order ΣΔ Modulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCM/CCM Mode Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      920.0,
+      585.0,
+      959.0,
+      624.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ΣΔFDC1",
+          "count": 1
+        },
+        {
+          "name": "ΣΔFDC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CIC Decimator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DCM/CCM Mode Control": {
+    "component_box": [
+      79.0,
+      239.0,
+      255.0,
+      328.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Dither Generation",
+          "count": 1
+        },
+        {
+          "name": "Modular Prescalar",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2nd Order ΣΔ Modulator",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Dead Time Generator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Modular Prescalar": {
+    "component_box": [
+      297.0,
+      354.0,
+      439.0,
+      444.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Dither Generation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ/N",
+          "count": 1
+        },
+        {
+          "name": "2nd Order ΣΔ Modulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Matched VCOs": {
+    "component_box": [
+      1132.0,
+      548.0,
+      1170.0,
+      589.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ΣΔFDC1",
+          "count": 1
+        },
+        {
+          "name": "ΣΔFDC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Feedback",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Σ/N",
+          "count": 1
+        },
+        {
+          "name": "ΣΔFDC3",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "2nd Order ΣΔ Modulator": {
+    "component_box": [
+      80.0,
+      551.0,
+      440.0,
+      673.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Dither Generation",
+          "count": 1
+        },
+        {
+          "name": "Modular Prescalar",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PID Compensator (IIR Filter)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PID Compensator (IIR Filter)": {
+    "component_box": [
+      480.0,
+      550.0,
+      712.0,
+      668.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CIC Decimator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2nd Order ΣΔ Modulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ΣΔFDC1": {
+    "component_box": [
+      988.0,
+      547.0,
+      1100.0,
+      591.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Matched VCOs",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "Driver & Control": {
+    "component_box": [
+      1371.0,
+      355.0,
+      1470.0,
+      501.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Phase-error-free PWM Modulator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "误差放大器": {
+    "component_box": [
+      1437.0,
+      788.0,
+      1516.0,
+      917.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Cc",
+          "count": 1
+        },
+        {
+          "name": "switch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comp": {
+    "component_box": [
+      582.0,
+      739.0,
+      663.0,
+      870.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "T1",
+          "count": 1
+        },
+        {
+          "name": "T2",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Amp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Amp  \nComp  \nT1  \nT2  \nRM": {
+    "component_box": [
+      227.0,
+      651.0,
+      886.0,
+      1035.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vip",
+          "count": 1
+        },
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "I_ref",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Phase-error-free PWM Modulator": {
+    "component_box": [
+      909.0,
+      372.0,
+      1249.0,
+      488.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Phase-error-free PWM Modulator",
+          "count": 1
+        },
+        {
+          "name": "Opamp2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Driver & Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "I_ref": {
+    "component_box": [
+      903.0,
+      693.0,
+      967.0,
+      757.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Error amplifier",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Error amplifier": {
+    "component_box": [
+      1511.0,
+      749.0,
+      1565.0,
+      801.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Switch",
+          "count": 1
+        },
+        {
+          "name": "Switch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Opamp2": {
+    "component_box": [
+      650.0,
+      198.0,
+      831.0,
+      382.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "R4",
+          "count": 1
+        },
+        {
+          "name": "C2",
+          "count": 1
+        },
+        {
+          "name": "R6",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Phase-error-free PWM Modulator",
+          "count": 1
+        },
+        {
+          "name": "Phase-error-free PWM Modulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Opamp1": {
+    "component_box": [
+      321.0,
+      198.0,
+      503.0,
+      382.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "C1",
+          "count": 1
+        },
+        {
+          "name": "R4",
+          "count": 1
+        },
+        {
+          "name": "Positive Supply Rail",
+          "count": 1
+        },
+        {
+          "name": "Negative Supply Rail",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Amp": {
+    "component_box": [
+      347.0,
+      747.0,
+      480.0,
+      884.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vip",
+          "count": 1
+        },
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Comp",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

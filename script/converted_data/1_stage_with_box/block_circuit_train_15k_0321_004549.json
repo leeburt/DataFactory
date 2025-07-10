@@ -1,0 +1,293 @@
+{
+  "DSM": {
+    "component_box": [
+      162.0,
+      578.0,
+      318.0,
+      656.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FCW",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "÷N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Operational amplifier": {
+    "component_box": [
+      1386.0,
+      331.0,
+      1483.0,
+      465.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FTL",
+          "count": 1
+        },
+        {
+          "name": "FTL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ILFM_X15",
+          "count": 1
+        },
+        {
+          "name": "ILFM_X3",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OUT15_Q+ / OUT15_Q-": {
+    "component_box": [
+      909.0,
+      306.0,
+      1132.0,
+      387.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ILFM_X15",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OUT_3_Q": {
+    "component_box": [
+      910.0,
+      410.0,
+      1133.0,
+      482.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ILFM_X3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "÷2": {
+    "component_box": [
+      616.0,
+      341.0,
+      728.0,
+      438.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Pulse Generator",
+          "count": 1
+        },
+        {
+          "name": "Pulse Generator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Pulse Generator": {
+    "component_box": [
+      593.0,
+      566.0,
+      750.0,
+      669.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "÷2",
+          "count": 1
+        },
+        {
+          "name": "EN_15",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ILFM_X3",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "÷N": {
+    "component_box": [
+      190.0,
+      473.0,
+      285.0,
+      553.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DSM",
+          "count": 1
+        },
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD + CP + LF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD + CP + LF": {
+    "component_box": [
+      93.0,
+      338.0,
+      393.0,
+      446.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CKREF",
+          "count": 1
+        },
+        {
+          "name": "÷N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ILFM_X15": {
+    "component_box": [
+      856.0,
+      109.0,
+      1083.0,
+      256.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Pulse Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OUT15_I ± (25–30 GHz)",
+          "count": 1
+        },
+        {
+          "name": "OUT15_Q+\nOUT15_Q-",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VCO": {
+    "component_box": [
+      430.0,
+      335.0,
+      538.0,
+      445.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD + CP + LF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "÷2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ILFM_X3": {
+    "component_box": [
+      855.0,
+      545.0,
+      1084.0,
+      690.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Pulse Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OUT_3_I ±",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "FTL",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

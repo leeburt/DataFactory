@@ -1,0 +1,450 @@
+{
+  "Clock buffer": {
+    "component_box": [
+      439.0,
+      475.0,
+      524.0,
+      542.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Divide 2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Second T/H",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OUTPUT": {
+    "component_box": [
+      780.0,
+      417.0,
+      798.0,
+      435.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Output buffer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DC阻断电容器": {
+    "component_box": [
+      243.0,
+      196.0,
+      268.0,
+      223.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "1:1 Transformer",
+          "count": 1
+        },
+        {
+          "name": "INPUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Signal generator": {
+    "component_box": [
+      17.0,
+      147.0,
+      121.0,
+      207.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "BPF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Output buffer": {
+    "component_box": [
+      622.0,
+      327.0,
+      725.0,
+      462.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Second T/H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OUTPUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "INPUT": {
+    "component_box": [
+      320.0,
+      231.0,
+      339.0,
+      250.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "1:1 Transformer",
+          "count": 1
+        },
+        {
+          "name": "First T/H",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Clock generator": {
+    "component_box": [
+      399.0,
+      11.0,
+      500.0,
+      68.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C1",
+          "count": 1
+        },
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "50 Ω",
+          "count": 1
+        },
+        {
+          "name": "CLOCK",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "C1": {
+    "component_box": [
+      391.0,
+      145.0,
+      410.0,
+      163.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Clock generator",
+          "count": 1
+        },
+        {
+          "name": "DUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DC-blocking电容器": {
+    "component_box": [
+      620.0,
+      193.0,
+      645.0,
+      221.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "4:1 transformer",
+          "count": 1
+        },
+        {
+          "name": "Spectrum analyzer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "1:1变压器": {
+    "component_box": [
+      320.0,
+      168.0,
+      339.0,
+      186.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "BPF",
+          "count": 1
+        },
+        {
+          "name": "INPUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CLOCK": {
+    "component_box": [
+      231.0,
+      632.0,
+      250.0,
+      651.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R3",
+          "count": 1
+        },
+        {
+          "name": "R3",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Second T/H": {
+    "component_box": [
+      450.0,
+      327.0,
+      554.0,
+      461.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "First T/H",
+          "count": 1
+        },
+        {
+          "name": "Clock buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output buffer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Spectrum analyzer": {
+    "component_box": [
+      712.0,
+      145.0,
+      817.0,
+      207.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "4:1 balun",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "4:1 balun": {
+    "component_box": [
+      549.0,
+      168.0,
+      568.0,
+      186.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DUT",
+          "count": 1
+        },
+        {
+          "name": "Spectrum analyzer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "4:1 transformer": {
+    "component_box": [
+      587.0,
+      194.0,
+      612.0,
+      221.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "4:1 balun",
+          "count": 1
+        },
+        {
+          "name": "DC-blocking电容器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "230 pF": {
+    "component_box": [
+      487.0,
+      145.0,
+      505.0,
+      163.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "50 Ω resistor",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "First T/H": {
+    "component_box": [
+      263.0,
+      327.0,
+      368.0,
+      461.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "INPUT",
+          "count": 1
+        },
+        {
+          "name": "Clock buffer",
+          "count": 1
+        },
+        {
+          "name": "Second T/H",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Divide 2": {
+    "component_box": [
+      343.0,
+      494.0,
+      432.0,
+      544.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clock buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Clock buffer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BPF": {
+    "component_box": [
+      151.0,
+      159.0,
+      218.0,
+      195.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Signal generator",
+          "count": 1
+        },
+        {
+          "name": "DC阻断电容器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "1:1 Transformer": {
+    "component_box": [
+      277.0,
+      195.0,
+      301.0,
+      223.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "BPF",
+          "count": 1
+        },
+        {
+          "name": "INPUT",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

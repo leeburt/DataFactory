@@ -1,0 +1,318 @@
+{
+  "VARACTOR": {
+    "component_box": [
+      290.0,
+      278.0,
+      308.0,
+      289.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CP_sub",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "电容器",
+          "count": 1
+        },
+        {
+          "name": "VCO_sub",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VCO_main": {
+    "component_box": [
+      445.0,
+      62.0,
+      512.0,
+      129.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "loop filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MMD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "current sink": {
+    "component_box": [
+      249.0,
+      136.0,
+      275.0,
+      161.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Ground",
+          "count": 1
+        },
+        {
+          "name": "Loop filter input node",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DIV": {
+    "component_box": [
+      85.0,
+      229.0,
+      152.0,
+      285.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "REF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "/N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP_sub": {
+    "component_box": [
+      338.0,
+      214.0,
+      357.0,
+      231.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "电容器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "/N": {
+    "component_box": [
+      177.0,
+      236.0,
+      226.0,
+      278.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DIV",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO_sub",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "电容器": {
+    "component_box": [
+      339.0,
+      283.0,
+      357.0,
+      302.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "resistor",
+          "count": 1
+        },
+        {
+          "name": "电容器",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "REF": {
+    "component_box": [
+      9.0,
+      57.0,
+      57.0,
+      107.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD": {
+    "component_box": [
+      126.0,
+      59.0,
+      218.0,
+      127.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "REF",
+          "count": 1
+        },
+        {
+          "name": "VCO_main",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP_main",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP_main": {
+    "component_box": [
+      249.0,
+      29.0,
+      275.0,
+      55.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "switch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO_sub": {
+    "component_box": [
+      237.0,
+      235.0,
+      280.0,
+      277.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "/N",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "VARACTOR",
+          "count": 1
+        },
+        {
+          "name": "电容器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MMD": {
+    "component_box": [
+      469.0,
+      226.0,
+      537.0,
+      282.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VCO_main",
+          "count": 1
+        },
+        {
+          "name": "ΔΣ",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ΔΣ": {
+    "component_box": [
+      469.0,
+      313.0,
+      537.0,
+      366.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FCW",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MMD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

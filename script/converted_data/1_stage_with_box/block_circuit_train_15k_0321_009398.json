@@ -1,0 +1,141 @@
+{
+  "Space Vector PWM": {
+    "component_box": [
+      677.0,
+      14.0,
+      828.0,
+      246.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current Regulator",
+          "count": 1
+        },
+        {
+          "name": "Current Regulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "System",
+          "count": 1
+        },
+        {
+          "name": "System",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current Regulator": {
+    "component_box": [
+      426.0,
+      16.0,
+      579.0,
+      246.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage Regulator",
+          "count": 1
+        },
+        {
+          "name": "i_d* = 0",
+          "count": 1
+        },
+        {
+          "name": "System",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Space Vector PWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "System": {
+    "component_box": [
+      927.0,
+      10.0,
+      1078.0,
+      240.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Space Vector PWM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current Regulator",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      81.0,
+      48.0,
+      115.0,
+      81.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vdc*",
+          "count": 1
+        },
+        {
+          "name": "Vdc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Voltage Regulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Voltage Regulator": {
+    "component_box": [
+      162.0,
+      15.0,
+      328.0,
+      112.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current Regulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

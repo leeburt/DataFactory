@@ -1,0 +1,294 @@
+{
+  "Adder": {
+    "component_box": [
+      567.0,
+      253.0,
+      596.0,
+      282.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "dq/αβ",
+          "count": 1
+        },
+        {
+          "name": "Practical voltage pre-compensator B",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Switch": {
+    "component_box": [
+      729.0,
+      253.0,
+      757.0,
+      282.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/sL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      261.0,
+      110.0,
+      289.0,
+      138.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "dq/αβ",
+          "count": 1
+        },
+        {
+          "name": "D⁻¹(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Kt ωₛ / (s² + 2 ξ ωₛ s + ωₛ²)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "dq/αβ": {
+    "component_box": [
+      372.0,
+      225.0,
+      457.0,
+      309.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI",
+          "count": 1
+        },
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PWM": {
+    "component_box": [
+      634.0,
+      244.0,
+      705.0,
+      290.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Switch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/sL": {
+    "component_box": [
+      781.0,
+      244.0,
+      852.0,
+      290.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Switch",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "αβ/dq",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Kt ωₛ / (s² + 2 ξ ωₛ s + ωₛ²)": {
+    "component_box": [
+      329.0,
+      81.0,
+      497.0,
+      166.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D(s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Practical voltage pre-compensator B": {
+    "component_box": [
+      506.0,
+      101.0,
+      573.0,
+      147.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "dq/αβ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI": {
+    "component_box": [
+      270.0,
+      222.0,
+      328.0,
+      261.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "dq/αβ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "αβ/dq": {
+    "component_box": [
+      372.0,
+      334.0,
+      456.0,
+      418.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "D(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D⁻¹(s)": {
+    "component_box": [
+      188.0,
+      140.0,
+      266.0,
+      185.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "dq/αβ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D(s)": {
+    "component_box": [
+      500.0,
+      378.0,
+      571.0,
+      423.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "αβ/dq",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

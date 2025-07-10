@@ -1,0 +1,300 @@
+{
+  "GATE DRIVER": {
+    "component_box": [
+      1038.0,
+      336.0,
+      1094.0,
+      399.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "logic gate",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "power MOSFET",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "PRE-REGULATOR",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Current limit comparator": {
+    "component_box": [
+      547.0,
+      567.0,
+      614.0,
+      636.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "0.34 V",
+          "count": 1
+        },
+        {
+          "name": "I_LIMIT",
+          "count": 1
+        },
+        {
+          "name": "OR gate",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "BANDGAP REFERENCE": {
+    "component_box": [
+      279.0,
+      230.0,
+      425.0,
+      297.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PRE-REGULATOR",
+          "count": 1
+        },
+        {
+          "name": "OSCILLATOR",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SR latch": {
+    "component_box": [
+      764.0,
+      436.0,
+      850.0,
+      514.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OR gate",
+          "count": 1
+        },
+        {
+          "name": "OSCILLATOR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "AND gate",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FAULT DETECTION": {
+    "component_box": [
+      530.0,
+      86.0,
+      687.0,
+      196.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PRE-REGULATOR",
+          "count": 1
+        },
+        {
+          "name": "Overtemperature Shutdown",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OR gate",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OSCILLATOR": {
+    "component_box": [
+      279.0,
+      344.0,
+      422.0,
+      426.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "BANDGAP REFERENCE",
+          "count": 1
+        },
+        {
+          "name": "REXT-",
+          "count": 1
+        },
+        {
+          "name": "REXT+",
+          "count": 1
+        },
+        {
+          "name": "CEXT",
+          "count": 1
+        },
+        {
+          "name": "PWM CMP",
+          "count": 1
+        },
+        {
+          "name": "OR gate",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PRE-REGULATOR": {
+    "component_box": [
+      279.0,
+      99.0,
+      424.0,
+      173.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VS",
+          "count": 1
+        },
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "VBIAS",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "BANDGAP REFERENCE",
+          "count": 1
+        },
+        {
+          "name": "FAULT DETECTION",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Overtemperature Shutdown": {
+    "component_box": [
+      517.0,
+      271.0,
+      738.0,
+      331.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FAULT DETECTION",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OR gate",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PWM CMP": {
+    "component_box": [
+      480.0,
+      435.0,
+      548.0,
+      506.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OSCILLATOR",
+          "count": 1
+        },
+        {
+          "name": "ERROR AMP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SR latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "REXT-": {
+    "component_box": [
+      187.0,
+      355.0,
+      223.0,
+      391.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "OSCILLATOR",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ERROR AMP": {
+    "component_box": [
+      319.0,
+      489.0,
+      387.0,
+      561.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "EA-",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWM CMP",
+          "count": 1
+        },
+        {
+          "name": "EAO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

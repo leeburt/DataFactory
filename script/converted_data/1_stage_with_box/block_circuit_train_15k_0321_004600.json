@@ -1,0 +1,79 @@
+{
+  "Optional HPF/FIR": {
+    "component_box": [
+      132.0,
+      91.0,
+      186.0,
+      154.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "in_RX",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "A/D",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "A/D": {
+    "component_box": [
+      263.0,
+      47.0,
+      324.0,
+      194.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Optional HPF/FIR",
+          "count": 1
+        },
+        {
+          "name": "clk",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Optional HPF/FIR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital Equalizer / Sequence Detector / CDR": {
+    "component_box": [
+      379.0,
+      37.0,
+      691.0,
+      206.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "A/D",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "data_RX",
+          "count": 1
+        },
+        {
+          "name": "A/D",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

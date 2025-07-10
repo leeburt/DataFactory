@@ -1,0 +1,132 @@
+{
+  "Real part": {
+    "component_box": [
+      111.0,
+      17.0,
+      217.0,
+      105.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "X",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Complex multiplier",
+          "count": 1
+        },
+        {
+          "name": "Complex multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Complex multiplier": {
+    "component_box": [
+      260.0,
+      57.0,
+      589.0,
+      215.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Real part",
+          "count": 1
+        },
+        {
+          "name": "Imag part",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      445.0,
+      46.0,
+      473.0,
+      74.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Real part",
+          "count": 1
+        },
+        {
+          "name": "Imag part",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      540.0,
+      123.0,
+      568.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Imag part": {
+    "component_box": [
+      111.0,
+      167.0,
+      218.0,
+      253.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

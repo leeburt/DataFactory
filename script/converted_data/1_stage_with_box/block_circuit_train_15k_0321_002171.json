@@ -1,0 +1,471 @@
+{
+  "Summing junction": {
+    "component_box": [
+      611.0,
+      447.0,
+      641.0,
+      477.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "abc/dq变换块",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PV array": {
+    "component_box": [
+      13.0,
+      106.0,
+      118.0,
+      219.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "MPPT",
+          "count": 1
+        },
+        {
+          "name": "MPPT",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Grid": {
+    "component_box": [
+      1172.0,
+      61.0,
+      1230.0,
+      118.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "L2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MPPT": {
+    "component_box": [
+      89.0,
+      365.0,
+      237.0,
+      423.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PV array",
+          "count": 1
+        },
+        {
+          "name": "PV array",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "adder": {
+    "component_box": [
+      149.0,
+      517.0,
+      178.0,
+      546.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MPPT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI Controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI": {
+    "component_box": [
+      591.0,
+      538.0,
+      659.0,
+      593.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Open-loop simplified repetitive predictor": {
+    "component_box": [
+      220.0,
+      635.0,
+      483.0,
+      730.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SVPWM",
+          "count": 1
+        },
+        {
+          "name": "αβ/dq",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "−ω₁Liq": {
+    "component_box": [
+      724.0,
+      733.0,
+      753.0,
+      763.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "abc/dq变换块",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "αβ/dq": {
+    "component_box": [
+      486.0,
+      636.0,
+      577.0,
+      769.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Open-loop simplified repetitive predictor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI",
+          "count": 1
+        },
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI Controller": {
+    "component_box": [
+      129.0,
+      598.0,
+      198.0,
+      651.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Open-loop simplified repetitive predictor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "abc/dq变换块": {
+    "component_box": [
+      549.0,
+      295.0,
+      805.0,
+      379.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_a",
+          "count": 1
+        },
+        {
+          "name": "i_b",
+          "count": 1
+        },
+        {
+          "name": "i_c",
+          "count": 1
+        },
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "abc/αβ": {
+    "component_box": [
+      1020.0,
+      563.0,
+      1191.0,
+      646.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "line/phase",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Cf": {
+    "component_box": [
+      929.0,
+      345.0,
+      958.0,
+      368.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Rf",
+          "count": 1
+        },
+        {
+          "name": "filter neutral node",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "line/phase": {
+    "component_box": [
+      1020.0,
+      439.0,
+      1191.0,
+      521.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Grid",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "abc/αβ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summer": {
+    "component_box": [
+      611.0,
+      642.0,
+      640.0,
+      671.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI",
+          "count": 1
+        },
+        {
+          "name": "−ω₁Liq",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "αβ/dq",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SVPWM": {
+    "component_box": [
+      271.0,
+      306.0,
+      468.0,
+      365.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PLL": {
+    "component_box": [
+      1050.0,
+      721.0,
+      1158.0,
+      778.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "abc/αβ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "abc/dq变换块",
+          "count": 1
+        },
+        {
+          "name": "αβ/dq",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Inverter": {
+    "component_box": [
+      303.0,
+      49.0,
+      440.0,
+      269.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SVPWM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "L1",
+          "count": 1
+        },
+        {
+          "name": "abc/dq变换块",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "C_dc",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

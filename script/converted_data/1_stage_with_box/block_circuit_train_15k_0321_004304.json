@@ -1,0 +1,101 @@
+{
+  "PFD": {
+    "component_box": [
+      192.0,
+      313.0,
+      261.0,
+      432.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "input buffer",
+          "count": 1
+        },
+        {
+          "name": "input buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CHARGE PUMP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "input buffer": {
+    "component_box": [
+      83.0,
+      384.0,
+      111.0,
+      425.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DELAY LINE",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DIVIDER": {
+    "component_box": [
+      591.0,
+      335.0,
+      699.0,
+      431.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CLOCK TREE",
+          "count": 1
+        },
+        {
+          "name": "DELAY LINE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      479.0,
+      334.0,
+      548.0,
+      432.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "FILTER",
+          "count": 1
+        },
+        {
+          "name": "DIVIDER",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

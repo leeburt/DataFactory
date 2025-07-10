@@ -1,0 +1,208 @@
+{
+  "K_IP + K_II/s": {
+    "component_box": [
+      205.0,
+      258.0,
+      346.0,
+      342.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing node",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing node",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_VP1 + K_VI1/s": {
+    "component_box": [
+      5.0,
+      121.0,
+      154.0,
+      205.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vdc error summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "i_dh error summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2K_R ω_c s/(s² + 2ω_c s + ω₀²)": {
+    "component_box": [
+      197.0,
+      157.0,
+      364.0,
+      249.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Error summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction before PWM delay",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/(Ls+R)": {
+    "component_box": [
+      641.0,
+      258.0,
+      736.0,
+      342.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM delay",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sampling delay",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sampling delay": {
+    "component_box": [
+      213.0,
+      11.0,
+      308.0,
+      94.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DC-link",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PIR controller\nPWM delay\nSampling delay": {
+    "component_box": [
+      395.0,
+      11.0,
+      482.0,
+      93.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Sampling delay",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PIR controller\nPWM delay\nSampling delay",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "KVP1 + KVI1/s  Sampling delay  DC-link  Power relation": {
+    "component_box": [
+      4.0,
+      32.0,
+      447.0,
+      474.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vdc*",
+          "count": 1
+        },
+        {
+          "name": "e_d",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "PIR controller  \nPWM delay  \nSampling delay": {
+    "component_box": [
+      569.0,
+      11.0,
+      654.0,
+      93.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DC-link",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWM delay",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PWM delay": {
+    "component_box": [
+      435.0,
+      257.0,
+      602.0,
+      344.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K_IP + K_II/s",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/(Ls+R)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

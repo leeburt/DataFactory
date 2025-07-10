@@ -1,0 +1,166 @@
+{
+  "EQUALIZER": {
+    "component_box": [
+      292.0,
+      171.0,
+      412.0,
+      246.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TIA & VGA",
+          "count": 1
+        },
+        {
+          "name": "AWGN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Clocked comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TIA & VGA": {
+    "component_box": [
+      150.0,
+      170.0,
+      256.0,
+      247.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "AWGN",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TRANSMITTER": {
+    "component_box": [
+      104.0,
+      40.0,
+      249.0,
+      116.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "LOSS & PMD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LOSS & PMD": {
+    "component_box": [
+      299.0,
+      40.0,
+      404.0,
+      116.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TRANSMITTER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Receiver Input",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      103.0,
+      200.0,
+      119.0,
+      216.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LOSS & PMD",
+          "count": 1
+        },
+        {
+          "name": "Offset Correct",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TIA & VGA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clocked comparator": {
+    "component_box": [
+      466.0,
+      171.0,
+      541.0,
+      246.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "EQUALIZER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "AWGN": {
+    "component_box": [
+      266.0,
+      200.0,
+      282.0,
+      216.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TIA & VGA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "EQUALIZER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "VTCC": {
+    "component_box": [
+      159.0,
+      74.0,
+      274.0,
+      210.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "CMC1",
+          "count": 1
+        },
+        {
+          "name": "CMC2",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "nI₀",
+          "count": 1
+        },
+        {
+          "name": "I₀",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CMC1": {
+    "component_box": [
+      328.0,
+      35.0,
+      427.0,
+      103.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VTCC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "I1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "nI₀": {
+    "component_box": [
+      13.0,
+      44.0,
+      47.0,
+      77.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "I0",
+          "count": 1
+        },
+        {
+          "name": "SW",
+          "count": 1
+        },
+        {
+          "name": "Q1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I0": {
+    "component_box": [
+      98.0,
+      44.0,
+      132.0,
+      77.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "nI₀",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SW",
+          "count": 1
+        },
+        {
+          "name": "VTCC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "I1": {
+    "component_box": [
+      446.0,
+      52.0,
+      480.0,
+      85.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CMC1",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "nI₀",
+          "count": 1
+        },
+        {
+          "name": "I0",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CMC2": {
+    "component_box": [
+      328.0,
+      182.0,
+      428.0,
+      249.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VTCC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "I2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "I2": {
+    "component_box": [
+      446.0,
+      198.0,
+      480.0,
+      232.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "R2",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "CMC2",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

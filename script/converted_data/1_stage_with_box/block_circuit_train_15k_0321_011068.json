@@ -1,0 +1,430 @@
+{
+  "ADC B": {
+    "component_box": [
+      680.0,
+      162.0,
+      770.0,
+      219.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "±ΔV",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LUT B",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Wᵀ": {
+    "component_box": [
+      56.0,
+      433.0,
+      146.0,
+      479.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Weight coefficient table",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "AVG": {
+    "component_box": [
+      639.0,
+      370.0,
+      708.0,
+      418.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LUT A",
+          "count": 1
+        },
+        {
+          "name": "LUT B",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "x",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "±Control": {
+    "component_box": [
+      379.0,
+      74.0,
+      501.0,
+      133.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Calibration (set of conversions)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "±ΔV",
+          "count": 1
+        },
+        {
+          "name": "±ΔV",
+          "count": 1
+        },
+        {
+          "name": "Update LUTS",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LUT B": {
+    "component_box": [
+      680.0,
+      266.0,
+      770.0,
+      313.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC B",
+          "count": 1
+        },
+        {
+          "name": "Update LUTS",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "AVG",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Shift for LMS": {
+    "component_box": [
+      298.0,
+      348.0,
+      414.0,
+      397.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "μ",
+          "count": 1
+        },
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Update LUTS",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "x": {
+    "component_box": [
+      638.0,
+      432.0,
+      709.0,
+      478.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AVG",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "x_out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Δx": {
+    "component_box": [
+      471.0,
+      431.0,
+      540.0,
+      478.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DIFF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "±ΔV": {
+    "component_box": [
+      680.0,
+      78.0,
+      771.0,
+      137.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "±Control",
+          "count": 1
+        },
+        {
+          "name": "vIN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC B",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "μ": {
+    "component_box": [
+      231.0,
+      348.0,
+      279.0,
+      396.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Shift for LMS",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DIFF": {
+    "component_box": [
+      471.0,
+      369.0,
+      540.0,
+      417.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LUT A",
+          "count": 1
+        },
+        {
+          "name": "LUT B",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Δx",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Weight coefficient table": {
+    "component_box": [
+      14.0,
+      285.0,
+      199.0,
+      335.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "W(nA) = -1",
+          "count": 1
+        },
+        {
+          "name": "W(nB) = +1",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Update LUTS",
+          "count": 1
+        },
+        {
+          "name": "Wᵀ",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      333.0,
+      428.0,
+      379.0,
+      474.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Wᵀ",
+          "count": 1
+        },
+        {
+          "name": "Shift for LMS",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DIFF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Update LUTS": {
+    "component_box": [
+      275.0,
+      274.0,
+      441.0,
+      327.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "±Control",
+          "count": 1
+        },
+        {
+          "name": "ADC A",
+          "count": 1
+        },
+        {
+          "name": "ADC B",
+          "count": 1
+        },
+        {
+          "name": "Shift for LMS",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LUT A",
+          "count": 1
+        },
+        {
+          "name": "LUT B",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LUT A": {
+    "component_box": [
+      575.0,
+      267.0,
+      666.0,
+      314.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DIFF",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Update LUTS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ADC A": {
+    "component_box": [
+      575.0,
+      162.0,
+      667.0,
+      219.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "±ΔV",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LUT A",
+          "count": 1
+        },
+        {
+          "name": "W(n_A)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

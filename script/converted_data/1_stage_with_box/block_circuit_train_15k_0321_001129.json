@@ -1,0 +1,270 @@
+{
+  "BGR": {
+    "component_box": [
+      35.0,
+      110.0,
+      161.0,
+      209.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_L\nGND",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Configuration Selection",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "V_L\nGND": {
+    "component_box": [
+      683.0,
+      323.0,
+      715.0,
+      356.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SW4",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Body Biasing",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "P2",
+          "count": 1
+        },
+        {
+          "name": "C_L",
+          "count": 1
+        },
+        {
+          "name": "R_L",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Switch Controller": {
+    "component_box": [
+      447.0,
+      110.0,
+      669.0,
+      210.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Configuration Selection",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Body Biasing",
+          "count": 1
+        },
+        {
+          "name": "SW1",
+          "count": 1
+        },
+        {
+          "name": "SW2",
+          "count": 1
+        },
+        {
+          "name": "SW3",
+          "count": 1
+        },
+        {
+          "name": "SW4",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D2": {
+    "component_box": [
+      481.0,
+      351.0,
+      506.0,
+      374.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VR",
+          "count": 1
+        },
+        {
+          "name": "P2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Body Biasing": {
+    "component_box": [
+      700.0,
+      117.0,
+      853.0,
+      229.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_R",
+          "count": 1
+        },
+        {
+          "name": "V_n",
+          "count": 1
+        },
+        {
+          "name": "V_cs",
+          "count": 1
+        },
+        {
+          "name": "V_L",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_B1-4",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Driver": {
+    "component_box": [
+      57.0,
+      636.0,
+      179.0,
+      726.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "L1",
+          "count": 1
+        },
+        {
+          "name": "L2",
+          "count": 1
+        },
+        {
+          "name": "Vx",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Configuration Selection": {
+    "component_box": [
+      178.0,
+      110.0,
+      430.0,
+      209.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BGR",
+          "count": 1
+        },
+        {
+          "name": "V_L",
+          "count": 1
+        },
+        {
+          "name": "V_p",
+          "count": 1
+        },
+        {
+          "name": "V_cs",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Switch Controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Vn": {
+    "component_box": [
+      306.0,
+      439.0,
+      339.0,
+      474.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C2",
+          "count": 1
+        },
+        {
+          "name": "P1",
+          "count": 1
+        },
+        {
+          "name": "N1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "C1\nL1\nL2\nDriver": {
+    "component_box": [
+      62.0,
+      341.0,
+      181.0,
+      727.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C2",
+          "count": 1
+        },
+        {
+          "name": "V_R",
+          "count": 1
+        },
+        {
+          "name": "Vn",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

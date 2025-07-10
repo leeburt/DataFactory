@@ -1,0 +1,183 @@
+{
+  "Resistor": {
+    "component_box": [
+      42.0,
+      76.0,
+      108.0,
+      144.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "v_exc",
+          "count": 1
+        },
+        {
+          "name": "电阻",
+          "count": 1
+        },
+        {
+          "name": "Preamplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MEM Transducer": {
+    "component_box": [
+      41.0,
+      151.0,
+      106.0,
+      221.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Resistor",
+          "count": 1
+        },
+        {
+          "name": "Preamplifier",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ADC": {
+    "component_box": [
+      524.0,
+      106.0,
+      678.0,
+      273.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Preamplifier",
+          "count": 1
+        },
+        {
+          "name": "Digital Signal Processor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Signal Processor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital Signal Processor": {
+    "component_box": [
+      746.0,
+      107.0,
+      1133.0,
+      271.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Preamplifier": {
+    "component_box": [
+      328.0,
+      107.0,
+      442.0,
+      273.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "MEM Transducer",
+          "count": 1
+        },
+        {
+          "name": "MEM Transducer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "电阻": {
+    "component_box": [
+      118.0,
+      152.0,
+      185.0,
+      220.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Strain gauge resistor",
+          "count": 1
+        },
+        {
+          "name": "MEM Transducer",
+          "count": 1
+        },
+        {
+          "name": "Preamplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Strain gauge resistor": {
+    "component_box": [
+      118.0,
+      78.0,
+      183.0,
+      145.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "v_exc",
+          "count": 1
+        },
+        {
+          "name": "MEM Transducer",
+          "count": 1
+        },
+        {
+          "name": "Preamplifier",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

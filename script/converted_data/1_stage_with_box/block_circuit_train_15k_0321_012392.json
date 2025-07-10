@@ -1,0 +1,224 @@
+{
+  "Divider": {
+    "component_box": [
+      621.0,
+      150.0,
+      667.0,
+      195.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "减法器",
+          "count": 1
+        },
+        {
+          "name": "N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CIC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Register2": {
+    "component_box": [
+      406.0,
+      78.0,
+      486.0,
+      260.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Register1",
+          "count": 1
+        },
+        {
+          "name": "PPG_CLK",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "减法器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "FDC": {
+    "component_box": [
+      2.0,
+      53.0,
+      651.0,
+      290.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PPG_CLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "减法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Register1": {
+    "component_box": [
+      286.0,
+      78.0,
+      366.0,
+      260.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "PPG_CLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Register2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "减法器": {
+    "component_box": [
+      529.0,
+      150.0,
+      575.0,
+      195.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Register2",
+          "count": 1
+        },
+        {
+          "name": "Register1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CLK_ref": {
+    "component_box": [
+      24.0,
+      79.0,
+      115.0,
+      180.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CIC": {
+    "component_box": [
+      713.0,
+      119.0,
+      786.0,
+      228.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "HR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Counter": {
+    "component_box": [
+      152.0,
+      79.0,
+      249.0,
+      181.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK_ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Register1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "HR Calculator": {
+    "component_box": [
+      269.0,
+      47.0,
+      823.0,
+      302.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PPG_CLK",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "HR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

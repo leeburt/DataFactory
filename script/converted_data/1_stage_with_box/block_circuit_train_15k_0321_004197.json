@@ -1,0 +1,541 @@
+{
+  "BP": {
+    "component_box": [
+      579.0,
+      124.0,
+      617.0,
+      148.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_g",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "abc/dq变换器": {
+    "component_box": [
+      480.0,
+      158.0,
+      534.0,
+      199.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PLL",
+          "count": 1
+        },
+        {
+          "name": "i_abc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Σ (Summing Junction)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI controller": {
+    "component_box": [
+      413.0,
+      282.0,
+      453.0,
+      307.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ (Summing Junction)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PL": {
+    "component_box": [
+      590.0,
+      211.0,
+      686.0,
+      239.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      506.0,
+      251.0,
+      536.0,
+      282.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI controller",
+          "count": 1
+        },
+        {
+          "name": "乘法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "αβ/abc",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "abc到αβ变换块": {
+    "component_box": [
+      217.0,
+      142.0,
+      271.0,
+      183.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_abc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "k_cp",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "IGBT模块": {
+    "component_box": [
+      73.0,
+      24.0,
+      164.0,
+      144.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SPWM",
+          "count": 1
+        },
+        {
+          "name": "V_dc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Z_Lf",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ω(L1+L2)": {
+    "component_box": [
+      336.0,
+      204.0,
+      442.0,
+      237.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Σ (Summing Junction)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "αβ/abc": {
+    "component_box": [
+      215.0,
+      282.0,
+      246.0,
+      312.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "αβ/abc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SPWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      596.0,
+      239.0,
+      618.0,
+      277.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PLL",
+          "count": 1
+        },
+        {
+          "name": "Q_ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "乘法器": {
+    "component_box": [
+      364.0,
+      280.0,
+      395.0,
+      310.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ω(L1+L2)",
+          "count": 1
+        },
+        {
+          "name": "PI controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "k_cp": {
+    "component_box": [
+      210.0,
+      203.0,
+      277.0,
+      235.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "abc到αβ变换块",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "αβ/abc",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Vg": {
+    "component_box": [
+      712.0,
+      89.0,
+      743.0,
+      120.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Z_Lg",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "三相电压传感器": {
+    "component_box": [
+      104.0,
+      203.0,
+      134.0,
+      234.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "SPWM",
+          "count": 1
+        },
+        {
+          "name": "abc到αβ变换块",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "C_f": {
+    "component_box": [
+      320.0,
+      111.0,
+      331.0,
+      121.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Z_L1",
+          "count": 1
+        },
+        {
+          "name": "Z_L2",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PI": {
+    "component_box": [
+      428.0,
+      253.0,
+      468.0,
+      278.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ (Summing Junction)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PLL": {
+    "component_box": [
+      574.0,
+      168.0,
+      622.0,
+      190.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "abc/dq变换器",
+          "count": 1
+        },
+        {
+          "name": "αβ→dq变换模块",
+          "count": 1
+        },
+        {
+          "name": "Park变换",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Park变换": {
+    "component_box": [
+      287.0,
+      262.0,
+      340.0,
+      303.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI controller",
+          "count": 1
+        },
+        {
+          "name": "PI",
+          "count": 1
+        },
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "αβ/abc",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SPWM": {
+    "component_box": [
+      91.0,
+      158.0,
+      147.0,
+      184.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_dc",
+          "count": 1
+        },
+        {
+          "name": "αβ/abc",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "IGBT模块",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Σ (Summing Junction)": {
+    "component_box": [
+      469.0,
+      280.0,
+      500.0,
+      310.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI controller",
+          "count": 1
+        },
+        {
+          "name": "乘法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "αβ→dq变换模块": {
+    "component_box": [
+      239.0,
+      254.0,
+      269.0,
+      284.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI controller",
+          "count": 1
+        },
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

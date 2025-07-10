@@ -1,0 +1,121 @@
+{
+  "MOSFETs": {
+    "component_box": [
+      1083.0,
+      67.0,
+      1167.0,
+      200.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PWM",
+          "count": 1
+        },
+        {
+          "name": "L3",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MOSFET半桥": {
+    "component_box": [
+      359.0,
+      67.0,
+      443.0,
+      200.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PWM",
+          "count": 1
+        },
+        {
+          "name": "L1",
+          "count": 1
+        },
+        {
+          "name": "L2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PWM": {
+    "component_box": [
+      1195.0,
+      218.0,
+      1310.0,
+      352.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "carrier_m2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MOSFET",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "半桥MOSFET": {
+    "component_box": [
+      359.0,
+      218.0,
+      443.0,
+      351.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PWM",
+          "count": 1
+        },
+        {
+          "name": "outp2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MOSFET": {
+    "component_box": [
+      1083.0,
+      218.0,
+      1167.0,
+      352.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PWM",
+          "count": 1
+        },
+        {
+          "name": "L3",
+          "count": 1
+        },
+        {
+          "name": "L4",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

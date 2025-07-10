@@ -1,0 +1,179 @@
+{
+  "求和器": {
+    "component_box": [
+      80.0,
+      205.0,
+      118.0,
+      245.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vd",
+          "count": 1
+        },
+        {
+          "name": "Cuk converter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "sliding mode current controller": {
+    "component_box": [
+      514.0,
+      28.0,
+      782.0,
+      116.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Cuk converter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      411.0,
+      51.0,
+      450.0,
+      91.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "sliding mode current controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI controller": {
+    "component_box": [
+      191.0,
+      198.0,
+      253.0,
+      256.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "summing junction": {
+    "component_box": [
+      302.0,
+      52.0,
+      342.0,
+      92.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "feed-forward",
+          "count": 1
+        },
+        {
+          "name": "PI controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Cuk converter": {
+    "component_box": [
+      537.0,
+      186.0,
+      725.0,
+      284.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "sliding mode current controller",
+          "count": 1
+        },
+        {
+          "name": "E source",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "feed-forward": {
+    "component_box": [
+      89.0,
+      37.0,
+      220.0,
+      109.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

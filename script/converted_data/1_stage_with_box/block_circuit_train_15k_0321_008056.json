@@ -1,0 +1,247 @@
+{
+  "Peak Detector": {
+    "component_box": [
+      470.0,
+      120.0,
+      584.0,
+      210.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VGA",
+          "count": 1
+        },
+        {
+          "name": "OA",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DC电流源": {
+    "component_box": [
+      146.0,
+      311.0,
+      204.0,
+      371.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DC Current/Offset Compensation",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Photodiode",
+          "count": 1
+        },
+        {
+          "name": "R_F",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Coherent DSP": {
+    "component_box": [
+      708.0,
+      180.0,
+      833.0,
+      281.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      601.0,
+      181.0,
+      700.0,
+      284.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VGA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Coherent DSP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VGA": {
+    "component_box": [
+      385.0,
+      176.0,
+      478.0,
+      288.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TIA",
+          "count": 1
+        },
+        {
+          "name": "OA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Peak Detector",
+          "count": 1
+        },
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Photodiode": {
+    "component_box": [
+      149.0,
+      133.0,
+      202.0,
+      170.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DC电流源",
+          "count": 1
+        },
+        {
+          "name": "TIA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OA": {
+    "component_box": [
+      576.0,
+      12.0,
+      603.0,
+      39.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OA",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "TIA": {
+    "component_box": [
+      276.0,
+      203.0,
+      323.0,
+      261.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Photodiode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DC电流源",
+          "count": 1
+        },
+        {
+          "name": "VGA",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "R_F",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "R_F": {
+    "component_box": [
+      270.0,
+      136.0,
+      348.0,
+      191.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Photodiode",
+          "count": 1
+        },
+        {
+          "name": "DC电流源",
+          "count": 1
+        },
+        {
+          "name": "TIA",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DC Current/Offset Compensation": {
+    "component_box": [
+      249.0,
+      294.0,
+      483.0,
+      388.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "TIA",
+          "count": 1
+        },
+        {
+          "name": "VGA",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

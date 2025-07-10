@@ -1,0 +1,124 @@
+{
+  "γ Reference Voltage Generating Circuit": {
+    "component_box": [
+      262.0,
+      161.0,
+      405.0,
+      259.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V00",
+          "count": 1
+        },
+        {
+          "name": "V63",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DA Converter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Level Shifter": {
+    "component_box": [
+      147.0,
+      51.0,
+      249.0,
+      136.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "IN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DA Converter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Amplifier": {
+    "component_box": [
+      416.0,
+      29.0,
+      503.0,
+      158.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DA Converter",
+          "count": 1
+        },
+        {
+          "name": "Bias Generating Circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Bias Generating Circuit": {
+    "component_box": [
+      405.0,
+      161.0,
+      516.0,
+      259.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DA Converter": {
+    "component_box": [
+      283.0,
+      51.0,
+      384.0,
+      136.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Level Shifter",
+          "count": 1
+        },
+        {
+          "name": "γ Reference Voltage Generating Circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

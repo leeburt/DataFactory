@@ -1,0 +1,119 @@
+{
+  "CLK/RES GEN": {
+    "component_box": [
+      50.0,
+      272.0,
+      160.0,
+      394.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "RA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP  \nCN": {
+    "component_box": [
+      561.0,
+      1.0,
+      852.0,
+      219.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "RA": {
+    "component_box": [
+      65.0,
+      74.0,
+      168.0,
+      177.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK/RES GEN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CDAC_B",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CDAC_B": {
+    "component_box": [
+      277.0,
+      66.0,
+      497.0,
+      193.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RA",
+          "count": 1
+        },
+        {
+          "name": "Offset Calibration",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Offset Calibration",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Offset Calibration": {
+    "component_box": [
+      320.0,
+      342.0,
+      506.0,
+      393.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Clock Buffer": {
+    "component_box": [
+      353.0,
+      248.0,
+      420.0,
+      332.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Asynchronous Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CK7-13",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

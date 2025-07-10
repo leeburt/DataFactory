@@ -1,0 +1,400 @@
+{
+  "K1": {
+    "component_box": [
+      234.0,
+      574.0,
+      298.0,
+      624.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "charge estimate",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "IM": {
+    "component_box": [
+      671.0,
+      97.0,
+      747.0,
+      175.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "output power calculator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      393.0,
+      463.0,
+      439.0,
+      510.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Va* ref calculator",
+          "count": 1
+        },
+        {
+          "name": "K*",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Id",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI - DATA": {
+    "component_box": [
+      437.0,
+      612.0,
+      592.0,
+      732.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "PI*",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DC-link capacitor": {
+    "component_box": [
+      368.0,
+      74.0,
+      410.0,
+      194.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Diode rectifier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      92.0,
+      455.0,
+      140.0,
+      504.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Va* ref calculator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "K1",
+          "count": 1
+        },
+        {
+          "name": "K₂",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "input ref. line current calculator": {
+    "component_box": [
+      212.0,
+      241.0,
+      401.0,
+      363.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Utility Supply",
+          "count": 1
+        },
+        {
+          "name": "output power calculator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "charge estimate": {
+    "component_box": [
+      236.0,
+      658.0,
+      406.0,
+      769.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K1",
+          "count": 1
+        },
+        {
+          "name": "K₂",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ΔQ_a",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI*": {
+    "component_box": [
+      555.0,
+      454.0,
+      623.0,
+      512.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K₂": {
+    "component_box": [
+      343.0,
+      575.0,
+      406.0,
+      625.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI*",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Utility Supply": {
+    "component_box": [
+      30.0,
+      64.0,
+      76.0,
+      246.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "input ref. line current calculator",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Id": {
+    "component_box": [
+      656.0,
+      460.0,
+      700.0,
+      507.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI*",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "current regulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "output power calculator": {
+    "component_box": [
+      445.0,
+      248.0,
+      589.0,
+      371.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_x",
+          "count": 1
+        },
+        {
+          "name": "i_y",
+          "count": 1
+        },
+        {
+          "name": "i_z",
+          "count": 1
+        },
+        {
+          "name": "V_x",
+          "count": 1
+        },
+        {
+          "name": "V_y",
+          "count": 1
+        },
+        {
+          "name": "V_z",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "input ref. line current calculator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "C*": {
+    "component_box": [
+      226.0,
+      73.0,
+      268.0,
+      194.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "A*",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "DC-link capacitor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "K*": {
+    "component_box": [
+      477.0,
+      463.0,
+      524.0,
+      511.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI*",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Va* ref calculator": {
+    "component_box": [
+      183.0,
+      440.0,
+      333.0,
+      524.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "charge estimate",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "BOOST CONVERTER": {
+    "component_box": [
+      91.0,
+      21.0,
+      306.0,
+      138.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "UC3854 INNER LOOP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LOAD",
+          "count": 1
+        },
+        {
+          "name": "UC3854 INNER LOOP",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "VIN",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "XDAC": {
+    "component_box": [
+      485.0,
+      250.0,
+      606.0,
+      317.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "80C196 AND PERIPHERALS",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "UC3854 INNER LOOP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LOAD": {
+    "component_box": [
+      404.0,
+      12.0,
+      485.0,
+      148.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BOOST CONVERTER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RESOLUTION MAPPING",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RESOLUTION MAPPING": {
+    "component_box": [
+      582.0,
+      23.0,
+      790.0,
+      139.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LOAD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "80C196 AND PERIPHERALS",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DC FILTER": {
+    "component_box": [
+      105.0,
+      421.0,
+      246.0,
+      508.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "80C196 AND PERIPHERALS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "UC3854 INNER LOOP": {
+    "component_box": [
+      122.0,
+      206.0,
+      275.0,
+      350.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BOOST CONVERTER",
+          "count": 1
+        },
+        {
+          "name": "XDAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "BOOST CONVERTER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "80C196 AND PERIPHERALS": {
+    "component_box": [
+      577.0,
+      408.0,
+      788.0,
+      522.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DC FILTER",
+          "count": 1
+        },
+        {
+          "name": "RESOLUTION MAPPING",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  }
+}

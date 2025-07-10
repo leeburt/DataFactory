@@ -1,0 +1,202 @@
+{
+  "Sign Detector": {
+    "component_box": [
+      222.0,
+      227.0,
+      326.0,
+      308.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Decision Table",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "v_PCC_h": {
+    "component_box": [
+      673.0,
+      87.0,
+      784.0,
+      174.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Limiter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Decision Table",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI(s)": {
+    "component_box": [
+      5.0,
+      159.0,
+      576.0,
+      334.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing Junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      461.0,
+      118.0,
+      487.0,
+      144.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI(s)",
+          "count": 1
+        },
+        {
+          "name": "K_ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Limiter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Decision Table": {
+    "component_box": [
+      371.0,
+      226.0,
+      540.0,
+      308.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Sign Detector",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Limiter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Limiter": {
+    "component_box": [
+      519.0,
+      90.0,
+      624.0,
+      171.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        },
+        {
+          "name": "Decision Table",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "v_PCC_h",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing Junction": {
+    "component_box": [
+      225.0,
+      118.0,
+      250.0,
+      144.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_o5_ref",
+          "count": 1
+        },
+        {
+          "name": "i_o5_ampn",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI(s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      142.0,
+      255.0,
+      167.0,
+      280.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_oamp",
+          "count": 1
+        },
+        {
+          "name": "i_oamp_rated",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sign Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

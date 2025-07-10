@@ -1,0 +1,125 @@
+{
+  "digital post-processing": {
+    "component_box": [
+      580.0,
+      151.0,
+      735.0,
+      250.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "registers",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "adder": {
+    "component_box": [
+      777.0,
+      123.0,
+      808.0,
+      154.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "digital post-processing",
+          "count": 1
+        },
+        {
+          "name": "digital post-processing",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y[n]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "registers": {
+    "component_box": [
+      488.0,
+      158.0,
+      537.0,
+      254.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "counters",
+          "count": 1
+        },
+        {
+          "name": "fs",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "digital post-processing",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "counters": {
+    "component_box": [
+      285.0,
+      26.0,
+      378.0,
+      123.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "registers",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RO": {
+    "component_box": [
+      97.0,
+      156.0,
+      168.0,
+      252.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x_n(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "counters",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

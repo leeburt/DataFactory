@@ -1,0 +1,97 @@
+{
+  "D Flip-Flop": {
+    "component_box": [
+      688.0,
+      14.0,
+      779.0,
+      176.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Shift Register and Control Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC Capacitor Array": {
+    "component_box": [
+      159.0,
+      21.0,
+      430.0,
+      121.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "Shift Register and Control Logic",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      533.0,
+      25.0,
+      644.0,
+      155.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "D Flip-Flop",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "DAC Capacitor Array",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Shift Register and Control Logic": {
+    "component_box": [
+      159.0,
+      191.0,
+      429.0,
+      292.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "D Flip-Flop",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC Capacitor Array",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

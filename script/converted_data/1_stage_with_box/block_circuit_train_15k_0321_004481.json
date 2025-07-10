@@ -1,0 +1,268 @@
+{
+  "Subtractor": {
+    "component_box": [
+      561.0,
+      102.0,
+      593.0,
+      135.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Switch",
+          "count": 1
+        },
+        {
+          "name": "Switch",
+          "count": 1
+        },
+        {
+          "name": "D/A",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "A/D": {
+    "component_box": [
+      306.0,
+      96.0,
+      375.0,
+      148.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Imager output VOUT",
+          "count": 1
+        },
+        {
+          "name": "Switch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Imager output VOUT": {
+    "component_box": [
+      272.0,
+      62.0,
+      292.0,
+      81.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Soft x-ray AMI",
+          "count": 1
+        },
+        {
+          "name": "RL 1kΩ",
+          "count": 1
+        },
+        {
+          "name": "MOSFET",
+          "count": 1
+        },
+        {
+          "name": "NMOS transistor",
+          "count": 1
+        },
+        {
+          "name": "A/D",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MOSFET": {
+    "component_box": [
+      229.0,
+      30.0,
+      248.0,
+      49.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Soft x-ray AMI",
+          "count": 1
+        },
+        {
+          "name": "RL 1kΩ",
+          "count": 1
+        },
+        {
+          "name": "NMOS transistor",
+          "count": 1
+        },
+        {
+          "name": "Imager output VOUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Soft x-ray AMI": {
+    "component_box": [
+      11.0,
+      49.0,
+      114.0,
+      133.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RL 1kΩ",
+          "count": 1
+        },
+        {
+          "name": "NMOS transistor",
+          "count": 1
+        },
+        {
+          "name": "MOSFET",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Switch": {
+    "component_box": [
+      430.0,
+      83.0,
+      447.0,
+      101.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "A/D",
+          "count": 1
+        },
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "10bit FPN memory": {
+    "component_box": [
+      455.0,
+      26.0,
+      561.0,
+      74.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Switch",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "NMOS transistor": {
+    "component_box": [
+      227.0,
+      143.0,
+      253.0,
+      176.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "MOSFET",
+          "count": 1
+        },
+        {
+          "name": "RL 1kΩ",
+          "count": 1
+        },
+        {
+          "name": "A/D",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "D/A": {
+    "component_box": [
+      613.0,
+      94.0,
+      686.0,
+      146.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Video output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RL 1kΩ": {
+    "component_box": [
+      164.0,
+      111.0,
+      191.0,
+      149.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Soft x-ray AMI",
+          "count": 1
+        },
+        {
+          "name": "MOSFET",
+          "count": 1
+        },
+        {
+          "name": "NMOS transistor",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

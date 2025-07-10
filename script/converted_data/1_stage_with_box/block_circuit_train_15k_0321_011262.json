@@ -1,0 +1,377 @@
+{
+  "ECG filter": {
+    "component_box": [
+      208.0,
+      152.0,
+      437.0,
+      278.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ECG in",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ACLT Transform",
+          "count": 1
+        },
+        {
+          "name": "Differentiator",
+          "count": 1
+        },
+        {
+          "name": "Latch Based RAM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ACLT Transform": {
+    "component_box": [
+      482.0,
+      152.0,
+      713.0,
+      278.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ECG filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "QRS Detector",
+          "count": 1
+        },
+        {
+          "name": "Define Window",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "QRS Detector": {
+    "component_box": [
+      755.0,
+      152.0,
+      985.0,
+      278.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ACLT Transform",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Intervals RR QT",
+          "count": 1
+        },
+        {
+          "name": "Define Window",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "T-P wave Delineator": {
+    "component_box": [
+      755.0,
+      481.0,
+      986.0,
+      607.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Latch Based RAM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Intervals RR QT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Latch Based RAM": {
+    "component_box": [
+      515.0,
+      349.0,
+      707.0,
+      603.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Differentiator",
+          "count": 1
+        },
+        {
+          "name": "Define Window",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Qon - Soff Delineator",
+          "count": 1
+        },
+        {
+          "name": "T-P wave Delineator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Configuration Register": {
+    "component_box": [
+      1237.0,
+      458.0,
+      1461.0,
+      590.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "IO SPI Interface",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CAN Severity Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "IO SPI Interface": {
+    "component_box": [
+      1042.0,
+      612.0,
+      1517.0,
+      700.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Control FSM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Configuration Register",
+          "count": 1
+        },
+        {
+          "name": "Feature Class, Extracted Features, CAN Status",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CAN Severity Detector": {
+    "component_box": [
+      175.0,
+      61.0,
+      1540.0,
+      827.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ECG in",
+          "count": 1
+        },
+        {
+          "name": "Control, Configuration Data",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Feature Class, Extracted Features, CAN Status",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Qon - Soff Delineator": {
+    "component_box": [
+      754.0,
+      343.0,
+      985.0,
+      468.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Define Window",
+          "count": 1
+        },
+        {
+          "name": "Latch Based RAM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Intervals RR QT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Differentiator": {
+    "component_box": [
+      208.0,
+      372.0,
+      438.0,
+      476.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ECG filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Latch Based RAM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ACLT Transform  \nDefine Window  \nLatch Based RAM": {
+    "component_box": [
+      452.0,
+      283.0,
+      770.0,
+      343.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ECG filter",
+          "count": 1
+        },
+        {
+          "name": "Differentiator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Qon - Soff Delineator",
+          "count": 1
+        },
+        {
+          "name": "T-P wave Delineator",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "QRS Detector",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Control FSM": {
+    "component_box": [
+      204.0,
+      616.0,
+      1036.0,
+      704.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "ECG filter",
+          "count": 1
+        },
+        {
+          "name": "ACLT Transform",
+          "count": 1
+        },
+        {
+          "name": "QRS Detector",
+          "count": 1
+        },
+        {
+          "name": "Differentiator",
+          "count": 1
+        },
+        {
+          "name": "Latch Based RAM",
+          "count": 1
+        },
+        {
+          "name": "Qon - Soff Delineator",
+          "count": 1
+        },
+        {
+          "name": "T-P wave Delineator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Intervals RR QT": {
+    "component_box": [
+      1023.0,
+      144.0,
+      1198.0,
+      607.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "QRS Detector",
+          "count": 1
+        },
+        {
+          "name": "Qon - Soff Delineator",
+          "count": 1
+        },
+        {
+          "name": "T-P wave Delineator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CAN Severity Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

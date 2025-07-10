@@ -1,0 +1,528 @@
+{
+  "LPF1": {
+    "component_box": [
+      268.0,
+      329.0,
+      323.0,
+      376.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "g_DC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "g_DC": {
+    "component_box": [
+      191.0,
+      329.0,
+      242.0,
+      376.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "R_znz",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LPF1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H": {
+    "component_box": [
+      59.0,
+      414.0,
+      107.0,
+      462.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "vo",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Gas 放电管": {
+    "component_box": [
+      74.0,
+      101.0,
+      96.0,
+      121.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Diode",
+          "count": 1
+        },
+        {
+          "name": "二极管",
+          "count": 1
+        },
+        {
+          "name": "L1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      382.0,
+      330.0,
+      426.0,
+      375.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LPF1",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      190.0,
+      416.0,
+      229.0,
+      455.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H",
+          "count": 1
+        },
+        {
+          "name": "Vref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Gv(s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LPF2": {
+    "component_box": [
+      297.0,
+      534.0,
+      353.0,
+      578.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "g_DC·G",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Gv_sns",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Do": {
+    "component_box": [
+      560.0,
+      48.0,
+      580.0,
+      69.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "L2",
+          "count": 1
+        },
+        {
+          "name": "Co",
+          "count": 1
+        },
+        {
+          "name": "Ro",
+          "count": 1
+        },
+        {
+          "name": "H",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Ramp generator": {
+    "component_box": [
+      474.0,
+      446.0,
+      536.0,
+      472.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "R.I.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "R.I.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "R.I.": {
+    "component_box": [
+      417.0,
+      410.0,
+      471.0,
+      466.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "RS触发器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Gv(s)": {
+    "component_box": [
+      268.0,
+      410.0,
+      325.0,
+      468.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "vac": {
+    "component_box": [
+      146.0,
+      100.0,
+      167.0,
+      120.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Gas 放电管",
+          "count": 1
+        },
+        {
+          "name": "Diode",
+          "count": 1
+        },
+        {
+          "name": "二极管",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CLK": {
+    "component_box": [
+      555.0,
+      401.0,
+      609.0,
+      456.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "RS触发器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Ds": {
+    "component_box": [
+      377.0,
+      204.0,
+      394.0,
+      220.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Q",
+          "count": 1
+        },
+        {
+          "name": "Cs",
+          "count": 1
+        },
+        {
+          "name": "D1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "D1": {
+    "component_box": [
+      448.0,
+      119.0,
+      470.0,
+      140.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C1",
+          "count": 1
+        },
+        {
+          "name": "Lr",
+          "count": 1
+        },
+        {
+          "name": "L2",
+          "count": 1
+        },
+        {
+          "name": "Cs",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RS触发器": {
+    "component_box": [
+      639.0,
+      339.0,
+      719.0,
+      454.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "CLK",
+          "count": 1
+        },
+        {
+          "name": "R.I.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Q",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Ro": {
+    "component_box": [
+      657.0,
+      140.0,
+      674.0,
+      180.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vo",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "二极管": {
+    "component_box": [
+      146.0,
+      201.0,
+      168.0,
+      221.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "vac",
+          "count": 1
+        },
+        {
+          "name": "R_znz",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      551.0,
+      334.0,
+      596.0,
+      393.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ramp generator",
+          "count": 1
+        },
+        {
+          "name": "R.I.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RS触发器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Diode": {
+    "component_box": [
+      74.0,
+      202.0,
+      96.0,
+      221.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "vac",
+          "count": 1
+        },
+        {
+          "name": "Rznz",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "g_DC·G": {
+    "component_box": [
+      189.0,
+      535.0,
+      278.0,
+      576.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LPF2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

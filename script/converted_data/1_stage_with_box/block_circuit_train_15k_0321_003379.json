@@ -1,0 +1,52 @@
+{
+  "Phase Accumulator": {
+    "component_box": [
+      127.0,
+      20.0,
+      307.0,
+      216.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Length (32 bit)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Phase to Amplitude Converter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Phase to Amplitude Converter": {
+    "component_box": [
+      479.0,
+      21.0,
+      662.0,
+      220.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Phase Accumulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "sine",
+          "count": 1
+        },
+        {
+          "name": "cosine",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

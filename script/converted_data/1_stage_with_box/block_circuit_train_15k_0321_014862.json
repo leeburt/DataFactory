@@ -1,0 +1,386 @@
+{
+  "DAC3": {
+    "component_box": [
+      541.0,
+      272.0,
+      600.0,
+      361.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC FLASH 5-bit": {
+    "component_box": [
+      858.0,
+      85.0,
+      982.0,
+      298.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      882.0,
+      165.0,
+      963.0,
+      240.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2",
+          "count": 1
+        },
+        {
+          "name": "εq",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z⁻¹": {
+    "component_box": [
+      613.0,
+      383.0,
+      703.0,
+      440.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC3",
+          "count": 1
+        },
+        {
+          "name": "DAC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1–z⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1–z⁻¹": {
+    "component_box": [
+      736.0,
+      382.0,
+      835.0,
+      439.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z⁻¹",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1 - z⁻¹": {
+    "component_box": [
+      555.0,
+      36.0,
+      708.0,
+      106.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      471.0,
+      176.0,
+      523.0,
+      226.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "1 - z⁻¹",
+          "count": 1
+        },
+        {
+          "name": "DAC1",
+          "count": 1
+        },
+        {
+          "name": "1–z⁻¹",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "z⁻¹/(1–z⁻¹)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      989.0,
+      174.0,
+      1043.0,
+      228.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC FLASH 5-bit",
+          "count": 1
+        },
+        {
+          "name": "z⁻¹",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VOUT",
+          "count": 1
+        },
+        {
+          "name": "z⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2": {
+    "component_box": [
+      781.0,
+      163.0,
+      851.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z⁻¹/(1–z⁻¹)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC FLASH 5-bit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC1": {
+    "component_box": [
+      541.0,
+      470.0,
+      600.0,
+      560.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "E(z)",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Σ": {
+    "component_box": [
+      134.0,
+      178.0,
+      186.0,
+      228.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_IN",
+          "count": 1
+        },
+        {
+          "name": "DAC1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/2 z⁻¹ / (1 − z⁻¹)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC2": {
+    "component_box": [
+      541.0,
+      366.0,
+      599.0,
+      455.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "z⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z⁻¹/(1–z⁻¹)": {
+    "component_box": [
+      555.0,
+      151.0,
+      707.0,
+      254.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2",
+          "count": 1
+        },
+        {
+          "name": "1 - z⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/2": {
+    "component_box": [
+      445.0,
+      324.0,
+      522.0,
+      393.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC3",
+          "count": 1
+        },
+        {
+          "name": "DAC2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/2 z⁻¹ / (1 − z⁻¹)": {
+    "component_box": [
+      209.0,
+      152.0,
+      361.0,
+      255.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

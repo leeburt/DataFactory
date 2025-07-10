@@ -1,0 +1,176 @@
+{
+  "DEMUX": {
+    "component_box": [
+      207.0,
+      122.0,
+      248.0,
+      194.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sample Rearrange",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Filter": {
+    "component_box": [
+      577.0,
+      123.0,
+      661.0,
+      190.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Linear PD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sample Selection",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Slicer": {
+    "component_box": [
+      378.0,
+      28.0,
+      469.0,
+      95.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Sample Rearrange",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sample Selection",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      108.0,
+      132.0,
+      178.0,
+      181.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RXIN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DEMUX",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "2x Sampling CK",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Linear PD": {
+    "component_box": [
+      441.0,
+      120.0,
+      541.0,
+      196.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Sample Rearrange",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Slicer",
+          "count": 1
+        },
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sample Rearrange": {
+    "component_box": [
+      263.0,
+      119.0,
+      415.0,
+      196.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DEMUX",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Linear PD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sample Selection": {
+    "component_box": [
+      497.0,
+      26.0,
+      642.0,
+      94.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Slicer",
+          "count": 1
+        },
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DOUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

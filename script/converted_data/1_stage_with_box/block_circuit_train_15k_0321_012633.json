@@ -1,0 +1,219 @@
+{
+  "env detect": {
+    "component_box": [
+      722.0,
+      35.0,
+      811.0,
+      112.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "tuning circuit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "freq divider": {
+    "component_box": [
+      282.0,
+      131.0,
+      385.0,
+      195.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "freq divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "phase detect": {
+    "component_box": [
+      176.0,
+      35.0,
+      278.0,
+      99.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "freq divider",
+          "count": 1
+        },
+        {
+          "name": "freq divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "filter": {
+    "component_box": [
+      582.0,
+      34.0,
+      704.0,
+      108.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "attn",
+          "count": 1
+        },
+        {
+          "name": "tuning circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "env detect",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "attn": {
+    "component_box": [
+      494.0,
+      47.0,
+      559.0,
+      88.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        },
+        {
+          "name": "CLK_att",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      379.0,
+      41.0,
+      456.0,
+      93.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "attn",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "freq divider",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "tuning circuit": {
+    "component_box": [
+      553.0,
+      166.0,
+      740.0,
+      244.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "filter",
+          "count": 1
+        },
+        {
+          "name": "filter",
+          "count": 1
+        },
+        {
+          "name": "SW0",
+          "count": 1
+        },
+        {
+          "name": "SW",
+          "count": 1
+        },
+        {
+          "name": "CLK_cnt",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "env detect",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LPF": {
+    "component_box": [
+      296.0,
+      41.0,
+      362.0,
+      94.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "phase detect",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

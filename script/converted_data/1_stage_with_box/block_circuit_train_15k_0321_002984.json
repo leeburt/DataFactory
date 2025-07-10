@@ -1,0 +1,213 @@
+{
+  "2.125-GHz CLK": {
+    "component_box": [
+      973.0,
+      155.0,
+      1024.0,
+      195.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VCO",
+          "count": 1
+        },
+        {
+          "name": "1/40 Prescaler",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "53.125-MHz Ref. CLK": {
+    "component_box": [
+      155.0,
+      139.0,
+      204.0,
+      179.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Phase Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Select Signal": {
+    "component_box": [
+      968.0,
+      421.0,
+      1018.0,
+      460.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/40 Prescaler",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "1/40 Prescaler": {
+    "component_box": [
+      680.0,
+      251.0,
+      853.0,
+      341.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "1.0625-GHz CLK",
+          "count": 1
+        },
+        {
+          "name": "Select Signal",
+          "count": 1
+        },
+        {
+          "name": "212.5-MHz CLK",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "VCO",
+          "count": 1
+        },
+        {
+          "name": "ECL - CMOS Converter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VCO": {
+    "component_box": [
+      681.0,
+      148.0,
+      803.0,
+      206.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "2.125-GHz CLK",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Loop-Filter",
+          "count": 1
+        },
+        {
+          "name": "1/40 Prescaler",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "212.5-MHz CLK": {
+    "component_box": [
+      968.0,
+      474.0,
+      1018.0,
+      515.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/40 Prescaler",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "ECL - CMOS Converter": {
+    "component_box": [
+      440.0,
+      253.0,
+      628.0,
+      339.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/40 Prescaler",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Phase Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Loop-Filter": {
+    "component_box": [
+      472.0,
+      131.0,
+      596.0,
+      222.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Phase Detector",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Phase Detector": {
+    "component_box": [
+      261.0,
+      131.0,
+      402.0,
+      221.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "53.125-MHz Ref. CLK",
+          "count": 1
+        },
+        {
+          "name": "ECL - CMOS Converter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Loop-Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

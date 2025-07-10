@@ -1,0 +1,383 @@
+{
+  "Counter": {
+    "component_box": [
+      360.0,
+      398.0,
+      460.0,
+      442.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Pulse generator",
+          "count": 1
+        },
+        {
+          "name": "Read",
+          "count": 1
+        },
+        {
+          "name": "Increment/Decrement/Bypass Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "buffer": {
+    "component_box": [
+      254.0,
+      94.0,
+      279.0,
+      121.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SC Power Stage Module",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Buffer": {
+    "component_box": [
+      255.0,
+      127.0,
+      279.0,
+      155.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Hysteretic Regulation Loop",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SC Power Stage Module",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CMP": {
+    "component_box": [
+      562.0,
+      248.0,
+      671.0,
+      367.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_fb",
+          "count": 1
+        },
+        {
+          "name": "V_ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "T-Latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Level Shifter": {
+    "component_box": [
+      50.0,
+      245.0,
+      159.0,
+      310.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Non-Overlap",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SC Power Stage Module",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Non-Overlap": {
+    "component_box": [
+      229.0,
+      245.0,
+      338.0,
+      310.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Buffer",
+          "count": 1
+        },
+        {
+          "name": "buffer",
+          "count": 1
+        },
+        {
+          "name": "Buffer",
+          "count": 1
+        },
+        {
+          "name": "Inverter",
+          "count": 1
+        },
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "T-Latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Inverter": {
+    "component_box": [
+      254.0,
+      162.0,
+      279.0,
+      189.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "SC Power Stage Module",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SC Power Stage Module": {
+    "component_box": [
+      348.0,
+      36.0,
+      592.0,
+      196.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Buffer",
+          "count": 1
+        },
+        {
+          "name": "buffer",
+          "count": 1
+        },
+        {
+          "name": "Buffer",
+          "count": 1
+        },
+        {
+          "name": "Buffer",
+          "count": 1
+        },
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Cout",
+          "count": 1
+        },
+        {
+          "name": "RL",
+          "count": 1
+        },
+        {
+          "name": "Rfb1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Pulse generator": {
+    "component_box": [
+      368.0,
+      346.0,
+      401.0,
+      375.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "T-Latch": {
+    "component_box": [
+      384.0,
+      247.0,
+      483.0,
+      308.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Non-Overlap",
+          "count": 1
+        },
+        {
+          "name": "CMP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SC Integrator": {
+    "component_box": [
+      145.0,
+      486.0,
+      254.0,
+      538.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Increment/Decrement/Bypass Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Read": {
+    "component_box": [
+      415.0,
+      346.0,
+      446.0,
+      374.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Pulse generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      576.0,
+      419.0,
+      668.0,
+      464.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SC Integrator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CMP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Increment/Decrement/Bypass Logic": {
+    "component_box": [
+      68.0,
+      355.0,
+      199.0,
+      439.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SC Integrator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "SC Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

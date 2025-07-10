@@ -1,0 +1,133 @@
+{
+  "ΔΣ Modulator": {
+    "component_box": [
+      166.0,
+      242.0,
+      299.0,
+      307.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Nsd[m]",
+          "count": 1
+        },
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TDC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DCO": {
+    "component_box": [
+      551.0,
+      25.0,
+      621.0,
+      95.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital Loop Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "out(t)",
+          "count": 1
+        },
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital Loop Filter": {
+    "component_box": [
+      331.0,
+      13.0,
+      509.0,
+      105.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TDC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Divider": {
+    "component_box": [
+      346.0,
+      155.0,
+      482.0,
+      229.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DCO",
+          "count": 1
+        },
+        {
+          "name": "ΔΣ Modulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TDC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TDC": {
+    "component_box": [
+      165.0,
+      13.0,
+      292.0,
+      105.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ref(t)",
+          "count": 1
+        },
+        {
+          "name": "ΔΣ Modulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Loop Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "RC Delay Based Oscillator": {
+    "component_box": [
+      155.0,
+      253.0,
+      259.0,
+      326.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power on Reset Circuitry",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Clock Generation Circuits",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Power on Reset Circuitry": {
+    "component_box": [
+      16.0,
+      253.0,
+      121.0,
+      327.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BandGap Reference",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RC Delay Based Oscillator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Level Shifters": {
+    "component_box": [
+      433.0,
+      253.0,
+      537.0,
+      326.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clock Generation Circuits",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Switched-capacitor charge pump",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BandGap Reference": {
+    "component_box": [
+      16.0,
+      157.0,
+      121.0,
+      231.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power on Reset Circuitry",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Switched-capacitor charge pump",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Clock Generation Circuits": {
+    "component_box": [
+      294.0,
+      254.0,
+      398.0,
+      326.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RC Delay Based Oscillator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Level Shifters",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Switched-capacitor charge pump": {
+    "component_box": [
+      515.0,
+      124.0,
+      750.0,
+      209.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VBuck_10V",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        },
+        {
+          "name": "Level Shifters",
+          "count": 1
+        },
+        {
+          "name": "COUT",
+          "count": 1
+        },
+        {
+          "name": "RLOAD",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

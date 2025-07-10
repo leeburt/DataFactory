@@ -1,0 +1,77 @@
+{
+  "Load": {
+    "component_box": [
+      617.0,
+      208.0,
+      866.0,
+      407.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Driver",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Driver": {
+    "component_box": [
+      402.0,
+      204.0,
+      549.0,
+      384.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "R1",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "R4",
+          "count": 1
+        },
+        {
+          "name": "R3",
+          "count": 1
+        },
+        {
+          "name": "Cf",
+          "count": 1
+        },
+        {
+          "name": "Load",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Cf": {
+    "component_box": [
+      427.0,
+      56.0,
+      547.0,
+      146.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Driver",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

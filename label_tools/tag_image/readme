@@ -1,0 +1,3 @@
+conda activate swall 
+##run
+streamlit run tag_to_image.py --server.fileWatcherType none

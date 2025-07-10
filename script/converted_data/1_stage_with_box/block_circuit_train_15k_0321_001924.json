@@ -1,0 +1,147 @@
+{
+  "VCO": {
+    "component_box": [
+      668.0,
+      84.0,
+      770.0,
+      164.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output",
+          "count": 1
+        },
+        {
+          "name": "Divider ÷ N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Divider ÷ N": {
+    "component_box": [
+      161.0,
+      157.0,
+      293.0,
+      234.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        },
+        {
+          "name": "Tuning word",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Reference oscillator": {
+    "component_box": [
+      2.0,
+      11.0,
+      132.0,
+      88.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Reference divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LF": {
+    "component_box": [
+      522.0,
+      84.0,
+      623.0,
+      163.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PD": {
+    "component_box": [
+      376.0,
+      83.0,
+      478.0,
+      162.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference divider",
+          "count": 1
+        },
+        {
+          "name": "Divider ÷ N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Reference divider": {
+    "component_box": [
+      160.0,
+      12.0,
+      293.0,
+      89.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference oscillator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

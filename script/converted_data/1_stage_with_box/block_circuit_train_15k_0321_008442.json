@@ -1,0 +1,179 @@
+{
+  "Counter1": {
+    "component_box": [
+      423.0,
+      287.0,
+      523.0,
+      349.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ring Oscillator1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Ring Oscillator1": {
+    "component_box": [
+      35.0,
+      357.0,
+      153.0,
+      419.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Counter1",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "M1",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Subtractor": {
+    "component_box": [
+      641.0,
+      190.0,
+      698.0,
+      254.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Counter2",
+          "count": 1
+        },
+        {
+          "name": "Counter1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "C'e",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "I_CTAT": {
+    "component_box": [
+      148.0,
+      121.0,
+      193.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vdd",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Ring Oscillator1",
+          "count": 1
+        },
+        {
+          "name": "Ring Oscillator2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Fixed-number counting controller": {
+    "component_box": [
+      583.0,
+      360.0,
+      752.0,
+      453.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Counter1",
+          "count": 1
+        },
+        {
+          "name": "Counter2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Ring Oscillator2": {
+    "component_box": [
+      186.0,
+      357.0,
+      304.0,
+      418.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "M2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Counter2",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Counter2": {
+    "component_box": [
+      426.0,
+      115.0,
+      521.0,
+      176.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ring Oscillator2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

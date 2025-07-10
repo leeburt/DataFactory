@@ -1,0 +1,271 @@
+{
+  "Power Amplifier": {
+    "component_box": [
+      334.0,
+      982.0,
+      489.0,
+      1086.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Signal Source",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Speaker 1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Speaker 2": {
+    "component_box": [
+      601.0,
+      788.0,
+      658.0,
+      893.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Power Amplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Buffer": {
+    "component_box": [
+      973.0,
+      572.0,
+      1079.0,
+      628.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "反相运算放大器",
+          "count": 1
+        },
+        {
+          "name": "Power Amplifier",
+          "count": 1
+        },
+        {
+          "name": "Microphone",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Inverting IntegratoR": {
+    "component_box": [
+      430.0,
+      152.0,
+      553.0,
+      276.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R",
+          "count": 1
+        },
+        {
+          "name": "C",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        },
+        {
+          "name": "Wheatstone bridge",
+          "count": 1
+        },
+        {
+          "name": "反相运算放大器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Signal Source": {
+    "component_box": [
+      45.0,
+      982.0,
+      200.0,
+      1086.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Power Amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Inverting amplifier": {
+    "component_box": [
+      1442.0,
+      150.0,
+      1564.0,
+      276.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Inverting integrator",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        },
+        {
+          "name": "V3",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "反相运算放大器": {
+    "component_box": [
+      754.0,
+      418.0,
+      878.0,
+      542.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V1",
+          "count": 1
+        },
+        {
+          "name": "Buffer",
+          "count": 1
+        },
+        {
+          "name": "Inverting amplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Wheatstone bridge": {
+    "component_box": [
+      670.0,
+      161.0,
+      823.0,
+      267.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Inverting IntegratoR",
+          "count": 1
+        },
+        {
+          "name": "R",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Speaker 1": {
+    "component_box": [
+      600.0,
+      982.0,
+      658.0,
+      1086.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Power Amplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "桥式整流器": {
+    "component_box": [
+      45.0,
+      162.0,
+      197.0,
+      268.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vc",
+          "count": 1
+        },
+        {
+          "name": "Inverting IntegratoR",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Inverting integrator": {
+    "component_box": [
+      1044.0,
+      153.0,
+      1167.0,
+      279.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Wheatstone bridge",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Inverting amplifier",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "C",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "Voltage Compensator": {
+    "component_box": [
+      212.0,
+      178.0,
+      354.0,
+      250.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K_A/D",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current Compensator": {
+    "component_box": [
+      213.0,
+      11.0,
+      354.0,
+      81.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "K_DPWM",
+          "count": 1
+        },
+        {
+          "name": "Voltage Compensator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_DPWM": {
+    "component_box": [
+      402.0,
+      11.0,
+      504.0,
+      81.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current Compensator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Gid(s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_A/D": {
+    "component_box": [
+      420.0,
+      126.0,
+      487.0,
+      171.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Gid(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_cast": {
+    "component_box": [
+      13.0,
+      107.0,
+      65.0,
+      152.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      811.0,
+      113.0,
+      867.0,
+      170.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "G_vi(s)",
+          "count": 1
+        },
+        {
+          "name": "v_ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "K_A/D",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G_vi(s)": {
+    "component_box": [
+      696.0,
+      10.0,
+      788.0,
+      81.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Gid(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Gid(s)": {
+    "component_box": [
+      555.0,
+      11.0,
+      646.0,
+      82.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K_DPWM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "G_vi(s)",
+          "count": 1
+        },
+        {
+          "name": "K_A/D",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

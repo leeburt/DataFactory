@@ -1,0 +1,165 @@
+{
+  "D1": {
+    "component_box": [
+      500.0,
+      108.0,
+      522.0,
+      128.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "C_B",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "L1",
+          "count": 1
+        },
+        {
+          "name": "D2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "AC Voltage Source": {
+    "component_box": [
+      66.0,
+      140.0,
+      99.0,
+      173.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Diode",
+          "count": 1
+        },
+        {
+          "name": "输入整流二极管",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      228.0,
+      363.0,
+      310.0,
+      446.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R_I_det",
+          "count": 1
+        },
+        {
+          "name": "ref3",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "输入整流二极管": {
+    "component_box": [
+      23.0,
+      199.0,
+      46.0,
+      221.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "AC Voltage Source",
+          "count": 1
+        },
+        {
+          "name": "negative DC bus",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Diode": {
+    "component_box": [
+      23.0,
+      95.0,
+      46.0,
+      116.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "AC Voltage Source",
+          "count": 1
+        },
+        {
+          "name": "Current transformer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Current transformer": {
+    "component_box": [
+      121.0,
+      95.0,
+      143.0,
+      116.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Diode",
+          "count": 1
+        },
+        {
+          "name": "Input Filter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Current Sensing Amplifier": {
+    "component_box": [
+      458.0,
+      381.0,
+      543.0,
+      467.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "RS",
+          "count": 1
+        },
+        {
+          "name": "Resistor",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

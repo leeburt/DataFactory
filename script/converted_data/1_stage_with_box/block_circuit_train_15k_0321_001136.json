@@ -1,0 +1,133 @@
+{
+  "Park conversion": {
+    "component_box": [
+      215.0,
+      49.0,
+      311.0,
+      203.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MVF-QSG",
+          "count": 1
+        },
+        {
+          "name": "MVF-QSG",
+          "count": 1
+        },
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MVF-QSG": {
+    "component_box": [
+      63.0,
+      51.0,
+      161.0,
+      201.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "u_s",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Park conversion",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Integrator": {
+    "component_box": [
+      558.0,
+      51.0,
+      630.0,
+      133.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "θ̂",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      483.0,
+      81.0,
+      505.0,
+      102.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI",
+          "count": 1
+        },
+        {
+          "name": "ω_ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI": {
+    "component_box": [
+      356.0,
+      63.0,
+      429.0,
+      120.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Park conversion",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

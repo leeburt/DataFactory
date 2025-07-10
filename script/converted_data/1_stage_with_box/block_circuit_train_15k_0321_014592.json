@@ -1,0 +1,284 @@
+{
+  "Slicer": {
+    "component_box": [
+      731.0,
+      151.0,
+      803.0,
+      239.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Rx Data",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Rx LPF": {
+    "component_box": [
+      337.0,
+      165.0,
+      389.0,
+      218.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PGA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "EQ": {
+    "component_box": [
+      589.0,
+      173.0,
+      646.0,
+      216.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Remote Transceiver a[n]": {
+    "component_box": [
+      16.0,
+      84.0,
+      146.0,
+      179.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "channel",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Tx LPF": {
+    "component_box": [
+      337.0,
+      33.0,
+      389.0,
+      88.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H": {
+    "component_box": [
+      293.0,
+      110.0,
+      327.0,
+      149.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "channel",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Tx LPF",
+          "count": 1
+        },
+        {
+          "name": "Rx LPF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      664.0,
+      173.0,
+      702.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "EQ",
+          "count": 1
+        },
+        {
+          "name": "EC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Slicer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "EC": {
+    "component_box": [
+      645.0,
+      109.0,
+      721.0,
+      153.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      477.0,
+      22.0,
+      568.0,
+      101.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Tx LPF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "EC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      477.0,
+      155.0,
+      567.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PGA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "EQ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "channel": {
+    "component_box": [
+      179.0,
+      107.0,
+      266.0,
+      152.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Remote Transceiver a[n]",
+          "count": 1
+        },
+        {
+          "name": "H",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PGA": {
+    "component_box": [
+      406.0,
+      156.0,
+      464.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Rx LPF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

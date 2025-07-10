@@ -1,0 +1,425 @@
+{
+  "1/U_pn": {
+    "component_box": [
+      434.0,
+      365.0,
+      485.0,
+      393.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Y-bridge": {
+    "component_box": [
+      340.0,
+      205.0,
+      434.0,
+      301.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Cal. i_y",
+          "count": 1
+        },
+        {
+          "name": "SVPWM",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "IVS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "三相交流电压源": {
+    "component_box": [
+      45.0,
+      66.0,
+      104.0,
+      162.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "IVS",
+          "count": 1
+        },
+        {
+          "name": "IVS",
+          "count": 1
+        },
+        {
+          "name": "IVS",
+          "count": 1
+        },
+        {
+          "name": "PLL",
+          "count": 1
+        },
+        {
+          "name": "C_f",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VSI": {
+    "component_box": [
+      520.0,
+      38.0,
+      648.0,
+      189.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SVPWM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LLu",
+          "count": 1
+        },
+        {
+          "name": "LLv",
+          "count": 1
+        },
+        {
+          "name": "LLw",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "IVS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      498.0,
+      363.0,
+      530.0,
+      395.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/U_pn",
+          "count": 1
+        },
+        {
+          "name": "Cal. k and U_pn",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SVPWM": {
+    "component_box": [
+      529.0,
+      219.0,
+      622.0,
+      252.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VSI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Cal. k and U_pn": {
+    "component_box": [
+      578.0,
+      334.0,
+      626.0,
+      417.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DC link node",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/U_pn",
+          "count": 1
+        },
+        {
+          "name": "Multiplier",
+          "count": 1
+        },
+        {
+          "name": "SVPWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PWM": {
+    "component_box": [
+      428.0,
+      322.0,
+      484.0,
+      350.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Cal. i_y",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Y-bridge",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI Controller": {
+    "component_box": [
+      364.0,
+      366.0,
+      416.0,
+      395.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/U_pn",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "usc": {
+    "component_box": [
+      72.0,
+      149.0,
+      94.0,
+      170.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Lf",
+          "count": 1
+        },
+        {
+          "name": "Cf",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "三相交流电压源",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "u_sb  \\n u_sc": {
+    "component_box": [
+      72.0,
+      103.0,
+      93.0,
+      125.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Lf",
+          "count": 1
+        },
+        {
+          "name": "Lf",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "N",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SPWM": {
+    "component_box": [
+      280.0,
+      230.0,
+      318.0,
+      264.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Y-bridge",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "IVS": {
+    "component_box": [
+      288.0,
+      36.0,
+      413.0,
+      189.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "三相交流电压源",
+          "count": 1
+        },
+        {
+          "name": "SPWM",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "VSI",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Cal. i_y": {
+    "component_box": [
+      237.0,
+      348.0,
+      285.0,
+      416.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_sd",
+          "count": 1
+        },
+        {
+          "name": "i_sq",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "u_sa": {
+    "component_box": [
+      71.0,
+      58.0,
+      93.0,
+      80.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Lf",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PLL": {
+    "component_box": [
+      86.0,
+      223.0,
+      158.0,
+      272.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "三相交流电压源",
+          "count": 1
+        },
+        {
+          "name": "SPWM",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

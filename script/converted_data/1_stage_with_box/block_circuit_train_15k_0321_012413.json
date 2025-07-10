@@ -1,0 +1,298 @@
+{
+  "ADC": {
+    "component_box": [
+      908.0,
+      89.0,
+      993.0,
+      165.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z⁻¹/(1−z⁻¹)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_OUT",
+          "count": 1
+        },
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/2": {
+    "component_box": [
+      217.0,
+      88.0,
+      291.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "z^-1/(1-z^-1)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Noise Enhancement": {
+    "component_box": [
+      612.0,
+      208.0,
+      929.0,
+      392.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summer": {
+    "component_box": [
+      135.0,
+      102.0,
+      189.0,
+      156.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_IN",
+          "count": 1
+        },
+        {
+          "name": "DAC1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z⁻¹/(1−z⁻¹)": {
+    "component_box": [
+      694.0,
+      73.0,
+      840.0,
+      183.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ": {
+    "component_box": [
+      493.0,
+      101.0,
+      547.0,
+      155.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z^-1/(1-z^-1)",
+          "count": 1
+        },
+        {
+          "name": "DAC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2",
+          "count": 1
+        },
+        {
+          "name": "DAC1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC1": {
+    "component_box": [
+      542.0,
+      353.0,
+      603.0,
+      447.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FLASH ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z^-1/(1-z^-1)": {
+    "component_box": [
+      318.0,
+      73.0,
+      463.0,
+      183.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC2": {
+    "component_box": [
+      814.0,
+      317.0,
+      908.0,
+      376.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H(z)": {
+    "component_box": [
+      650.0,
+      227.0,
+      789.0,
+      298.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FLASH ADC": {
+    "component_box": [
+      883.0,
+      5.0,
+      1020.0,
+      204.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z⁻¹/(1−z⁻¹)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "V_OUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2": {
+    "component_box": [
+      586.0,
+      88.0,
+      659.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "z⁻¹/(1−z⁻¹)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

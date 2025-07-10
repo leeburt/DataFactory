@@ -1,0 +1,154 @@
+{
+  "Temperature-Controllable Cantilever": {
+    "component_box": [
+      183.0,
+      211.0,
+      241.0,
+      330.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Probe",
+          "count": 1
+        },
+        {
+          "name": "Probe",
+          "count": 1
+        },
+        {
+          "name": "Thermocouple",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "HP4195A Network Analyzer": {
+    "component_box": [
+      628.0,
+      371.0,
+      751.0,
+      456.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Transresistance Amplifier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Probe Feedthrough",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Transresistance Amplifier": {
+    "component_box": [
+      582.0,
+      237.0,
+      666.0,
+      328.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Temperature-Controllable Cantilever",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "HP4195A Network Analyzer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Probe": {
+    "component_box": [
+      376.0,
+      248.0,
+      432.0,
+      295.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Temperature-Controllable Cantilever",
+          "count": 1
+        },
+        {
+          "name": "Probe Feedthrough",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Probe Feedthrough": {
+    "component_box": [
+      125.0,
+      397.0,
+      142.0,
+      425.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Thermocouple",
+          "count": 1
+        },
+        {
+          "name": "Power Supply",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Thermocouple": {
+    "component_box": [
+      123.0,
+      332.0,
+      160.0,
+      355.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Probe Feedthrough",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Power Supply": {
+    "component_box": [
+      62.0,
+      445.0,
+      206.0,
+      525.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Probe Feedthrough",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

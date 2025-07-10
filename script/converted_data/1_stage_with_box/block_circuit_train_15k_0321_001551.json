@@ -1,0 +1,221 @@
+{
+  "adder": {
+    "component_box": [
+      267.0,
+      212.0,
+      310.0,
+      256.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "d2",
+          "count": 1
+        },
+        {
+          "name": "DFF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DFF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DFF": {
+    "component_box": [
+      636.0,
+      326.0,
+      711.0,
+      400.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "g_ELD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_OUT[2:0]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      424.0,
+      213.0,
+      467.0,
+      256.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "d1",
+          "count": 1
+        },
+        {
+          "name": "DFF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "d1": {
+    "component_box": [
+      176.0,
+      105.0,
+      254.0,
+      183.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "D_IN[5:0]",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DQTZ": {
+    "component_box": [
+      595.0,
+      183.0,
+      694.0,
+      283.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DEM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "d2": {
+    "component_box": [
+      176.0,
+      198.0,
+      252.0,
+      274.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DIN[5:0]",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      517.0,
+      213.0,
+      560.0,
+      256.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "g_ELD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DQTZ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DEM": {
+    "component_box": [
+      781.0,
+      193.0,
+      869.0,
+      276.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DQTZ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_DEM[7:0]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "g_ELD": {
+    "component_box": [
+      532.0,
+      323.0,
+      610.0,
+      401.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DFF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

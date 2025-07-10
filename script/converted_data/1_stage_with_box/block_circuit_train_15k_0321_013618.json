@@ -1,0 +1,289 @@
+{
+  "High Frequency Signal Generator": {
+    "component_box": [
+      16.0,
+      257.0,
+      299.0,
+      359.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "BPF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Connector\nOutput Clk": {
+    "component_box": [
+      1252.0,
+      270.0,
+      1313.0,
+      520.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Data Buffer IC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Logic Analyzer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Supply & Reference Decoupling Network \nADC \nData Buffer IC \nConnector": {
+    "component_box": [
+      436.0,
+      95.0,
+      1366.0,
+      661.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Supply",
+          "count": 1
+        },
+        {
+          "name": "BPF",
+          "count": 1
+        },
+        {
+          "name": "BPF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Logic Analyzer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Supply & Reference Decoupling Network": {
+    "component_box": [
+      692.0,
+      127.0,
+      1093.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Supply",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      740.0,
+      272.0,
+      1133.0,
+      521.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Supply & Reference Decoupling Network",
+          "count": 1
+        },
+        {
+          "name": "BPF",
+          "count": 1
+        },
+        {
+          "name": "BPF",
+          "count": 1
+        },
+        {
+          "name": "Button",
+          "count": 1
+        },
+        {
+          "name": "Switches",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Data Buffer IC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Data Buffer IC": {
+    "component_box": [
+      1158.0,
+      271.0,
+      1215.0,
+      520.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Connector\nOutput Clk",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Logic Analyzer": {
+    "component_box": [
+      1401.0,
+      315.0,
+      1573.0,
+      478.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Connector\nOutput Clk",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Button": {
+    "component_box": [
+      750.0,
+      558.0,
+      891.0,
+      626.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PC": {
+    "component_box": [
+      1599.0,
+      340.0,
+      1777.0,
+      455.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Logic Analyzer",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "BPF": {
+    "component_box": [
+      314.0,
+      416.0,
+      426.0,
+      505.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "High Frequency Signal Generator",
+          "count": 1
+        },
+        {
+          "name": "SMA",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Switches": {
+    "component_box": [
+      902.0,
+      558.0,
+      1031.0,
+      633.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Supply & Reference Decoupling Network",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "GND",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Power Supply": {
+    "component_box": [
+      754.0,
+      12.0,
+      1010.0,
+      75.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Supply & Reference Decoupling Network",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "OFE + Post Amplifier": {
+    "component_box": [
+      11.0,
+      18.0,
+      253.0,
+      172.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Channel Model Estimator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "THA",
+          "count": 1
+        },
+        {
+          "name": "Timing Recovery",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adaptive DSP (FFE/DFE/MLSE)": {
+    "component_box": [
+      939.0,
+      9.0,
+      1206.0,
+      189.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Channel Model Estimator",
+          "count": 1
+        },
+        {
+          "name": "Output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "THA": {
+    "component_box": [
+      559.0,
+      27.0,
+      681.0,
+      163.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OFE + Post Amplifier",
+          "count": 1
+        },
+        {
+          "name": "Timing Recovery",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Channel Model Estimator": {
+    "component_box": [
+      971.0,
+      242.0,
+      1188.0,
+      403.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adaptive DSP (FFE/DFE/MLSE)",
+          "count": 1
+        },
+        {
+          "name": "Timing Recovery",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OFE + Post Amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      676.0,
+      28.0,
+      848.0,
+      163.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "THA",
+          "count": 1
+        },
+        {
+          "name": "Timing Recovery",
+          "count": 1
+        },
+        {
+          "name": "Channel Model Estimator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adaptive DSP (FFE/DFE/MLSE)",
+          "count": 1
+        },
+        {
+          "name": "Channel Model Estimator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Timing Recovery": {
+    "component_box": [
+      385.0,
+      226.0,
+      575.0,
+      356.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OFE + Post Amplifier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "THA",
+          "count": 1
+        },
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "Counter": {
+    "component_box": [
+      219.0,
+      255.0,
+      328.0,
+      309.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO<1>",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      392.0,
+      339.0,
+      441.0,
+      389.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "DFF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DFF": {
+    "component_box": [
+      465.0,
+      324.0,
+      536.0,
+      398.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        },
+        {
+          "name": "CLKs",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DFF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Reset counter": {
+    "component_box": [
+      317.0,
+      72.0,
+      464.0,
+      179.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLKs",
+          "count": 1
+        },
+        {
+          "name": "Ring VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Dec filter",
+          "count": 1
+        },
+        {
+          "name": "Digital output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      656.0,
+      339.0,
+      704.0,
+      387.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DFF",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Dec filter": {
+    "component_box": [
+      560.0,
+      50.0,
+      665.0,
+      133.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reset counter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

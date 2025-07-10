@@ -1,0 +1,225 @@
+{
+  "QILO": {
+    "component_box": [
+      647.0,
+      76.0,
+      816.0,
+      166.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "20 GHz VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP": {
+    "component_box": [
+      259.0,
+      77.0,
+      376.0,
+      157.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LPF": {
+    "component_box": [
+      394.0,
+      77.0,
+      510.0,
+      157.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "20 GHz VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "÷2": {
+    "component_box": [
+      271.0,
+      299.0,
+      355.0,
+      348.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "÷2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD": {
+    "component_box": [
+      114.0,
+      76.0,
+      242.0,
+      157.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "REF",
+          "count": 1
+        },
+        {
+          "name": "Digital divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "REF": {
+    "component_box": [
+      11.0,
+      73.0,
+      94.0,
+      134.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital divider": {
+    "component_box": [
+      113.0,
+      285.0,
+      228.0,
+      365.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "÷2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "20 GHz VCO": {
+    "component_box": [
+      545.0,
+      78.0,
+      622.0,
+      156.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "QILO",
+          "count": 1
+        },
+        {
+          "name": "÷2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "÷4": {
+    "component_box": [
+      332.0,
+      195.0,
+      416.0,
+      245.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "20 GHz VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

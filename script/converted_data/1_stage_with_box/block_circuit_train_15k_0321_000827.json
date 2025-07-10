@@ -1,0 +1,219 @@
+{
+  "VGA": {
+    "component_box": [
+      382.0,
+      100.0,
+      419.0,
+      144.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "低通滤波器",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      441.0,
+      42.0,
+      499.0,
+      81.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VGA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "I_RX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Mixer": {
+    "component_box": [
+      262.0,
+      44.0,
+      297.0,
+      79.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "NIS",
+          "count": 1
+        },
+        {
+          "name": "LO",
+          "count": 1
+        },
+        {
+          "name": "带通滤波器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "带通滤波器": {
+    "component_box": [
+      310.0,
+      42.0,
+      366.0,
+      80.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VGA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Envelope Extraction": {
+    "component_box": [
+      15.0,
+      22.0,
+      61.0,
+      62.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "NIS",
+          "count": 1
+        },
+        {
+          "name": "Envelope Extraction",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "mixer": {
+    "component_box": [
+      140.0,
+      193.0,
+      186.0,
+      240.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Antenna",
+          "count": 1
+        },
+        {
+          "name": "NIS",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "低通滤波器": {
+    "component_box": [
+      311.0,
+      102.0,
+      366.0,
+      141.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VGA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      414.0,
+      155.0,
+      499.0,
+      212.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "NIS Control",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "NIS",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LPF": {
+    "component_box": [
+      256.0,
+      226.0,
+      326.0,
+      284.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "mixer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

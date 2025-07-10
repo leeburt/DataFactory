@@ -1,0 +1,146 @@
+{
+  "DAC": {
+    "component_box": [
+      288.0,
+      87.0,
+      364.0,
+      145.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "7-bit Counter",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "COMP",
+          "count": 1
+        },
+        {
+          "name": "Vrefdac",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "COMP": {
+    "component_box": [
+      190.0,
+      170.0,
+      324.0,
+      238.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comp. Offset. Controller",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "capacitor array",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comp. Offset. Controller": {
+    "component_box": [
+      397.0,
+      173.0,
+      530.0,
+      238.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "7-bit Counter",
+          "count": 1
+        },
+        {
+          "name": "CLK-CAL-B",
+          "count": 1
+        },
+        {
+          "name": "RST",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "7-bit Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "capacitor array": {
+    "component_box": [
+      19.0,
+      33.0,
+      207.0,
+      379.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vcm",
+          "count": 1
+        },
+        {
+          "name": "Comp. Offset. Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "COMP",
+          "count": 1
+        },
+        {
+          "name": "COMP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "7-bit Counter": {
+    "component_box": [
+      403.0,
+      88.0,
+      508.0,
+      145.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK-CAL-b",
+          "count": 1
+        },
+        {
+          "name": "enable-cnt",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

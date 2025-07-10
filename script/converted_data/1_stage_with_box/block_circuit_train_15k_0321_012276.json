@@ -1,0 +1,230 @@
+{
+  "Spectrum Analyzer": {
+    "component_box": [
+      948.0,
+      288.0,
+      1082.0,
+      369.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "3dB Coupler",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PD": {
+    "component_box": [
+      224.0,
+      292.0,
+      357.0,
+      374.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "3dB Coupler",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3dB Coupler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "3dB Coupler": {
+    "component_box": [
+      974.0,
+      10.0,
+      1110.0,
+      92.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3dB Coupler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Laser": {
+    "component_box": [
+      711.0,
+      294.0,
+      844.0,
+      377.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "EDFA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "EDFA": {
+    "component_box": [
+      550.0,
+      293.0,
+      684.0,
+      377.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Laser",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Amp": {
+    "component_box": [
+      896.0,
+      508.0,
+      1020.0,
+      603.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MZM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3dB Coupler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MZM": {
+    "component_box": [
+      550.0,
+      514.0,
+      684.0,
+      596.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PC",
+          "count": 1
+        },
+        {
+          "name": "Amp",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "3dB Coupler",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VCO": {
+    "component_box": [
+      640.0,
+      10.0,
+      774.0,
+      92.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mixer+LPFA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3dB Coupler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PC": {
+    "component_box": [
+      550.0,
+      405.0,
+      684.0,
+      488.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "EDFA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MZM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Mixer+LPFA": {
+    "component_box": [
+      578.0,
+      192.0,
+      837.0,
+      251.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Amp",
+          "count": 1
+        },
+        {
+          "name": "3dB Coupler",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

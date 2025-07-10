@@ -1,0 +1,404 @@
+{
+  "二极管": {
+    "component_box": [
+      116.0,
+      141.0,
+      136.0,
+      159.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "交流电源",
+          "count": 1
+        },
+        {
+          "name": "全桥开关模块",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Driver": {
+    "component_box": [
+      158.0,
+      237.0,
+      249.0,
+      295.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "全桥开关模块",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Diode": {
+    "component_box": [
+      91.0,
+      80.0,
+      111.0,
+      98.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "交流电源",
+          "count": 1
+        },
+        {
+          "name": "二极管",
+          "count": 1
+        },
+        {
+          "name": "全桥开关模块",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Freewheeling diode": {
+    "component_box": [
+      305.0,
+      141.0,
+      337.0,
+      200.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "全桥开关模块",
+          "count": 1
+        },
+        {
+          "name": "Cp  Lkp  LM",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "交流电源": {
+    "component_box": [
+      23.0,
+      102.0,
+      52.0,
+      131.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Diode",
+          "count": 1
+        },
+        {
+          "name": "二极管",
+          "count": 1
+        },
+        {
+          "name": "整流二极管",
+          "count": 1
+        },
+        {
+          "name": "二极管",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "anti-parallel diode": {
+    "component_box": [
+      238.0,
+      140.0,
+      271.0,
+      199.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Cp  Lkp  LM",
+          "count": 1
+        },
+        {
+          "name": "DC negative rail",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Cp  \nLkp  \nLM": {
+    "component_box": [
+      352.0,
+      81.0,
+      529.0,
+      149.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "全桥开关模块",
+          "count": 1
+        },
+        {
+          "name": "N1:N2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "clamp diodes": {
+    "component_box": [
+      305.0,
+      25.0,
+      336.0,
+      83.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Cp  \\nLkp  \\nLM",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Isolation": {
+    "component_box": [
+      684.0,
+      221.0,
+      758.0,
+      307.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "A/D",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "全桥开关模块": {
+    "component_box": [
+      178.0,
+      16.0,
+      331.0,
+      217.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Driver",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Diode",
+          "count": 1
+        },
+        {
+          "name": "二极管",
+          "count": 1
+        },
+        {
+          "name": "整流二极管",
+          "count": 1
+        },
+        {
+          "name": "二极管",
+          "count": 1
+        },
+        {
+          "name": "clamp diodes",
+          "count": 1
+        },
+        {
+          "name": "续流二极管",
+          "count": 1
+        },
+        {
+          "name": "anti-parallel diode",
+          "count": 1
+        },
+        {
+          "name": "Freewheeling diode",
+          "count": 1
+        },
+        {
+          "name": "Cp  \nLkp  \nLM",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PWM Generator": {
+    "component_box": [
+      294.0,
+      220.0,
+      397.0,
+      306.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Harmonic lookup table",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Driver",
+          "count": 1
+        },
+        {
+          "name": "Power estimation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "A/D": {
+    "component_box": [
+      576.0,
+      223.0,
+      648.0,
+      306.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Isolation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Harmonic lookup table",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "整流二极管": {
+    "component_box": [
+      91.0,
+      140.0,
+      111.0,
+      159.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "交流电源",
+          "count": 1
+        },
+        {
+          "name": "Cin",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Power estimation": {
+    "component_box": [
+      284.0,
+      343.0,
+      411.0,
+      414.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Harmonic lookup table",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "续流二极管": {
+    "component_box": [
+      239.0,
+      25.0,
+      271.0,
+      84.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Cp  \nLkp  \nLM",
+          "count": 1
+        },
+        {
+          "name": "+Vin",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Harmonic lookup table": {
+    "component_box": [
+      448.0,
+      222.0,
+      542.0,
+      305.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM Generator",
+          "count": 1
+        },
+        {
+          "name": "A/D",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Power estimation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

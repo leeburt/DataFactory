@@ -1,0 +1,107 @@
+{
+  "A  \nB": {
+    "component_box": [
+      235.0,
+      207.0,
+      270.0,
+      243.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Voltage Follower",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Current Follower",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "R1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Current Follower": {
+    "component_box": [
+      714.0,
+      168.0,
+      820.0,
+      231.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "B",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "αI_R",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "B": {
+    "component_box": [
+      600.0,
+      207.0,
+      636.0,
+      243.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "R1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Voltage Follower",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "R2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Voltage Follower": {
+    "component_box": [
+      190.0,
+      13.0,
+      325.0,
+      134.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vi+",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "R/2 IR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

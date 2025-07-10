@@ -1,0 +1,205 @@
+{
+  "Delay": {
+    "component_box": [
+      794.0,
+      321.0,
+      934.0,
+      424.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Inverter",
+          "count": 1
+        },
+        {
+          "name": "Latch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Tunable Lowpass": {
+    "component_box": [
+      173.0,
+      215.0,
+      334.0,
+      376.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Passive Low Pass and Adder",
+          "count": 1
+        },
+        {
+          "name": "DAC1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Latch": {
+    "component_box": [
+      594.0,
+      276.0,
+      738.0,
+      409.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Comp",
+          "count": 1
+        },
+        {
+          "name": "Delay",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Inverter": {
+    "component_box": [
+      828.0,
+      186.0,
+      889.0,
+      255.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK=2.56GHz",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comp",
+          "count": 1
+        },
+        {
+          "name": "Latch",
+          "count": 1
+        },
+        {
+          "name": "Delay",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comp": {
+    "component_box": [
+      392.0,
+      32.0,
+      537.0,
+      165.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Passive Low Pass and Adder",
+          "count": 1
+        },
+        {
+          "name": "CLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Latch",
+          "count": 1
+        },
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Buffer": {
+    "component_box": [
+      93.0,
+      563.0,
+      132.0,
+      623.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Resistor string",
+          "count": 1
+        },
+        {
+          "name": "DAC2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DAC1": {
+    "component_box": [
+      361.0,
+      428.0,
+      572.0,
+      558.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Tunable Lowpass",
+          "count": 1
+        },
+        {
+          "name": "Buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Passive Low Pass and Adder": {
+    "component_box": [
+      163.0,
+      11.0,
+      337.0,
+      185.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vi",
+          "count": 1
+        },
+        {
+          "name": "Comp",
+          "count": 1
+        },
+        {
+          "name": "Tunable Lowpass",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

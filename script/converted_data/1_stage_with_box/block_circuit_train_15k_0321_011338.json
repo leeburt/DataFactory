@@ -1,0 +1,221 @@
+{
+  "CDR/DEMUX": {
+    "component_box": [
+      1027.0,
+      137.0,
+      1133.0,
+      275.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LA",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "MUX/clk-synth\nMOD driver\nLD\nMOD": {
+    "component_box": [
+      0.0,
+      18.0,
+      365.0,
+      381.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Optical Amp",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LA": {
+    "component_box": [
+      892.0,
+      144.0,
+      975.0,
+      267.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TIA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CDR/DEMUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MOD Drive": {
+    "component_box": [
+      193.0,
+      220.0,
+      297.0,
+      343.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MUX/PRBS synth",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MOD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MOD": {
+    "component_box": [
+      245.0,
+      78.0,
+      349.0,
+      201.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MOD Drive",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Optical Amp",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "LD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "TIA": {
+    "component_box": [
+      765.0,
+      141.0,
+      845.0,
+      264.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MUX/PRBS synth": {
+    "component_box": [
+      44.0,
+      209.0,
+      151.0,
+      348.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "MOD Drive",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PD": {
+    "component_box": [
+      663.0,
+      52.0,
+      756.0,
+      129.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Optical Amp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TIA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Optical Amp": {
+    "component_box": [
+      431.0,
+      78.0,
+      568.0,
+      207.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MOD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LD": {
+    "component_box": [
+      102.0,
+      81.0,
+      199.0,
+      156.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "MOD",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

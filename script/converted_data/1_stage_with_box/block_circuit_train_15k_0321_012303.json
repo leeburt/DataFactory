@@ -1,0 +1,196 @@
+{
+  "Op Amp": {
+    "component_box": [
+      501.0,
+      1093.0,
+      647.0,
+      1236.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "Switched-cap input network",
+          "count": 1
+        },
+        {
+          "name": "Op Amp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MDAC": {
+    "component_box": [
+      1109.0,
+      278.0,
+      1256.0,
+      422.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Differential adder",
+          "count": 1
+        },
+        {
+          "name": "16 levels ADC DWA",
+          "count": 1
+        },
+        {
+          "name": "vrefp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "12 levels ADC": {
+    "component_box": [
+      1366.0,
+      1051.0,
+      1541.0,
+      1310.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Op Amp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Noise cancellation  \nDecimation  \nSerial interface",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Noise cancellation  \nDecimation  \nSerial interface": {
+    "component_box": [
+      1596.0,
+      562.0,
+      1885.0,
+      963.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "16 levels ADC DWA",
+          "count": 1
+        },
+        {
+          "name": "12 levels ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "16 levels ADC DWA": {
+    "component_box": [
+      1324.0,
+      229.0,
+      1555.0,
+      492.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MDAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Noise cancellation  Decimation  Serial interface",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Differential adder": {
+    "component_box": [
+      499.0,
+      276.0,
+      644.0,
+      420.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DAC (vrefp)",
+          "count": 1
+        },
+        {
+          "name": "vinp",
+          "count": 1
+        },
+        {
+          "name": "Op Amp",
+          "count": 1
+        },
+        {
+          "name": "Op Amp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Delta-Sigma Modulator": {
+    "component_box": [
+      9.0,
+      563.0,
+      1205.0,
+      1146.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "vinp",
+          "count": 1
+        },
+        {
+          "name": "vinn",
+          "count": 1
+        },
+        {
+          "name": "vrefp",
+          "count": 1
+        },
+        {
+          "name": "vrefn",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "12 levels ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

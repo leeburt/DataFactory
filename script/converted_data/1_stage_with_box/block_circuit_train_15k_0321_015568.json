@@ -1,0 +1,79 @@
+{
+  "r_D": {
+    "component_box": [
+      233.0,
+      104.0,
+      252.0,
+      144.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "C_SC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LDO",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "S3",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RL": {
+    "component_box": [
+      687.0,
+      158.0,
+      718.0,
+      227.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LDO",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LDO": {
+    "component_box": [
+      472.0,
+      21.0,
+      587.0,
+      163.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RL",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

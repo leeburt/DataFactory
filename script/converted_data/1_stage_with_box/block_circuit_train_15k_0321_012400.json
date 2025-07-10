@@ -1,0 +1,203 @@
+{
+  "Meas. Volt.": {
+    "component_box": [
+      501.0,
+      407.0,
+      665.0,
+      470.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AC-DC Rectifier, DC Link & DC-AC Inverter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Analog Circuitry",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator Outputs RIN, TIN & UIN": {
+    "component_box": [
+      281.0,
+      469.0,
+      494.0,
+      604.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Digital Logic Block",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Analog Circuitry",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Ref. Volt., Sine & Cosine Signals": {
+    "component_box": [
+      474.0,
+      593.0,
+      688.0,
+      709.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Analog Circuitry",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MiniDSP Controller Card with TMS320F240": {
+    "component_box": [
+      83.0,
+      698.0,
+      682.0,
+      791.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Analog Circuitry",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Logic Block",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital Logic Block\nAnalog Circuitry": {
+    "component_box": [
+      202.0,
+      371.0,
+      719.0,
+      871.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MiniDSP Controller Card with TMS320F240",
+          "count": 1
+        },
+        {
+          "name": "Ref. Volt., Sine & Cosine Signals",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "AC-DC Rectifier, DC Link & DC-AC Inverter",
+          "count": 1
+        },
+        {
+          "name": "Meas. Volt.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital Logic Block": {
+    "component_box": [
+      88.0,
+      339.0,
+      289.0,
+      602.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator Outputs RIN, TIN & UIN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MiniDSP Controller Card with TMS320F240",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "AC-DC Rectifier, DC Link & DC-AC Inverter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Analog Circuitry": {
+    "component_box": [
+      487.0,
+      466.0,
+      680.0,
+      600.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Meas. Volt.",
+          "count": 1
+        },
+        {
+          "name": "Ref. Volt., Sine & Cosine Signals",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator Outputs RIN, TIN & UIN",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "AC-DC Rectifier, DC Link & DC-AC Inverter": {
+    "component_box": [
+      74.0,
+      16.0,
+      302.0,
+      327.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital Logic Block",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Meas. Volt.",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "RL Loads",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

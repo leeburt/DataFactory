@@ -1,0 +1,98 @@
+{
+  "H(z)": {
+    "component_box": [
+      219.0,
+      13.0,
+      357.0,
+      108.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      117.0,
+      37.0,
+      164.0,
+      84.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "X",
+          "count": 1
+        },
+        {
+          "name": "β(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Quantizer": {
+    "component_box": [
+      416.0,
+      12.0,
+      601.0,
+      108.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Y",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "β(z)": {
+    "component_box": [
+      287.0,
+      163.0,
+      399.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

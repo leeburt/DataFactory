@@ -1,0 +1,157 @@
+{
+  "MUX": {
+    "component_box": [
+      451.0,
+      96.0,
+      545.0,
+      170.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MLX",
+          "count": 1
+        },
+        {
+          "name": "Unit Pulse Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D",
+          "count": 1
+        },
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Zero Crossing Detector": {
+    "component_box": [
+      178.0,
+      341.0,
+      322.0,
+      441.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Unit Pulse Generator",
+          "count": 1
+        },
+        {
+          "name": "OCP",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "COMP",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Unit Pulse Generator": {
+    "component_box": [
+      438.0,
+      341.0,
+      622.0,
+      439.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Zero Crossing Detector",
+          "count": 1
+        },
+        {
+          "name": "SMC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MLX",
+          "count": 1
+        },
+        {
+          "name": "MUX",
+          "count": 1
+        },
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MLX": {
+    "component_box": [
+      305.0,
+      95.0,
+      399.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "COMP",
+          "count": 1
+        },
+        {
+          "name": "Unit Pulse Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        },
+        {
+          "name": "G",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "COMP": {
+    "component_box": [
+      119.0,
+      76.0,
+      224.0,
+      184.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VT_measured",
+          "count": 1
+        },
+        {
+          "name": "VT_desired",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        },
+        {
+          "name": "Zero Crossing Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

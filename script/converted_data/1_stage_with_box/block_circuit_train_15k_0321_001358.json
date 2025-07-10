@@ -1,0 +1,71 @@
+{
+  "LNA/VGA": {
+    "component_box": [
+      501.0,
+      48.0,
+      603.0,
+      175.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RF in",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multi-channel Selector": {
+    "component_box": [
+      799.0,
+      39.0,
+      962.0,
+      186.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multi-stream out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      599.0,
+      38.0,
+      760.0,
+      185.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LNA/VGA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multi-channel Selector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

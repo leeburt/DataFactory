@@ -1,0 +1,144 @@
+{
+  "SAFF": {
+    "component_box": [
+      242.0,
+      253.0,
+      347.0,
+      357.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SAFF/2",
+          "count": 1
+        },
+        {
+          "name": "Reset counter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TSPC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SAFF/2": {
+    "component_box": [
+      109.0,
+      253.0,
+      214.0,
+      357.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "SAFF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TSPC": {
+    "component_box": [
+      387.0,
+      253.0,
+      497.0,
+      357.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SAFF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "XOR",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "XOR",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "64-bit adder": {
+    "component_box": [
+      481.0,
+      40.0,
+      612.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reset counter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "XOR": {
+    "component_box": [
+      551.0,
+      265.0,
+      648.0,
+      345.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TSPC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Reset counter": {
+    "component_box": [
+      310.0,
+      42.0,
+      440.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "64-bit adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

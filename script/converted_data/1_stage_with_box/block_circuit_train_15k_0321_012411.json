@@ -1,0 +1,188 @@
+{
+  "Digital Phase Comparator": {
+    "component_box": [
+      762.0,
+      88.0,
+      784.0,
+      111.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Control Pulse",
+          "count": 1
+        },
+        {
+          "name": "Sub-Tracking Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Capstan Phase Control Output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Reference Signal": {
+    "component_box": [
+      326.0,
+      89.0,
+      348.0,
+      111.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Main Tracking",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PB C-sync.": {
+    "component_box": [
+      115.0,
+      88.0,
+      138.0,
+      111.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Noise-bar Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Main Tracking": {
+    "component_box": [
+      270.0,
+      189.0,
+      409.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference Signal",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sub-Tracking Controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Noise Position Calibrator": {
+    "component_box": [
+      252.0,
+      318.0,
+      411.0,
+      419.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Noise-bar Detector",
+          "count": 1
+        },
+        {
+          "name": "Head Switch Signal",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Accumulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Noise-bar Detector": {
+    "component_box": [
+      45.0,
+      191.0,
+      215.0,
+      269.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PB C-sync.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Noise Position Calibrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sub-Tracking Controller": {
+    "component_box": [
+      452.0,
+      190.0,
+      646.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Main Tracking",
+          "count": 1
+        },
+        {
+          "name": "Accumulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Phase Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Accumulator": {
+    "component_box": [
+      453.0,
+      318.0,
+      646.0,
+      420.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Noise Position Calibrator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sub-Tracking Controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

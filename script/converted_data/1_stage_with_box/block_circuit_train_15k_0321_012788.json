@@ -1,0 +1,356 @@
+{
+  "Current Source": {
+    "component_box": [
+      162.0,
+      50.0,
+      181.0,
+      69.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CP",
+          "count": 1
+        },
+        {
+          "name": "D/VCO",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "FF-PD": {
+    "component_box": [
+      486.0,
+      91.0,
+      539.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "f_REF",
+          "count": 1
+        },
+        {
+          "name": "/N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LPF (no 1/s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LPF (no 1/s)": {
+    "component_box": [
+      559.0,
+      91.0,
+      623.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FF-PD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Notch Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ": {
+    "component_box": [
+      279.0,
+      174.0,
+      303.0,
+      198.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DSM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "/N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DSM": {
+    "component_box": [
+      222.0,
+      197.0,
+      266.0,
+      224.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FSM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "/N": {
+    "component_box": [
+      205.0,
+      259.0,
+      243.0,
+      289.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "D/VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        },
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      719.0,
+      86.0,
+      784.0,
+      153.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Notch Filter",
+          "count": 1
+        },
+        {
+          "name": "AFC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "/N",
+          "count": 1
+        },
+        {
+          "name": "AFC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FSM": {
+    "component_box": [
+      143.0,
+      178.0,
+      196.0,
+      221.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DSM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D/VCO": {
+    "component_box": [
+      293.0,
+      75.0,
+      360.0,
+      142.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CP",
+          "count": 1
+        },
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "/N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "AFC": {
+    "component_box": [
+      686.0,
+      179.0,
+      732.0,
+      216.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Notch Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD": {
+    "component_box": [
+      72.0,
+      87.0,
+      124.0,
+      131.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "f_REF",
+          "count": 1
+        },
+        {
+          "name": "/N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Notch Filter": {
+    "component_box": [
+      643.0,
+      91.0,
+      696.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LPF (no 1/s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BBPD": {
+    "component_box": [
+      70.0,
+      178.0,
+      124.0,
+      222.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "f_REF",
+          "count": 1
+        },
+        {
+          "name": "/N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FSM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP": {
+    "component_box": [
+      146.0,
+      75.0,
+      196.0,
+      140.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D/VCO",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Current Source",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

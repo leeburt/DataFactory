@@ -1,0 +1,56 @@
+{
+  "S/H": {
+    "component_box": [
+      94.0,
+      158.0,
+      245.0,
+      248.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vi",
+          "count": 1
+        },
+        {
+          "name": "Coarse ADC & control circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_O,S/H",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Coarse ADC & control circuit": {
+    "component_box": [
+      93.0,
+      19.0,
+      245.0,
+      110.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vi",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "DO, S/H=(p,m)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

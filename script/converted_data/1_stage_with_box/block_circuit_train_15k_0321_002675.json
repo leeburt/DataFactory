@@ -1,0 +1,262 @@
+{
+  "Duty Cycle Calculation Eq. (9)": {
+    "component_box": [
+      553.0,
+      250.0,
+      680.0,
+      330.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Eqs. (21), (31)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Modulation 1",
+          "count": 1
+        },
+        {
+          "name": "Modulation 2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Modulation 1  \nModulation 2": {
+    "component_box": [
+      372.0,
+      237.0,
+      502.0,
+      292.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Gate drives",
+          "count": 1
+        },
+        {
+          "name": "Gate drives",
+          "count": 1
+        },
+        {
+          "name": "Eqs. (16), (26)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Duty Cycle Calculation Eq. (9)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Eqs. (16), (26)": {
+    "component_box": [
+      365.0,
+      151.0,
+      505.0,
+      216.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference Computation Eq. (12)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Eqs. (21), (31)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Reference Computation Eq. (12)": {
+    "component_box": [
+      176.0,
+      142.0,
+      299.0,
+      223.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "0.5",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Eqs. (16), (26)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Modulation 2": {
+    "component_box": [
+      372.0,
+      292.0,
+      503.0,
+      347.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Gate drives",
+          "count": 1
+        },
+        {
+          "name": "Duty Cycle Calculation Eq. (9)",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Eqs. (21), (31)": {
+    "component_box": [
+      549.0,
+      151.0,
+      688.0,
+      216.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Disturbance Observer",
+          "count": 1
+        },
+        {
+          "name": "Eqs. (16), (26)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Duty Cycle Calculation Eq. (9)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FDBC in Fig. 2": {
+    "component_box": [
+      31.0,
+      249.0,
+      178.0,
+      336.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Gate drives",
+          "count": 1
+        },
+        {
+          "name": "Gate drives",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "0.5": {
+    "component_box": [
+      105.0,
+      154.0,
+      163.0,
+      209.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summation",
+          "count": 1
+        },
+        {
+          "name": "Summation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Reference Computation Eq. (12)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Disturbance Observer": {
+    "component_box": [
+      366.0,
+      2.0,
+      546.0,
+      116.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Coordinate Transformation Eqs. (6a)-(6d)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Eqs. (21), (31)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Coordinate Transformation Eqs. (6a)-(6d)": {
+    "component_box": [
+      124.0,
+      2.0,
+      284.0,
+      117.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_L1",
+          "count": 1
+        },
+        {
+          "name": "v_C1",
+          "count": 1
+        },
+        {
+          "name": "i_L2",
+          "count": 1
+        },
+        {
+          "name": "v_C2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Disturbance Observer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

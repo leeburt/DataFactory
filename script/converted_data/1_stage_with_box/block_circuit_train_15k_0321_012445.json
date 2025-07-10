@@ -1,0 +1,529 @@
+{
+  "HV-Start": {
+    "component_box": [
+      332.0,
+      246.0,
+      386.0,
+      273.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DRAIN",
+          "count": 1
+        },
+        {
+          "name": "HV NMOS",
+          "count": 1
+        },
+        {
+          "name": "UVLO",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "D12": {
+    "component_box": [
+      80.0,
+      172.0,
+      113.0,
+      200.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Cin",
+          "count": 1
+        },
+        {
+          "name": "HVDD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "EA": {
+    "component_box": [
+      327.0,
+      163.0,
+      390.0,
+      241.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "HV-Start",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWM Comp",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D11": {
+    "component_box": [
+      75.0,
+      116.0,
+      103.0,
+      142.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "D13",
+          "count": 1
+        },
+        {
+          "name": "L0",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SR latch": {
+    "component_box": [
+      616.0,
+      244.0,
+      666.0,
+      319.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM Comp",
+          "count": 1
+        },
+        {
+          "name": "Frequency Control",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "S/H": {
+    "component_box": [
+      251.0,
+      121.0,
+      300.0,
+      146.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FB",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "EA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "GND1": {
+    "component_box": [
+      553.0,
+      90.0,
+      581.0,
+      112.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R_CS",
+          "count": 1
+        },
+        {
+          "name": "CS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DRAIN": {
+    "component_box": [
+      225.0,
+      246.0,
+      253.0,
+      268.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "L0",
+          "count": 1
+        },
+        {
+          "name": "HV-Start",
+          "count": 1
+        },
+        {
+          "name": "HV NMOS",
+          "count": 1
+        },
+        {
+          "name": "Cin",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PWM": {
+    "component_box": [
+      23.0,
+      175.0,
+      55.0,
+      208.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "D11",
+          "count": 1
+        },
+        {
+          "name": "D12",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "GATE": {
+    "component_box": [
+      345.0,
+      90.0,
+      373.0,
+      113.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DRIVE",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "MP",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DRIVE": {
+    "component_box": [
+      346.0,
+      117.0,
+      370.0,
+      141.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "GATE",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "HV-Start",
+          "count": 1
+        },
+        {
+          "name": "HV NMOS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "D14": {
+    "component_box": [
+      137.0,
+      169.0,
+      170.0,
+      198.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "DRAIN",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "UVLO": {
+    "component_box": [
+      331.0,
+      313.0,
+      386.0,
+      340.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "HVDD",
+          "count": 1
+        },
+        {
+          "name": "VDD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PWM Comp": {
+    "component_box": [
+      487.0,
+      163.0,
+      569.0,
+      248.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "EA",
+          "count": 1
+        },
+        {
+          "name": "CS",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SR latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FB": {
+    "component_box": [
+      261.0,
+      91.0,
+      289.0,
+      113.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "Resistor Divider",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CS": {
+    "component_box": [
+      438.0,
+      90.0,
+      466.0,
+      113.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "MP",
+          "count": 1
+        },
+        {
+          "name": "R_CS",
+          "count": 1
+        },
+        {
+          "name": "PWM Comp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "D1": {
+    "component_box": [
+      675.0,
+      147.0,
+      695.0,
+      167.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "L0",
+          "count": 1
+        },
+        {
+          "name": "Cout",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Frequency Control": {
+    "component_box": [
+      495.0,
+      274.0,
+      592.0,
+      322.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM Comp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SR latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "HV NMOS": {
+    "component_box": [
+      225.0,
+      277.0,
+      253.0,
+      303.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "HV-Start",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "DRAIN",
+          "count": 1
+        },
+        {
+          "name": "HVDD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Bridge rectifier": {
+    "component_box": [
+      35.0,
+      102.0,
+      189.0,
+      239.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "L0",
+          "count": 1
+        },
+        {
+          "name": "MP",
+          "count": 1
+        },
+        {
+          "name": "C_in",
+          "count": 1
+        },
+        {
+          "name": "HVDD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D13": {
+    "component_box": [
+      144.0,
+      115.0,
+      170.0,
+      142.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "L0",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

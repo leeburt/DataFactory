@@ -1,0 +1,299 @@
+{
+  "2280S-60-3": {
+    "component_box": [
+      14.0,
+      290.0,
+      198.0,
+      393.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Power Regulator",
+          "count": 1
+        },
+        {
+          "name": "Power Regulator",
+          "count": 1
+        },
+        {
+          "name": "Power Regulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SRS DS360": {
+    "component_box": [
+      19.0,
+      145.0,
+      202.0,
+      244.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "V to I Circuit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Anritsu MG3642A\\nSRS DS360\\n2280S-60-3": {
+    "component_box": [
+      9.0,
+      9.0,
+      227.0,
+      394.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DUT PCB",
+          "count": 1
+        },
+        {
+          "name": "V to I Circuit",
+          "count": 1
+        },
+        {
+          "name": "Power Regulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Power Regulator": {
+    "component_box": [
+      500.0,
+      288.0,
+      573.0,
+      349.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2280S-60-3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "V to I Circuit": {
+    "component_box": [
+      242.0,
+      144.0,
+      300.0,
+      235.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SRS DS360",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DUT",
+          "count": 1
+        },
+        {
+          "name": "DUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Keysight DSAV134A": {
+    "component_box": [
+      645.0,
+      11.0,
+      857.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DUT PCB",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Matlab": {
+    "component_box": [
+      687.0,
+      315.0,
+      861.0,
+      392.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Agilent 16902B",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Keysight DSAV134A\nAgilent 16902B\nMatlab": {
+    "component_box": [
+      590.0,
+      0.0,
+      868.0,
+      399.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DUT",
+          "count": 1
+        },
+        {
+          "name": "DUT",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "DUT": {
+    "component_box": [
+      321.0,
+      55.0,
+      573.0,
+      272.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Anritsu MG3642A",
+          "count": 1
+        },
+        {
+          "name": "V to I Circuit",
+          "count": 1
+        },
+        {
+          "name": "Power Regulator",
+          "count": 1
+        },
+        {
+          "name": "Power Regulator",
+          "count": 1
+        },
+        {
+          "name": "Power Regulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Keysight DSAV134A",
+          "count": 1
+        },
+        {
+          "name": "Agilent 16902B",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DUT PCB": {
+    "component_box": [
+      217.0,
+      13.0,
+      594.0,
+      390.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Anritsu MG3642A",
+          "count": 1
+        },
+        {
+          "name": "SRS DS360",
+          "count": 1
+        },
+        {
+          "name": "2280S-60-3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Keysight DSAV134A",
+          "count": 1
+        },
+        {
+          "name": "Agilent 16902B",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Agilent 16902B": {
+    "component_box": [
+      698.0,
+      154.0,
+      858.0,
+      270.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DUT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Matlab",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Anritsu MG3642A": {
+    "component_box": [
+      18.0,
+      12.0,
+      206.0,
+      138.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DUT PCB",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

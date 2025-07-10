@@ -1,0 +1,56 @@
+{
+  "10-bit 30MHz Pipelined ADC": {
+    "component_box": [
+      101.0,
+      39.0,
+      268.0,
+      109.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Digital MUX",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "AIN",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Digital MUX": {
+    "component_box": [
+      346.0,
+      39.0,
+      405.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "10-bit 30MHz Pipelined ADC",
+          "count": 1
+        },
+        {
+          "name": "10-bit 30MHz Pipelined ADC",
+          "count": 1
+        },
+        {
+          "name": "Fs",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_out<9:0>",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

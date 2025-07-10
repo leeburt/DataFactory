@@ -1,0 +1,270 @@
+{
+  "Signal Gen.": {
+    "component_box": [
+      7.0,
+      236.0,
+      114.0,
+      315.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Filter",
+          "count": 1
+        },
+        {
+          "name": "Clock Gen.",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Coaxial connector": {
+    "component_box": [
+      286.0,
+      122.0,
+      337.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Balun",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC 0",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock Gen.": {
+    "component_box": [
+      6.0,
+      367.0,
+      122.0,
+      448.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MUX": {
+    "component_box": [
+      654.0,
+      109.0,
+      698.0,
+      273.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC 0",
+          "count": 1
+        },
+        {
+          "name": "ADC1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "X2(t)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Filter": {
+    "component_box": [
+      8.0,
+      156.0,
+      114.0,
+      204.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Signal Gen.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Balun",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Balun": {
+    "component_box": [
+      127.0,
+      66.0,
+      374.0,
+      288.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Power Splitter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "180°": {
+    "component_box": [
+      444.0,
+      361.0,
+      524.0,
+      414.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "ADC1",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Directional coupler": {
+    "component_box": [
+      286.0,
+      179.0,
+      338.0,
+      226.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "ADC 0",
+          "count": 1
+        },
+        {
+          "name": "ADC1",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Coaxial connector",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ADC 0": {
+    "component_box": [
+      490.0,
+      108.0,
+      627.0,
+      187.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Balun",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ADC1": {
+    "component_box": [
+      491.0,
+      192.0,
+      627.0,
+      271.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power Splitter",
+          "count": 1
+        },
+        {
+          "name": "180°",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      465.0,
+      79.0,
+      724.0,
+      314.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Coaxial connector",
+          "count": 1
+        },
+        {
+          "name": "180°",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

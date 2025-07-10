@@ -1,0 +1,261 @@
+{
+  "Transmission gate": {
+    "component_box": [
+      401.0,
+      83.0,
+      472.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CMP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SAR Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SAR Logic": {
+    "component_box": [
+      552.0,
+      39.0,
+      668.0,
+      199.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Transmission gate",
+          "count": 1
+        },
+        {
+          "name": "Control Logic",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "CDAC": {
+    "component_box": [
+      187.0,
+      83.0,
+      276.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "SAR Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CMP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CLK": {
+    "component_box": [
+      133.0,
+      199.0,
+      222.0,
+      246.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "Control Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D触发器": {
+    "component_box": [
+      233.0,
+      480.0,
+      298.0,
+      563.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK",
+          "count": 1
+        },
+        {
+          "name": "RST/Ready",
+          "count": 1
+        },
+        {
+          "name": "D触发器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D Flip-Flop",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CMP": {
+    "component_box": [
+      284.0,
+      74.0,
+      361.0,
+      160.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CDAC",
+          "count": 1
+        },
+        {
+          "name": "Control Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Transmission gate",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D Flip-Flop": {
+    "component_box": [
+      451.0,
+      480.0,
+      516.0,
+      563.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "D Flip-Flop",
+          "count": 1
+        },
+        {
+          "name": "Control Logic",
+          "count": 1
+        },
+        {
+          "name": "RSTd Ready",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "S/H": {
+    "component_box": [
+      61.0,
+      87.0,
+      151.0,
+      147.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "CLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CDAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D flip-flop": {
+    "component_box": [
+      225.0,
+      364.0,
+      290.0,
+      449.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CMP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SAR Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Control Logic": {
+    "component_box": [
+      281.0,
+      199.0,
+      463.0,
+      246.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK",
+          "count": 1
+        },
+        {
+          "name": "CMP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SAR Logic",
+          "count": 1
+        },
+        {
+          "name": "OR gate",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

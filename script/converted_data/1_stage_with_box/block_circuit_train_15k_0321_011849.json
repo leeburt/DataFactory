@@ -1,0 +1,270 @@
+{
+  "DPLL接口": {
+    "component_box": [
+      403.0,
+      420.0,
+      428.0,
+      436.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "3D stacked dies",
+          "count": 1
+        },
+        {
+          "name": "Performance monitor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DPLL": {
+    "component_box": [
+      444.0,
+      407.0,
+      546.0,
+      448.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DPLL接口",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Performance monitor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Voltage-controlled delay line": {
+    "component_box": [
+      17.0,
+      38.0,
+      422.0,
+      145.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage Regulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DPLL",
+          "count": 1
+        },
+        {
+          "name": "DPLL",
+          "count": 1
+        },
+        {
+          "name": "DPLL",
+          "count": 1
+        },
+        {
+          "name": "DPLL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CPMs": {
+    "component_box": [
+      699.0,
+      26.0,
+      814.0,
+      88.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DPLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DPLL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Level Shifter": {
+    "component_box": [
+      404.0,
+      192.0,
+      428.0,
+      210.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "3D stacked dies",
+          "count": 1
+        },
+        {
+          "name": "DPLL",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VCO array": {
+    "component_box": [
+      20.0,
+      152.0,
+      367.0,
+      243.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage Regulator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Level Shifter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Voltage Regulator": {
+    "component_box": [
+      100.0,
+      517.0,
+      272.0,
+      591.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Performance monitor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3D stacked dies",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Voltage-controlled delay element": {
+    "component_box": [
+      117.0,
+      380.0,
+      356.0,
+      471.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage Regulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DPLL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "3D stacked dies": {
+    "component_box": [
+      20.0,
+      263.0,
+      423.0,
+      365.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage Regulator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "DPLL",
+          "count": 1
+        },
+        {
+          "name": "Level Shifter",
+          "count": 1
+        },
+        {
+          "name": "DPLL",
+          "count": 1
+        },
+        {
+          "name": "DPLL接口",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Performance monitor": {
+    "component_box": [
+      606.0,
+      273.0,
+      792.0,
+      346.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DPLL",
+          "count": 1
+        },
+        {
+          "name": "DPLL",
+          "count": 1
+        },
+        {
+          "name": "DPLL",
+          "count": 1
+        },
+        {
+          "name": "DPLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DPLL",
+          "count": 1
+        },
+        {
+          "name": "Voltage Regulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

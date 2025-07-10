@@ -1,0 +1,155 @@
+{
+  "Integrator": {
+    "component_box": [
+      310.0,
+      656.0,
+      412.0,
+      746.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Integrator",
+          "count": 1
+        },
+        {
+          "name": "OTA",
+          "count": 1
+        },
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        },
+        {
+          "name": "Signal in",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Voltage-controlled current source": {
+    "component_box": [
+      561.0,
+      127.0,
+      605.0,
+      179.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      714.0,
+      273.0,
+      803.0,
+      374.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Op amp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Voltage-controlled current source",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Operational amplifier": {
+    "component_box": [
+      625.0,
+      660.0,
+      728.0,
+      748.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "OTA",
+          "count": 1
+        },
+        {
+          "name": "Signal out",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Op amp": {
+    "component_box": [
+      557.0,
+      244.0,
+      645.0,
+      344.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Voltage-controlled current source",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "Phase comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "OTA": {
+    "component_box": [
+      522.0,
+      658.0,
+      625.0,
+      749.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "OTA",
+          "count": 1
+        },
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

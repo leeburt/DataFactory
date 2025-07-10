@@ -1,0 +1,442 @@
+{
+  "Lock Detector": {
+    "component_box": [
+      1386.0,
+      251.0,
+      1528.0,
+      337.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Decoder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "State Machine",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Watchdog": {
+    "component_box": [
+      1378.0,
+      47.0,
+      1536.0,
+      107.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Memory",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "State Machine",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      1026.0,
+      159.0,
+      1143.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Charge Discharge",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Memory",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "State Machine": {
+    "component_box": [
+      1591.0,
+      134.0,
+      1734.0,
+      224.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Decoder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "10-Bit Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "10-Bit Counter": {
+    "component_box": [
+      1596.0,
+      264.0,
+      1731.0,
+      352.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "State Machine",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "State Machine",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Decoder": {
+    "component_box": [
+      1388.0,
+      151.0,
+      1526.0,
+      208.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Memory",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Watchdog",
+          "count": 1
+        },
+        {
+          "name": "Lock Detector",
+          "count": 1
+        },
+        {
+          "name": "State Machine",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Memory": {
+    "component_box": [
+      1178.0,
+      149.0,
+      1320.0,
+      210.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Charge Discharge",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Decoder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      599.0,
+      43.0,
+      684.0,
+      129.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Buffer Amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP": {
+    "component_box": [
+      447.0,
+      376.0,
+      557.0,
+      434.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "REFDIV": {
+    "component_box": [
+      148.0,
+      393.0,
+      294.0,
+      451.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sampler": {
+    "component_box": [
+      855.0,
+      268.0,
+      991.0,
+      328.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Buffer Amplifier",
+          "count": 1
+        },
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD": {
+    "component_box": [
+      317.0,
+      376.0,
+      426.0,
+      434.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "REFDIV",
+          "count": 1
+        },
+        {
+          "name": "FBDIV",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "charge discharge  \nMemory  \nLock Detector  \nWatchdog  \nDecoder  \nState Machine  \n10-Bit Counter": {
+    "component_box": [
+      1160.0,
+      30.0,
+      1790.0,
+      368.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Charge Discharge",
+          "count": 1
+        },
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "Sampler",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Buffer Amplifier": {
+    "component_box": [
+      704.0,
+      56.0,
+      764.0,
+      114.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sampler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FBDIV": {
+    "component_box": [
+      437.0,
+      275.0,
+      566.0,
+      332.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Charge Discharge": {
+    "component_box": [
+      984.0,
+      55.0,
+      1143.0,
+      149.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Buffer Amplifier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LF": {
+    "component_box": [
+      468.0,
+      55.0,
+      576.0,
+      115.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SSPD": {
+    "component_box": [
+      208.0,
+      56.0,
+      314.0,
+      114.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CP",
+          "count": 1
+        },
+        {
+          "name": "Sampler",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

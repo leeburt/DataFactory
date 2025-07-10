@@ -1,0 +1,192 @@
+{
+  "Rectifier": {
+    "component_box": [
+      414.0,
+      92.0,
+      462.0,
+      181.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DC Transformer",
+          "count": 1
+        },
+        {
+          "name": "Low-Voltage Bus",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DG_m": {
+    "component_box": [
+      41.0,
+      31.0,
+      129.0,
+      68.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Medium-Voltage Bus",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ESS_m": {
+    "component_box": [
+      21.0,
+      267.0,
+      128.0,
+      312.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "BDDC_m",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ESS_l": {
+    "component_box": [
+      695.0,
+      267.0,
+      801.0,
+      312.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "BDDC_l",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DC Transformer": {
+    "component_box": [
+      260.0,
+      69.0,
+      498.0,
+      240.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Medium-Voltage Bus",
+          "count": 1
+        },
+        {
+          "name": "Low-Voltage Bus",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "BDDC_l": {
+    "component_box": [
+      694.0,
+      194.0,
+      802.0,
+      246.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R_line,l",
+          "count": 1
+        },
+        {
+          "name": "ESS_l",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DC/AC Converter": {
+    "component_box": [
+      294.0,
+      92.0,
+      344.0,
+      181.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Medium-Voltage Bus",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DG_l": {
+    "component_box": [
+      557.0,
+      28.0,
+      645.0,
+      65.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Low-Voltage Bus",
+          "count": 1
+        },
+        {
+          "name": "DC Transformer",
+          "count": 1
+        },
+        {
+          "name": "Passive Load",
+          "count": 1
+        },
+        {
+          "name": "BDDC_l",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "BDDC_m": {
+    "component_box": [
+      21.0,
+      193.0,
+      129.0,
+      246.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "ESS_m",
+          "count": 1
+        },
+        {
+          "name": "Medium-Voltage Bus",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "9-Level ADC": {
+    "component_box": [
+      865.0,
+      39.0,
+      991.0,
+      126.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "a3 z⁻¹/(1–z⁻¹)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Decimation filter",
+          "count": 1
+        },
+        {
+          "name": "Selector (TNSDEM)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "9-Level SC-DAC": {
+    "component_box": [
+      432.0,
+      169.0,
+      547.0,
+      254.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Selector (TNSDEM)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Selector (TNSDEM)": {
+    "component_box": [
+      865.0,
+      282.0,
+      992.0,
+      367.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "9-Level ADC",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      374.0,
+      72.0,
+      399.0,
+      95.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "a1 z⁻¹/(1–z⁻¹)",
+          "count": 1
+        },
+        {
+          "name": "9-Level SC-DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "a2 z⁻¹/(1–z⁻¹)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Decimation filter": {
+    "component_box": [
+      1071.0,
+      39.0,
+      1198.0,
+      126.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "9-Level ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "a3 z⁻¹/(1–z⁻¹)": {
+    "component_box": [
+      676.0,
+      39.0,
+      792.0,
+      126.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "9-Level ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "a1 z⁻¹/(1–z⁻¹)": {
+    "component_box": [
+      189.0,
+      39.0,
+      304.0,
+      127.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "a2 z⁻¹/(1–z⁻¹)": {
+    "component_box": [
+      431.0,
+      39.0,
+      547.0,
+      126.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

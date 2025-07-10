@@ -1,0 +1,85 @@
+{
+  "Resonant gate drive": {
+    "component_box": [
+      547.0,
+      148.0,
+      754.0,
+      268.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "com",
+          "count": 1
+        },
+        {
+          "name": "VHF dc-dc converter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "com": {
+    "component_box": [
+      254.0,
+      133.0,
+      410.0,
+      290.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R4",
+          "count": 1
+        },
+        {
+          "name": "R3",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "Resonant gate drive",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VHF dc-dc converter": {
+    "component_box": [
+      786.0,
+      147.0,
+      1007.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Resonant gate drive",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Co",
+          "count": 1
+        },
+        {
+          "name": "RL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

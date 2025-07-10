@@ -1,0 +1,451 @@
+{
+  "VCO Quantizer": {
+    "component_box": [
+      491.0,
+      460.0,
+      524.0,
+      493.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Passive Integrator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Encoder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "(1 - a)a / (1 - (1 - a) z⁻¹)": {
+    "component_box": [
+      166.0,
+      441.0,
+      276.0,
+      509.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "g·z⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      711.0,
+      459.0,
+      745.0,
+      492.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "g·z⁻¹",
+          "count": 1
+        },
+        {
+          "name": "Q1\nQ2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_SAR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Passive Integrator": {
+    "component_box": [
+      90.0,
+      231.0,
+      378.0,
+      386.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "g·z⁻¹",
+          "count": 1
+        },
+        {
+          "name": "Kvco/s",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sample": {
+    "component_box": [
+      608.0,
+      649.0,
+      762.0,
+      687.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_OUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SAR Logic": {
+    "component_box": [
+      555.0,
+      76.0,
+      645.0,
+      136.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Encoder",
+          "count": 1
+        },
+        {
+          "name": "N-bit CDAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Inverter": {
+    "component_box": [
+      431.0,
+      276.0,
+      449.0,
+      298.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VCO Quantizer中的VCO_ring_oscillator（即VCO）",
+          "count": 1
+        },
+        {
+          "name": "VCO Quantizer中的VCO_ring_oscillator（即VCO）",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "1 − z⁻¹": {
+    "component_box": [
+      425.0,
+      648.0,
+      618.0,
+      687.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Q1\nQ2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "(1 - (1 - a) z⁻¹) / G_d",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Q1\nQ2": {
+    "component_box": [
+      416.0,
+      569.0,
+      450.0,
+      602.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "g·z⁻¹",
+          "count": 1
+        },
+        {
+          "name": "SAR Logic",
+          "count": 1
+        },
+        {
+          "name": "Kvco/s",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "1 - z⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Phase Quantizer": {
+    "component_box": [
+      492.0,
+      268.0,
+      582.0,
+      350.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO Quantizer中的VCO_ring_oscillator（即VCO）",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1 − z⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1 - z⁻¹": {
+    "component_box": [
+      479.0,
+      566.0,
+      549.0,
+      607.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Q1\nQ2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "(1 - (1 - a) z⁻¹) / G_d",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Kvco/s": {
+    "component_box": [
+      325.0,
+      553.0,
+      385.0,
+      615.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "(1 - a)a / (1 - (1 - a) z⁻¹)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Q1\nQ2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "KVCO/s": {
+    "component_box": [
+      191.0,
+      647.0,
+      431.0,
+      686.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Passive Integrator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Q1\nQ2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "(1 - (1 - a) z⁻¹) / G_d": {
+    "component_box": [
+      606.0,
+      553.0,
+      717.0,
+      616.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1 - z⁻¹",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "g·z⁻¹": {
+    "component_box": [
+      325.0,
+      456.0,
+      391.0,
+      496.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "(1 - a)a / (1 - (1 - a) z⁻¹)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO_ring_oscillator": {
+    "component_box": [
+      393.0,
+      268.0,
+      488.0,
+      351.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Passive Integrator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Phase Quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      414.0,
+      47.0,
+      512.0,
+      165.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SAR Logic",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "N-bit CDAC",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        },
+        {
+          "name": "SAR Logic",
+          "count": 1
+        },
+        {
+          "name": "VCO Quantizer",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Encoder": {
+    "component_box": [
+      705.0,
+      65.0,
+      760.0,
+      343.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SAR Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Dout",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

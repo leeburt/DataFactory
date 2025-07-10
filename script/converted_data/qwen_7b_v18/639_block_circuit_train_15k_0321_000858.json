@@ -1,0 +1,138 @@
+{
+  "MEMORY ARRAY": {
+    "component_box": [
+      798.0,
+      160.0,
+      935.0,
+      253.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SEQUENCER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DATA ENCODER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DATA ENCODER": {
+    "component_box": [
+      599.0,
+      376.0,
+      737.0,
+      470.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MEMORY ARRAY",
+          "count": 1
+        },
+        {
+          "name": "CLOCK EXTRACTOR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DATA MODULATOR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CLOCK EXTRACTOR": {
+    "component_box": [
+      400.0,
+      10.0,
+      537.0,
+      102.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "SEQUENCER",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "FULL WAVE RECTIFIER",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SEQUENCER": {
+    "component_box": [
+      599.0,
+      160.0,
+      737.0,
+      253.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLOCK EXTRACTOR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MEMORY ARRAY",
+          "count": 1
+        },
+        {
+          "name": "DATA ENCODER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FULL WAVE RECTIFIER": {
+    "component_box": [
+      288.0,
+      159.0,
+      425.0,
+      253.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "DATA MODULATOR": {
+    "component_box": [
+      296.0,
+      330.0,
+      434.0,
+      421.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FULL WAVE RECTIFIER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DATA ENCODER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

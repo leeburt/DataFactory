@@ -1,0 +1,345 @@
+{
+  "乘法器": {
+    "component_box": [
+      131.0,
+      226.0,
+      159.0,
+      254.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TDL_f\nCoeff_f",
+          "count": 1
+        },
+        {
+          "name": "μ_far",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Derotator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "HC": {
+    "component_box": [
+      671.0,
+      178.0,
+      719.0,
+      228.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TMTR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RCVR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TDL_n": {
+    "component_box": [
+      376.0,
+      173.0,
+      521.0,
+      205.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Pre TMTR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "μ_near",
+          "count": 1
+        },
+        {
+          "name": "Coeff_n",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RCVR": {
+    "component_box": [
+      584.0,
+      427.0,
+      647.0,
+      477.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "HC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Freq. Offset Corr.": {
+    "component_box": [
+      164.0,
+      425.0,
+      358.0,
+      476.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Derotator",
+          "count": 1
+        },
+        {
+          "name": "Rotator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "乘法器",
+          "count": 1
+        },
+        {
+          "name": "Pre TMTR",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TDL_f\nCoeff_f": {
+    "component_box": [
+      50.0,
+      169.0,
+      234.0,
+      201.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Pre TMTR",
+          "count": 1
+        },
+        {
+          "name": "Rotator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "乘法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Bulk Delay": {
+    "component_box": [
+      237.0,
+      59.0,
+      332.0,
+      107.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TDL_f Coeff_f",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Pre TMTR",
+          "count": 1
+        },
+        {
+          "name": "Freq. Offset Corr.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Rotator": {
+    "component_box": [
+      207.0,
+      287.0,
+      302.0,
+      337.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Derotator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Freq. Offset Corr.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "μ_near": {
+    "component_box": [
+      440.0,
+      229.0,
+      469.0,
+      257.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TDL_n",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Rotator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Derotator": {
+    "component_box": [
+      98.0,
+      289.0,
+      192.0,
+      339.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "乘法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Rotator",
+          "count": 1
+        },
+        {
+          "name": "Freq. Offset Corr.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TMTR": {
+    "component_box": [
+      589.0,
+      10.0,
+      652.0,
+      59.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Pre TMTR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "HC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Pre TMTR": {
+    "component_box": [
+      317.0,
+      10.0,
+      411.0,
+      59.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Bulk Delay",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TMTR",
+          "count": 1
+        },
+        {
+          "name": "TDL_n",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      528.0,
+      434.0,
+      561.0,
+      468.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RCVR",
+          "count": 1
+        },
+        {
+          "name": "Freq. Offset Corr.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "μ_near",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

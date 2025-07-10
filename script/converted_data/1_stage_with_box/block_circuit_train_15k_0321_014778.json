@@ -1,0 +1,262 @@
+{
+  "Mixer": {
+    "component_box": [
+      572.0,
+      443.0,
+      639.0,
+      511.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Band-pass filter",
+          "count": 1
+        },
+        {
+          "name": "Frequency Synthesizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "IF PGA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LNA": {
+    "component_box": [
+      354.0,
+      88.0,
+      446.0,
+      195.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Bandpass Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "IF PGA": {
+    "component_box": [
+      658.0,
+      387.0,
+      797.0,
+      594.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Band-pass Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Antenna": {
+    "component_box": [
+      16.0,
+      223.0,
+      59.0,
+      247.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "T/R switch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Bandpass Filter": {
+    "component_box": [
+      610.0,
+      106.0,
+      704.0,
+      178.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "IF PGA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "T/R switch": {
+    "component_box": [
+      118.0,
+      270.0,
+      188.0,
+      355.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Bandpass Filter",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Antenna",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Band-pass filter": {
+    "component_box": [
+      436.0,
+      444.0,
+      525.0,
+      514.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RF VGA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Frequency Synthesizer": {
+    "component_box": [
+      687.0,
+      275.0,
+      896.0,
+      343.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Mixer",
+          "count": 1
+        },
+        {
+          "name": "Mixer",
+          "count": 1
+        },
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Band-pass Filter": {
+    "component_box": [
+      814.0,
+      444.0,
+      908.0,
+      517.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "IF PGA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PA": {
+    "component_box": [
+      199.0,
+      425.0,
+      292.0,
+      531.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RF VGA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "T/R switch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RF VGA": {
+    "component_box": [
+      322.0,
+      437.0,
+      392.0,
+      516.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Band-pass filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

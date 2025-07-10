@@ -1,0 +1,285 @@
+{
+  "Differential Amplifier": {
+    "component_box": [
+      464.0,
+      97.0,
+      523.0,
+      166.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Differential amplifier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Delay cell",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "÷2 Divider": {
+    "component_box": [
+      519.0,
+      236.0,
+      577.0,
+      274.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        },
+        {
+          "name": "÷2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current source": {
+    "component_box": [
+      148.0,
+      61.0,
+      172.0,
+      86.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Switch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Delay cell": {
+    "component_box": [
+      541.0,
+      97.0,
+      601.0,
+      166.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Differential Amplifier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Delay Cell",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "电流下拉晶体管": {
+    "component_box": [
+      148.0,
+      194.0,
+      172.0,
+      218.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Current source",
+          "count": 1
+        },
+        {
+          "name": "C1",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      693.0,
+      97.0,
+      755.0,
+      166.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Delay Cell",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "250MHz CLK",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Bias": {
+    "component_box": [
+      311.0,
+      92.0,
+      362.0,
+      183.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R3",
+          "count": 1
+        },
+        {
+          "name": "C3",
+          "count": 1
+        },
+        {
+          "name": "Differential amplifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "÷2": {
+    "component_box": [
+      519.0,
+      283.0,
+      577.0,
+      320.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "÷2 Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "62.5MHz BB CLK",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Delay Cell": {
+    "component_box": [
+      614.0,
+      97.0,
+      673.0,
+      166.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Delay cell",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "θ4",
+          "count": 1
+        },
+        {
+          "name": "θ8",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Differential amplifier": {
+    "component_box": [
+      387.0,
+      97.0,
+      447.0,
+      166.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "θ1",
+          "count": 1
+        },
+        {
+          "name": "θ5",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Bias",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PFD": {
+    "component_box": [
+      79.0,
+      101.0,
+      134.0,
+      184.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vref",
+          "count": 1
+        },
+        {
+          "name": "÷2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current source",
+          "count": 1
+        },
+        {
+          "name": "电流下拉晶体管",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

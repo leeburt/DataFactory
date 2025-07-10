@@ -1,0 +1,200 @@
+{
+  "Counter": {
+    "component_box": [
+      262.0,
+      63.0,
+      348.0,
+      232.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO_REF",
+          "count": 1
+        },
+        {
+          "name": "DFF_OUT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI control circuit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "I_OUT": {
+    "component_box": [
+      728.0,
+      244.0,
+      780.0,
+      296.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "MOSFET 阵列",
+          "count": 1
+        },
+        {
+          "name": "C_OUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DFF_OUT": {
+    "component_box": [
+      249.0,
+      287.0,
+      315.0,
+      376.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO_OUT",
+          "count": 1
+        },
+        {
+          "name": "VCO_REF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI control circuit": {
+    "component_box": [
+      425.0,
+      63.0,
+      539.0,
+      236.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Gate driver array",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      454.0,
+      258.0,
+      564.0,
+      350.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DFF_OUT",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "VCO_REF",
+          "count": 1
+        },
+        {
+          "name": "MOSFET 阵列",
+          "count": 1
+        },
+        {
+          "name": "PI control circuit",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MOSFET 阵列": {
+    "component_box": [
+      686.0,
+      67.0,
+      799.0,
+      185.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Gate driver array",
+          "count": 1
+        },
+        {
+          "name": "V_IN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_OUT",
+          "count": 1
+        },
+        {
+          "name": "I_OUT",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "C_OUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Gate driver array": {
+    "component_box": [
+      565.0,
+      63.0,
+      673.0,
+      235.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI control circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MOSFET 阵列",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

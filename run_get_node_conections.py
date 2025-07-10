@@ -4,14 +4,19 @@ import json
 import traceback
 from src.config import Config
 from node_connections.get_node_info_from_det import ComponentAnalyzer
+from node_connections.get_node_info_from_det_qwen import ComponentAnalyzer as ComponentAnalyzerQwen
+from node_connections.get_node_info_from_det_v2 import ComponentAnalyzer as ComponentAnalyzerV2
 from src.utils import parse_args, create_config_from_args
-from config.prompts_node import (COMPONENT_IO_PROMPT_MODEL)
+from config.prompts_node import (COMPONENT_IO_PROMPT_MODEL,COMPONENT_IO_PROMPT_MODEL_QWEN,COMPONENT_NAME_PROMPT,COMPONENT_IO_PROMPT_MODE_WITH_BOX)
 
 
 
 def get_prompts(config: Config):
     prompts = {
         "COMPONENT_IO_PROMPT_MODEL": COMPONENT_IO_PROMPT_MODEL,
+        "COMPONENT_IO_PROMPT_MODEL_QWEN": COMPONENT_IO_PROMPT_MODEL_QWEN,
+        "COMPONENT_NAME_PROMPT": COMPONENT_NAME_PROMPT,
+        "COMPONENT_IO_PROMPT_MODE_WITH_BOX": COMPONENT_IO_PROMPT_MODE_WITH_BOX
     }
     config.prompts = prompts
     return config
@@ -41,11 +46,8 @@ async def main():
         print("\n第一步：组件识别和IO分析")
         print("-" * 50)
         print(config.rerun)
-        if config.rerun:
-            print('rerun mode')
-            analyzer = ComponentAnalyzer(config)
-        else:
-            analyzer = ComponentAnalyzer(config)
+        # 使用新的 V2 版本分析器，包含组件名字获取功能
+        analyzer = ComponentAnalyzerQwen(config)
         result_paths = await analyzer.run()
 
         

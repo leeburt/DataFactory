@@ -1,0 +1,131 @@
+{
+  "lossy integrator": {
+    "component_box": [
+      521.0,
+      102.0,
+      621.0,
+      232.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "It",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Class AB input conditioner and log. compr.",
+          "count": 1
+        },
+        {
+          "name": "i_outn",
+          "count": 1
+        },
+        {
+          "name": "i_outp",
+          "count": 1
+        },
+        {
+          "name": "C3",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Class AB input conditioner and log. compr.": {
+    "component_box": [
+      126.0,
+      102.0,
+      254.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "lossy integrator",
+          "count": 1
+        },
+        {
+          "name": "lossy integrator",
+          "count": 1
+        },
+        {
+          "name": "Iq",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "D2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "D2": {
+    "component_box": [
+      47.0,
+      198.0,
+      91.0,
+      217.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Class AB input conditioner and log. compr.",
+          "count": 1
+        },
+        {
+          "name": "vin",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "lossless integrator": {
+    "component_box": [
+      399.0,
+      103.0,
+      498.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "lossy integrator",
+          "count": 1
+        },
+        {
+          "name": "It",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "lossy integrator",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "C2",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

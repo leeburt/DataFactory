@@ -1,0 +1,124 @@
+{
+  "comparator": {
+    "component_box": [
+      271.0,
+      86.0,
+      333.0,
+      201.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SAR ADC",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Register",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SAR ADC": {
+    "component_box": [
+      3.0,
+      63.0,
+      415.0,
+      446.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      126.0,
+      210.0,
+      265.0,
+      279.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Register",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "二进制加权电容阵列": {
+    "component_box": [
+      495.0,
+      58.0,
+      685.0,
+      445.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Register",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "V_IN",
+          "count": 1
+        },
+        {
+          "name": "V_FS",
+          "count": 1
+        },
+        {
+          "name": "V0",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Register": {
+    "component_box": [
+      104.0,
+      293.0,
+      291.0,
+      391.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

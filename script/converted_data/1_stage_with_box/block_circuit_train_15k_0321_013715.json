@@ -1,0 +1,184 @@
+{
+  "ωt": {
+    "component_box": [
+      342.0,
+      444.0,
+      365.0,
+      468.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SHE",
+          "count": 1
+        },
+        {
+          "name": "cos⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LPF": {
+    "component_box": [
+      523.0,
+      334.0,
+      593.0,
+      378.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DC link inductor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "summation node",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Load": {
+    "component_box": [
+      552.0,
+      31.0,
+      608.0,
+      321.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Inductor",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "cos⁻¹": {
+    "component_box": [
+      425.0,
+      437.0,
+      485.0,
+      478.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing Junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SHE": {
+    "component_box": [
+      297.0,
+      360.0,
+      405.0,
+      410.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWM CSR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "I_dc_ref": {
+    "component_box": [
+      546.0,
+      446.0,
+      562.0,
+      463.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PLL": {
+    "component_box": [
+      158.0,
+      436.0,
+      232.0,
+      474.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Grid",
+          "count": 1
+        },
+        {
+          "name": "ωt",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PI": {
+    "component_box": [
+      491.0,
+      439.0,
+      537.0,
+      473.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "cos⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

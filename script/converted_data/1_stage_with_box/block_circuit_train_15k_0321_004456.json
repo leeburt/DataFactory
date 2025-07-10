@@ -1,0 +1,375 @@
+{
+  "Adder": {
+    "component_box": [
+      453.0,
+      60.0,
+      486.0,
+      93.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "a_M",
+          "count": 1
+        },
+        {
+          "name": "τ_M",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "b_M",
+          "count": 1
+        },
+        {
+          "name": "Output Summation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Divider": {
+    "component_box": [
+      88.0,
+      189.0,
+      243.0,
+      343.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "In",
+          "count": 1
+        },
+        {
+          "name": "In",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "a_M",
+          "count": 1
+        },
+        {
+          "name": "a_A1",
+          "count": 1
+        },
+        {
+          "name": "a_A2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "τ_A2": {
+    "component_box": [
+      538.0,
+      466.0,
+      581.0,
+      501.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "b_A2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "a_{A1}": {
+    "component_box": [
+      393.0,
+      234.0,
+      427.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "a_M": {
+    "component_box": [
+      392.0,
+      60.0,
+      428.0,
+      94.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "τ_M": {
+    "component_box": [
+      538.0,
+      118.0,
+      580.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "b_M",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Auxiliary channel 1 & Auxiliary channel 2": {
+    "component_box": [
+      349.0,
+      362.0,
+      647.0,
+      400.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Out",
+          "count": 1
+        },
+        {
+          "name": "Out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Main channel": {
+    "component_box": [
+      349.0,
+      14.0,
+      646.0,
+      52.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "b_M": {
+    "component_box": [
+      483.0,
+      118.0,
+      517.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "τ_M",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "b_A1": {
+    "component_box": [
+      483.0,
+      292.0,
+      517.0,
+      326.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "τ_A1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H_M(f)": {
+    "component_box": [
+      348.0,
+      189.0,
+      646.0,
+      226.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "b_A2": {
+    "component_box": [
+      482.0,
+      466.0,
+      516.0,
+      501.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "τ_A2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "τ_A1": {
+    "component_box": [
+      538.0,
+      291.0,
+      580.0,
+      326.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "b_A1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      453.0,
+      235.0,
+      486.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "a_{A1}",
+          "count": 1
+        },
+        {
+          "name": "b_{A1}",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "a_A2": {
+    "component_box": [
+      392.0,
+      408.0,
+      426.0,
+      443.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

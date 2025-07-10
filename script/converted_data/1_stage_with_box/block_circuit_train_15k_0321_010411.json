@@ -1,0 +1,247 @@
+{
+  "Antenna": {
+    "component_box": [
+      694.0,
+      15.0,
+      728.0,
+      39.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "mixer": {
+    "component_box": [
+      534.0,
+      260.0,
+      588.0,
+      315.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PA",
+          "count": 1
+        },
+        {
+          "name": "LO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      103.0,
+      41.0,
+      217.0,
+      116.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      400.0,
+      245.0,
+      514.0,
+      319.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "mixer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Time/Power Alignment",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LO": {
+    "component_box": [
+      547.0,
+      214.0,
+      574.0,
+      241.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PA": {
+    "component_box": [
+      537.0,
+      45.0,
+      606.0,
+      116.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Linearizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Antenna",
+          "count": 1
+        },
+        {
+          "name": "mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Linearizer": {
+    "component_box": [
+      355.0,
+      44.0,
+      460.0,
+      117.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mixer",
+          "count": 1
+        },
+        {
+          "name": "Control Strategy",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Mixer": {
+    "component_box": [
+      262.0,
+      53.0,
+      317.0,
+      107.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "LO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Linearizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Time/Power Alignment": {
+    "component_box": [
+      260.0,
+      245.0,
+      374.0,
+      319.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input",
+          "count": 1
+        },
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Control Strategy",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Control Strategy": {
+    "component_box": [
+      242.0,
+      173.0,
+      392.0,
+      220.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Time/Power Alignment",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

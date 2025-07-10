@@ -1,0 +1,102 @@
+{
+  "VG": {
+    "component_box": [
+      30.0,
+      142.0,
+      78.0,
+      187.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R_G",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Start-up oscillator": {
+    "component_box": [
+      416.0,
+      311.0,
+      629.0,
+      466.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DC–DC converter",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "DC–DC converter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DC–DC converter": {
+    "component_box": [
+      406.0,
+      45.0,
+      624.0,
+      203.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Cin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Cout",
+          "count": 1
+        },
+        {
+          "name": "P_out",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Start-up oscillator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DC–DC converter\nStart-up oscillator": {
+    "component_box": [
+      349.0,
+      27.0,
+      711.0,
+      527.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Cin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Cout",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

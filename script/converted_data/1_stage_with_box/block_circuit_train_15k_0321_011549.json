@@ -1,0 +1,306 @@
+{
+  "FB_n": {
+    "component_box": [
+      1056.0,
+      356.0,
+      1183.0,
+      452.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PRI2_n",
+          "count": 1
+        },
+        {
+          "name": "clk(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y_n[n]",
+          "count": 1
+        },
+        {
+          "name": "PRI1_n",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PRI1_n": {
+    "component_box": [
+      266.0,
+      355.0,
+      394.0,
+      451.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO_n",
+          "count": 1
+        },
+        {
+          "name": "FB_n",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "IDAC_n",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PRI1_p": {
+    "component_box": [
+      265.0,
+      118.0,
+      394.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO_p",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "IDAC_p",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CCO_p": {
+    "component_box": [
+      655.0,
+      118.0,
+      748.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "IDAC_p",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PRI2p",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO_p": {
+    "component_box": [
+      89.0,
+      119.0,
+      183.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_inp(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PRI1_p",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PRI2p": {
+    "component_box": [
+      847.0,
+      118.0,
+      975.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CCO_p",
+          "count": 1
+        },
+        {
+          "name": "FB_p",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FB_p",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PRI2_n": {
+    "component_box": [
+      847.0,
+      356.0,
+      975.0,
+      452.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CCO_n",
+          "count": 1
+        },
+        {
+          "name": "FB_n",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FB_n",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "IDAC_p": {
+    "component_box": [
+      474.0,
+      118.0,
+      615.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PRI1_p",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CCO_p",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FB_p": {
+    "component_box": [
+      1056.0,
+      118.0,
+      1183.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PRI2p",
+          "count": 1
+        },
+        {
+          "name": "f_b_p(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y_p[n]",
+          "count": 1
+        },
+        {
+          "name": "FB_n",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO_n": {
+    "component_box": [
+      89.0,
+      356.0,
+      183.0,
+      450.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_inn(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PRI1_n",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "IDAC_n": {
+    "component_box": [
+      474.0,
+      355.0,
+      614.0,
+      451.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PRI1_n",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CCO_n",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CCO_n": {
+    "component_box": [
+      655.0,
+      356.0,
+      749.0,
+      451.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "IDAC_n",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PRI2_n",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

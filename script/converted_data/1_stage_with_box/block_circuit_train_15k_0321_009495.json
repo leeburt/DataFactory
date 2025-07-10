@@ -1,0 +1,160 @@
+{
+  "LM current controller": {
+    "component_box": [
+      351.0,
+      26.0,
+      476.0,
+      103.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "abc/αβ transformation",
+          "count": 1
+        },
+        {
+          "name": "i*_c,αβ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Interleaving modulation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "abc/αβ transformation": {
+    "component_box": [
+      206.0,
+      16.0,
+      283.0,
+      91.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_c,abc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LM current controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TM current controller": {
+    "component_box": [
+      351.0,
+      179.0,
+      476.0,
+      255.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2 i_TM,abc",
+          "count": 1
+        },
+        {
+          "name": "0",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Interleaving modulation": {
+    "component_box": [
+      566.0,
+      26.0,
+      697.0,
+      103.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LM current controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      596.0,
+      163.0,
+      611.0,
+      178.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Interleaving modulation",
+          "count": 1
+        },
+        {
+          "name": "Interleaving modulation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "i_c,abc": {
+    "component_box": [
+      147.0,
+      47.0,
+      161.0,
+      61.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_c,1,abc",
+          "count": 1
+        },
+        {
+          "name": "i_c,2,abc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "abc/αβ transformation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

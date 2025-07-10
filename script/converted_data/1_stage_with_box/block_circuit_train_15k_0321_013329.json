@@ -1,0 +1,244 @@
+{
+  "Start-up circuit": {
+    "component_box": [
+      419.0,
+      234.0,
+      502.0,
+      284.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Out_clk",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Phase Detector": {
+    "component_box": [
+      158.0,
+      309.0,
+      261.0,
+      376.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "REF_CLK",
+          "count": 1
+        },
+        {
+          "name": "Replica clock delay",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Charge Pump",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Lower VCDL+DCDL": {
+    "component_box": [
+      278.0,
+      84.0,
+      396.0,
+      131.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Interger TDC  Xor Mux",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "REF_CLK",
+          "count": 1
+        },
+        {
+          "name": "Phase Blender",
+          "count": 1
+        },
+        {
+          "name": "LF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Phase Blender": {
+    "component_box": [
+      570.0,
+      44.0,
+      671.0,
+      118.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Upper VCDL+DCDL",
+          "count": 1
+        },
+        {
+          "name": "Lower VCDL+DCDL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Out_clk",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Interger TDC  \nXor Mux": {
+    "component_box": [
+      106.0,
+      179.0,
+      247.0,
+      245.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "REF_CLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Lower VCDL+DCDL",
+          "count": 1
+        },
+        {
+          "name": "Upper VCDL+DCDL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Upper VCDL+DCDL": {
+    "component_box": [
+      383.0,
+      31.0,
+      502.0,
+      76.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "REF_CLK",
+          "count": 1
+        },
+        {
+          "name": "Lower VCDL+DCDL",
+          "count": 1
+        },
+        {
+          "name": "Start-up circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Phase Blender",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Charge Pump": {
+    "component_box": [
+      296.0,
+      309.0,
+      398.0,
+      375.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Phase Detector",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LF",
+          "count": 1
+        },
+        {
+          "name": "Replica clock delay",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LF": {
+    "component_box": [
+      414.0,
+      309.0,
+      516.0,
+      376.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Charge Pump",
+          "count": 1
+        },
+        {
+          "name": "Start-up circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Lower VCDL+DCDL",
+          "count": 1
+        },
+        {
+          "name": "Upper VCDL+DCDL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Replica clock delay": {
+    "component_box": [
+      294.0,
+      375.0,
+      405.0,
+      424.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Phase Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

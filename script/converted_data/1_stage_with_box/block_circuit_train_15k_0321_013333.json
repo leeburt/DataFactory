@@ -1,0 +1,199 @@
+{
+  "adder": {
+    "component_box": [
+      386.0,
+      127.0,
+      426.0,
+      166.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "K_P",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z⁻¹": {
+    "component_box": [
+      331.0,
+      73.0,
+      394.0,
+      120.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      277.0,
+      76.0,
+      316.0,
+      114.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K_I",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "z⁻¹",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "K_I": {
+    "component_box": [
+      173.0,
+      51.0,
+      250.0,
+      139.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BBPD": {
+    "component_box": [
+      47.0,
+      102.0,
+      124.0,
+      191.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "K_I",
+          "count": 1
+        },
+        {
+          "name": "K_P",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_P": {
+    "component_box": [
+      263.0,
+      148.0,
+      341.0,
+      236.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DCO": {
+    "component_box": [
+      449.0,
+      101.0,
+      526.0,
+      190.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Divider ÷N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Divider ÷N": {
+    "component_box": [
+      237.0,
+      280.0,
+      350.0,
+      369.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

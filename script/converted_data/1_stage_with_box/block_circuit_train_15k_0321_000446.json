@@ -1,0 +1,240 @@
+{
+  "Switch": {
+    "component_box": [
+      108.0,
+      43.0,
+      133.0,
+      66.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Solar Cell",
+          "count": 1
+        },
+        {
+          "name": "Dc-Dc converter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DC Input Terminal": {
+    "component_box": [
+      50.0,
+      100.0,
+      85.0,
+      134.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Solar Cell",
+          "count": 1
+        },
+        {
+          "name": "Dc-Dc converter",
+          "count": 1
+        },
+        {
+          "name": "Start-up",
+          "count": 1
+        },
+        {
+          "name": "MPPT",
+          "count": 1
+        },
+        {
+          "name": "GND",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "GND": {
+    "component_box": [
+      462.0,
+      247.0,
+      486.0,
+      271.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Dc-Dc converter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VIN+  \nVIN-": {
+    "component_box": [
+      108.0,
+      173.0,
+      133.0,
+      197.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DC Input Terminal",
+          "count": 1
+        },
+        {
+          "name": "Dc-Dc converter",
+          "count": 1
+        },
+        {
+          "name": "MPPT",
+          "count": 1
+        },
+        {
+          "name": "Start-up",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Vout": {
+    "component_box": [
+      526.0,
+      81.0,
+      552.0,
+      106.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Dc-Dc converter",
+          "count": 1
+        },
+        {
+          "name": "C_storage",
+          "count": 1
+        },
+        {
+          "name": "φLOAD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MPPT": {
+    "component_box": [
+      272.0,
+      195.0,
+      340.0,
+      231.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VIN+  VIN-",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Dc-Dc converter": {
+    "component_box": [
+      324.0,
+      65.0,
+      512.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Switch",
+          "count": 1
+        },
+        {
+          "name": "Vout",
+          "count": 1
+        },
+        {
+          "name": "GND",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Start-up": {
+    "component_box": [
+      243.0,
+      151.0,
+      333.0,
+      188.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VIN+  VIN-",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "DCO",
+          "count": 1
+        },
+        {
+          "name": "MPPT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DCO": {
+    "component_box": [
+      372.0,
+      172.0,
+      440.0,
+      212.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MPPT",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Dc-Dc converter",
+          "count": 1
+        },
+        {
+          "name": "GND",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

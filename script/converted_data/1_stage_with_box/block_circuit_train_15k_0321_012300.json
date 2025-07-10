@@ -1,0 +1,220 @@
+{
+  "H(s)": {
+    "component_box": [
+      92.0,
+      421.0,
+      176.0,
+      472.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_DC",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "K_R(s)": {
+    "component_box": [
+      213.0,
+      505.0,
+      299.0,
+      553.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Peak",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Extraction of VDCmax": {
+    "component_box": [
+      70.0,
+      285.0,
+      324.0,
+      632.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_DC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Extraction of V_DCmax": {
+    "component_box": [
+      235.0,
+      10.0,
+      314.0,
+      121.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "vg",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PWM": {
+    "component_box": [
+      675.0,
+      144.0,
+      762.0,
+      254.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Repetitive Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Q1",
+          "count": 1
+        },
+        {
+          "name": "Q2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      114.0,
+      343.0,
+      150.0,
+      378.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H(s)",
+          "count": 1
+        },
+        {
+          "name": "Peak",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      350.0,
+      182.0,
+      388.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PLL",
+          "count": 1
+        },
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Repetitive Controller": {
+    "component_box": [
+      497.0,
+      143.0,
+      649.0,
+      255.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Peak": {
+    "component_box": [
+      214.0,
+      423.0,
+      298.0,
+      473.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "K_R(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

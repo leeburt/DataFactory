@@ -1,0 +1,157 @@
+{
+  "Comparator": {
+    "component_box": [
+      164.0,
+      62.0,
+      280.0,
+      213.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Ref_tran",
+          "count": 1
+        },
+        {
+          "name": "CLK generator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Custom layout": {
+    "component_box": [
+      163.0,
+      228.0,
+      280.0,
+      378.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ref_up",
+          "count": 1
+        },
+        {
+          "name": "Custom layout",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Barrel Shifter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Ref_dn": {
+    "component_box": [
+      164.0,
+      393.0,
+      280.0,
+      543.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ref_dn",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Barrel Shifter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current sink": {
+    "component_box": [
+      823.0,
+      641.0,
+      868.0,
+      685.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Capacitor",
+          "count": 1
+        },
+        {
+          "name": "Custom layout",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Capacitor": {
+    "component_box": [
+      580.0,
+      34.0,
+      873.0,
+      602.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Barrel Shifter",
+          "count": 1
+        },
+        {
+          "name": "VDD",
+          "count": 1
+        },
+        {
+          "name": "Current sink",
+          "count": 1
+        },
+        {
+          "name": "Custom layout",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Barrel Shifter": {
+    "component_box": [
+      337.0,
+      332.0,
+      541.0,
+      438.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK generator",
+          "count": 1
+        },
+        {
+          "name": "Ref_up",
+          "count": 1
+        },
+        {
+          "name": "Ref_dn",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Custom layout",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

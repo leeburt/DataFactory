@@ -1,0 +1,284 @@
+{
+  "channel": {
+    "component_box": [
+      163.0,
+      117.0,
+      245.0,
+      164.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Remote Transceiver",
+          "count": 1
+        },
+        {
+          "name": "H",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Rx LPF": {
+    "component_box": [
+      313.0,
+      177.0,
+      362.0,
+      232.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PGA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Slicer": {
+    "component_box": [
+      688.0,
+      163.0,
+      757.0,
+      254.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Remote Transceiver": {
+    "component_box": [
+      8.0,
+      113.0,
+      131.0,
+      170.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "channel",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "EC": {
+    "component_box": [
+      608.0,
+      120.0,
+      679.0,
+      164.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Tx LPF": {
+    "component_box": [
+      313.0,
+      42.0,
+      362.0,
+      97.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      625.0,
+      187.0,
+      661.0,
+      227.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "EQ",
+          "count": 1
+        },
+        {
+          "name": "EC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Slicer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PGA": {
+    "component_box": [
+      378.0,
+      168.0,
+      431.0,
+      247.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Rx LPF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H": {
+    "component_box": [
+      271.0,
+      121.0,
+      304.0,
+      160.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "channel",
+          "count": 1
+        },
+        {
+          "name": "Tx LPF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Rx LPF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "EQ": {
+    "component_box": [
+      550.0,
+      187.0,
+      604.0,
+      230.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      446.0,
+      31.0,
+      532.0,
+      111.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "EC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Tx LPF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      446.0,
+      167.0,
+      532.0,
+      248.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PGA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "EQ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

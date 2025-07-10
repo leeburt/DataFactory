@@ -1,0 +1,112 @@
+{
+  "AMPd": {
+    "component_box": [
+      444.0,
+      209.0,
+      495.0,
+      261.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R1V",
+          "count": 1
+        },
+        {
+          "name": "Rco",
+          "count": 1
+        },
+        {
+          "name": "C0",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Counter": {
+    "component_box": [
+      607.0,
+      174.0,
+      771.0,
+      286.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AMPd",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "AMP_d": {
+    "component_box": [
+      182.0,
+      196.0,
+      234.0,
+      248.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R1V",
+          "count": 1
+        },
+        {
+          "name": "R1V",
+          "count": 1
+        },
+        {
+          "name": "R_co",
+          "count": 1
+        },
+        {
+          "name": "C0",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Controller": {
+    "component_box": [
+      34.0,
+      459.0,
+      530.0,
+      554.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Counter",
+          "count": 1
+        },
+        {
+          "name": "Counter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "R_C0",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

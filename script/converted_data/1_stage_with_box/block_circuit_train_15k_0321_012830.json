@@ -1,0 +1,376 @@
+{
+  "Current Sensor": {
+    "component_box": [
+      1243.0,
+      109.0,
+      1294.0,
+      134.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RC补偿网络": {
+    "component_box": [
+      713.0,
+      378.0,
+      904.0,
+      458.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Speaker",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Digital Filter  \nDPWM": {
+    "component_box": [
+      626.0,
+      160.0,
+      1019.0,
+      315.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "NSH  \nDAC": {
+    "component_box": [
+      7.0,
+      167.0,
+      302.0,
+      308.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Din",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      253.0,
+      207.0,
+      332.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "NSH",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DPWM": {
+    "component_box": [
+      893.0,
+      207.0,
+      993.0,
+      269.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      590.0,
+      207.0,
+      668.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Speaker": {
+    "component_box": [
+      1344.0,
+      187.0,
+      1391.0,
+      288.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PA",
+          "count": 1
+        },
+        {
+          "name": "Current Sensor",
+          "count": 1
+        },
+        {
+          "name": "RC补偿网络",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      454.0,
+      137.0,
+      502.0,
+      185.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "Compensation network",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital Filter": {
+    "component_box": [
+      714.0,
+      207.0,
+      849.0,
+      269.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DPWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Compensation network": {
+    "component_box": [
+      712.0,
+      24.0,
+      904.0,
+      91.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current Sensor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "GND": {
+    "component_box": [
+      1244.0,
+      342.0,
+      1294.0,
+      368.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "NSH": {
+    "component_box": [
+      127.0,
+      208.0,
+      207.0,
+      269.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Din",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PA": {
+    "component_box": [
+      1039.0,
+      207.0,
+      1129.0,
+      269.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DPWM",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Compensation network",
+          "count": 1
+        },
+        {
+          "name": "RC补偿网络",
+          "count": 1
+        },
+        {
+          "name": "Current Sensor",
+          "count": 1
+        },
+        {
+          "name": "Speaker",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Adder": {
+    "component_box": [
+      454.0,
+      291.0,
+      503.0,
+      339.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "RC补偿网络",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

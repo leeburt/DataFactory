@@ -1,0 +1,294 @@
+{
+  "Comparator kick-back": {
+    "component_box": [
+      477.0,
+      611.0,
+      747.0,
+      703.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Residue Transient in the whole cycle",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Transient Reference up to Trigger": {
+    "component_box": [
+      83.0,
+      415.0,
+      352.0,
+      506.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Initial Condition (17)–(18)",
+          "count": 1
+        },
+        {
+          "name": "phi_comp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Conversion residue up to Trigger",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Conversion residue up to Trigger": {
+    "component_box": [
+      83.0,
+      559.0,
+      352.0,
+      650.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Transient Reference up to Trigger",
+          "count": 1
+        },
+        {
+          "name": "First Comparator Decision",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "i < M",
+          "count": 1
+        },
+        {
+          "name": "Residue Transient in the whole cycle",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator Decision": {
+    "component_box": [
+      475.0,
+      25.0,
+      745.0,
+      116.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "First Comparator Decision",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparison and cycle time",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "First Comparator Decision": {
+    "component_box": [
+      111.0,
+      25.0,
+      329.0,
+      116.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ε1 ≈ x",
+          "count": 1
+        },
+        {
+          "name": "V_R^(1) = R",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator Decision",
+          "count": 1
+        },
+        {
+          "name": "i < M",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Initial Condition  \nTransient Reference up to Trigger  \nConversion residue up to Trigger": {
+    "component_box": [
+      64.0,
+      219.0,
+      449.0,
+      719.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i < M",
+          "count": 1
+        },
+        {
+          "name": "φ_comp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Reference Transient in the whole cycle",
+          "count": 1
+        },
+        {
+          "name": "Residue Transient in the whole cycle",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "i < M": {
+    "component_box": [
+      157.0,
+      154.0,
+      282.0,
+      247.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "First Comparator Decision",
+          "count": 1
+        },
+        {
+          "name": "Conversion residue up to Trigger",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Initial Condition (17)–(18)",
+          "count": 1
+        },
+        {
+          "name": "LOOP EXIT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Reference Transient in the whole cycle": {
+    "component_box": [
+      476.0,
+      312.0,
+      746.0,
+      401.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparison and cycle time",
+          "count": 1
+        },
+        {
+          "name": "Comparator Decision",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Residue Transient in the whole cycle",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Residue Transient in the whole cycle": {
+    "component_box": [
+      476.0,
+      454.0,
+      746.0,
+      544.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference Transient in the whole cycle",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator kick-back",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Initial Condition (17)–(18)": {
+    "component_box": [
+      84.0,
+      274.0,
+      352.0,
+      365.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i < M",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Transient Reference up to Trigger",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparison and cycle time": {
+    "component_box": [
+      475.0,
+      167.0,
+      745.0,
+      260.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator Decision",
+          "count": 1
+        },
+        {
+          "name": "φ_comp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Reference Transient in the whole cycle",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

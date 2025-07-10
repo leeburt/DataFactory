@@ -1,0 +1,255 @@
+{
+  "BBPD": {
+    "component_box": [
+      108.0,
+      98.0,
+      217.0,
+      164.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ref",
+          "count": 1
+        },
+        {
+          "name": "DTC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LMS": {
+    "component_box": [
+      30.0,
+      292.0,
+      107.0,
+      337.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DTC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Frequency Aid": {
+    "component_box": [
+      185.0,
+      15.0,
+      357.0,
+      68.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ref",
+          "count": 1
+        },
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital Filter": {
+    "component_box": [
+      250.0,
+      98.0,
+      336.0,
+      163.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BBPD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital Quantizer": {
+    "component_box": [
+      306.0,
+      282.0,
+      433.0,
+      347.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Frequency Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FCW",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      168.0,
+      298.0,
+      202.0,
+      332.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LMS",
+          "count": 1
+        },
+        {
+          "name": "DTC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DCO": {
+    "component_box": [
+      406.0,
+      109.0,
+      447.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Frequency Aid",
+          "count": 1
+        },
+        {
+          "name": "Digital Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Frequency Divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Ref": {
+    "component_box": [
+      12.0,
+      90.0,
+      54.0,
+      133.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "BBPD",
+          "count": 1
+        },
+        {
+          "name": "Frequency Aid",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Frequency Divider": {
+    "component_box": [
+      307.0,
+      195.0,
+      434.0,
+      260.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Quantizer",
+          "count": 1
+        },
+        {
+          "name": "DTC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DTC": {
+    "component_box": [
+      141.0,
+      195.0,
+      227.0,
+      260.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BBPD",
+          "count": 1
+        },
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Frequency Divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

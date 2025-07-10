@@ -1,0 +1,188 @@
+{
+  "CP": {
+    "component_box": [
+      542.0,
+      105.0,
+      606.0,
+      161.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LOGIC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Bypass capacitor": {
+    "component_box": [
+      40.0,
+      205.0,
+      64.0,
+      259.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "BIAS",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "COMP": {
+    "component_box": [
+      276.0,
+      79.0,
+      377.0,
+      186.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "R&H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LOGIC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LOGIC": {
+    "component_box": [
+      412.0,
+      104.0,
+      500.0,
+      161.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "COMP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP",
+          "count": 1
+        },
+        {
+          "name": "BIAS",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      646.0,
+      104.0,
+      721.0,
+      160.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CP",
+          "count": 1
+        },
+        {
+          "name": "BIAS",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FOSC",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "R&H",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "R&H": {
+    "component_box": [
+      127.0,
+      44.0,
+      203.0,
+      142.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BIAS",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "COMP",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "C",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "BIAS": {
+    "component_box": [
+      15.0,
+      91.0,
+      90.0,
+      180.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "R&H",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "VCO",
+          "count": 1
+        },
+        {
+          "name": "R",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

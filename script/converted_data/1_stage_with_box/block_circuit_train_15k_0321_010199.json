@@ -1,0 +1,148 @@
+{
+  "pulse shortener": {
+    "component_box": [
+      370.0,
+      11.0,
+      499.0,
+      115.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "schmitt trigger",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "hold circuit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "乘法器": {
+    "component_box": [
+      246.0,
+      231.0,
+      285.0,
+      271.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "hold circuit",
+          "count": 1
+        },
+        {
+          "name": "reference value",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P-I regulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P-I regulator": {
+    "component_box": [
+      32.0,
+      197.0,
+      162.0,
+      304.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "乘法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "two integrator oscillator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "hold circuit": {
+    "component_box": [
+      370.0,
+      197.0,
+      498.0,
+      303.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "pulse shortener",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "乘法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "two integrator oscillator": {
+    "component_box": [
+      31.0,
+      11.0,
+      159.0,
+      117.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "pulse shortener",
+          "count": 1
+        },
+        {
+          "name": "P-I regulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "schmitt trigger",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "schmitt trigger": {
+    "component_box": [
+      201.0,
+      10.0,
+      329.0,
+      115.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "two integrator oscillator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "pulse shortener",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

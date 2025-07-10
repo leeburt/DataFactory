@@ -1,0 +1,173 @@
+{
+  "Frequency Detector": {
+    "component_box": [
+      272.0,
+      171.0,
+      454.0,
+      269.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RC Oscillator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RC Network": {
+    "component_box": [
+      571.0,
+      181.0,
+      708.0,
+      259.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Feedback Block",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Feedback Block": {
+    "component_box": [
+      272.0,
+      44.0,
+      454.0,
+      153.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RC Oscillator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "delay": {
+    "component_box": [
+      671.0,
+      109.0,
+      692.0,
+      133.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "CLK",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "op-amp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Reference Block": {
+    "component_box": [
+      3.0,
+      111.0,
+      173.0,
+      209.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RC Oscillator": {
+    "component_box": [
+      524.0,
+      50.0,
+      754.0,
+      283.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Feedback Block",
+          "count": 1
+        },
+        {
+          "name": "RC Network",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "delay",
+          "count": 1
+        },
+        {
+          "name": "delay",
+          "count": 1
+        },
+        {
+          "name": "delay",
+          "count": 1
+        },
+        {
+          "name": "CLK",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "求和器": {
+    "component_box": [
+      210.0,
+      141.0,
+      249.0,
+      179.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference Block",
+          "count": 1
+        },
+        {
+          "name": "Frequency Detector",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Feedback Block",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

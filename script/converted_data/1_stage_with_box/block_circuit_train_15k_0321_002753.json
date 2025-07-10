@@ -1,0 +1,182 @@
+{
+  "CURRENT SOURCE": {
+    "component_box": [
+      451.0,
+      326.0,
+      599.0,
+      414.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PTAT CURRENT REFERENCE",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DRIVER",
+          "count": 1
+        },
+        {
+          "name": "DRIVER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2:1 MUX": {
+    "component_box": [
+      262.0,
+      164.0,
+      359.0,
+      227.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ENABLE SCRAMBLER",
+          "count": 1
+        },
+        {
+          "name": "SCRAMBLER",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Input buffer",
+          "count": 1
+        },
+        {
+          "name": "DRIVER",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DRIVER": {
+    "component_box": [
+      461.0,
+      135.0,
+      581.0,
+      264.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2:1 MUX",
+          "count": 1
+        },
+        {
+          "name": "CURRENT SOURCE",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "GaAlAs LED",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PTAT CURRENT REFERENCE": {
+    "component_box": [
+      655.0,
+      326.0,
+      834.0,
+      415.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "CURRENT SOURCE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SCRAMBLER": {
+    "component_box": [
+      222.0,
+      326.0,
+      396.0,
+      414.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input buffer",
+          "count": 1
+        },
+        {
+          "name": "Clock Buffer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2:1 MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock Buffer": {
+    "component_box": [
+      94.0,
+      350.0,
+      165.0,
+      423.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLOCK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SCRAMBLER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Input buffer": {
+    "component_box": [
+      96.0,
+      111.0,
+      167.0,
+      184.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DATA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2:1 MUX",
+          "count": 1
+        },
+        {
+          "name": "SCRAMBLER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

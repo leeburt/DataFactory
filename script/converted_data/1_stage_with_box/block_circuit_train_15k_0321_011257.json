@@ -1,0 +1,102 @@
+{
+  "V1": {
+    "component_box": [
+      96.0,
+      141.0,
+      175.0,
+      221.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PARTIAL CONVERTER",
+          "count": 1
+        },
+        {
+          "name": "HIGH EFFICIENCY RESONANT CONVERTER 4:1",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "HIGH EFFICIENCY RESONANT CONVERTER 4:1": {
+    "component_box": [
+      310.0,
+      203.0,
+      491.0,
+      363.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V1",
+          "count": 1
+        },
+        {
+          "name": "PARTIAL_CONVERTER",
+          "count": 1
+        },
+        {
+          "name": "V2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "V2": {
+    "component_box": [
+      596.0,
+      142.0,
+      675.0,
+      222.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PARTIAL CONVERTER",
+          "count": 1
+        },
+        {
+          "name": "HIGH EFFICIENCY RESONANT CONVERTER 4:1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PARTIAL CONVERTER": {
+    "component_box": [
+      311.0,
+      11.0,
+      492.0,
+      171.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V1",
+          "count": 1
+        },
+        {
+          "name": "HIGH EFFICIENCY RESONANT CONVERTER 4:1",
+          "count": 1
+        },
+        {
+          "name": "V2",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "interstage matching & biasing": {
+    "component_box": [
+      85.0,
+      15.0,
+      166.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "bias control",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "in+",
+          "count": 1
+        },
+        {
+          "name": "in-",
+          "count": 1
+        },
+        {
+          "name": "Stage1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Stage2": {
+    "component_box": [
+      313.0,
+      14.0,
+      396.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "interstage matching & biasing",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Stage2",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Vdd",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "bias control": {
+    "component_box": [
+      75.0,
+      281.0,
+      185.0,
+      353.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "bias control",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "interstage matching & biasing",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Stage1": {
+    "component_box": [
+      179.0,
+      62.0,
+      300.0,
+      221.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "interstage matching & biasing",
+          "count": 1
+        },
+        {
+          "name": "Stage2",
+          "count": 1
+        },
+        {
+          "name": "Vdd",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "voltage detection": {
+    "component_box": [
+      493.0,
+      280.0,
+      634.0,
+      364.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "bias control",
+          "count": 1
+        },
+        {
+          "name": "bias control",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Balun",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

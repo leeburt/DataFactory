@@ -1,0 +1,217 @@
+{
+  "7b SA Registers": {
+    "component_box": [
+      147.0,
+      93.0,
+      238.0,
+      143.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Calibration Sequence Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2.5b Stage with Calibration Capacitor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2.5b Stage with Calibration Capacitor": {
+    "component_box": [
+      392.0,
+      174.0,
+      515.0,
+      270.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "7b SA Registers",
+          "count": 1
+        },
+        {
+          "name": "2.5b Stage with Calibration Capacitor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2.5b Stage",
+          "count": 1
+        },
+        {
+          "name": "Digital Error Correction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock-Boost Input Switch": {
+    "component_box": [
+      51.0,
+      173.0,
+      232.0,
+      271.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_IN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2.5b Stage with Calibration Capacitor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Calibration Sequence Controller": {
+    "component_box": [
+      120.0,
+      20.0,
+      511.0,
+      73.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Calibration Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "7b SA Registers",
+          "count": 1
+        },
+        {
+          "name": "7b SA Registers",
+          "count": 1
+        },
+        {
+          "name": "7b SA Registers",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Calibration Comparator": {
+    "component_box": [
+      570.0,
+      14.0,
+      626.0,
+      80.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Calibration Sequence Controller",
+          "count": 1
+        },
+        {
+          "name": "1/2 VREF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "2.5b Stage": {
+    "component_box": [
+      542.0,
+      176.0,
+      664.0,
+      271.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2.5b Stage with Calibration Capacitor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2b Sub-ADC",
+          "count": 1
+        },
+        {
+          "name": "Digital Error Correction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital Error Correction": {
+    "component_box": [
+      105.0,
+      296.0,
+      848.0,
+      347.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2.5b Stage with Calibration Capacitor",
+          "count": 1
+        },
+        {
+          "name": "2.5b Stage with Calibration Capacitor",
+          "count": 1
+        },
+        {
+          "name": "2.5b Stage",
+          "count": 1
+        },
+        {
+          "name": "2b Sub-ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2b Sub-ADC": {
+    "component_box": [
+      695.0,
+      174.0,
+      811.0,
+      271.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2.5b Stage",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Error Correction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

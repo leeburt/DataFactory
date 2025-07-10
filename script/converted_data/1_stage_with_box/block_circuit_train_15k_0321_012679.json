@@ -1,0 +1,202 @@
+{
+  "abc/αβ transformation": {
+    "component_box": [
+      72.0,
+      24.0,
+      135.0,
+      112.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "s_abc(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "αβ/dq变换",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      803.0,
+      84.0,
+      835.0,
+      116.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Integrator",
+          "count": 1
+        },
+        {
+          "name": "θ̃ₑ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "αβ/dq变换",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "αβ/dq变换": {
+    "component_box": [
+      207.0,
+      24.0,
+      270.0,
+      112.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "abc/αβ transformation",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Filter f(t)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Integrator": {
+    "component_box": [
+      717.0,
+      61.0,
+      758.0,
+      136.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Filter f(t)": {
+    "component_box": [
+      329.0,
+      71.0,
+      435.0,
+      121.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "αβ/dq transformation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Controller c(t)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      635.0,
+      83.0,
+      667.0,
+      115.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ω_n",
+          "count": 1
+        },
+        {
+          "name": "Controller c(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      481.0,
+      150.0,
+      528.0,
+      190.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "αβ/dq变换",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Controller c(t)": {
+    "component_box": [
+      467.0,
+      71.0,
+      594.0,
+      121.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Filter f(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

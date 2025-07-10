@@ -1,0 +1,83 @@
+{
+  "SOGI": {
+    "component_box": [
+      376.0,
+      89.0,
+      584.0,
+      220.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "ωgest",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "v1_1α",
+          "count": 1
+        },
+        {
+          "name": "v1_1β",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      228.0,
+      137.0,
+      288.0,
+      202.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "v_i",
+          "count": 1
+        },
+        {
+          "name": "r_e",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SOGI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "r_e": {
+    "component_box": [
+      109.0,
+      233.0,
+      204.0,
+      320.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_L",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

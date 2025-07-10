@@ -1,0 +1,540 @@
+{
+  "Regulator": {
+    "component_box": [
+      620.0,
+      192.0,
+      730.0,
+      225.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LDVCC  \nLDOUT",
+          "count": 1
+        },
+        {
+          "name": "DC-DC (off-chip)\nFeed-back network",
+          "count": 1
+        },
+        {
+          "name": "Replica driver",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LVDS Rx": {
+    "component_box": [
+      136.0,
+      392.0,
+      228.0,
+      472.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Trig-",
+          "count": 1
+        },
+        {
+          "name": "Trig+",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Pulse gen.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      371.0,
+      220.0,
+      437.0,
+      268.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital storage & algorithm",
+          "count": 1
+        },
+        {
+          "name": "A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multi-phase gen.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Trig-": {
+    "component_box": [
+      110.0,
+      415.0,
+      126.0,
+      432.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "LVDS Rx",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "decoupling capacitor": {
+    "component_box": [
+      494.0,
+      123.0,
+      520.0,
+      140.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DVCC",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DLL": {
+    "component_box": [
+      137.0,
+      303.0,
+      235.0,
+      361.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Fref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multi-phase gen.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Ctrl sig. gen.": {
+    "component_box": [
+      110.0,
+      236.0,
+      126.0,
+      252.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DC-DC ctrl SPI",
+          "count": 1
+        },
+        {
+          "name": "DC-DC (off-chip)\nFeed-back network",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital storage & algorithm",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DC-DC (off-chip)": {
+    "component_box": [
+      212.0,
+      15.0,
+      373.0,
+      75.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vsupply",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Feed-back network",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "decoupling capacitor",
+          "count": 1
+        },
+        {
+          "name": "DVCC",
+          "count": 1
+        },
+        {
+          "name": "LDVCC  \nLDOUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Replica driver": {
+    "component_box": [
+      783.0,
+      481.0,
+      801.0,
+      498.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vth-tracking bias gen",
+          "count": 1
+        },
+        {
+          "name": "LDVCC",
+          "count": 1
+        },
+        {
+          "name": "LDOUT",
+          "count": 1
+        },
+        {
+          "name": "L_GND",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Transmission gate": {
+    "component_box": [
+      456.0,
+      410.0,
+      494.0,
+      450.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Pulse gen.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Low-to-high convert",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Low-to-high convert": {
+    "component_box": [
+      500.0,
+      394.0,
+      591.0,
+      465.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Transmission gate",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Replica driver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DVCC": {
+    "component_box": [
+      532.0,
+      158.0,
+      549.0,
+      174.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "decoupling capacitor",
+          "count": 1
+        },
+        {
+          "name": "DC-DC (off-chip)",
+          "count": 1
+        },
+        {
+          "name": "Feed-back network",
+          "count": 1
+        },
+        {
+          "name": "LDVCC  \nLDOUT",
+          "count": 1
+        },
+        {
+          "name": "Regulator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DC-DC (off-chip)\\nFeed-back network": {
+    "component_box": [
+      102.0,
+      13.0,
+      707.0,
+      171.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vsupply",
+          "count": 1
+        },
+        {
+          "name": "DC-DC ctrl SPI",
+          "count": 1
+        },
+        {
+          "name": "Fref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DVCC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "A": {
+    "component_box": [
+      451.0,
+      206.0,
+      524.0,
+      284.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Regulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LDVCC  \nLDOUT": {
+    "component_box": [
+      652.0,
+      158.0,
+      670.0,
+      174.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DC-DC (off-chip)",
+          "count": 1
+        },
+        {
+          "name": "Feed-back network",
+          "count": 1
+        },
+        {
+          "name": "decoupling capacitor",
+          "count": 1
+        },
+        {
+          "name": "DVCC",
+          "count": 1
+        },
+        {
+          "name": "Replica driver",
+          "count": 1
+        },
+        {
+          "name": "VCSEL",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Transistor": {
+    "component_box": [
+      599.0,
+      406.0,
+      639.0,
+      454.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Low-to-high convert",
+          "count": 1
+        },
+        {
+          "name": "Replica driver",
+          "count": 1
+        },
+        {
+          "name": "Replica driver",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Digital storage & algorithm": {
+    "component_box": [
+      240.0,
+      216.0,
+      344.0,
+      300.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ctrl sig. gen.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multi-phase gen.",
+          "count": 1
+        },
+        {
+          "name": "A",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Pulse gen.": {
+    "component_box": [
+      320.0,
+      395.0,
+      391.0,
+      465.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LVDS Rx",
+          "count": 1
+        },
+        {
+          "name": "Multi-phase gen.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Low-to-high convert",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multi-phase gen.": {
+    "component_box": [
+      353.0,
+      298.0,
+      477.0,
+      353.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Pulse gen.",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Feed-back network": {
+    "component_box": [
+      372.0,
+      62.0,
+      493.0,
+      115.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DC-DC (off-chip)",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

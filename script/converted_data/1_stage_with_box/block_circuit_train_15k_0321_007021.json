@@ -1,0 +1,338 @@
+{
+  "Reference Frame Transformation": {
+    "component_box": [
+      82.0,
+      265.0,
+      660.0,
+      312.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i",
+          "count": 1
+        },
+        {
+          "name": "Current Control with Active Damping",
+          "count": 1
+        },
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "τ_PWM",
+          "count": 1
+        },
+        {
+          "name": "Current Control with Active Damping",
+          "count": 1
+        },
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "L2": {
+    "component_box": [
+      614.0,
+      68.0,
+      672.0,
+      92.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Rg",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "v_g",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "L1": {
+    "component_box": [
+      311.0,
+      68.0,
+      367.0,
+      91.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Rg",
+          "count": 1
+        },
+        {
+          "name": "R_C",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "R_P",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Current Control with Active Damping": {
+    "component_box": [
+      128.0,
+      371.0,
+      338.0,
+      485.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference Frame Transformation",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "i_q*",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Reference Frame Transformation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "τ_PWM": {
+    "component_box": [
+      52.0,
+      114.0,
+      137.0,
+      166.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "v_b",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "df/dt Control": {
+    "component_box": [
+      449.0,
+      599.0,
+      575.0,
+      684.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PLL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Rg": {
+    "component_box": [
+      542.0,
+      69.0,
+      598.0,
+      92.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "L1",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "L2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PLL": {
+    "component_box": [
+      649.0,
+      332.0,
+      728.0,
+      378.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "v_c",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Reference Frame Transformation",
+          "count": 1
+        },
+        {
+          "name": "df/dt Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "R_P": {
+    "component_box": [
+      238.0,
+      69.0,
+      295.0,
+      92.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "v_b",
+          "count": 1
+        },
+        {
+          "name": "L1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "v_b": {
+    "component_box": [
+      180.0,
+      119.0,
+      221.0,
+      160.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "τ_PWM",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "R_P",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "v_g": {
+    "component_box": [
+      688.0,
+      119.0,
+      729.0,
+      160.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "L2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      265.0,
+      533.0,
+      294.0,
+      562.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "df/dt Control",
+          "count": 1
+        },
+        {
+          "name": "i_d*ext",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current Control with Active Damping",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "R_C": {
+    "component_box": [
+      442.0,
+      128.0,
+      465.0,
+      186.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "L1",
+          "count": 1
+        },
+        {
+          "name": "Rg",
+          "count": 1
+        },
+        {
+          "name": "C",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

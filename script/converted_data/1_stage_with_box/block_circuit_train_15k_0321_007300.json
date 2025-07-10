@@ -1,0 +1,97 @@
+{
+  "proposed ADC in Est. mode": {
+    "component_box": [
+      134.0,
+      13.0,
+      266.0,
+      92.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_CM",
+          "count": 1
+        },
+        {
+          "name": "Est. pattern generater",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "weight solvement",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Est. pattern generater": {
+    "component_box": [
+      42.0,
+      160.0,
+      159.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "proposed ADC in Est. mode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "weight solvement",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "weight solvement": {
+    "component_box": [
+      203.0,
+      160.0,
+      319.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "proposed ADC in Est. mode",
+          "count": 1
+        },
+        {
+          "name": "Est. pattern generater",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "weight result",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "V_CM": {
+    "component_box": [
+      63.0,
+      64.0,
+      101.0,
+      103.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "proposed ADC in Est. mode",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

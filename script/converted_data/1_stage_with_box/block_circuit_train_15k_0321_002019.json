@@ -1,0 +1,84 @@
+{
+  "Current ripple (peak) prediction with Tsn": {
+    "component_box": [
+      339.0,
+      10.0,
+      526.0,
+      183.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "n-phase duty cycle calculation (feedback control)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Max",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "n-phase duty cycle calculation (feedback control)": {
+    "component_box": [
+      0.0,
+      9.0,
+      233.0,
+      184.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Current ripple (peak) prediction with Tsn",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Ts计算模块": {
+    "component_box": [
+      16.0,
+      226.0,
+      316.0,
+      399.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Max",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Max": {
+    "component_box": [
+      404.0,
+      227.0,
+      520.0,
+      399.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current ripple (peak) prediction with Tsn",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Ts计算模块",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

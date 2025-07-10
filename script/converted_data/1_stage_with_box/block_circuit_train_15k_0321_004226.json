@@ -1,0 +1,267 @@
+{
+  "Control logic": {
+    "component_box": [
+      574.0,
+      228.0,
+      729.0,
+      291.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "SWITCH",
+          "count": 1
+        },
+        {
+          "name": "OUT SEL",
+          "count": 1
+        },
+        {
+          "name": "/N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VCO": {
+    "component_box": [
+      434.0,
+      59.0,
+      515.0,
+      128.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "BUF",
+          "count": 1
+        },
+        {
+          "name": "SWITCH",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PFD": {
+    "component_box": [
+      107.0,
+      44.0,
+      178.0,
+      140.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Fref",
+          "count": 1
+        },
+        {
+          "name": "/N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BUF": {
+    "component_box": [
+      552.0,
+      56.0,
+      617.0,
+      134.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OUT SEL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP": {
+    "component_box": [
+      205.0,
+      45.0,
+      273.0,
+      140.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LPF": {
+    "component_box": [
+      321.0,
+      45.0,
+      390.0,
+      140.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP",
+          "count": 1
+        },
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "/N": {
+    "component_box": [
+      195.0,
+      185.0,
+      322.0,
+      248.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        },
+        {
+          "name": "Control logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OUT SEL": {
+    "component_box": [
+      656.0,
+      73.0,
+      700.0,
+      179.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BUF",
+          "count": 1
+        },
+        {
+          "name": "Control logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OUT BUF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OUT BUF": {
+    "component_box": [
+      719.0,
+      94.0,
+      772.0,
+      157.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OUT SEL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CKOP",
+          "count": 1
+        },
+        {
+          "name": "CKON",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SWITCH": {
+    "component_box": [
+      533.0,
+      152.0,
+      638.0,
+      224.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BUF",
+          "count": 1
+        },
+        {
+          "name": "/N",
+          "count": 1
+        },
+        {
+          "name": "Control logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OUT SEL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

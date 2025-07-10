@@ -1,0 +1,106 @@
+{
+  "LOG (E_lms) BLOCK": {
+    "component_box": [
+      206.0,
+      446.0,
+      366.0,
+      530.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Low Complexity Adaptive Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sliding DCT Transform": {
+    "component_box": [
+      55.0,
+      121.0,
+      742.0,
+      184.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "u(n)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Low Complexity Adaptive Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      376.0,
+      392.0,
+      468.0,
+      475.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Low Complexity Adaptive Filter",
+          "count": 1
+        },
+        {
+          "name": "Low Complexity Adaptive Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LOG (E_lms) BLOCK",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Low Complexity Adaptive Filter": {
+    "component_box": [
+      47.0,
+      236.0,
+      745.0,
+      361.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Sliding DCT Transform",
+          "count": 1
+        },
+        {
+          "name": "LOG (E_lms) BLOCK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LOG (E_lms) BLOCK",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

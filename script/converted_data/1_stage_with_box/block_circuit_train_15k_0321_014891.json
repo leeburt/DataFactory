@@ -1,0 +1,195 @@
+{
+  "Clock Recovery": {
+    "component_box": [
+      528.0,
+      233.0,
+      674.0,
+      329.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AGC, LA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DECISION",
+          "count": 1
+        },
+        {
+          "name": "÷N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "AGC, LA": {
+    "component_box": [
+      313.0,
+      76.0,
+      430.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TIA",
+          "count": 1
+        },
+        {
+          "name": "Gain, Offset Control",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DECISION",
+          "count": 1
+        },
+        {
+          "name": "Clock Recovery",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DECISION": {
+    "component_box": [
+      528.0,
+      91.0,
+      675.0,
+      198.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AGC, LA",
+          "count": 1
+        },
+        {
+          "name": "Clock Recovery",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DEMUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TIA": {
+    "component_box": [
+      142.0,
+      76.0,
+      260.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "photodiode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "AGC, LA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Gain, Offset Control": {
+    "component_box": [
+      321.0,
+      233.0,
+      427.0,
+      329.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AGC, LA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "AGC, LA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "÷N": {
+    "component_box": [
+      750.0,
+      254.0,
+      817.0,
+      309.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clock Recovery",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DEMUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DEMUX": {
+    "component_box": [
+      714.0,
+      93.0,
+      846.0,
+      198.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DECISION",
+          "count": 1
+        },
+        {
+          "name": "÷N",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

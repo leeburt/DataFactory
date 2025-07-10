@@ -1,0 +1,112 @@
+{
+  "N+": {
+    "component_box": [
+      394.0,
+      118.0,
+      444.0,
+      152.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Rbias",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "P+": {
+    "component_box": [
+      469.0,
+      119.0,
+      519.0,
+      152.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Rbias",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Cox": {
+    "component_box": [
+      21.0,
+      76.0,
+      413.0,
+      304.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Top",
+          "count": 1
+        },
+        {
+          "name": "Bottom",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Cox  \nCchan  \nCnwpsub": {
+    "component_box": [
+      73.0,
+      117.0,
+      434.0,
+      211.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Top",
+          "count": 1
+        },
+        {
+          "name": "Bottom",
+          "count": 1
+        },
+        {
+          "name": "Rbias",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Rbias": {
+    "component_box": [
+      178.0,
+      2.0,
+      562.0,
+      303.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "N+",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

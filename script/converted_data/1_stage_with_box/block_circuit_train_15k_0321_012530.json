@@ -1,0 +1,68 @@
+{
+  "I_LED": {
+    "component_box": [
+      2.0,
+      41.0,
+      186.0,
+      131.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Level Shifters and HV Gate Driver": {
+    "component_box": [
+      174.0,
+      183.0,
+      393.0,
+      317.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MP",
+          "count": 1
+        },
+        {
+          "name": "MN",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Valley Current Sensor": {
+    "component_box": [
+      476.0,
+      300.0,
+      616.0,
+      426.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Level Shifters and HV Gate Driver",
+          "count": 1
+        },
+        {
+          "name": "RSEN",
+          "count": 1
+        },
+        {
+          "name": "L",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

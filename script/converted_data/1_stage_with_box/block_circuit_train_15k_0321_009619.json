@@ -1,0 +1,74 @@
+{
+  "Vector quantizer": {
+    "component_box": [
+      8.0,
+      106.0,
+      120.0,
+      186.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Filters",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Filters",
+          "count": 1
+        },
+        {
+          "name": "sv[n]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Quantizer": {
+    "component_box": [
+      451.0,
+      82.0,
+      549.0,
+      176.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Complete Sorter",
+          "count": 1
+        },
+        {
+          "name": "d[n]",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Complete Sorter": {
+    "component_box": [
+      209.0,
+      106.0,
+      354.0,
+      185.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Filters",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

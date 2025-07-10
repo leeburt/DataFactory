@@ -1,0 +1,15 @@
+{
+  "null": {
+    "component_box": [
+      1266.0,
+      570.0,
+      1483.0,
+      785.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "Capacitor": {
+    "component_box": [
+      188.0,
+      399.0,
+      213.0,
+      460.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DC-DC converter",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Diode-Bridge Rectifier",
+          "count": 1
+        },
+        {
+          "name": "3 Phase Utility",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Diode-Bridge Rectifier": {
+    "component_box": [
+      313.0,
+      84.0,
+      466.0,
+      360.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DC-DC converter",
+          "count": 1
+        },
+        {
+          "name": "DC-DC converter",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "3 Phase Utility",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Switch": {
+    "component_box": [
+      135.0,
+      399.0,
+      159.0,
+      460.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "3 Phase Utility",
+          "count": 1
+        },
+        {
+          "name": "Diode-Bridge Rectifier",
+          "count": 1
+        },
+        {
+          "name": "Capacitor",
+          "count": 1
+        },
+        {
+          "name": "capacitor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DC-DC converter": {
+    "component_box": [
+      567.0,
+      269.0,
+      724.0,
+      360.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Diode-Bridge Rectifier",
+          "count": 1
+        },
+        {
+          "name": "Injection Network",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Output Midpoint",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "capacitor": {
+    "component_box": [
+      242.0,
+      400.0,
+      266.0,
+      460.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "3 Phase Utility",
+          "count": 1
+        },
+        {
+          "name": "2i3",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

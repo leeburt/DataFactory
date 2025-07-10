@@ -1,0 +1,156 @@
+{
+  "DAC": {
+    "component_box": [
+      247.0,
+      113.0,
+      414.0,
+      182.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SAR Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comp",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "S/H\nDAC\nComp": {
+    "component_box": [
+      200.0,
+      6.0,
+      729.0,
+      260.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "SAR Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SAR Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "S/H  \nSAR Logic  \nDAC": {
+    "component_box": [
+      2.0,
+      6.0,
+      494.0,
+      266.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Comp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comp",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SAR Logic": {
+    "component_box": [
+      31.0,
+      111.0,
+      203.0,
+      182.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "S/H": {
+    "component_box": [
+      246.0,
+      18.0,
+      414.0,
+      88.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Comp",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "V_in",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comp": {
+    "component_box": [
+      482.0,
+      20.0,
+      631.0,
+      182.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SAR Logic",
+          "count": 1
+        },
+        {
+          "name": "D_out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

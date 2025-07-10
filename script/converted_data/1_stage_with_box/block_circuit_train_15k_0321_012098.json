@@ -1,0 +1,740 @@
+{
+  "Start-up": {
+    "component_box": [
+      516.0,
+      1043.0,
+      703.0,
+      1109.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "vB",
+          "count": 1
+        },
+        {
+          "name": "V_D",
+          "count": 1
+        },
+        {
+          "name": "V_DD",
+          "count": 1
+        },
+        {
+          "name": "V_PV",
+          "count": 1
+        },
+        {
+          "name": "V_PZ",
+          "count": 1
+        },
+        {
+          "name": "V_RF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital controller with SAR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "L": {
+    "component_box": [
+      529.0,
+      113.0,
+      560.0,
+      144.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C_DD\nC_D\nC_store",
+          "count": 1
+        },
+        {
+          "name": "S1 S2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "0.5 hour clock": {
+    "component_box": [
+      1136.0,
+      340.0,
+      1369.0,
+      407.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "I_R1",
+          "count": 1
+        },
+        {
+          "name": "I_R2,3,4",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "clock",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital controller with SAR": {
+    "component_box": [
+      784.0,
+      534.0,
+      1043.0,
+      844.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Start-up",
+          "count": 1
+        },
+        {
+          "name": "Switches & Sampler",
+          "count": 1
+        },
+        {
+          "name": "References",
+          "count": 1
+        },
+        {
+          "name": "Vstore-OK Comparator",
+          "count": 1
+        },
+        {
+          "name": "0.5 hour clock",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Voltage doubler & driver",
+          "count": 1
+        },
+        {
+          "name": "Energize/dump pulse gen.",
+          "count": 1
+        },
+        {
+          "name": "LDO",
+          "count": 1
+        },
+        {
+          "name": "LDO  \nSwitches & Sampler",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Oscillator PV Oscillator piezo Oscillator RF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LDO & Switches & Sampler": {
+    "component_box": [
+      1437.0,
+      652.0,
+      1466.0,
+      681.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "U5",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LDO",
+          "count": 1
+        },
+        {
+          "name": "Switches & Sampler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LDO": {
+    "component_box": [
+      1292.0,
+      161.0,
+      1436.0,
+      241.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Cstore",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_LDO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Analog switch": {
+    "component_box": [
+      167.0,
+      545.0,
+      197.0,
+      575.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Rectifier",
+          "count": 1
+        },
+        {
+          "name": "C_BPZ",
+          "count": 1
+        },
+        {
+          "name": "Digital controller with SAR",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Energize/dump pulse gen.": {
+    "component_box": [
+      481.0,
+      789.0,
+      733.0,
+      929.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage doubler & driver",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Piezo": {
+    "component_box": [
+      166.0,
+      441.0,
+      197.0,
+      470.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C_BPV",
+          "count": 1
+        },
+        {
+          "name": "Analog switch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "V_PV  \\nv_BPZ  \\nv_BRF": {
+    "component_box": [
+      167.0,
+      137.0,
+      196.0,
+      166.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "C_BPV",
+          "count": 1
+        },
+        {
+          "name": "Analog switch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "clock": {
+    "component_box": [
+      1437.0,
+      359.0,
+      1466.0,
+      389.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "0.5 hour clock",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Vstore-OK Comparator": {
+    "component_box": [
+      903.0,
+      288.0,
+      1123.0,
+      409.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_D  \nV_store",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "0.5 hour clock",
+          "count": 1
+        },
+        {
+          "name": "Digital controller with SAR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "C_BPV": {
+    "component_box": [
+      167.0,
+      289.0,
+      197.0,
+      318.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "S0 PV",
+          "count": 1
+        },
+        {
+          "name": "Switches & Sampler",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "C_DD\nC_D\nC_store": {
+    "component_box": [
+      412.0,
+      114.0,
+      443.0,
+      143.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "ground",
+          "count": 1
+        },
+        {
+          "name": "V_DD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Voltage doubler & driver": {
+    "component_box": [
+      481.0,
+      580.0,
+      735.0,
+      717.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital controller with SAR",
+          "count": 1
+        },
+        {
+          "name": "Energize/dump pulse gen.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "S1 S2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Cstore": {
+    "component_box": [
+      1115.0,
+      114.0,
+      1145.0,
+      143.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Vstore-OK Comparator",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "V_D  V_store",
+          "count": 1
+        },
+        {
+          "name": "LDO",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "S1 S2": {
+    "component_box": [
+      509.0,
+      359.0,
+      667.0,
+      410.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage doubler & driver",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "L",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Switches & Sampler": {
+    "component_box": [
+      889.0,
+      1034.0,
+      1439.0,
+      1110.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "References",
+          "count": 1
+        },
+        {
+          "name": "V_PV  v_BPZ  v_BRF",
+          "count": 1
+        },
+        {
+          "name": "V_DD",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Digital controller with SAR",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "V_D  \nV_store": {
+    "component_box": [
+      875.0,
+      114.0,
+      905.0,
+      143.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "L",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Vstore-OK Comparator",
+          "count": 1
+        },
+        {
+          "name": "0.5 hour clock",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "C_DD\nC_D\nC_store",
+          "count": 1
+        },
+        {
+          "name": "Cstore",
+          "count": 1
+        },
+        {
+          "name": "LDO",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "C_DD  \nC_BPV  \nC_BRF": {
+    "component_box": [
+      166.0,
+      1101.0,
+      198.0,
+      1132.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_PV  \nv_BPZ  \nv_BRF",
+          "count": 1
+        },
+        {
+          "name": "GND",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RF matching inductor": {
+    "component_box": [
+      167.0,
+      902.0,
+      197.0,
+      932.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RF",
+          "count": 1
+        },
+        {
+          "name": "Rectifier",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "IR5": {
+    "component_box": [
+      1225.0,
+      716.0,
+      1347.0,
+      841.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Digital controller with SAR",
+          "count": 1
+        },
+        {
+          "name": "v_B",
+          "count": 1
+        },
+        {
+          "name": "V_R",
+          "count": 1
+        },
+        {
+          "name": "C_R",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Rectifier": {
+    "component_box": [
+      219.0,
+      868.0,
+      274.0,
+      974.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RF matching inductor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "S0 RF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "References": {
+    "component_box": [
+      856.0,
+      858.0,
+      1102.0,
+      934.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "0.5 hour clock",
+          "count": 1
+        },
+        {
+          "name": "Oscillator PV Oscillator piezo Oscillator RF",
+          "count": 1
+        },
+        {
+          "name": "IR5",
+          "count": 1
+        },
+        {
+          "name": "Switches & Sampler",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Digital controller with SAR",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Oscillator PV Oscillator piezo Oscillator RF": {
+    "component_box": [
+      1107.0,
+      505.0,
+      1384.0,
+      654.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital controller with SAR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital controller with SAR",
+          "count": 1
+        },
+        {
+          "name": "Switches & Sampler",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "v_BPZ  \nv_BRF": {
+    "component_box": [
+      166.0,
+      721.0,
+      197.0,
+      751.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Switches & Sampler",
+          "count": 1
+        },
+        {
+          "name": "Energize/dump pulse gen.",
+          "count": 1
+        },
+        {
+          "name": "Start-up",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Analog switch",
+          "count": 1
+        },
+        {
+          "name": "S0 RF",
+          "count": 1
+        },
+        {
+          "name": "C_BPZ",
+          "count": 1
+        },
+        {
+          "name": "C_BRF",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

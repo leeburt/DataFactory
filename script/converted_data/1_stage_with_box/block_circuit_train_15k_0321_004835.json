@@ -1,0 +1,75 @@
+{
+  "fine ADC": {
+    "component_box": [
+      377.0,
+      133.0,
+      562.0,
+      235.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "folding circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "5 LSBs",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "coarse ADC": {
+    "component_box": [
+      378.0,
+      9.0,
+      564.0,
+      109.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3 MSBs",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "folding circuit": {
+    "component_box": [
+      113.0,
+      131.0,
+      354.0,
+      235.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "coarse ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "fine ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

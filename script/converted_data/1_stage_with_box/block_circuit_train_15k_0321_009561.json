@@ -1,0 +1,129 @@
+{
+  "1-bit quantizer": {
+    "component_box": [
+      291.0,
+      113.0,
+      380.0,
+      198.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "N-1 / N+1 Waveform Selection",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PWM": {
+    "component_box": [
+      195.0,
+      15.0,
+      319.0,
+      96.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "v_am",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "N-1 / N+1 Waveform Selection",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      180.0,
+      121.0,
+      247.0,
+      188.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_diff",
+          "count": 1
+        },
+        {
+          "name": "i^*_diff",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1-bit quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "N-1 / N+1 Waveform Selection": {
+    "component_box": [
+      416.0,
+      10.0,
+      565.0,
+      204.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM",
+          "count": 1
+        },
+        {
+          "name": "1-bit quantizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sorting Algorithm",
+          "count": 1
+        },
+        {
+          "name": "Sorting Algorithm",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sorting Algorithm": {
+    "component_box": [
+      660.0,
+      16.0,
+      810.0,
+      95.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "N-1 / N+1 Waveform Selection",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "s_u_j",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

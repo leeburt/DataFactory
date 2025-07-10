@@ -1,0 +1,203 @@
+{
+  "DAC": {
+    "component_box": [
+      264.0,
+      207.0,
+      319.0,
+      246.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H(s)": {
+    "component_box": [
+      247.0,
+      116.0,
+      352.0,
+      164.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H′(s)": {
+    "component_box": [
+      247.0,
+      375.0,
+      357.0,
+      425.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "F",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "NTF": {
+    "component_box": [
+      221.0,
+      22.0,
+      286.0,
+      106.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "F": {
+    "component_box": [
+      490.0,
+      375.0,
+      540.0,
+      424.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H′(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/(b₁s + 1)": {
+    "component_box": [
+      136.0,
+      448.0,
+      212.0,
+      497.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      155.0,
+      379.0,
+      194.0,
+      419.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/(b1 s + 1)",
+          "count": 1
+        },
+        {
+          "name": "1/(b₁s + 1)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H′(s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Quantizer": {
+    "component_box": [
+      478.0,
+      115.0,
+      526.0,
+      163.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/(b1 s + 1)": {
+    "component_box": [
+      50.0,
+      375.0,
+      127.0,
+      425.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "u",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

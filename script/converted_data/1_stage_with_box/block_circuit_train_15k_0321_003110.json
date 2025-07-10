@@ -1,0 +1,223 @@
+{
+  "Sequencer": {
+    "component_box": [
+      579.0,
+      7.0,
+      662.0,
+      128.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Strong-arm latch array",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "comparator": {
+    "component_box": [
+      313.0,
+      186.0,
+      408.0,
+      294.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "INV",
+          "count": 1
+        },
+        {
+          "name": "lat",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "logic gate",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Vbp … Vbn": {
+    "component_box": [
+      396.0,
+      347.0,
+      529.0,
+      428.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output driver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Bias generator": {
+    "component_box": [
+      466.0,
+      361.0,
+      511.0,
+      417.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vbp … Vbn",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "INV",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Output driver": {
+    "component_box": [
+      706.0,
+      224.0,
+      764.0,
+      305.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "INV",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Transmission gate",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Transmission gate": {
+    "component_box": [
+      380.0,
+      361.0,
+      423.0,
+      418.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "INV",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Strong-arm latch array": {
+    "component_box": [
+      287.0,
+      11.0,
+      524.0,
+      128.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ctrl_m <12:1>",
+          "count": 1
+        },
+        {
+          "name": "ctrl_p <12:1>",
+          "count": 1
+        },
+        {
+          "name": "Sequencer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      87.0,
+      241.0,
+      247.0,
+      304.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ctrlp <12:1>",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "INV": {
+    "component_box": [
+      506.0,
+      361.0,
+      548.0,
+      417.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Bias generator",
+          "count": 1
+        },
+        {
+          "name": "Output driver",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

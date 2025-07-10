@@ -1,0 +1,213 @@
+{
+  "Adder": {
+    "component_box": [
+      752.0,
+      276.0,
+      792.0,
+      315.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/N",
+          "count": 1
+        },
+        {
+          "name": "φ_Q,DSM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "8-Tap FIR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DCO": {
+    "component_box": [
+      586.0,
+      91.0,
+      685.0,
+      175.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DLF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "(s/ω_p)/(1+s/ω_p)": {
+    "component_box": [
+      228.0,
+      365.0,
+      335.0,
+      449.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/(1+ s/ωₚ)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/M": {
+    "component_box": [
+      145.0,
+      255.0,
+      200.0,
+      338.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/(1+ s/ωₚ)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/(1+ s/ωₚ)": {
+    "component_box": [
+      321.0,
+      254.0,
+      442.0,
+      339.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "8-Tap FIR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "8-Tap FIR": {
+    "component_box": [
+      458.0,
+      254.0,
+      639.0,
+      339.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/(1+ s/ωₚ)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/N",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "K_BPD": {
+    "component_box": [
+      195.0,
+      91.0,
+      277.0,
+      175.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DLF": {
+    "component_box": [
+      392.0,
+      90.0,
+      519.0,
+      176.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/N": {
+    "component_box": [
+      674.0,
+      255.0,
+      728.0,
+      338.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "8-Tap FIR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

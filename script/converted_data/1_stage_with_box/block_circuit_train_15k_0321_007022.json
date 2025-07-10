@@ -1,0 +1,256 @@
+{
+  "Coupling capacitor": {
+    "component_box": [
+      680.0,
+      514.0,
+      761.0,
+      550.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LP filters",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "OA2": {
+    "component_box": [
+      1301.0,
+      382.0,
+      1477.0,
+      554.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_COMPOSITE",
+          "count": 1
+        },
+        {
+          "name": "R_SENSE",
+          "count": 1
+        },
+        {
+          "name": "C_OUT",
+          "count": 1
+        },
+        {
+          "name": "Q_OUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Power stage": {
+    "component_box": [
+      0.0,
+      140.0,
+      578.0,
+      760.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "LP filters",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "G_PMOS",
+          "count": 1
+        },
+        {
+          "name": "G_NMOS",
+          "count": 1
+        },
+        {
+          "name": "VPLUS_POWER",
+          "count": 1
+        },
+        {
+          "name": "VMINUS_POWER",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LP filters": {
+    "component_box": [
+      679.0,
+      382.0,
+      761.0,
+      419.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Power stage",
+          "count": 1
+        },
+        {
+          "name": "OA1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "V_COMPOSITE": {
+    "component_box": [
+      985.0,
+      243.0,
+      1153.0,
+      324.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "+V_DD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OA1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "V_SENSE": {
+    "component_box": [
+      1568.0,
+      610.0,
+      1606.0,
+      683.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Q_OUT",
+          "count": 1
+        },
+        {
+          "name": "VSENSE",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "OA2",
+          "count": 1
+        },
+        {
+          "name": "C_OUT",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Charge-pump level-shifter": {
+    "component_box": [
+      1101.0,
+      100.0,
+      1354.0,
+      206.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "+V_DD",
+          "count": 1
+        },
+        {
+          "name": "V_COMPOSITE",
+          "count": 1
+        },
+        {
+          "name": "Output NMOS transistor",
+          "count": 1
+        },
+        {
+          "name": "Output PMOS transistor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VSENSE": {
+    "component_box": [
+      1622.0,
+      602.0,
+      1764.0,
+      695.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "OA2",
+          "count": 1
+        },
+        {
+          "name": "Q_OUT",
+          "count": 1
+        },
+        {
+          "name": "R_SENSE",
+          "count": 1
+        },
+        {
+          "name": "C_OUT",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "OA1": {
+    "component_box": [
+      899.0,
+      338.0,
+      1165.0,
+      597.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LP filters",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Coupling capacitor",
+          "count": 1
+        },
+        {
+          "name": "Charge-pump level-shifter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

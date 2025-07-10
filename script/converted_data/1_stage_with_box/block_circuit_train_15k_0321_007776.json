@@ -1,0 +1,257 @@
+{
+  "Sorting Algorithm": {
+    "component_box": [
+      650.0,
+      121.0,
+      805.0,
+      203.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "s_lj",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sign": {
+    "component_box": [
+      217.0,
+      118.0,
+      310.0,
+      206.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "N-1 / N+1 Waveform Selection",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Subtractor": {
+    "component_box": [
+      102.0,
+      125.0,
+      171.0,
+      195.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "i_diff",
+          "count": 1
+        },
+        {
+          "name": "i*_diff",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Dev",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "N-1 / N+1 Waveform Selection": {
+    "component_box": [
+      347.0,
+      12.0,
+      502.0,
+      212.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM",
+          "count": 1
+        },
+        {
+          "name": "Sign",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Quantizer": {
+    "component_box": [
+      341.0,
+      239.0,
+      432.0,
+      327.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Dev",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Saturation block",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PWM": {
+    "component_box": [
+      116.0,
+      16.0,
+      246.0,
+      101.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "vam",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "N-1 / N+1 Waveform Selection",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      553.0,
+      136.0,
+      608.0,
+      191.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "N-1 / N+1 Waveform Selection",
+          "count": 1
+        },
+        {
+          "name": "Saturation block",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sorting Algorithm",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Dev": {
+    "component_box": [
+      222.0,
+      247.0,
+      303.0,
+      318.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Subtractor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      553.0,
+      34.0,
+      608.0,
+      88.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "N-1 / N+1 Waveform Selection",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Sorting Algorithm",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Saturation block": {
+    "component_box": [
+      467.0,
+      241.0,
+      559.0,
+      329.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

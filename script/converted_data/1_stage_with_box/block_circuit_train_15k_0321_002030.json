@@ -1,0 +1,140 @@
+{
+  "High Voltage Generator": {
+    "component_box": [
+      154.0,
+      4.0,
+      287.0,
+      59.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Voltage Reference",
+          "count": 1
+        },
+        {
+          "name": "Stimulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Stimulus Driver": {
+    "component_box": [
+      315.0,
+      397.0,
+      402.0,
+      450.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Stimulator",
+          "count": 1
+        },
+        {
+          "name": "Stimulator",
+          "count": 1
+        },
+        {
+          "name": "Stimulator",
+          "count": 1
+        },
+        {
+          "name": "Stimulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Cochlea",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Cochlea",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Voltage DAC": {
+    "component_box": [
+      96.0,
+      331.0,
+      333.0,
+      407.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage Reference",
+          "count": 1
+        },
+        {
+          "name": "amp[2:0]",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Cochlea",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Cochlea": {
+    "component_box": [
+      22.0,
+      395.0,
+      408.0,
+      492.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Stimulus Driver",
+          "count": 1
+        },
+        {
+          "name": "Stimulus Driver",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Voltage Reference": {
+    "component_box": [
+      168.0,
+      100.0,
+      270.0,
+      155.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "High Voltage Generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Stimulator",
+          "count": 1
+        },
+        {
+          "name": "Stimulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

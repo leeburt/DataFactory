@@ -1,0 +1,72 @@
+{
+  "Control Loop": {
+    "component_box": [
+      322.0,
+      466.0,
+      598.0,
+      605.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Optical mirrors",
+          "count": 1
+        },
+        {
+          "name": "Optical mirrors",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Optical mirrors",
+          "count": 1
+        },
+        {
+          "name": "Optical mirrors",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Optical mirrors": {
+    "component_box": [
+      350.0,
+      70.0,
+      490.0,
+      389.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Incoming fiber",
+          "count": 1
+        },
+        {
+          "name": "Incoming fiber",
+          "count": 1
+        },
+        {
+          "name": "Control Loop",
+          "count": 1
+        },
+        {
+          "name": "Control Loop",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "outgoing fiber",
+          "count": 1
+        },
+        {
+          "name": "outgoing fiber",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

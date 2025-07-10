@@ -1,0 +1,98 @@
+{
+  "PFD": {
+    "component_box": [
+      152.0,
+      61.0,
+      262.0,
+      180.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CKREF",
+          "count": 1
+        },
+        {
+          "name": "MMD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP": {
+    "component_box": [
+      314.0,
+      64.0,
+      424.0,
+      183.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Analog LF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Analog LF": {
+    "component_box": [
+      477.0,
+      63.0,
+      603.0,
+      181.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MMD": {
+    "component_box": [
+      396.0,
+      245.0,
+      563.0,
+      310.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

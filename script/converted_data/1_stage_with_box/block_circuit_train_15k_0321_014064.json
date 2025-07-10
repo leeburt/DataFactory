@@ -1,0 +1,129 @@
+{
+  "iPark": {
+    "component_box": [
+      547.0,
+      36.0,
+      726.0,
+      168.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MAF",
+          "count": 1
+        },
+        {
+          "name": "MAF",
+          "count": 1
+        },
+        {
+          "name": "θ_f",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Park",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI": {
+    "component_box": [
+      1097.0,
+      71.0,
+      1184.0,
+      137.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Park",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MAF": {
+    "component_box": [
+      358.0,
+      115.0,
+      459.0,
+      182.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Park",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "iPark",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Park": {
+    "component_box": [
+      834.0,
+      36.0,
+      1012.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "iPark",
+          "count": 1
+        },
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Integrator": {
+    "component_box": [
+      1256.0,
+      52.0,
+      1337.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Park",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

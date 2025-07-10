@@ -1,0 +1,166 @@
+{
+  "P2S": {
+    "component_box": [
+      949.0,
+      118.0,
+      1053.0,
+      199.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "4-square block",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Analog Front-end": {
+    "component_box": [
+      85.0,
+      118.0,
+      274.0,
+      200.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Current source",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ΣΔ ADC",
+          "count": 1
+        },
+        {
+          "name": "ΣΔ ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Demapper": {
+    "component_box": [
+      809.0,
+      116.0,
+      910.0,
+      203.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "EQ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P2S",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ΣΔ ADC": {
+    "component_box": [
+      355.0,
+      166.0,
+      464.0,
+      248.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Analog Front-end",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FFT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current source": {
+    "component_box": [
+      22.0,
+      101.0,
+      61.0,
+      138.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Analog Front-end",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FFT": {
+    "component_box": [
+      528.0,
+      70.0,
+      630.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ΣΔ ADC",
+          "count": 1
+        },
+        {
+          "name": "ΣΔ ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "EQ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "EQ": {
+    "component_box": [
+      669.0,
+      116.0,
+      770.0,
+      203.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FFT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Demapper",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

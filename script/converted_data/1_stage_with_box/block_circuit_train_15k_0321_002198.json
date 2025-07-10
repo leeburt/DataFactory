@@ -1,0 +1,186 @@
+{
+  "Updating filter": {
+    "component_box": [
+      456.0,
+      321.0,
+      595.0,
+      397.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input prediction",
+          "count": 1
+        },
+        {
+          "name": "LUT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      50.0,
+      194.0,
+      195.0,
+      272.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        },
+        {
+          "name": "Signal generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Input synchronization",
+          "count": 1
+        },
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Signal generator": {
+    "component_box": [
+      106.0,
+      31.0,
+      367.0,
+      132.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      32.0,
+      62.0,
+      71.0,
+      101.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "g",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Signal generator",
+          "count": 1
+        },
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Input prediction": {
+    "component_box": [
+      456.0,
+      195.0,
+      596.0,
+      271.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input synchronization",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Updating filter",
+          "count": 1
+        },
+        {
+          "name": "̃ψ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LUT": {
+    "component_box": [
+      633.0,
+      309.0,
+      752.0,
+      509.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Updating filter",
+          "count": 1
+        },
+        {
+          "name": "addr",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Input synchronization": {
+    "component_box": [
+      254.0,
+      196.0,
+      425.0,
+      271.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "Signal generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Input prediction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

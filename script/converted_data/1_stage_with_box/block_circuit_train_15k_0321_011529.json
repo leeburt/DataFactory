@@ -1,0 +1,243 @@
+{
+  "SECOND MULTIPLIER": {
+    "component_box": [
+      461.0,
+      168.0,
+      633.0,
+      258.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OFFSET ADJUST",
+          "count": 1
+        },
+        {
+          "name": "LOW PASS FILTER",
+          "count": 1
+        },
+        {
+          "name": "FIRST MULTIPLIER",
+          "count": 1
+        },
+        {
+          "name": "Precision Thermally Compensated Bias Network",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OUTPUT AMPLIFIER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FIRST MULTIPLIER": {
+    "component_box": [
+      259.0,
+      328.0,
+      429.0,
+      421.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LIMITER",
+          "count": 1
+        },
+        {
+          "name": "INPUT AMPLIFIER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LOW PASS FILTER",
+          "count": 1
+        },
+        {
+          "name": "SECOND MULTIPLIER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "INHIBIT": {
+    "component_box": [
+      64.0,
+      169.0,
+      231.0,
+      257.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SWITCH",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LOW PASS FILTER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OFFSET ADJUST": {
+    "component_box": [
+      461.0,
+      10.0,
+      631.0,
+      99.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "SECOND MULTIPLIER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LOW PASS FILTER": {
+    "component_box": [
+      261.0,
+      169.0,
+      430.0,
+      258.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "INHIBIT",
+          "count": 1
+        },
+        {
+          "name": "FIRST MULTIPLIER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SECOND MULTIPLIER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OUTPUT AMPLIFIER": {
+    "component_box": [
+      661.0,
+      168.0,
+      831.0,
+      258.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SECOND MULTIPLIER",
+          "count": 1
+        },
+        {
+          "name": "Precision Thermally Compensated Bias Network",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "INPUT AMPLIFIER": {
+    "component_box": [
+      64.0,
+      494.0,
+      231.0,
+      582.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "IN",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "LIMITER",
+          "count": 1
+        },
+        {
+          "name": "FIRST MULTIPLIER",
+          "count": 1
+        },
+        {
+          "name": "Precision Thermally Compensated Bias Network",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Precision Thermally Compensated Bias Network": {
+    "component_box": [
+      637.0,
+      332.0,
+      855.0,
+      544.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "SECOND MULTIPLIER",
+          "count": 1
+        },
+        {
+          "name": "OUTPUT AMPLIFIER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LIMITER": {
+    "component_box": [
+      64.0,
+      329.0,
+      231.0,
+      419.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "INHIBIT",
+          "count": 1
+        },
+        {
+          "name": "INPUT AMPLIFIER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FIRST MULTIPLIER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

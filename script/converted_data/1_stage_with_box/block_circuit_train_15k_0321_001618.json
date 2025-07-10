@@ -1,0 +1,72 @@
+{
+  "MUX": {
+    "component_box": [
+      169.0,
+      9.0,
+      260.0,
+      344.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Sensor_1",
+          "count": 1
+        },
+        {
+          "name": "Sensor_2",
+          "count": 1
+        },
+        {
+          "name": "...",
+          "count": 1
+        },
+        {
+          "name": "Sensor_n",
+          "count": 1
+        },
+        {
+          "name": "SEL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      350.0,
+      6.0,
+      656.0,
+      376.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK",
+          "count": 1
+        },
+        {
+          "name": "MUX",
+          "count": 1
+        },
+        {
+          "name": "VBG",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

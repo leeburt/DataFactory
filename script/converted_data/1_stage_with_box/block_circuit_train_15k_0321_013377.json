@@ -1,0 +1,229 @@
+{
+  "DEGEN. PAR. AMP": {
+    "component_box": [
+      563.0,
+      10.0,
+      689.0,
+      129.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Circulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "X2 MULT.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PHASE ADJ.": {
+    "component_box": [
+      384.0,
+      395.0,
+      514.0,
+      516.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "POWER DIVIDER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MIXER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "X2 MULT.": {
+    "component_box": [
+      742.0,
+      9.0,
+      866.0,
+      130.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DEGEN. PAR. AMP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PHASE ADJ.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "POWER DIVIDER": {
+    "component_box": [
+      99.0,
+      354.0,
+      229.0,
+      480.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PUMP",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "A",
+          "count": 1
+        },
+        {
+          "name": "PHASE ADJ.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "UP CONVERTER": {
+    "component_box": [
+      5.0,
+      10.0,
+      134.0,
+      130.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "A",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "LIGHT MOD.",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LF AMP.": {
+    "component_box": [
+      564.0,
+      222.0,
+      690.0,
+      344.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MIXER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PHASE ADJ.",
+          "count": 1
+        },
+        {
+          "name": "OUTPUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MIXER": {
+    "component_box": [
+      387.0,
+      223.0,
+      510.0,
+      345.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Circulator",
+          "count": 1
+        },
+        {
+          "name": "PHASE ADJ.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LF AMP.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "A": {
+    "component_box": [
+      194.0,
+      68.0,
+      311.0,
+      187.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "UP CONVERTER",
+          "count": 1
+        },
+        {
+          "name": "POWER DIVIDER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Circulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Circulator": {
+    "component_box": [
+      391.0,
+      66.0,
+      507.0,
+      186.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DEGEN. PAR. AMP",
+          "count": 1
+        },
+        {
+          "name": "MIXER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

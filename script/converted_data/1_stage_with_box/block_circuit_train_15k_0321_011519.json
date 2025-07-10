@@ -1,0 +1,183 @@
+{
+  "d/dt": {
+    "component_box": [
+      608.0,
+      284.0,
+      656.0,
+      332.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      273.0,
+      20.0,
+      739.0,
+      476.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "V_ref",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Clock signals",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      573.0,
+      233.0,
+      610.0,
+      275.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "d/dt",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Charge pump": {
+    "component_box": [
+      166.0,
+      267.0,
+      431.0,
+      429.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Clock signals",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock signals": {
+    "component_box": [
+      167.0,
+      55.0,
+      352.0,
+      204.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "10MHz",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Charge pump",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock signals  \nCharge pump": {
+    "component_box": [
+      9.0,
+      8.0,
+      412.0,
+      479.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "10MHz",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "Vin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Divider": {
+    "component_box": [
+      530.0,
+      285.0,
+      576.0,
+      332.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "d/dt",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "Charge Pump Module": {
+    "component_box": [
+      107.0,
+      331.0,
+      496.0,
+      393.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "non-overlap circuit",
+          "count": 1
+        },
+        {
+          "name": "Switching capacitor bandgap reference circuit",
+          "count": 1
+        },
+        {
+          "name": "Automatic Body Switch",
+          "count": 1
+        },
+        {
+          "name": "VOUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VOUT": {
+    "component_box": [
+      699.0,
+      0.0,
+      1187.0,
+      422.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Charge Pump Module",
+          "count": 1
+        },
+        {
+          "name": "Charge Pump Module",
+          "count": 1
+        },
+        {
+          "name": "Automatic Body Switch",
+          "count": 1
+        },
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "COUT",
+          "count": 1
+        },
+        {
+          "name": "RLOAD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Automatic Body Switch": {
+    "component_box": [
+      166.0,
+      507.0,
+      495.0,
+      579.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "HV_DD",
+          "count": 1
+        },
+        {
+          "name": "HV_CLK",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Charge Pump Module",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Current buffer": {
+    "component_box": [
+      437.0,
+      28.0,
+      557.0,
+      149.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "non-overlap circuit",
+          "count": 1
+        },
+        {
+          "name": "Switching capacitor bandgap reference circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Charge Pump Module",
+          "count": 1
+        },
+        {
+          "name": "Charge Pump Module",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "GND": {
+    "component_box": [
+      620.0,
+      562.0,
+      674.0,
+      593.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "COUT",
+          "count": 1
+        },
+        {
+          "name": "RLOAD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Sensor Stage": {
+    "component_box": [
+      54.0,
+      14.0,
+      595.0,
+      579.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current buffer",
+          "count": 1
+        },
+        {
+          "name": "Charge Pump Module",
+          "count": 1
+        },
+        {
+          "name": "Charge Pump Module",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "non-overlap circuit": {
+    "component_box": [
+      105.0,
+      27.0,
+      335.0,
+      133.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Switching capacitor bandgap reference circuit",
+          "count": 1
+        },
+        {
+          "name": "Current buffer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Switching capacitor bandgap reference circuit\n1st Charge Pump Module\n2nd Charge Pump Module\nNth Charge Pump Module": {
+    "component_box": [
+      103.0,
+      267.0,
+      498.0,
+      324.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "non-overlap circuit",
+          "count": 1
+        },
+        {
+          "name": "Automatic Body Switch",
+          "count": 1
+        },
+        {
+          "name": "V_FB",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current buffer",
+          "count": 1
+        },
+        {
+          "name": "VOUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Switching capacitor bandgap reference circuit": {
+    "component_box": [
+      105.0,
+      141.0,
+      335.0,
+      244.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "non-overlap circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current buffer",
+          "count": 1
+        },
+        {
+          "name": "Charge Pump Module",
+          "count": 1
+        },
+        {
+          "name": "Charge Pump Module",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

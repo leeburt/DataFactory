@@ -1,0 +1,175 @@
+{
+  "z⁻¹/(1–z⁻¹)": {
+    "component_box": [
+      356.0,
+      183.0,
+      459.0,
+      261.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Z⁻¹/(1−Z⁻¹)",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      382.0,
+      7.0,
+      437.0,
+      60.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      595.0,
+      195.0,
+      649.0,
+      249.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Smart-DEM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Smart-DEM": {
+    "component_box": [
+      356.0,
+      324.0,
+      459.0,
+      400.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      204.0,
+      330.0,
+      278.0,
+      395.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Smart-DEM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Z⁻¹/(1−Z⁻¹)": {
+    "component_box": [
+      193.0,
+      182.0,
+      296.0,
+      261.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "z⁻¹/(1–z⁻¹)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ": {
+    "component_box": [
+      525.0,
+      204.0,
+      561.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

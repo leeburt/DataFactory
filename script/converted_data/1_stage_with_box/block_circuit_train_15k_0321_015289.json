@@ -1,0 +1,106 @@
+{
+  "AC/DC–DC/DC CONVERTER": {
+    "component_box": [
+      144.0,
+      31.0,
+      259.0,
+      105.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Energy Harvester",
+          "count": 1
+        },
+        {
+          "name": "MPPT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Voltage Regulating DC-DC Converter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Voltage Regulating DC-DC Converter": {
+    "component_box": [
+      350.0,
+      29.0,
+      475.0,
+      103.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AC/DC–DC/DC CONVERTER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Load",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Energy Harvester": {
+    "component_box": [
+      33.0,
+      46.0,
+      75.0,
+      88.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "AC/DC–DC CONVERTER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MPPT": {
+    "component_box": [
+      144.0,
+      141.0,
+      259.0,
+      214.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "AC/DC–DC/DC CONVERTER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Load": {
+    "component_box": [
+      559.0,
+      31.0,
+      661.0,
+      105.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Voltage Regulating DC-DC Converter",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  }
+}

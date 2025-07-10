@@ -1,0 +1,167 @@
+{
+  "Operational amplifier": {
+    "component_box": [
+      305.0,
+      22.0,
+      427.0,
+      163.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Switched-capacitor summing network",
+          "count": 1
+        },
+        {
+          "name": "M5",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP2": {
+    "component_box": [
+      462.0,
+      267.0,
+      547.0,
+      331.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Cc",
+          "count": 1
+        },
+        {
+          "name": "FBB/RBB switch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DAC": {
+    "component_box": [
+      13.0,
+      12.0,
+      77.0,
+      96.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Switched-capacitor summing network",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP1": {
+    "component_box": [
+      462.0,
+      91.0,
+      547.0,
+      154.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        },
+        {
+          "name": "CP2",
+          "count": 1
+        },
+        {
+          "name": "Vpwell",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Current source": {
+    "component_box": [
+      190.0,
+      190.0,
+      233.0,
+      232.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "M5",
+          "count": 1
+        },
+        {
+          "name": "Negative voltage rail",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Switched-capacitor summing network": {
+    "component_box": [
+      112.0,
+      13.0,
+      194.0,
+      96.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Operational amplifier",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "M5",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Negative voltage rail": {
+    "component_box": [
+      191.0,
+      237.0,
+      233.0,
+      261.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Current source",
+          "count": 1
+        },
+        {
+          "name": "Switched-capacitor summing network",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

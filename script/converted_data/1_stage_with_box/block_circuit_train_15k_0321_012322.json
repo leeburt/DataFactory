@@ -1,0 +1,75 @@
+{
+  "Proposed Filter": {
+    "component_box": [
+      485.0,
+      92.0,
+      669.0,
+      196.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Anti-Aliasing Filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y(t)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      104.0,
+      109.0,
+      174.0,
+      179.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "u(t)",
+          "count": 1
+        },
+        {
+          "name": "n(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Anti-Aliasing Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Anti-Aliasing Filter": {
+    "component_box": [
+      227.0,
+      92.0,
+      403.0,
+      196.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Proposed Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

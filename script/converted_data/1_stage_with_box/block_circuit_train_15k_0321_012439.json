@@ -1,0 +1,151 @@
+{
+  "Z_H0(jΩ)": {
+    "component_box": [
+      87.0,
+      62.0,
+      231.0,
+      168.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "X_BB(jΩ)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Z_H1*(-jΩ)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "X* (jΩ)": {
+    "component_box": [
+      129.0,
+      490.0,
+      272.0,
+      578.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Filter W(jΩ)": {
+    "component_box": [
+      395.0,
+      307.0,
+      514.0,
+      353.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Conjugate",
+          "count": 1
+        },
+        {
+          "name": "Mismatch Extraction Algorithm",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Conjugate": {
+    "component_box": [
+      213.0,
+      303.0,
+      292.0,
+      360.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x_BB(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Filter W(jΩ)",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Mismatch Extraction Algorithm",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Mismatch Extraction Algorithm": {
+    "component_box": [
+      294.0,
+      374.0,
+      510.0,
+      435.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Conjugate",
+          "count": 1
+        },
+        {
+          "name": "Filter W(jΩ)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Conjugate",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      507.0,
+      218.0,
+      562.0,
+      274.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x_BB(t)",
+          "count": 1
+        },
+        {
+          "name": "Filter W(jΩ)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y(t)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

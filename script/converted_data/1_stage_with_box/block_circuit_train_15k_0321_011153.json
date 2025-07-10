@@ -1,0 +1,170 @@
+{
+  "Comparator": {
+    "component_box": [
+      210.0,
+      233.0,
+      270.0,
+      309.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Extra Comp",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Tap Assignment": {
+    "component_box": [
+      320.0,
+      343.0,
+      412.0,
+      462.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "comparator",
+          "count": 1
+        },
+        {
+          "name": "Tap Assignment",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Extra Comp",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Extra Comp": {
+    "component_box": [
+      548.0,
+      40.0,
+      693.0,
+      75.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "32:1 MUX",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RX Data",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "32:1 MUX": {
+    "component_box": [
+      436.0,
+      61.0,
+      504.0,
+      300.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Extra Comp",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Shift Register",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      157.0,
+      256.0,
+      187.0,
+      286.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "",
+          "count": 1
+        },
+        {
+          "name": "Vref_M",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "comparator": {
+    "component_box": [
+      210.0,
+      130.0,
+      270.0,
+      206.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Tap Assignment",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Vref_2": {
+    "component_box": [
+      157.0,
+      152.0,
+      187.0,
+      182.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "comparator",
+          "count": 1
+        },
+        {
+          "name": "Unknown",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

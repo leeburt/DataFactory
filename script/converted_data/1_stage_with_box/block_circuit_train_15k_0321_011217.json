@@ -1,0 +1,129 @@
+{
+  "DAC": {
+    "component_box": [
+      62.0,
+      41.0,
+      146.0,
+      98.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      82.0,
+      132.0,
+      127.0,
+      178.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "X",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H_L(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Quantizer": {
+    "component_box": [
+      373.0,
+      111.0,
+      461.0,
+      198.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H_L(z)",
+          "count": 1
+        },
+        {
+          "name": "Fs",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Y",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Sigma-Delta Modulator": {
+    "component_box": [
+      101.0,
+      16.0,
+      531.0,
+      276.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "X",
+          "count": 1
+        },
+        {
+          "name": "Fs",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Y",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H_L(z)": {
+    "component_box": [
+      201.0,
+      111.0,
+      287.0,
+      198.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

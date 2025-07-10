@@ -1,0 +1,155 @@
+{
+  "DIGITAL LOW-PASS AND DECIMATION FILTER": {
+    "component_box": [
+      511.0,
+      124.0,
+      663.0,
+      342.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "D FF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PCM OUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D FF": {
+    "component_box": [
+      313.0,
+      75.0,
+      420.0,
+      181.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "comparator",
+          "count": 1
+        },
+        {
+          "name": "PDM CLOCK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DIGITAL LOW-PASS AND DECIMATION FILTER",
+          "count": 1
+        },
+        {
+          "name": "D/A",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      86.0,
+      326.0,
+      109.0,
+      350.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "D/A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LOOP FILTER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LOOP FILTER": {
+    "component_box": [
+      45.0,
+      178.0,
+      152.0,
+      278.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "D/A": {
+    "component_box": [
+      243.0,
+      281.0,
+      369.0,
+      390.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "comparator": {
+    "component_box": [
+      209.0,
+      93.0,
+      272.0,
+      165.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LOOP FILTER",
+          "count": 1
+        },
+        {
+          "name": "D/A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D FF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

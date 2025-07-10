@@ -1,0 +1,194 @@
+{
+  "4-bit NS-SAR": {
+    "component_box": [
+      19.0,
+      149.0,
+      158.0,
+      273.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Combine",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "VIN",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "H(s)": {
+    "component_box": [
+      369.0,
+      10.0,
+      487.0,
+      135.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2-bit Flash Quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Combine": {
+    "component_box": [
+      157.0,
+      421.0,
+      379.0,
+      468.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "4-bit NS-SAR",
+          "count": 1
+        },
+        {
+          "name": "2-bit Flash Quantizer",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "DWA",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "2-bit Flash Quantizer": {
+    "component_box": [
+      558.0,
+      9.0,
+      674.0,
+      135.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H(s)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Combine",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "4-bit DAC": {
+    "component_box": [
+      194.0,
+      149.0,
+      333.0,
+      272.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DWA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Dout": {
+    "component_box": [
+      387.0,
+      362.0,
+      706.0,
+      452.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Combine",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "YΣΔ/2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      238.0,
+      45.0,
+      287.0,
+      98.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "4-bit DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H(s)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DWA": {
+    "component_box": [
+      217.0,
+      310.0,
+      309.0,
+      354.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Combine",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "4-bit DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

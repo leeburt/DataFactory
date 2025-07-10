@@ -1,0 +1,315 @@
+{
+  "Pre-amp Shared  \\nOTA shared & Power scaled": {
+    "component_box": [
+      218.0,
+      142.0,
+      714.0,
+      382.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Bootstrapped sampling switch",
+          "count": 1
+        },
+        {
+          "name": "CK_ADSC",
+          "count": 1
+        },
+        {
+          "name": "CK_MDAC GEN.",
+          "count": 1
+        },
+        {
+          "name": "Off-chip Reference",
+          "count": 1
+        },
+        {
+          "name": "Reset",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DASC1": {
+    "component_box": [
+      443.0,
+      173.0,
+      537.0,
+      259.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADSC 1&2",
+          "count": 1
+        },
+        {
+          "name": "CK_MDAC1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Bootstrapped sampling switch": {
+    "component_box": [
+      109.0,
+      282.0,
+      177.0,
+      325.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "CK_ADSC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADSC 1&2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Bias Ctrl": {
+    "component_box": [
+      618.0,
+      312.0,
+      701.0,
+      371.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "2^B",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DCL": {
+    "component_box": [
+      381.0,
+      425.0,
+      466.0,
+      482.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADSC 1&2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Dout[1:11]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      551.0,
+      245.0,
+      595.0,
+      288.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DASC1",
+          "count": 1
+        },
+        {
+          "name": "DASC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2^B",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DASC2": {
+    "component_box": [
+      443.0,
+      274.0,
+      538.0,
+      359.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADSC 1&2",
+          "count": 1
+        },
+        {
+          "name": "CK_MDAC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "DCL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADSC 1&2": {
+    "component_box": [
+      246.0,
+      210.0,
+      417.0,
+      321.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Bootstrapped sampling switch",
+          "count": 1
+        },
+        {
+          "name": "CK_ADSC GEN.",
+          "count": 1
+        },
+        {
+          "name": "Pre-amp Shared  \nOTA shared & Power scaled",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DASC1",
+          "count": 1
+        },
+        {
+          "name": "DASC2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CK_MDAC GEN.": {
+    "component_box": [
+      71.0,
+      12.0,
+      231.0,
+      59.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DASC1",
+          "count": 1
+        },
+        {
+          "name": "DASC2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CK_ADSC": {
+    "component_box": [
+      160.0,
+      682.0,
+      242.0,
+      721.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CK_ADSC GEN.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADSC 1&2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CK_ADSC GEN.": {
+    "component_box": [
+      244.0,
+      12.0,
+      404.0,
+      59.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "ADSC 1&2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2^B": {
+    "component_box": [
+      618.0,
+      224.0,
+      699.0,
+      308.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Bias Ctrl",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

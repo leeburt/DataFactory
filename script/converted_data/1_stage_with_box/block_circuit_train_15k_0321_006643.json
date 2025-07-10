@@ -1,0 +1,309 @@
+{
+  "Decoder": {
+    "component_box": [
+      347.0,
+      164.0,
+      524.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reg.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Reg.": {
+    "component_box": [
+      186.0,
+      164.0,
+      310.0,
+      232.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "D[7:4]",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Decoder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "16b CALADC": {
+    "component_box": [
+      1092.0,
+      379.0,
+      1298.0,
+      499.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "6b MSB Array",
+          "count": 1
+        },
+        {
+          "name": "8b (6+2) CALDAC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Delay": {
+    "component_box": [
+      349.0,
+      20.0,
+      525.0,
+      89.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reg.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Latch": {
+    "component_box": [
+      560.0,
+      317.0,
+      691.0,
+      385.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Decoder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "6b MSB Array",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RAM(63×8)": {
+    "component_box": [
+      254.0,
+      436.0,
+      479.0,
+      581.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reg.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Latch",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Bias Generator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Bias Generator": {
+    "component_box": [
+      599.0,
+      681.0,
+      827.0,
+      787.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "6b BiasReg",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "4b LLSB Array  \n4b ULSB Array",
+          "count": 1
+        },
+        {
+          "name": "6b MSB Array",
+          "count": 1
+        },
+        {
+          "name": "8b (6+2) CALDAC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "6b MSB Array": {
+    "component_box": [
+      781.0,
+      321.0,
+      988.0,
+      427.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Latch",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Bias Generator",
+          "count": 1
+        },
+        {
+          "name": "Vout",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "8b (6+2) CALDAC": {
+    "component_box": [
+      780.0,
+      518.0,
+      987.0,
+      623.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Latch",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "16b CALADC",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Calibration Control",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Calibration Control": {
+    "component_box": [
+      1076.0,
+      580.0,
+      1297.0,
+      685.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "8b (6+2) CALDAC",
+          "count": 1
+        },
+        {
+          "name": "6b BiasReg",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "6b BiasReg": {
+    "component_box": [
+      875.0,
+      683.0,
+      1070.0,
+      788.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Bias Generator",
+          "count": 1
+        },
+        {
+          "name": "Calibration Control",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "4b LLSB Array  \n4b ULSB Array": {
+    "component_box": [
+      786.0,
+      21.0,
+      991.0,
+      299.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Latch",
+          "count": 1
+        },
+        {
+          "name": "Latch",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "16b CALADC",
+          "count": 1
+        },
+        {
+          "name": "50Ω",
+          "count": 1
+        },
+        {
+          "name": "50Ω",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,717 @@
+{
+  "NFI": {
+    "component_box": [
+      475.0,
+      232.0,
+      538.0,
+      260.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "memory",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "3G PA": {
+    "component_box": [
+      103.0,
+      120.0,
+      224.0,
+      168.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "dual mode RF",
+          "count": 1
+        },
+        {
+          "name": "antenna interface",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "USIM": {
+    "component_box": [
+      726.0,
+      396.0,
+      794.0,
+      423.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "USIM card",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "audio analog": {
+    "component_box": [
+      654.0,
+      274.0,
+      740.0,
+      362.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Earpiece",
+          "count": 1
+        },
+        {
+          "name": "Headphone jack",
+          "count": 1
+        },
+        {
+          "name": "FM radio",
+          "count": 1
+        },
+        {
+          "name": "secure NFC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "JDI": {
+    "component_box": [
+      768.0,
+      358.0,
+      841.0,
+      385.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Jog dial",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "KBS": {
+    "component_box": [
+      768.0,
+      189.0,
+      840.0,
+      216.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "keyboard",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Jog dial": {
+    "component_box": [
+      978.0,
+      399.0,
+      1121.0,
+      459.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "audio analog",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "keyboard": {
+    "component_box": [
+      979.0,
+      171.0,
+      1123.0,
+      230.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PNX67xx_SOС",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SPI": {
+    "component_box": [
+      768.0,
+      322.0,
+      840.0,
+      350.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "WLAN",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Headphone jack": {
+    "component_box": [
+      890.0,
+      394.0,
+      922.0,
+      431.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "audio analog",
+          "count": 1
+        },
+        {
+          "name": "Earpiece",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "2G PA": {
+    "component_box": [
+      103.0,
+      58.0,
+      224.0,
+      106.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "dual mode RF",
+          "count": 1
+        },
+        {
+          "name": "antenna",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "TV receiver": {
+    "component_box": [
+      980.0,
+      110.0,
+      1123.0,
+      157.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PNX67xx_SOС",
+          "count": 1
+        },
+        {
+          "name": "antenna",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "memory": {
+    "component_box": [
+      284.0,
+      224.0,
+      404.0,
+      273.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PNX67xx_SOC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "USB": {
+    "component_box": [
+      475.0,
+      368.0,
+      538.0,
+      396.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "QVGA": {
+    "component_box": [
+      439.0,
+      474.0,
+      524.0,
+      531.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PNX67xx_SOС",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "storage card": {
+    "component_box": [
+      978.0,
+      14.0,
+      1123.0,
+      65.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "SDI",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "camera sensor": {
+    "component_box": [
+      552.0,
+      472.0,
+      637.0,
+      528.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PNX67xx_SOС",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PNX67xx_SOC": {
+    "component_box": [
+      459.0,
+      14.0,
+      856.0,
+      431.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "dual mode RF",
+          "count": 1
+        },
+        {
+          "name": "memory",
+          "count": 1
+        },
+        {
+          "name": "parallel bus interface",
+          "count": 1
+        },
+        {
+          "name": "QVGA",
+          "count": 1
+        },
+        {
+          "name": "camera sensor",
+          "count": 1
+        },
+        {
+          "name": "Flash",
+          "count": 1
+        },
+        {
+          "name": "storage card",
+          "count": 1
+        },
+        {
+          "name": "IrDa",
+          "count": 1
+        },
+        {
+          "name": "SPI",
+          "count": 1
+        },
+        {
+          "name": "KBS",
+          "count": 1
+        },
+        {
+          "name": "UART",
+          "count": 1
+        },
+        {
+          "name": "IOM-2",
+          "count": 1
+        },
+        {
+          "name": "SPI",
+          "count": 1
+        },
+        {
+          "name": "JDI",
+          "count": 1
+        },
+        {
+          "name": "USIM",
+          "count": 1
+        },
+        {
+          "name": "Headphone jack",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ARM926 + caches": {
+    "component_box": [
+      552.0,
+      161.0,
+      678.0,
+      251.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "2.5G/3G modem",
+          "count": 1
+        },
+        {
+          "name": "SDI",
+          "count": 1
+        },
+        {
+          "name": "NFI",
+          "count": 1
+        },
+        {
+          "name": "EBI",
+          "count": 1
+        },
+        {
+          "name": "USB",
+          "count": 1
+        },
+        {
+          "name": "RAM\nROM",
+          "count": 1
+        },
+        {
+          "name": "audio analog",
+          "count": 1
+        },
+        {
+          "name": "I2C",
+          "count": 1
+        },
+        {
+          "name": "USIM",
+          "count": 1
+        },
+        {
+          "name": "SPI",
+          "count": 1
+        },
+        {
+          "name": "SPI",
+          "count": 1
+        },
+        {
+          "name": "JDI",
+          "count": 1
+        },
+        {
+          "name": "UART",
+          "count": 1
+        },
+        {
+          "name": "IOM-2",
+          "count": 1
+        },
+        {
+          "name": "KBS",
+          "count": 1
+        },
+        {
+          "name": "IrDa",
+          "count": 1
+        },
+        {
+          "name": "Flash",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "I2C": {
+    "component_box": [
+      655.0,
+      396.0,
+      716.0,
+      423.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "FM radio",
+          "count": 1
+        },
+        {
+          "name": "secure NFC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "dual mode RF": {
+    "component_box": [
+      296.0,
+      59.0,
+      406.0,
+      157.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "2G PA",
+          "count": 1
+        },
+        {
+          "name": "3G PA",
+          "count": 1
+        },
+        {
+          "name": "PNX67xx_SOС",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "WLAN": {
+    "component_box": [
+      979.0,
+      307.0,
+      1123.0,
+      366.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PNX67xx_SOC",
+          "count": 1
+        },
+        {
+          "name": "antenna",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "2.5G/3G modem": {
+    "component_box": [
+      547.0,
+      57.0,
+      683.0,
+      148.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RF i/f",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "IOM-2": {
+    "component_box": [
+      767.0,
+      265.0,
+      840.0,
+      293.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Bluetooth",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "RAM\nROM": {
+    "component_box": [
+      679.0,
+      160.0,
+      761.0,
+      251.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Flash": {
+    "component_box": [
+      759.0,
+      19.0,
+      849.0,
+      56.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "storage card",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Bluetooth": {
+    "component_box": [
+      978.0,
+      235.0,
+      1123.0,
+      292.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "IOM-2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "EBI": {
+    "component_box": [
+      476.0,
+      316.0,
+      538.0,
+      364.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "parallel bus interface",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "IrDa": {
+    "component_box": [
+      760.0,
+      71.0,
+      843.0,
+      100.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PNX67xx_SOС",
+          "count": 1
+        },
+        {
+          "name": "IrDa",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SDI": {
+    "component_box": [
+      476.0,
+      183.0,
+      539.0,
+      235.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "UART": {
+    "component_box": [
+      768.0,
+      235.0,
+      839.0,
+      260.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Bluetooth",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

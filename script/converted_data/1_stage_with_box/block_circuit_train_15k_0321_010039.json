@@ -1,0 +1,154 @@
+{
+  "Upper M-bit counter": {
+    "component_box": [
+      622.0,
+      155.0,
+      712.0,
+      235.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Concatenator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "C_F": {
+    "component_box": [
+      326.0,
+      39.0,
+      474.0,
+      182.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Op Amp",
+          "count": 1
+        },
+        {
+          "name": "S_RST",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      478.0,
+      164.0,
+      531.0,
+      227.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Upper M-bit counter",
+          "count": 1
+        },
+        {
+          "name": "Lower N-bit counter",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Op Amp",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Concatenator": {
+    "component_box": [
+      702.0,
+      248.0,
+      724.0,
+      270.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Upper M-bit counter",
+          "count": 1
+        },
+        {
+          "name": "Lower N-bit counter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_OUTPUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Op Amp": {
+    "component_box": [
+      352.0,
+      152.0,
+      411.0,
+      213.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "C_F",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Lower N-bit counter": {
+    "component_box": [
+      720.0,
+      155.0,
+      811.0,
+      235.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "CLKN-BIT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Concatenator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

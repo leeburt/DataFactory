@@ -1,0 +1,78 @@
+{
+  "Peak to Peak Detector": {
+    "component_box": [
+      475.0,
+      340.0,
+      684.0,
+      437.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DDA",
+          "count": 1
+        },
+        {
+          "name": "Vi",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "DDA": {
+    "component_box": [
+      235.0,
+      209.0,
+      397.0,
+      458.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vi",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Peak to Peak Detector",
+          "count": 1
+        },
+        {
+          "name": "Peak to Peak Detector",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LINE DRIVER": {
+    "component_box": [
+      253.0,
+      12.0,
+      662.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vi",
+          "count": 1
+        },
+        {
+          "name": "DDA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Vo",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "Summing junction": {
+    "component_box": [
+      268.0,
+      35.0,
+      307.0,
+      74.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "GPI₃",
+          "count": 1
+        },
+        {
+          "name": "SPMR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "GPI1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SPMR": {
+    "component_box": [
+      643.0,
+      26.0,
+      790.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Non-linear feedback control",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "Non-linear feedback control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "GPI2": {
+    "component_box": [
+      323.0,
+      97.0,
+      411.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Non-linear feedback control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "GPI₃": {
+    "component_box": [
+      129.0,
+      23.0,
+      217.0,
+      79.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Non-linear feedback control": {
+    "component_box": [
+      444.0,
+      19.0,
+      608.0,
+      159.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "GPI1",
+          "count": 1
+        },
+        {
+          "name": "GPI2",
+          "count": 1
+        },
+        {
+          "name": "SPMR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SPMR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "GPI1": {
+    "component_box": [
+      324.0,
+      23.0,
+      411.0,
+      79.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Non-linear feedback control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

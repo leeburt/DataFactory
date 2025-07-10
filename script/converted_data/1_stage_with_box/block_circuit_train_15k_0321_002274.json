@@ -1,0 +1,425 @@
+{
+  "2nd SAR": {
+    "component_box": [
+      646.0,
+      33.0,
+      802.0,
+      119.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing node",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CC-based Offset Calibration",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      91.0,
+      46.0,
+      138.0,
+      94.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Cal. Voltage Generation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "V_os1  \\nV_os,ra  \\nV_os2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "All ’0’?": {
+    "component_box": [
+      569.0,
+      394.0,
+      699.0,
+      454.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "D_out2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Up/Down Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RA": {
+    "component_box": [
+      479.0,
+      35.0,
+      554.0,
+      111.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "adder  \nadder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing node",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "V_os1  V_os,ra  V_os2": {
+    "component_box": [
+      166.0,
+      47.0,
+      212.0,
+      93.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Cal. Voltage Generation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1st NS SAR",
+          "count": 1
+        },
+        {
+          "name": "RA",
+          "count": 1
+        },
+        {
+          "name": "2nd SAR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction  \nZ⁻¹": {
+    "component_box": [
+      583.0,
+      592.0,
+      629.0,
+      630.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Up/Down Counter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_Last",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "adder  \ninputs": {
+    "component_box": [
+      117.0,
+      284.0,
+      191.0,
+      333.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Cal. Voltage Generation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Regenerative latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CC-based Offset Calibration": {
+    "component_box": [
+      419.0,
+      174.0,
+      684.0,
+      263.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2nd SAR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Regenerative latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "<D_Last": {
+    "component_box": [
+      342.0,
+      579.0,
+      480.0,
+      641.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Up/Down Counter",
+          "count": 1
+        },
+        {
+          "name": "D_Last",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Cal. Voltage Generation",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Up/Down Counter": {
+    "component_box": [
+      467.0,
+      471.0,
+      683.0,
+      547.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "All ‘1’?",
+          "count": 1
+        },
+        {
+          "name": "All ’0’?",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction  Z⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "All ‘1’?": {
+    "component_box": [
+      437.0,
+      394.0,
+      567.0,
+      455.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2nd SAR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Up/Down Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing node": {
+    "component_box": [
+      582.0,
+      50.0,
+      628.0,
+      96.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "RA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2nd SAR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Regenerative latch": {
+    "component_box": [
+      209.0,
+      278.0,
+      340.0,
+      410.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "adder  inputs",
+          "count": 1
+        },
+        {
+          "name": "Cal. Voltage Generation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D_out1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1st NS SAR": {
+    "component_box": [
+      230.0,
+      30.0,
+      386.0,
+      116.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing node",
+          "count": 1
+        },
+        {
+          "name": "D_out1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "adder  \nadder": {
+    "component_box": [
+      418.0,
+      50.0,
+      464.0,
+      97.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1st NS SAR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D_Last": {
+    "component_box": [
+      660.0,
+      591.0,
+      740.0,
+      630.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction  \nZ⁻¹",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "<D_Last",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Cal. Voltage Generation": {
+    "component_box": [
+      226.0,
+      489.0,
+      373.0,
+      564.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "<D_Last",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1st-stage comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

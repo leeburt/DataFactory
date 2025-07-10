@@ -1,0 +1,252 @@
+{
+  "v_g,a\nv_g,b": {
+    "component_box": [
+      686.0,
+      132.0,
+      725.0,
+      170.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "L_g",
+          "count": 1
+        },
+        {
+          "name": "L_g",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "n",
+          "count": 1
+        },
+        {
+          "name": "n",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "GM(z)": {
+    "component_box": [
+      251.0,
+      451.0,
+      345.0,
+      501.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "WAIC",
+          "count": 1
+        },
+        {
+          "name": "Summation",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Rd": {
+    "component_box": [
+      448.0,
+      279.0,
+      464.0,
+      311.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Cf",
+          "count": 1
+        },
+        {
+          "name": "n",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Cf": {
+    "component_box": [
+      492.0,
+      280.0,
+      509.0,
+      311.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "L1",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "n",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PLL": {
+    "component_box": [
+      679.0,
+      452.0,
+      716.0,
+      544.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "v_g,a  \nv_g,b  \nv_g,c",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ω",
+          "count": 1
+        },
+        {
+          "name": "θ_j",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PWM switching signals": {
+    "component_box": [
+      57.0,
+      364.0,
+      155.0,
+      415.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "PWM",
+          "count": 1
+        },
+        {
+          "name": "IGBT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PWM": {
+    "component_box": [
+      48.0,
+      409.0,
+      169.0,
+      458.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Deadbeat Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "IGBT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "v_g,a  \nv_g,b  \nv_g,c": {
+    "component_box": [
+      686.0,
+      88.0,
+      724.0,
+      126.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "L_g",
+          "count": 1
+        },
+        {
+          "name": "L_g",
+          "count": 1
+        },
+        {
+          "name": "L_g",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "IGBT": {
+    "component_box": [
+      120.0,
+      35.0,
+      159.0,
+      94.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM switching signals",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vdc",
+          "count": 1
+        },
+        {
+          "name": "v_a",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Deadbeat Controller": {
+    "component_box": [
+      46.0,
+      495.0,
+      170.0,
+      559.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DC bus voltage",
+          "count": 1
+        },
+        {
+          "name": "Grid voltages",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

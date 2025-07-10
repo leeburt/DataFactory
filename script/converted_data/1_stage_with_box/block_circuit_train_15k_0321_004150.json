@@ -1,0 +1,128 @@
+{
+  "Current Sensor": {
+    "component_box": [
+      512.0,
+      165.0,
+      534.0,
+      181.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Current Mode Control",
+          "count": 1
+        },
+        {
+          "name": "PFC Switch Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      87.0,
+      80.0,
+      148.0,
+      141.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vd",
+          "count": 1
+        },
+        {
+          "name": "Vo",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current Mode Control": {
+    "component_box": [
+      457.0,
+      56.0,
+      596.0,
+      168.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        },
+        {
+          "name": "Current Sensor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFC Switch Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      363.0,
+      81.0,
+      423.0,
+      142.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI Control",
+          "count": 1
+        },
+        {
+          "name": "|Vin|",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current Mode Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI Control": {
+    "component_box": [
+      190.0,
+      55.0,
+      331.0,
+      167.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

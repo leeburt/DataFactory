@@ -1,0 +1,183 @@
+{
+  "MUX": {
+    "component_box": [
+      507.0,
+      95.0,
+      594.0,
+      168.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SAMPLE/HOLD/COMPARE",
+          "count": 1
+        },
+        {
+          "name": "MEDIAN VALUE LOGIC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MEDIAN PEAK",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PEAK DET": {
+    "component_box": [
+      199.0,
+      28.0,
+      298.0,
+      142.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S-E INPUT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SAMPLE/HOLD/COMPARE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SAMPLE/HOLD/COMPARE": {
+    "component_box": [
+      321.0,
+      29.0,
+      445.0,
+      247.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PEAK DET",
+          "count": 1
+        },
+        {
+          "name": "DEMOD LOGIC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LATCHES",
+          "count": 1
+        },
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MEDIAN VALUE LOGIC": {
+    "component_box": [
+      493.0,
+      256.0,
+      607.0,
+      343.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LATCHES",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ZERO CROSSING DET": {
+    "component_box": [
+      66.0,
+      162.0,
+      163.0,
+      275.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S-E INPUT",
+          "count": 1
+        },
+        {
+          "name": "CTRL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DEMOD LOGIC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DEMOD LOGIC": {
+    "component_box": [
+      193.0,
+      187.0,
+      293.0,
+      341.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ZERO CROSSING DET",
+          "count": 1
+        },
+        {
+          "name": "CTRL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SAMPLE/HOLD/COMPARE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LATCHES": {
+    "component_box": [
+      320.0,
+      295.0,
+      443.0,
+      342.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SAMPLE/HOLD/COMPARE",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MEDIAN VALUE LOGIC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "DEF": {
+    "component_box": [
+      825.0,
+      129.0,
+      858.0,
+      162.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H_GES(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H_tr(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H_tr(z)": {
+    "component_box": [
+      273.0,
+      272.0,
+      313.0,
+      312.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H_tr(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Residue amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DEF\nH_tr(z)": {
+    "component_box": [
+      542.0,
+      273.0,
+      581.0,
+      312.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H_GES(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H_GES(z)": {
+    "component_box": [
+      492.0,
+      97.0,
+      592.0,
+      143.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DEF",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/(1-α)": {
+    "component_box": [
+      316.0,
+      71.0,
+      397.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        },
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "adder": {
+    "component_box": [
+      109.0,
+      272.0,
+      149.0,
+      311.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_in",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Residue amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Residue amplifier": {
+    "component_box": [
+      340.0,
+      246.0,
+      416.0,
+      338.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

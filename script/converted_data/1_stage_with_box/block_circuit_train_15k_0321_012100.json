@@ -1,0 +1,127 @@
+{
+  "Charge Pump": {
+    "component_box": [
+      265.0,
+      30.0,
+      477.0,
+      141.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SENSOR",
+          "count": 1
+        },
+        {
+          "name": "MPPT",
+          "count": 1
+        },
+        {
+          "name": "MPPT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Auxiliary Charge Pump",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Auxiliary Charge Pump": {
+    "component_box": [
+      525.0,
+      202.0,
+      735.0,
+      313.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Charge Pump",
+          "count": 1
+        },
+        {
+          "name": "MPPT",
+          "count": 1
+        },
+        {
+          "name": "MPPT",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Charge Pump\nMPPT\nAuxiliary Charge Pump": {
+    "component_box": [
+      256.0,
+      22.0,
+      744.0,
+      371.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SENSOR",
+          "count": 1
+        },
+        {
+          "name": "Oscillator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "MPPT": {
+    "component_box": [
+      266.0,
+      202.0,
+      476.0,
+      313.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Charge Pump",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Auxiliary Charge Pump",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Oscillator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SENSOR": {
+    "component_box": [
+      20.0,
+      30.0,
+      234.0,
+      141.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Charge Pump",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

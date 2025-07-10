@@ -1,0 +1,140 @@
+{
+  "BIAS AND THRESHOLD REFERENCE GENERATION": {
+    "component_box": [
+      17.0,
+      96.0,
+      220.0,
+      407.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "DIGITAL INPUT LEVEL SHIFTERS AND DRIVERS",
+          "count": 1
+        },
+        {
+          "name": "CURRENT SWITCHES",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "A1": {
+    "component_box": [
+      824.0,
+      343.0,
+      878.0,
+      405.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CURRENT SWITCHES",
+          "count": 1
+        },
+        {
+          "name": "R_ref",
+          "count": 1
+        },
+        {
+          "name": "Resistor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CURRENT SWITCHES": {
+    "component_box": [
+      266.0,
+      312.0,
+      722.0,
+      440.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BIAS AND THRESHOLD REFERENCE GENERATION",
+          "count": 1
+        },
+        {
+          "name": "DIGITAL INPUT LEVEL SHIFTERS AND DRIVERS",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "R-2R LADDER",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "A1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DIGITAL INPUT LEVEL SHIFTERS AND DRIVERS": {
+    "component_box": [
+      263.0,
+      95.0,
+      722.0,
+      225.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "BIAS AND THRESHOLD REFERENCE GENERATION",
+          "count": 1
+        },
+        {
+          "name": "16 BIT PARALLEL DATA WORD IN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CURRENT SWITCHES",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "R-2R LADDER": {
+    "component_box": [
+      268.0,
+      524.0,
+      721.0,
+      633.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CURRENT SWITCHES",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "D/A",
+          "count": 1
+        },
+        {
+          "name": "10V",
+          "count": 1
+        },
+        {
+          "name": "20V",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

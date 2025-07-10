@@ -1,0 +1,101 @@
+{
+  "Analog computer / math co-processor": {
+    "component_box": [
+      256.0,
+      269.0,
+      563.0,
+      576.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Signal sources",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Data acquisition card",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Test equipment",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "User interface (Matlab & Simulink)": {
+    "component_box": [
+      24.0,
+      22.0,
+      207.0,
+      187.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Data acquisition card",
+          "count": 1
+        },
+        {
+          "name": "Computational programs",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital computer": {
+    "component_box": [
+      9.0,
+      25.0,
+      222.0,
+      604.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Data acquisition card",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Data acquisition card": {
+    "component_box": [
+      321.0,
+      10.0,
+      515.0,
+      173.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "User interface (Matlab & Simulink)",
+          "count": 1
+        },
+        {
+          "name": "Analog computer / math co-processor",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "User interface (Matlab & Simulink)",
+          "count": 1
+        },
+        {
+          "name": "Analog computer / math co-processor",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

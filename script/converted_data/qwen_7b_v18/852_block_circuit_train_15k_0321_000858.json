@@ -1,0 +1,205 @@
+{
+  "Convert": {
+    "component_box": [
+      715.0,
+      361.0,
+      924.0,
+      458.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "UIdx1_0",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SYSTEM OF INTEREST",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TestVector": {
+    "component_box": [
+      22.0,
+      406.0,
+      295.0,
+      504.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "UIdx1_0",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Scope": {
+    "component_box": [
+      1755.0,
+      10.0,
+      1920.0,
+      552.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Add1",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Selector1": {
+    "component_box": [
+      477.0,
+      21.0,
+      665.0,
+      195.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ExpResults",
+          "count": 1
+        },
+        {
+          "name": "Counter Limited",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Convert",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Counter Limited": {
+    "component_box": [
+      21.0,
+      210.0,
+      296.0,
+      307.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Selector1",
+          "count": 1
+        },
+        {
+          "name": "UIdx1_0",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SYSTEM OF INTEREST": {
+    "component_box": [
+      995.0,
+      354.0,
+      1293.0,
+      468.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Convert",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Add1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "UIdx1_0": {
+    "component_box": [
+      477.0,
+      324.0,
+      665.0,
+      499.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Counter Limited",
+          "count": 1
+        },
+        {
+          "name": "TestVector",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Convert",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ExpResults": {
+    "component_box": [
+      20.0,
+      17.0,
+      296.0,
+      115.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Selector1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Add1": {
+    "component_box": [
+      1412.0,
+      343.0,
+      1548.0,
+      481.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SYSTEM OF INTEREST",
+          "count": 1
+        },
+        {
+          "name": "Selector1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Scope",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

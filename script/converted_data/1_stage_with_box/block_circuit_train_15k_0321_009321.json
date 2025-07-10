@@ -1,0 +1,232 @@
+{
+  "M4 M5": {
+    "component_box": [
+      959.0,
+      288.0,
+      1166.0,
+      501.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "p-MOS mirror",
+          "count": 1
+        },
+        {
+          "name": "Switch phase generator",
+          "count": 1
+        },
+        {
+          "name": "Switch phase generator",
+          "count": 1
+        },
+        {
+          "name": "M6 M7",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "M6 M7": {
+    "component_box": [
+      950.0,
+      709.0,
+      1165.0,
+      920.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Switch phase generator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "M4 M5",
+          "count": 1
+        },
+        {
+          "name": "n-MOS mirror",
+          "count": 1
+        },
+        {
+          "name": "Array of capacitors",
+          "count": 1
+        },
+        {
+          "name": "Schmitt Trigger",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "n-MOS mirror": {
+    "component_box": [
+      599.0,
+      999.0,
+      825.0,
+      1115.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "M4 M5",
+          "count": 1
+        },
+        {
+          "name": "M6 M7",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "p-MOS mirror": {
+    "component_box": [
+      398.0,
+      93.0,
+      833.0,
+      209.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "op-amp",
+          "count": 1
+        },
+        {
+          "name": "M4 M5",
+          "count": 1
+        },
+        {
+          "name": "IN2",
+          "count": 1
+        },
+        {
+          "name": "s202",
+          "count": 1
+        },
+        {
+          "name": "s102",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Schmitt Trigger": {
+    "component_box": [
+      1622.0,
+      495.0,
+      1803.0,
+      717.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Commutation path switches",
+          "count": 1
+        },
+        {
+          "name": "Array of capacitors",
+          "count": 1
+        },
+        {
+          "name": "Vo",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Array of capacitors": {
+    "component_box": [
+      1303.0,
+      663.0,
+      1492.0,
+      888.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "M4 M5",
+          "count": 1
+        },
+        {
+          "name": "M6 M7",
+          "count": 1
+        },
+        {
+          "name": "Schmitt Trigger",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "op-amp": {
+    "component_box": [
+      196.0,
+      403.0,
+      373.0,
+      639.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "M1",
+          "count": 1
+        },
+        {
+          "name": "RSENS",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Switch phase generator": {
+    "component_box": [
+      1615.0,
+      38.0,
+      1792.0,
+      253.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Schmitt Trigger",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "M4 M5",
+          "count": 1
+        },
+        {
+          "name": "M6 M7",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

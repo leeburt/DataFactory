@@ -1,0 +1,86 @@
+{
+  "DAC": {
+    "component_box": [
+      313.0,
+      349.0,
+      433.0,
+      418.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Bond wire",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "VDD=0.9V",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        },
+        {
+          "name": "Digital control lines",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "MESFET": {
+    "component_box": [
+      48.0,
+      337.0,
+      191.0,
+      431.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "IMN",
+          "count": 1
+        },
+        {
+          "name": "OMN",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "IMN": {
+    "component_box": [
+      8.0,
+      1.0,
+      511.0,
+      480.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RFin",
+          "count": 1
+        },
+        {
+          "name": "MESFET",
+          "count": 1
+        },
+        {
+          "name": "Bias (Vg)",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

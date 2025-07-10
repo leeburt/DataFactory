@@ -1,0 +1,175 @@
+{
+  "Trim": {
+    "component_box": [
+      574.0,
+      205.0,
+      720.0,
+      309.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Bandgap",
+          "count": 1
+        },
+        {
+          "name": "Trim Bits",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ASC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ASC": {
+    "component_box": [
+      361.0,
+      42.0,
+      507.0,
+      146.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OSC",
+          "count": 1
+        },
+        {
+          "name": "Temp. Comp.",
+          "count": 1
+        },
+        {
+          "name": "Bandgap",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OSC",
+          "count": 1
+        },
+        {
+          "name": "Trim",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "V-to-I": {
+    "component_box": [
+      147.0,
+      206.0,
+      292.0,
+      310.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_coarse",
+          "count": 1
+        },
+        {
+          "name": "V_fine",
+          "count": 1
+        },
+        {
+          "name": "Bandgap",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OSC",
+          "count": 1
+        },
+        {
+          "name": "R_ext",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Temp. Comp.": {
+    "component_box": [
+      574.0,
+      42.0,
+      721.0,
+      146.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "ASC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Bandgap": {
+    "component_box": [
+      361.0,
+      206.0,
+      514.0,
+      310.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V-to-I",
+          "count": 1
+        },
+        {
+          "name": "ASC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ASC",
+          "count": 1
+        },
+        {
+          "name": "Trim",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OSC": {
+    "component_box": [
+      146.0,
+      42.0,
+      293.0,
+      147.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V-to-I",
+          "count": 1
+        },
+        {
+          "name": "ASC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ASC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

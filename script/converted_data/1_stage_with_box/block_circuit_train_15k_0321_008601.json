@@ -1,0 +1,94 @@
+{
+  "Reference voltage generator": {
+    "component_box": [
+      13.0,
+      174.0,
+      232.0,
+      301.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Error amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Error amplifier": {
+    "component_box": [
+      325.0,
+      190.0,
+      486.0,
+      345.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Reference voltage generator",
+          "count": 1
+        },
+        {
+          "name": "Internal supply voltage generator",
+          "count": 1
+        },
+        {
+          "name": "P-channel MOSFET",
+          "count": 1
+        },
+        {
+          "name": "Output current driver",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "P-channel MOSFET": {
+    "component_box": [
+      583.0,
+      171.0,
+      641.0,
+      213.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Internal supply voltage generator",
+          "count": 1
+        },
+        {
+          "name": "Error amplifier",
+          "count": 1
+        },
+        {
+          "name": "N-channel MOSFET",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Internal supply voltage generator": {
+    "component_box": [
+      328.0,
+      25.0,
+      546.0,
+      150.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Error amplifier",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

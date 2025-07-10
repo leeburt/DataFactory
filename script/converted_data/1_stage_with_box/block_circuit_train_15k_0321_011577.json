@@ -1,0 +1,163 @@
+{
+  "Dual-PD OWC Receiver": {
+    "component_box": [
+      23.0,
+      589.0,
+      301.0,
+      908.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Attenuator",
+          "count": 1
+        },
+        {
+          "name": "DC Power Supply",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Oscilloscope",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Laser Diode": {
+    "component_box": [
+      291.0,
+      149.0,
+      344.0,
+      215.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Bias-Tee",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Attenuator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DC Power Supply": {
+    "component_box": [
+      282.0,
+      12.0,
+      504.0,
+      130.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Bias-Tee",
+          "count": 1
+        },
+        {
+          "name": "Dual-PD OWC Receiver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "AWG": {
+    "component_box": [
+      13.0,
+      287.0,
+      214.0,
+      408.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Bias-Tee",
+          "count": 1
+        },
+        {
+          "name": "Oscilloscope",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Oscilloscope": {
+    "component_box": [
+      637.0,
+      465.0,
+      762.0,
+      709.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Dual-PD OWC Receiver",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Bias-Tee": {
+    "component_box": [
+      12.0,
+      144.0,
+      215.0,
+      220.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DC Power Supply",
+          "count": 1
+        },
+        {
+          "name": "AWG",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Laser Diode",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Attenuator": {
+    "component_box": [
+      452.0,
+      136.0,
+      496.0,
+      235.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Laser Diode",
+          "count": 1
+        },
+        {
+          "name": "Dual-PD OWC Receiver",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

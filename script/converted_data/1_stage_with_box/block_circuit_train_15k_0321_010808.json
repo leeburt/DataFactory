@@ -1,0 +1,116 @@
+{
+  "1/Vz": {
+    "component_box": [
+      99.0,
+      182.0,
+      149.0,
+      231.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_t",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/s": {
+    "component_box": [
+      299.0,
+      180.0,
+      349.0,
+      229.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "uC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PWM": {
+    "component_box": [
+      201.0,
+      80.0,
+      250.0,
+      128.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "h(t)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Multiplier": {
+    "component_box": [
+      194.0,
+      174.0,
+      254.0,
+      235.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1/Vz",
+          "count": 1
+        },
+        {
+          "name": "1/s",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "h(t)": {
+    "component_box": [
+      217.0,
+      41.0,
+      236.0,
+      55.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PWM",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  }
+}

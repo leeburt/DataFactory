@@ -1,0 +1,418 @@
+{
+  "Q": {
+    "component_box": [
+      385.0,
+      574.0,
+      447.0,
+      629.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ΔΣ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MMD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital filter": {
+    "component_box": [
+      905.0,
+      152.0,
+      1013.0,
+      221.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ΔΣ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MMD": {
+    "component_box": [
+      599.0,
+      566.0,
+      684.0,
+      648.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Q",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "÷6 ILFD": {
+    "component_box": [
+      1031.0,
+      328.0,
+      1186.0,
+      387.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MMD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MUX": {
+    "component_box": [
+      768.0,
+      559.0,
+      818.0,
+      650.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MMD",
+          "count": 1
+        },
+        {
+          "name": "MMD",
+          "count": 1
+        },
+        {
+          "name": "Q",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3-level TDC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ΔΣ": {
+    "component_box": [
+      1029.0,
+      158.0,
+      1113.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DTC": {
+    "component_box": [
+      285.0,
+      84.0,
+      368.0,
+      140.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Ref 100MHz",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "BBPD",
+          "count": 1
+        },
+        {
+          "name": "DTC calibration",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Loop filter": {
+    "component_box": [
+      1214.0,
+      153.0,
+      1281.0,
+      218.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BBPD": {
+    "component_box": [
+      579.0,
+      89.0,
+      677.0,
+      185.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DTC",
+          "count": 1
+        },
+        {
+          "name": "DCO",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      1126.0,
+      159.0,
+      1204.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ΔΣ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Loop filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DCO calibration": {
+    "component_box": [
+      1015.0,
+      60.0,
+      1191.0,
+      144.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "mod[k]",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ΔΣ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ": {
+    "component_box": [
+      213.0,
+      482.0,
+      263.0,
+      530.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2^-1",
+          "count": 1
+        },
+        {
+          "name": "ΔΣ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DTC calibration": {
+    "component_box": [
+      209.0,
+      239.0,
+      443.0,
+      325.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "Digital filter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DTC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "3-level TDC": {
+    "component_box": [
+      989.0,
+      585.0,
+      1081.0,
+      689.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MUX",
+          "count": 1
+        },
+        {
+          "name": "DTC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "BBPD  \nDigital filter  \nΔΣ  \nDAC  \nDCO calibration  \nDCO  \n÷6 ILFD  \nMMD  \n3-level TDC": {
+    "component_box": [
+      227.0,
+      545.0,
+      253.0,
+      571.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DTC",
+          "count": 1
+        },
+        {
+          "name": "Q",
+          "count": 1
+        },
+        {
+          "name": "MUX",
+          "count": 1
+        },
+        {
+          "name": "DTC calibration",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DCO": {
+    "component_box": [
+      1298.0,
+      162.0,
+      1348.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DCO calibration",
+          "count": 1
+        },
+        {
+          "name": "Summation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "÷6 ILFD",
+          "count": 1
+        },
+        {
+          "name": "30GHz out",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

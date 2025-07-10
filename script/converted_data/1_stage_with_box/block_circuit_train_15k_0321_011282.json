@@ -1,0 +1,286 @@
+{
+  "φCHA": {
+    "component_box": [
+      657.0,
+      103.0,
+      742.0,
+      169.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLOCK/OVERDRIVE",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Op amp",
+          "count": 1
+        },
+        {
+          "name": "input sampling network",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "φ_CHAO": {
+    "component_box": [
+      931.0,
+      105.0,
+      1015.0,
+      172.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "4-bit flash A/D",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Op amp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Transmission gate": {
+    "component_box": [
+      931.0,
+      170.0,
+      1016.0,
+      243.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Op amp",
+          "count": 1
+        },
+        {
+          "name": "CLOCK/OVERDRIVE",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "4-bit flash A/D",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Op amp": {
+    "component_box": [
+      765.0,
+      96.0,
+      924.0,
+      242.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "ΦCHA",
+          "count": 1
+        },
+        {
+          "name": "transmission gate",
+          "count": 1
+        },
+        {
+          "name": "φ_CHAO",
+          "count": 1
+        },
+        {
+          "name": "transmission gate",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PULSED SWITCH OVERDRIVE": {
+    "component_box": [
+      506.0,
+      727.0,
+      733.0,
+      920.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CLOCK/OVERDRIVE",
+          "count": 1
+        },
+        {
+          "name": "4 BIT D/A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DECODE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DECODE": {
+    "component_box": [
+      970.0,
+      778.0,
+      1240.0,
+      881.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PULSED SWITCH OVERDRIVE",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "B0",
+          "count": 1
+        },
+        {
+          "name": "B1",
+          "count": 1
+        },
+        {
+          "name": "B2",
+          "count": 1
+        },
+        {
+          "name": "B3",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Switched‐capacitor amplifier": {
+    "component_box": [
+      579.0,
+      27.0,
+      1050.0,
+      310.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ΦCHA",
+          "count": 1
+        },
+        {
+          "name": "φ_CHAO",
+          "count": 1
+        },
+        {
+          "name": "transmission gate",
+          "count": 1
+        },
+        {
+          "name": "Transmission gate",
+          "count": 1
+        },
+        {
+          "name": "CLOCK/OVERDRIVE",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "4-bit flash A/D",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "4-bit flash A/D": {
+    "component_box": [
+      1142.0,
+      93.0,
+      1419.0,
+      244.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "φ_CHAO",
+          "count": 1
+        },
+        {
+          "name": "Transmission gate",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PULSED SWITCH OVERDRIVE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "transmission gate": {
+    "component_box": [
+      658.0,
+      167.0,
+      742.0,
+      238.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ΦCHA",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "Op amp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CLOCK/OVERDRIVE": {
+    "component_box": [
+      656.0,
+      480.0,
+      937.0,
+      641.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Switched‐capacitor amplifier",
+          "count": 1
+        },
+        {
+          "name": "PULSED SWITCH OVERDRIVE",
+          "count": 1
+        },
+        {
+          "name": "DECODE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

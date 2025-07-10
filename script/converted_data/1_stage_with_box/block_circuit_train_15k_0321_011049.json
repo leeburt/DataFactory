@@ -1,0 +1,96 @@
+{
+  "Delay Generator": {
+    "component_box": [
+      265.0,
+      174.0,
+      382.0,
+      232.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Differential PWM",
+          "count": 1
+        },
+        {
+          "name": "Differential PWM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Differential PWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Drivers : 3-elemental HBRIDGE": {
+    "component_box": [
+      388.0,
+      34.0,
+      481.0,
+      180.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Differential PWM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "8 Ohm Speaker",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Input": {
+    "component_box": [
+      8.0,
+      61.0,
+      61.0,
+      151.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Analog Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Analog Integrator": {
+    "component_box": [
+      104.0,
+      57.0,
+      206.0,
+      154.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Input",
+          "count": 1
+        },
+        {
+          "name": "Drivers : 3-elemental HBRIDGE",
+          "count": 1
+        },
+        {
+          "name": "Comparators",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

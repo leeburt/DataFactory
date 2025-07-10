@@ -1,0 +1,71 @@
+{
+  "TEKTRONIX 547 WITH 1A1 PLUG-IN": {
+    "component_box": [
+      204.0,
+      457.0,
+      407.0,
+      599.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "A.U.T.",
+          "count": 1
+        },
+        {
+          "name": "R3",
+          "count": 1
+        },
+        {
+          "name": "R4",
+          "count": 1
+        },
+        {
+          "name": "Protective diode network",
+          "count": 1
+        },
+        {
+          "name": "GND",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "A.U.T.": {
+    "component_box": [
+      303.0,
+      142.0,
+      422.0,
+      282.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "OUT",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "R1",
+          "count": 1
+        },
+        {
+          "name": "R2",
+          "count": 1
+        },
+        {
+          "name": "C1",
+          "count": 1
+        },
+        {
+          "name": "R4",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

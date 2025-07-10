@@ -1,0 +1,123 @@
+{
+  "单刀双掷开关": {
+    "component_box": [
+      99.0,
+      118.0,
+      172.0,
+      206.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "LTI",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "DC voltage source",
+          "count": 1
+        },
+        {
+          "name": "-1",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LTI": {
+    "component_box": [
+      261.0,
+      26.0,
+      395.0,
+      158.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "u(t)",
+          "count": 1
+        },
+        {
+          "name": "单刀双掷开关",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "mixed signal system",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DC voltage source": {
+    "component_box": [
+      62.0,
+      243.0,
+      113.0,
+      296.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "单刀双掷开关",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "mixed signal system": {
+    "component_box": [
+      505.0,
+      92.0,
+      657.0,
+      225.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LTI",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "单刀双掷开关",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "-1": {
+    "component_box": [
+      155.0,
+      243.0,
+      206.0,
+      295.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "单刀双掷开关",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

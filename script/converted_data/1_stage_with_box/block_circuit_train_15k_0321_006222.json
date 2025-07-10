@@ -1,0 +1,74 @@
+{
+  "Mixer": {
+    "component_box": [
+      419.0,
+      289.0,
+      491.0,
+      361.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input Signal Vs(t)",
+          "count": 1
+        },
+        {
+          "name": "Oscillator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Low Pass Filter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Oscillator": {
+    "component_box": [
+      155.0,
+      171.0,
+      241.0,
+      256.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Mixer",
+          "count": 1
+        },
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Low Pass Filter": {
+    "component_box": [
+      601.0,
+      48.0,
+      680.0,
+      116.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Mixer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "X",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

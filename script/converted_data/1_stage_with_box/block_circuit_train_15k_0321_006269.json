@@ -1,0 +1,202 @@
+{
+  "1 bit DAC": {
+    "component_box": [
+      236.0,
+      98.0,
+      299.0,
+      143.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1 bit quantizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Differentiator": {
+    "component_box": [
+      466.0,
+      253.0,
+      580.0,
+      295.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Differentiator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MUX": {
+    "component_box": [
+      88.0,
+      256.0,
+      158.0,
+      296.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MUX",
+          "count": 1
+        },
+        {
+          "name": "Delay",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Integrator": {
+    "component_box": [
+      228.0,
+      27.0,
+      317.0,
+      69.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1 bit quantizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      179.0,
+      33.0,
+      210.0,
+      63.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Integrator",
+          "count": 1
+        },
+        {
+          "name": "-Q1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Delay": {
+    "component_box": [
+      366.0,
+      97.0,
+      429.0,
+      142.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "1 bit quantizer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summer": {
+    "component_box": [
+      29.0,
+      34.0,
+      60.0,
+      63.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "X",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1 bit quantizer": {
+    "component_box": [
+      366.0,
+      27.0,
+      439.0,
+      68.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "Delay",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

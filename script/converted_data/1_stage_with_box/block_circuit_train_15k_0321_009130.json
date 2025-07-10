@@ -1,0 +1,109 @@
+{
+  "5-bit flash ADC": {
+    "component_box": [
+      589.0,
+      215.0,
+      750.0,
+      314.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "shift/latch elements & digital correction",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "1.5-bit": {
+    "component_box": [
+      227.0,
+      215.0,
+      326.0,
+      315.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "folded S/H stage",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1.5-bit",
+          "count": 1
+        },
+        {
+          "name": "shift/latch elements & digital correction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "shift/latch elements & digital correction": {
+    "component_box": [
+      147.0,
+      65.0,
+      763.0,
+      150.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "folded S/H stage",
+          "count": 1
+        },
+        {
+          "name": "1.5-bit",
+          "count": 1
+        },
+        {
+          "name": "1.5-bit",
+          "count": 1
+        },
+        {
+          "name": "5-bit flash ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "10",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "folded S/H stage": {
+    "component_box": [
+      62.0,
+      215.0,
+      207.0,
+      315.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "vin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1.5-bit",
+          "count": 1
+        },
+        {
+          "name": "shift/latch elements & digital correction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

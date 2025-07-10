@@ -1,0 +1,183 @@
+{
+  "summer": {
+    "component_box": [
+      254.0,
+      235.0,
+      289.0,
+      270.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TRUNC",
+          "count": 1
+        },
+        {
+          "name": "RAM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H(z)": {
+    "component_box": [
+      53.0,
+      201.0,
+      184.0,
+      302.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "summer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "summer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DWA": {
+    "component_box": [
+      374.0,
+      63.0,
+      474.0,
+      164.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TRUNC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "未知组件",
+          "count": 1
+        },
+        {
+          "name": "RAM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Signal splitter": {
+    "component_box": [
+      101.0,
+      97.0,
+      135.0,
+      131.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x_d",
+          "count": 1
+        },
+        {
+          "name": "H(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "TRUNC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RAM": {
+    "component_box": [
+      374.0,
+      217.0,
+      475.0,
+      286.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DWA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CADC": {
+    "component_box": [
+      557.0,
+      216.0,
+      688.0,
+      286.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "未知组件",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "RAM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADAC": {
+    "component_box": [
+      542.0,
+      63.0,
+      688.0,
+      164.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DWA",
+          "count": 1
+        },
+        {
+          "name": "e_nl(y_d)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CADC",
+          "count": 1
+        },
+        {
+          "name": "y_a",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

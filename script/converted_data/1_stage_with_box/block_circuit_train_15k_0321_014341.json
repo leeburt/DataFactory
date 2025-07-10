@@ -1,0 +1,182 @@
+{
+  "Voltage divider": {
+    "component_box": [
+      344.0,
+      199.0,
+      451.0,
+      251.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        },
+        {
+          "name": "运算放大器",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "运算放大器": {
+    "component_box": [
+      304.0,
+      273.0,
+      375.0,
+      344.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Voltage divider",
+          "count": 1
+        },
+        {
+          "name": "VCO/CkAC",
+          "count": 1
+        },
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        },
+        {
+          "name": "CL RL",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VCO/CkAC": {
+    "component_box": [
+      132.0,
+      268.0,
+      287.0,
+      342.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "运算放大器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        },
+        {
+          "name": "CL RL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Oscillator": {
+    "component_box": [
+      133.0,
+      345.0,
+      285.0,
+      397.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "VCO/CkAC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Opt. N-finder": {
+    "component_box": [
+      129.0,
+      8.0,
+      284.0,
+      82.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        },
+        {
+          "name": "CL RL",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "N-stages Charge Pump": {
+    "component_box": [
+      130.0,
+      127.0,
+      286.0,
+      213.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "Opt. N-finder",
+          "count": 1
+        },
+        {
+          "name": "VCO/CkAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Voltage divider",
+          "count": 1
+        },
+        {
+          "name": "CL RL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CL RL": {
+    "component_box": [
+      393.0,
+      0.0,
+      643.0,
+      174.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "N-stages Charge Pump",
+          "count": 1
+        },
+        {
+          "name": "Voltage divider",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "INPUT COMPARATOR": {
+    "component_box": [
+      589.0,
+      624.0,
+      797.0,
+      745.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LOW BAND FILTER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PERIOD COUNTER",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "OP AMP",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "OP AMP": {
+    "component_box": [
+      1086.0,
+      847.0,
+      1178.0,
+      949.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OP AMP IN",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "OP AMP OUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CODE CONVERTER": {
+    "component_box": [
+      1309.0,
+      401.0,
+      1519.0,
+      522.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CONTROL LOGIC",
+          "count": 1
+        },
+        {
+          "name": "VALIDITY CHECK",
+          "count": 1
+        },
+        {
+          "name": "VALIDITY CHECK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "4 BIT OUTPUT CODE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LOW BAND FILTER": {
+    "component_box": [
+      230.0,
+      621.0,
+      437.0,
+      741.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Telephone line",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "INPUT COMPARATOR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PERIOD COUNTER": {
+    "component_box": [
+      945.0,
+      627.0,
+      1153.0,
+      749.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "INPUT COMPARATOR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CONTROL LOGIC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "HIGH BAND FILTER": {
+    "component_box": [
+      236.0,
+      162.0,
+      444.0,
+      284.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "INPUT COMPARATOR",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "FROM TELEPHONE LINE",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "OSCILLATOR CIRCUITRY AND DIVIDER": {
+    "component_box": [
+      592.0,
+      392.0,
+      799.0,
+      513.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FROM TELEPHONE LINE",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CONTROL LOGIC",
+          "count": 1
+        },
+        {
+          "name": "FROM TELEPHONE LINE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VALIDITY CHECK": {
+    "component_box": [
+      1309.0,
+      175.0,
+      1521.0,
+      295.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PERIOD COUNTER",
+          "count": 1
+        },
+        {
+          "name": "CONTROL LOGIC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CODE CONVERTER",
+          "count": 1
+        },
+        {
+          "name": "VALID TONE STROBE",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CONTROL LOGIC": {
+    "component_box": [
+      944.0,
+      398.0,
+      1149.0,
+      516.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OSCILLATOR CIRCUITRY AND DIVIDER",
+          "count": 1
+        },
+        {
+          "name": "PERIOD COUNTER",
+          "count": 1
+        },
+        {
+          "name": "PERIOD COUNTER",
+          "count": 1
+        },
+        {
+          "name": "V+",
+          "count": 1
+        },
+        {
+          "name": "V-",
+          "count": 1
+        },
+        {
+          "name": "CONTROL INPUT",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CODE CONVERTER",
+          "count": 1
+        },
+        {
+          "name": "VALIDITY CHECK",
+          "count": 1
+        },
+        {
+          "name": "VALIDITY CHECK",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,630 @@
+{
+  "PFD with DZ": {
+    "component_box": [
+      364.0,
+      405.0,
+      481.0,
+      491.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Wave shape",
+          "count": 1
+        },
+        {
+          "name": "÷(54, 55, 56, 57, 58, 59, 60)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Power divider": {
+    "component_box": [
+      762.0,
+      404.0,
+      828.0,
+      463.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "20 GHz VCO with tail filtering",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "60 GHz QILO",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "÷4 ILFD": {
+    "component_box": [
+      640.0,
+      604.0,
+      758.0,
+      667.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power divider",
+          "count": 1
+        },
+        {
+          "name": "MUX1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clamping diodes": {
+    "component_box": [
+      121.0,
+      573.0,
+      153.0,
+      604.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Reference clock input pad",
+          "count": 1
+        },
+        {
+          "name": "Wave shape",
+          "count": 1
+        },
+        {
+          "name": "VSS",
+          "count": 1
+        },
+        {
+          "name": "VDD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Pulser": {
+    "component_box": [
+      364.0,
+      83.0,
+      474.0,
+      152.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "CP1",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Clamp diode",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SSPD": {
+    "component_box": [
+      363.0,
+      170.0,
+      473.0,
+      270.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Pulser",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Limiter": {
+    "component_box": [
+      251.0,
+      246.0,
+      284.0,
+      274.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Wave shape",
+          "count": 1
+        },
+        {
+          "name": "SSPD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CP1": {
+    "component_box": [
+      525.0,
+      196.0,
+      616.0,
+      263.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "SSPD",
+          "count": 1
+        },
+        {
+          "name": "SSPD",
+          "count": 1
+        },
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "÷(54, 55, 56, 57, 58, 59, 60)": {
+    "component_box": [
+      266.0,
+      547.0,
+      404.0,
+      648.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "÷4 ILFD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD with DZ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "+5": {
+    "component_box": [
+      502.0,
+      599.0,
+      592.0,
+      652.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "MUX1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MUX2": {
+    "component_box": [
+      199.0,
+      68.0,
+      258.0,
+      167.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "+2",
+          "count": 1
+        },
+        {
+          "name": "Limiter",
+          "count": 1
+        },
+        {
+          "name": "SEL2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Pulser",
+          "count": 1
+        },
+        {
+          "name": "SSPD",
+          "count": 1
+        },
+        {
+          "name": "SSPD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ESD二极管": {
+    "component_box": [
+      120.0,
+      600.0,
+      153.0,
+      627.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference clock input pad",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Wave shape",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clamp diode": {
+    "component_box": [
+      304.0,
+      139.0,
+      337.0,
+      171.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "MUX2",
+          "count": 1
+        },
+        {
+          "name": "Pulser",
+          "count": 1
+        },
+        {
+          "name": "ESD保护二极管",
+          "count": 1
+        },
+        {
+          "name": "VSS",
+          "count": 1
+        },
+        {
+          "name": "VDD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Oscillator": {
+    "component_box": [
+      912.0,
+      231.0,
+      994.0,
+      314.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "58.32 GHz",
+          "count": 1
+        },
+        {
+          "name": "59.40 GHz",
+          "count": 1
+        },
+        {
+          "name": "60.48 GHz",
+          "count": 1
+        },
+        {
+          "name": "61.56 GHz",
+          "count": 1
+        },
+        {
+          "name": "62.64 GHz",
+          "count": 1
+        },
+        {
+          "name": "63.72 GHz",
+          "count": 1
+        },
+        {
+          "name": "64.80 GHz",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "20 GHz VCO with tail filtering": {
+    "component_box": [
+      754.0,
+      190.0,
+      837.0,
+      274.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LPF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Power divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "+2": {
+    "component_box": [
+      106.0,
+      108.0,
+      170.0,
+      164.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "36 MHz/40 MHz REF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MUX2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "+4.5": {
+    "component_box": [
+      502.0,
+      539.0,
+      591.0,
+      593.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "MUX1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ESD保护二极管": {
+    "component_box": [
+      304.0,
+      166.0,
+      336.0,
+      192.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "MUX2",
+          "count": 1
+        },
+        {
+          "name": "Pulser",
+          "count": 1
+        },
+        {
+          "name": "SSPD",
+          "count": 1
+        },
+        {
+          "name": "SSPD",
+          "count": 1
+        },
+        {
+          "name": "Clamp diode",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CP2": {
+    "component_box": [
+      507.0,
+      418.0,
+      599.0,
+      485.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD with DZ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Power divider",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Wave shape": {
+    "component_box": [
+      100.0,
+      415.0,
+      171.0,
+      531.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clamping diodes",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PFD with DZ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "60 GHz QILO": {
+    "component_box": [
+      992.0,
+      231.0,
+      1074.0,
+      314.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Power divider",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "64.80 GHz",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MUX1": {
+    "component_box": [
+      433.0,
+      535.0,
+      492.0,
+      651.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PFD with DZ",
+          "count": 1
+        },
+        {
+          "name": "+4.5",
+          "count": 1
+        },
+        {
+          "name": "+5",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "÷4 ILFD",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Reference clock input pad": {
+    "component_box": [
+      47.0,
+      599.0,
+      79.0,
+      627.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "ESD二极管",
+          "count": 1
+        },
+        {
+          "name": "Wave shape",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "LPF": {
+    "component_box": [
+      658.0,
+      198.0,
+      744.0,
+      265.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CP1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "20 GHz VCO with tail filtering",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

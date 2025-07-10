@@ -1,0 +1,283 @@
+{
+  "Pipeline ADC": {
+    "component_box": [
+      146.0,
+      18.0,
+      714.0,
+      57.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Analog Input",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "14-bits",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Clock Generation",
+          "count": 1
+        },
+        {
+          "name": "Band-gap  Reference Buffer  Bais",
+          "count": 1
+        },
+        {
+          "name": "SPI",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Stage 4–6 2.5-bit": {
+    "component_box": [
+      434.0,
+      90.0,
+      564.0,
+      188.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Stage 2~3 3-bit",
+          "count": 1
+        },
+        {
+          "name": "Band-gap  Reference Buffer  Bais",
+          "count": 1
+        },
+        {
+          "name": "Pipeline ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Flash 4-bit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Stage1 3.5-bit": {
+    "component_box": [
+      105.0,
+      90.0,
+      235.0,
+      188.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Analog Input",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Stage 2~3 3-bit",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Clock Generation",
+          "count": 1
+        },
+        {
+          "name": "Band-gap  Reference Buffer  Bais",
+          "count": 1
+        },
+        {
+          "name": "Pipeline ADC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ADC": {
+    "component_box": [
+      91.0,
+      25.0,
+      743.0,
+      205.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Analog Input",
+          "count": 1
+        },
+        {
+          "name": "Clock Generation",
+          "count": 1
+        },
+        {
+          "name": "Band-gap  \nReference Buffer  \nBais",
+          "count": 1
+        },
+        {
+          "name": "SPI",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "14-bits",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock Generation": {
+    "component_box": [
+      59.0,
+      224.0,
+      198.0,
+      285.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Stage1 3.5-bit",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Band-gap Reference Buffer Bais",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Band-gap\nReference Buffer\nBais": {
+    "component_box": [
+      202.0,
+      223.0,
+      512.0,
+      286.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clock Generation",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Stage1 3.5-bit",
+          "count": 1
+        },
+        {
+          "name": "Stage 2~3 3-bit",
+          "count": 1
+        },
+        {
+          "name": "Stage 4–6 2.5-bit",
+          "count": 1
+        },
+        {
+          "name": "Flash 4-bit",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "SPI",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SPI": {
+    "component_box": [
+      539.0,
+      224.0,
+      640.0,
+      284.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Flash 4-bit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Flash 4-bit": {
+    "component_box": [
+      599.0,
+      90.0,
+      729.0,
+      189.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Stage 4–6 2.5-bit",
+          "count": 1
+        },
+        {
+          "name": "SPI",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Foreground Calibration",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Stage 2~3 3-bit": {
+    "component_box": [
+      270.0,
+      90.0,
+      400.0,
+      189.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Stage1 3.5-bit",
+          "count": 1
+        },
+        {
+          "name": "Pipeline ADC",
+          "count": 1
+        },
+        {
+          "name": "Clock Generation",
+          "count": 1
+        },
+        {
+          "name": "Band-gap  \nReference Buffer  \nBais",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Stage 4–6 2.5-bit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

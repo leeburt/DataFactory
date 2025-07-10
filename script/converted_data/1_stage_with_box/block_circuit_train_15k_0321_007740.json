@@ -1,0 +1,298 @@
+{
+  "Control Logic": {
+    "component_box": [
+      121.0,
+      303.0,
+      337.0,
+      373.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DB Core 1",
+          "count": 1
+        },
+        {
+          "name": "DB Core 2",
+          "count": 1
+        },
+        {
+          "name": "Comp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Voltage Divider": {
+    "component_box": [
+      453.0,
+      187.0,
+      564.0,
+      269.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CP Core",
+          "count": 1
+        },
+        {
+          "name": "Load",
+          "count": 1
+        },
+        {
+          "name": "Oscillator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DB Core 1": {
+    "component_box": [
+      122.0,
+      242.0,
+      213.0,
+      291.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "EH",
+          "count": 1
+        },
+        {
+          "name": "DB Core 2",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Load": {
+    "component_box": [
+      586.0,
+      135.0,
+      658.0,
+      182.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CP Core",
+          "count": 1
+        },
+        {
+          "name": "Oscillator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "CP Core": {
+    "component_box": [
+      149.0,
+      11.0,
+      456.0,
+      227.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "EH",
+          "count": 1
+        },
+        {
+          "name": "Voltage Divider",
+          "count": 1
+        },
+        {
+          "name": "DB Core 1",
+          "count": 1
+        },
+        {
+          "name": "DB Core 2",
+          "count": 1
+        },
+        {
+          "name": "C1n...Cnn",
+          "count": 1
+        },
+        {
+          "name": "C1p...Cnp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DRIVER BOOSTER": {
+    "component_box": [
+      108.0,
+      230.0,
+      348.0,
+      416.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CP Core",
+          "count": 1
+        },
+        {
+          "name": "Comp",
+          "count": 1
+        },
+        {
+          "name": "Clock Generator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Voltage Reference": {
+    "component_box": [
+      370.0,
+      384.0,
+      512.0,
+      423.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Control Logic",
+          "count": 1
+        },
+        {
+          "name": "Comp",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Clock Generator": {
+    "component_box": [
+      495.0,
+      301.0,
+      628.0,
+      373.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Voltage Divider",
+          "count": 1
+        },
+        {
+          "name": "Oscillator",
+          "count": 1
+        },
+        {
+          "name": "Voltage Reference",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Oscillator": {
+    "component_box": [
+      584.0,
+      188.0,
+      709.0,
+      269.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Load",
+          "count": 1
+        },
+        {
+          "name": "Clock Generator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DB Core 2": {
+    "component_box": [
+      245.0,
+      241.0,
+      336.0,
+      291.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DB Core 1",
+          "count": 1
+        },
+        {
+          "name": "CP Core",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "EH": {
+    "component_box": [
+      12.0,
+      118.0,
+      124.0,
+      200.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "CP Core",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comp": {
+    "component_box": [
+      364.0,
+      250.0,
+      433.0,
+      322.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Control Logic",
+          "count": 1
+        },
+        {
+          "name": "Voltage Divider",
+          "count": 1
+        },
+        {
+          "name": "Clock Generator",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

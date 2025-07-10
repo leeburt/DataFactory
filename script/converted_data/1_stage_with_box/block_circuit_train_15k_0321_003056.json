@@ -1,0 +1,138 @@
+{
+  "I1": {
+    "component_box": [
+      666.0,
+      105.0,
+      691.0,
+      133.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Φ2I",
+          "count": 1
+        },
+        {
+          "name": "Control Logic",
+          "count": 1
+        },
+        {
+          "name": "Vtp_p",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ZCD": {
+    "component_box": [
+      0.0,
+      41.0,
+      255.0,
+      444.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Front-end switch network",
+          "count": 1
+        },
+        {
+          "name": "Front-end switch network",
+          "count": 1
+        },
+        {
+          "name": "cal_co calibration switch",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Comp1": {
+    "component_box": [
+      570.0,
+      175.0,
+      658.0,
+      274.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Control Logic",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "ZCD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Control Logic": {
+    "component_box": [
+      657.0,
+      182.0,
+      768.0,
+      259.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comp1",
+          "count": 1
+        },
+        {
+          "name": "Comp2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "I1",
+          "count": 1
+        },
+        {
+          "name": "I1",
+          "count": 1
+        },
+        {
+          "name": "C_T2_p",
+          "count": 1
+        },
+        {
+          "name": "C_T2_m",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comp2": {
+    "component_box": [
+      343.0,
+      392.0,
+      429.0,
+      451.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "V_in+",
+          "count": 1
+        },
+        {
+          "name": "Control Logic",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  }
+}

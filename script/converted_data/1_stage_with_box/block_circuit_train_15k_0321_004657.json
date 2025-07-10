@@ -1,0 +1,436 @@
+{
+  "Dir": {
+    "component_box": [
+      929.0,
+      214.0,
+      991.0,
+      270.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Two-stage Delay Line",
+          "count": 1
+        },
+        {
+          "name": "Delay line",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      706.0,
+      375.0,
+      849.0,
+      469.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Amplitude Detect",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "DAC Ctrl Logic",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "τ→τ": {
+    "component_box": [
+      1228.0,
+      105.0,
+      1322.0,
+      179.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Two-stage Delay Line",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D flip-flop",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OR gate": {
+    "component_box": [
+      927.0,
+      55.0,
+      990.0,
+      114.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Delay line",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      761.0,
+      198.0,
+      854.0,
+      309.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "In",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "Dir",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Slope Detect": {
+    "component_box": [
+      326.0,
+      193.0,
+      588.0,
+      280.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Time-Shielding Logic": {
+    "component_box": [
+      317.0,
+      38.0,
+      596.0,
+      181.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Zero Crossing Detector (ZCD)\\nTime-Shielding Logic": {
+    "component_box": [
+      18.0,
+      12.0,
+      625.0,
+      474.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Resolution Update",
+          "count": 1
+        },
+        {
+          "name": "Resolution Range",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Slope Detect",
+          "count": 1
+        },
+        {
+          "name": "Amplitude Detect",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Information-Aware Logic": {
+    "component_box": [
+      1176.0,
+      300.0,
+      1544.0,
+      362.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Slope Detect",
+          "count": 1
+        },
+        {
+          "name": "Amplitude Detect",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC Ctrl Logic",
+          "count": 1
+        },
+        {
+          "name": "Resolution Update",
+          "count": 1
+        },
+        {
+          "name": "Resolution Range",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Slope Detect\nAmplitude Detect": {
+    "component_box": [
+      318.0,
+      278.0,
+      587.0,
+      374.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Zero Crossing Detector",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Delay line": {
+    "component_box": [
+      1015.0,
+      108.0,
+      1134.0,
+      184.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OR gate",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "D flip-flop",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Resolution Update": {
+    "component_box": [
+      1236.0,
+      373.0,
+      1356.0,
+      433.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "OR gate",
+          "count": 1
+        },
+        {
+          "name": "Resolution Range",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "D flip-flop": {
+    "component_box": [
+      1386.0,
+      102.0,
+      1468.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "τ→τ",
+          "count": 1
+        },
+        {
+          "name": "Delay line",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Slope Detect",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Resolution Range": {
+    "component_box": [
+      1380.0,
+      373.0,
+      1502.0,
+      434.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Resolution Update",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Slope Detect",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC Ctrl Logic": {
+    "component_box": [
+      927.0,
+      298.0,
+      1110.0,
+      378.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OR gate",
+          "count": 1
+        },
+        {
+          "name": "Dir",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "Information-Aware Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Amplitude Detect": {
+    "component_box": [
+      928.0,
+      394.0,
+      1110.0,
+      476.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Information-Aware Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Zero Crossing Detector": {
+    "component_box": [
+      42.0,
+      37.0,
+      313.0,
+      183.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Information Aware (IA) Module",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Two-stage Delay Line": {
+    "component_box": [
+      1016.0,
+      206.0,
+      1109.0,
+      279.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Dir",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC Ctrl Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

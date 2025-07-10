@@ -1,0 +1,245 @@
+{
+  "Delay": {
+    "component_box": [
+      87.0,
+      107.0,
+      159.0,
+      142.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "k₁-bit ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction\nG1": {
+    "component_box": [
+      267.0,
+      18.0,
+      297.0,
+      48.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "S/H",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "G1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Dynamic offset & Static offset detection  Correction Control": {
+    "component_box": [
+      355.0,
+      203.0,
+      715.0,
+      269.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Backend ADC",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "k₁-bit ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "G1": {
+    "component_box": [
+      363.0,
+      1.0,
+      429.0,
+      65.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction G1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Backend ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Backend ADC\nDynamic offset & Static offset detection\nCorrection Control": {
+    "component_box": [
+      355.0,
+      108.0,
+      716.0,
+      175.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction\nG1",
+          "count": 1
+        },
+        {
+          "name": "k₁-bit ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "S/H": {
+    "component_box": [
+      89.0,
+      17.0,
+      161.0,
+      53.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Vin",
+          "count": 1
+        },
+        {
+          "name": "Clock",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction\nG1",
+          "count": 1
+        },
+        {
+          "name": "Delay",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "k₁-bit ADC": {
+    "component_box": [
+      65.0,
+      171.0,
+      159.0,
+      230.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Delay",
+          "count": 1
+        },
+        {
+          "name": "Vin",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "Delay",
+          "count": 1
+        },
+        {
+          "name": "Dynamic offset & Static offset detection  \nCorrection Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Backend ADC": {
+    "component_box": [
+      524.0,
+      0.0,
+      720.0,
+      66.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "G1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Dynamic offset & Static offset detection  \nCorrection Control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC": {
+    "component_box": [
+      254.0,
+      70.0,
+      311.0,
+      117.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Dynamic offset & Static offset detection  \nCorrection Control",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction\nG1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

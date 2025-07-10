@@ -1,0 +1,132 @@
+{
+  "DRIVER": {
+    "component_box": [
+      114.0,
+      221.0,
+      224.0,
+      330.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SCHMITT_TRIGGER",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "TRANSDUCER SELECT 1 OF 4",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PULSE AMPLITUDE DISCRIMINATOR": {
+    "component_box": [
+      188.0,
+      45.0,
+      351.0,
+      155.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "THREE-STAGE COUNTER",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "POR",
+          "count": 1
+        },
+        {
+          "name": "VDD",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SCHMITT_TRIGGER": {
+    "component_box": [
+      464.0,
+      222.0,
+      572.0,
+      331.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TRANSDUCER SELECT 1 OF 4",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DRIVER",
+          "count": 1
+        },
+        {
+          "name": "THREE-STAGE COUNTER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "THREE-STAGE COUNTER": {
+    "component_box": [
+      439.0,
+      46.0,
+      600.0,
+      156.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PULSE AMPLITUDE DISCRIMINATOR",
+          "count": 1
+        },
+        {
+          "name": "VDD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SCHMITT_TRIGGER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "POR": {
+    "component_box": [
+      88.0,
+      45.0,
+      149.0,
+      155.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_DD",
+          "count": 1
+        },
+        {
+          "name": "PULSE AMPLITUDE DISCRIMINATOR",
+          "count": 1
+        },
+        {
+          "name": "THREE-STAGE COUNTER",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

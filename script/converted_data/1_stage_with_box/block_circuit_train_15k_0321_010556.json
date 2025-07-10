@@ -1,0 +1,343 @@
+{
+  "ADC": {
+    "component_box": [
+      861.0,
+      168.0,
+      942.0,
+      242.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2x Amplifier",
+          "count": 1
+        },
+        {
+          "name": "ε_q",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "DAC3",
+          "count": 1
+        },
+        {
+          "name": "DAC2",
+          "count": 1
+        },
+        {
+          "name": "DAC1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ": {
+    "component_box": [
+      131.0,
+      179.0,
+      183.0,
+      230.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "DAC feedback",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "1/2 z⁻¹ / (1 − z⁻¹)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC3": {
+    "component_box": [
+      714.0,
+      277.0,
+      773.0,
+      367.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DAC1": {
+    "component_box": [
+      714.0,
+      462.0,
+      773.0,
+      552.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC FLASH 5-bit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC2": {
+    "component_box": [
+      714.0,
+      369.0,
+      773.0,
+      459.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC FLASH 5-bit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "z⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z⁻¹": {
+    "component_box": [
+      837.0,
+      386.0,
+      928.0,
+      442.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DAC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/2": {
+    "component_box": [
+      427.0,
+      324.0,
+      504.0,
+      393.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "z^-1/(1-z^-1)": {
+    "component_box": [
+      537.0,
+      155.0,
+      688.0,
+      257.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "1-z⁻¹",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2x Amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1/2 z⁻¹ / (1 − z⁻¹)": {
+    "component_box": [
+      206.0,
+      154.0,
+      358.0,
+      257.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      990.0,
+      176.0,
+      1043.0,
+      230.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "z⁻¹",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "VOUT",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "1-z⁻¹": {
+    "component_box": [
+      538.0,
+      39.0,
+      688.0,
+      109.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC FLASH 5-bit": {
+    "component_box": [
+      836.0,
+      86.0,
+      962.0,
+      302.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2x Amplifier",
+          "count": 1
+        },
+        {
+          "name": "ε_q",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "DAC3",
+          "count": 1
+        },
+        {
+          "name": "DAC2",
+          "count": 1
+        },
+        {
+          "name": "DAC1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2x Amplifier": {
+    "component_box": [
+      761.0,
+      165.0,
+      831.0,
+      243.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z^-1/(1-z^-1)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC FLASH 5-bit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

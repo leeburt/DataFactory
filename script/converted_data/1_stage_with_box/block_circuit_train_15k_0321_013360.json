@@ -1,0 +1,94 @@
+{
+  "MOTOR DRIVER": {
+    "component_box": [
+      494.0,
+      44.0,
+      642.0,
+      172.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FREQUENCY DIVIDER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "STEPPING MOTOR + MECHANICAL DISPLAY",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "FREQUENCY DIVIDER": {
+    "component_box": [
+      308.0,
+      44.0,
+      457.0,
+      172.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "OSCILLATOR + BUFFER",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "MOTOR DRIVER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OSCILLATOR + BUFFER": {
+    "component_box": [
+      122.0,
+      44.0,
+      271.0,
+      172.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CRYSTAL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "FREQUENCY DIVIDER",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "STEPPING MOTOR + MECHANICAL DISPLAY",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "STEPPING MOTOR + MECHANICAL DISPLAY": {
+    "component_box": [
+      709.0,
+      40.0,
+      841.0,
+      173.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MOTOR DRIVER",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  }
+}

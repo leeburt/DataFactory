@@ -1,0 +1,556 @@
+{
+  "H1(z)": {
+    "component_box": [
+      153.0,
+      132.0,
+      304.0,
+      253.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        },
+        {
+          "name": "2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "NCF_2": {
+    "component_box": [
+      909.0,
+      481.0,
+      1117.0,
+      574.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CP3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "×2 amplifier": {
+    "component_box": [
+      362.0,
+      600.0,
+      427.0,
+      680.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "α3z⁻¹/(1−β3z⁻¹)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP2": {
+    "component_box": [
+      434.0,
+      21.0,
+      527.0,
+      84.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H2(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      1116.0,
+      170.0,
+      1162.0,
+      215.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "z⁻²",
+          "count": 1
+        },
+        {
+          "name": "CP3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y[k]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "adder": {
+    "component_box": [
+      710.0,
+      170.0,
+      756.0,
+      214.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H2(z)",
+          "count": 1
+        },
+        {
+          "name": "x[k]",
+          "count": 1
+        },
+        {
+          "name": "2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "加法器": {
+    "component_box": [
+      79.0,
+      505.0,
+      125.0,
+      551.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "u2[k]",
+          "count": 1
+        },
+        {
+          "name": "DAC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "α3z⁻¹/(1−β3z⁻¹)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "α3z⁻¹/(1−β3z⁻¹)": {
+    "component_box": [
+      153.0,
+      467.0,
+      303.0,
+      589.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H4(z)",
+          "count": 1
+        },
+        {
+          "name": "×2 amplifier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP1": {
+    "component_box": [
+      897.0,
+      20.0,
+      989.0,
+      84.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DWA",
+          "count": 1
+        },
+        {
+          "name": "z⁻²",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC1": {
+    "component_box": [
+      798.0,
+      132.0,
+      921.0,
+      252.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "z⁻²",
+          "count": 1
+        },
+        {
+          "name": "CP1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      373.0,
+      169.0,
+      420.0,
+      216.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H1(z)",
+          "count": 1
+        },
+        {
+          "name": "ADC3",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H2(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "求和器": {
+    "component_box": [
+      79.0,
+      170.0,
+      126.0,
+      215.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x[k]",
+          "count": 1
+        },
+        {
+          "name": "DAC1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "H1(z)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC1": {
+    "component_box": [
+      155.0,
+      355.0,
+      275.0,
+      421.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DWA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "求和器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H4(z)": {
+    "component_box": [
+      377.0,
+      467.0,
+      528.0,
+      589.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "α3z⁻¹/(1−β3z⁻¹)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DWA": {
+    "component_box": [
+      308.0,
+      355.0,
+      429.0,
+      420.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H1(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "H2(z)": {
+    "component_box": [
+      462.0,
+      132.0,
+      612.0,
+      253.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CP2",
+          "count": 1
+        },
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "z⁻²": {
+    "component_box": [
+      995.0,
+      146.0,
+      1088.0,
+      238.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC1",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "CP1",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC3": {
+    "component_box": [
+      280.0,
+      21.0,
+      373.0,
+      84.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "H1(z)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CP2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2": {
+    "component_box": [
+      405.0,
+      264.0,
+      468.0,
+      345.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC2": {
+    "component_box": [
+      685.0,
+      467.0,
+      808.0,
+      588.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "NCF_2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DAC2": {
+    "component_box": [
+      155.0,
+      691.0,
+      275.0,
+      756.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "加法器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CP3": {
+    "component_box": [
+      1135.0,
+      21.0,
+      1227.0,
+      84.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "NCF_2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

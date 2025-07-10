@@ -1,0 +1,238 @@
+{
+  "Calculate ke": {
+    "component_box": [
+      550.0,
+      50.0,
+      749.0,
+      152.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "FEM simulation for flux density",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "FEM simulation for flux density": {
+    "component_box": [
+      280.0,
+      51.0,
+      480.0,
+      153.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Design magnetic core of open-loop current transducer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Calculate ke",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Inverter": {
+    "component_box": [
+      76.0,
+      268.0,
+      207.0,
+      388.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SVPWM",
+          "count": 1
+        },
+        {
+          "name": "Vdc",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "O-L current transducers",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PMSM": {
+    "component_box": [
+      388.0,
+      286.0,
+      519.0,
+      387.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Resolver (Encoder)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SVPWM": {
+    "component_box": [
+      563.0,
+      436.0,
+      696.0,
+      537.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Inverter",
+          "count": 1
+        },
+        {
+          "name": "Current Controller",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Inverter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Design magnetic core of open-loop current transducer": {
+    "component_box": [
+      11.0,
+      53.0,
+      211.0,
+      154.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "FEM simulation for flux density",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Proposed Method in (11)": {
+    "component_box": [
+      76.0,
+      436.0,
+      207.0,
+      537.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Resolver (Encoder)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "abc/dq转换器",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Current Controller": {
+    "component_box": [
+      387.0,
+      436.0,
+      519.0,
+      537.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "abc/dq转换器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SVPWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "abc/dq转换器": {
+    "component_box": [
+      250.0,
+      437.0,
+      343.0,
+      537.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Proposed Method in (11)",
+          "count": 1
+        },
+        {
+          "name": "O-L current transducers",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Current Controller",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Resolver (Encoder)": {
+    "component_box": [
+      563.0,
+      286.0,
+      695.0,
+      387.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PMSM",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Proposed Method in (11)",
+          "count": 1
+        },
+        {
+          "name": "SVPWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

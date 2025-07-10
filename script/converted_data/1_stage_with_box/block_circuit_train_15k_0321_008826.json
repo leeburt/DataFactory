@@ -1,0 +1,159 @@
+{
+  "差分放大器": {
+    "component_box": [
+      413.0,
+      148.0,
+      488.0,
+      229.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Active combiner",
+          "count": 1
+        },
+        {
+          "name": "DUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Active combiner": {
+    "component_box": [
+      208.0,
+      130.0,
+      282.0,
+      211.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Signal generator",
+          "count": 1
+        },
+        {
+          "name": "sine wave source",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "差分放大器",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "sine wave source": {
+    "component_box": [
+      20.0,
+      162.0,
+      75.0,
+      216.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Active combiner",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "GP-IB",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DUT": {
+    "component_box": [
+      530.0,
+      142.0,
+      619.0,
+      230.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "差分放大器",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "High-speed I/O  \nGP-IB",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "High-speed I/O  \\nGP-IB": {
+    "component_box": [
+      659.0,
+      125.0,
+      864.0,
+      350.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DUT",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "sine wave source",
+          "count": 1
+        },
+        {
+          "name": "Signal generator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "GP-IB": {
+    "component_box": [
+      660.0,
+      246.0,
+      822.0,
+      339.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Signal generator": {
+    "component_box": [
+      20.0,
+      88.0,
+      75.0,
+      142.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Active combiner",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "VIN (differential)": {
+    "component_box": [
+      217.0,
+      275.0,
+      260.0,
+      717.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Slice 0",
+          "count": 1
+        },
+        {
+          "name": "Slice 1",
+          "count": 1
+        },
+        {
+          "name": "Slice 2",
+          "count": 1
+        },
+        {
+          "name": "Slice 3",
+          "count": 1
+        },
+        {
+          "name": "Slice 4",
+          "count": 1
+        },
+        {
+          "name": "Slice 5",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Slice 0": {
+    "component_box": [
+      346.0,
+      99.0,
+      540.0,
+      255.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clock generation",
+          "count": 1
+        },
+        {
+          "name": "Clock generation",
+          "count": 1
+        },
+        {
+          "name": "VIN (differential)",
+          "count": 1
+        },
+        {
+          "name": "VREF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Slice 1",
+          "count": 1
+        },
+        {
+          "name": "y[0]",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Slice 1": {
+    "component_box": [
+      345.0,
+      317.0,
+      541.0,
+      471.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Slice 0",
+          "count": 1
+        },
+        {
+          "name": "Clock generation",
+          "count": 1
+        },
+        {
+          "name": "VIN (differential)",
+          "count": 1
+        },
+        {
+          "name": "VREF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y[1]",
+          "count": 1
+        },
+        {
+          "name": "Slice 2",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock generation": {
+    "component_box": [
+      5.0,
+      35.0,
+      206.0,
+      179.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Slice 0",
+          "count": 1
+        },
+        {
+          "name": "Slice 1",
+          "count": 1
+        },
+        {
+          "name": "Slice 5",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Slice 5": {
+    "component_box": [
+      346.0,
+      636.0,
+      541.0,
+      793.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Clock generation",
+          "count": 1
+        },
+        {
+          "name": "Slice 4",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "y[5]",
+          "count": 1
+        },
+        {
+          "name": "Next",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "VIN (differential)",
+          "count": 1
+        },
+        {
+          "name": "VREF",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "Off-time control": {
+    "component_box": [
+      359.0,
+      263.0,
+      527.0,
+      325.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ZCD",
+          "count": 1
+        },
+        {
+          "name": "Pre-regulator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SR latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "AND门": {
+    "component_box": [
+      616.0,
+      443.0,
+      670.0,
+      491.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Spike-free circuit",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "SR latch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "SR latch": {
+    "component_box": [
+      567.0,
+      262.0,
+      630.0,
+      340.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Off-time control",
+          "count": 1
+        },
+        {
+          "name": "AND门",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Driver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comp": {
+    "component_box": [
+      750.0,
+      389.0,
+      832.0,
+      480.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TLM Control",
+          "count": 1
+        },
+        {
+          "name": "C_s  R_cs",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Spike-free circuit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TLM Control": {
+    "component_box": [
+      855.0,
+      305.0,
+      1017.0,
+      368.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Sawtooth Generator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Spike-free circuit": {
+    "component_box": [
+      550.0,
+      341.0,
+      672.0,
+      395.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SR latch",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ZCD": {
+    "component_box": [
+      359.0,
+      209.0,
+      528.0,
+      243.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VZCD",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Off-time control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "UHV start-up circuit": {
+    "component_box": [
+      341.0,
+      419.0,
+      524.0,
+      487.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "C2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Pre-regulator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "C_s  \\nR_cs": {
+    "component_box": [
+      744.0,
+      122.0,
+      837.0,
+      180.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "M_ns",
+          "count": 1
+        },
+        {
+          "name": "Comparator",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Driver": {
+    "component_box": [
+      667.0,
+      215.0,
+      713.0,
+      317.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SR latch",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "M_n3",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      689.0,
+      317.0,
+      771.0,
+      408.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "C_s  \\nR_cs",
+          "count": 1
+        },
+        {
+          "name": "V_limit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Spike-free circuit",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Pre-regulator": {
+    "component_box": [
+      361.0,
+      349.0,
+      525.0,
+      391.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "UHV start-up circuit",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Off-time control",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "VAC": {
+    "component_box": [
+      55.0,
+      149.0,
+      101.0,
+      196.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Bridge",
+          "count": 1
+        },
+        {
+          "name": "Bridge",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Sawtooth Generator": {
+    "component_box": [
+      856.0,
+      230.0,
+      1014.0,
+      295.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "THD Improvement",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "PLL X40": {
+    "component_box": [
+      636.0,
+      348.0,
+      854.0,
+      420.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "53.125-MHz Ref. CLK",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "32:8 MUX",
+          "count": 1
+        },
+        {
+          "name": "CMOS to ECL",
+          "count": 1
+        },
+        {
+          "name": "10:1 MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "32:8 MUX": {
+    "component_box": [
+      221.0,
+      65.0,
+      352.0,
+      244.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Parallel Input",
+          "count": 1
+        },
+        {
+          "name": "PLL X40",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "8B10B Enc.",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "10:1 MUX": {
+    "component_box": [
+      872.0,
+      66.0,
+      993.0,
+      243.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CMOS to ECL",
+          "count": 1
+        },
+        {
+          "name": "PLL X40",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Retimer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "CMOS to ECL": {
+    "component_box": [
+      657.0,
+      77.0,
+      801.0,
+      230.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "8B10B Enc.",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "10:1 MUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "8B10B Enc.": {
+    "component_box": [
+      421.0,
+      97.0,
+      583.0,
+      212.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "32:8 MUX",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CMOS to ECL",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Retimer": {
+    "component_box": [
+      1005.0,
+      109.0,
+      1148.0,
+      199.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "10:1 MUX",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Serial Output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

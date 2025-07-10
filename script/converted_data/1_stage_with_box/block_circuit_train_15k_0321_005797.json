@@ -1,0 +1,306 @@
+{
+  "Integrator/Gain Stage": {
+    "component_box": [
+      342.0,
+      89.0,
+      423.0,
+      200.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3-lev",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Φ1": {
+    "component_box": [
+      763.0,
+      653.0,
+      808.0,
+      693.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      516.0,
+      368.0,
+      555.0,
+      408.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Unknown",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "2x",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "2x": {
+    "component_box": [
+      576.0,
+      338.0,
+      645.0,
+      439.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3-level",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Integrator": {
+    "component_box": [
+      182.0,
+      312.0,
+      259.0,
+      420.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "求和器",
+          "count": 1
+        },
+        {
+          "name": "RST",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3-level",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "RST": {
+    "component_box": [
+      653.0,
+      712.0,
+      735.0,
+      753.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "RST",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DAC": {
+    "component_box": [
+      617.0,
+      464.0,
+      694.0,
+      520.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "3-level",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "求和器": {
+    "component_box": [
+      113.0,
+      344.0,
+      158.0,
+      388.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Digital Filter & Logic": {
+    "component_box": [
+      652.0,
+      99.0,
+      759.0,
+      190.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "3-lev",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "3-lev DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "3-level": {
+    "component_box": [
+      682.0,
+      360.0,
+      759.0,
+      415.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "2x",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summer": {
+    "component_box": [
+      275.0,
+      122.0,
+      325.0,
+      173.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VIN",
+          "count": 1
+        },
+        {
+          "name": "3-lev DAC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator/Gain Stage",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "3-lev": {
+    "component_box": [
+      495.0,
+      110.0,
+      563.0,
+      179.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Integrator/Gain Stage",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Digital Filter & Logic",
+          "count": 1
+        },
+        {
+          "name": "3-lev DAC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "3-lev DAC": {
+    "component_box": [
+      451.0,
+      7.0,
+      554.0,
+      78.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Digital Filter & Logic",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Integrator/Gain Stage",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

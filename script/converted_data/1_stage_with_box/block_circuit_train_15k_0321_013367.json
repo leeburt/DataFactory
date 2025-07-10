@@ -1,0 +1,224 @@
+{
+  "Interpolated Timing Recovery (ITR)": {
+    "component_box": [
+      661.0,
+      58.0,
+      861.0,
+      174.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Equalizer",
+          "count": 1
+        },
+        {
+          "name": "ITR⁻¹",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Slicer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "AGC": {
+    "component_box": [
+      325.0,
+      59.0,
+      427.0,
+      173.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Equalizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      192.0,
+      59.0,
+      292.0,
+      173.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "x(t)",
+          "count": 1
+        },
+        {
+          "name": "Crystal-derived Clock",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "AGC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "ITR⁻¹": {
+    "component_box": [
+      700.0,
+      312.0,
+      830.0,
+      382.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Σ",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Interpolated Timing Recovery (ITR)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Crystal-derived Clock": {
+    "component_box": [
+      21.0,
+      229.0,
+      213.0,
+      316.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Switch",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Equalizer": {
+    "component_box": [
+      474.0,
+      58.0,
+      627.0,
+      173.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AGC",
+          "count": 1
+        },
+        {
+          "name": "Ts",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Interpolated Timing Recovery (ITR)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Ts": {
+    "component_box": [
+      530.0,
+      61.0,
+      564.0,
+      82.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "AGC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Equalizer",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Σ": {
+    "component_box": [
+      941.0,
+      232.0,
+      1008.0,
+      299.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Slicer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ITR⁻¹",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Slicer": {
+    "component_box": [
+      924.0,
+      57.0,
+      1054.0,
+      176.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Interpolated Timing Recovery (ITR)",
+          "count": 1
+        },
+        {
+          "name": "T",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Σ",
+          "count": 1
+        },
+        {
+          "name": "â",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "tail current source": {
+    "component_box": [
+      695.0,
+      267.0,
+      727.0,
+      294.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Vbias",
+          "count": 1
+        },
+        {
+          "name": "Dynamic comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Calibration Logic": {
+    "component_box": [
+      989.0,
+      401.0,
+      1081.0,
+      601.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SAR",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "External",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "A2": {
+    "component_box": [
+      650.0,
+      377.0,
+      736.0,
+      503.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "A1",
+          "count": 1
+        },
+        {
+          "name": "A3",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Current source": {
+    "component_box": [
+      423.0,
+      684.0,
+      454.0,
+      705.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "Sampling capacitor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Dynamic comparator": {
+    "component_box": [
+      854.0,
+      401.0,
+      952.0,
+      481.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "A3",
+          "count": 1
+        },
+        {
+          "name": "Clk",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Calibration Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "current sink": {
+    "component_box": [
+      302.0,
+      246.0,
+      335.0,
+      273.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "in,n",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "SAR": {
+    "component_box": [
+      854.0,
+      531.0,
+      971.0,
+      594.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "latch",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "Calibration Logic",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "diode-connected PMOS transistor": {
+    "component_box": [
+      669.0,
+      42.0,
+      695.0,
+      94.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "out,n",
+          "count": 1
+        },
+        {
+          "name": "resistor",
+          "count": 1
+        },
+        {
+          "name": "补偿电容",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "sampling capacitor": {
+    "component_box": [
+      393.0,
+      598.0,
+      417.0,
+      671.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DAC",
+          "count": 1
+        },
+        {
+          "name": "other SAR ADCs",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "A3": {
+    "component_box": [
+      727.0,
+      382.0,
+      839.0,
+      509.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "A2",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Dynamic comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "A1": {
+    "component_box": [
+      571.0,
+      379.0,
+      657.0,
+      505.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "A2",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "Vcm",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DAC": {
+    "component_box": [
+      581.0,
+      522.0,
+      735.0,
+      604.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "SAR",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "A1",
+          "count": 1
+        },
+        {
+          "name": "Sampling capacitor",
+          "count": 1
+        },
+        {
+          "name": "Sampling capacitor",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Sampling capacitor": {
+    "component_box": [
+      428.0,
+      598.0,
+      452.0,
+      670.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "buffer",
+          "count": 1
+        },
+        {
+          "name": "other SAR ADCs",
+          "count": 1
+        },
+        {
+          "name": "ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "补偿电容": {
+    "component_box": [
+      729.0,
+      42.0,
+      755.0,
+      94.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "diode-connected PMOS transistor",
+          "count": 1
+        },
+        {
+          "name": "Dynamic comparator",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "buffer": {
+    "component_box": [
+      330.0,
+      375.0,
+      441.0,
+      502.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        },
+        {
+          "name": "",
+          "count": 1
+        },
+        {
+          "name": "A1",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

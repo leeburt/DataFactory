@@ -1,0 +1,147 @@
+{
+  "I_LOAD": {
+    "component_box": [
+      675.0,
+      114.0,
+      745.0,
+      187.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "V_O",
+          "count": 1
+        },
+        {
+          "name": "Ground",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "Summing junction": {
+    "component_box": [
+      456.0,
+      329.0,
+      525.0,
+      399.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Virtual Inductor Current",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "On - time generator": {
+    "component_box": [
+      99.0,
+      293.0,
+      267.0,
+      376.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Comparator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Driver",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Comparator": {
+    "component_box": [
+      313.0,
+      276.0,
+      405.0,
+      396.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        },
+        {
+          "name": "V_REF",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "On - time generator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Virtual Inductor Current": {
+    "component_box": [
+      522.0,
+      397.0,
+      719.0,
+      466.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VX",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Driver": {
+    "component_box": [
+      124.0,
+      177.0,
+      235.0,
+      238.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "On - time generator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "High-side MOSFET",
+          "count": 1
+        },
+        {
+          "name": "Low-side MOSFET",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

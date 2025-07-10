@@ -1,0 +1,291 @@
+{
+  "Main Path: A  \nPassive Part: α  \nActive Part: β/α  \nFeedback Path": {
+    "component_box": [
+      699.0,
+      11.0,
+      748.0,
+      58.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Main Path: A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "α",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out  \nSumming junction  \nFeedforward  \nFeedback": {
+    "component_box": [
+      188.0,
+      137.0,
+      237.0,
+      185.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference Input",
+          "count": 1
+        },
+        {
+          "name": "Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Main Path: A",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "α": {
+    "component_box": [
+      557.0,
+      278.0,
+      654.0,
+      321.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "P_out  \nSumming junction  \nFeedback loop  \nFeedback path",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing Junction": {
+    "component_box": [
+      85.0,
+      30.0,
+      152.0,
+      98.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Unknown",
+          "count": 1
+        },
+        {
+          "name": "Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Main Path: A",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out  Summing junction  β branch  Feedback path": {
+    "component_box": [
+      484.0,
+      357.0,
+      533.0,
+      404.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "P_out  Summing junction  Feedback loop  Feedback path",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "α",
+          "count": 1
+        },
+        {
+          "name": "Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out  \nSumming junction  \nFeedback loop  \nFeedback path": {
+    "component_box": [
+      484.0,
+      275.0,
+      532.0,
+      324.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Main Path: A",
+          "count": 1
+        },
+        {
+          "name": "Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P_out",
+          "count": 1
+        },
+        {
+          "name": "α",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out  \nSumming junction  \nSampler  \nFeedback loop": {
+    "component_box": [
+      326.0,
+      268.0,
+      392.0,
+      333.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Active Part: β/α",
+          "count": 1
+        },
+        {
+          "name": "Main Path: A",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "α",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "P_out Adder Active Part:β/α Passive Part:α": {
+    "component_box": [
+      767.0,
+      98.0,
+      816.0,
+      146.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Main Path: A",
+          "count": 1
+        },
+        {
+          "name": "Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "α",
+          "count": 1
+        },
+        {
+          "name": "Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Main Path: A": {
+    "component_box": [
+      315.0,
+      18.0,
+      611.0,
+      109.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing Junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "P_out",
+          "count": 1
+        },
+        {
+          "name": "Active Part: β/α",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Active Part: β/α": {
+    "component_box": [
+      217.0,
+      253.0,
+      414.0,
+      344.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "P_out  Summing junction  Feedback loop  Feedback path",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing Junction\nPout\nSumming Junction\nFeedback Loop\nFeedback Path",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "OP-AMP": {
+    "component_box": [
+      235.0,
+      259.0,
+      310.0,
+      338.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing Junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Multiplier",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

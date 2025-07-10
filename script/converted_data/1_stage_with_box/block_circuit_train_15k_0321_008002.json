@@ -1,0 +1,263 @@
+{
+  "Comparison of the proposed FPGA-based TDC": {
+    "component_box": [
+      486.0,
+      350.0,
+      903.0,
+      753.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Coarse counter": {
+    "component_box": [
+      295.0,
+      657.0,
+      434.0,
+      722.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Thermometer-to-binary encoder",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "State Machine": {
+    "component_box": [
+      596.0,
+      97.0,
+      782.0,
+      138.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "VTRAN",
+          "count": 1
+        },
+        {
+          "name": "VRECE",
+          "count": 1
+        },
+        {
+          "name": "System Clock",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "10bits Counter",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "10bits Counter": {
+    "component_box": [
+      597.0,
+      181.0,
+      782.0,
+      222.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "State Machine",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "8bits Counter": {
+    "component_box": [
+      141.0,
+      181.0,
+      326.0,
+      222.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "System Clock",
+          "count": 1
+        },
+        {
+          "name": "State Machine",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Bus slicer": {
+    "component_box": [
+      553.0,
+      269.0,
+      582.0,
+      302.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "10bits Counter",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Adder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Fine time interpolators": {
+    "component_box": [
+      296.0,
+      393.0,
+      435.0,
+      458.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Input stage",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Thermometer-to-binary encoder",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Input stage": {
+    "component_box": [
+      78.0,
+      393.0,
+      220.0,
+      457.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "Fine time interpolators",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Adder": {
+    "component_box": [
+      358.0,
+      261.0,
+      556.0,
+      302.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "8bits Counter",
+          "count": 1
+        },
+        {
+          "name": "State Machine",
+          "count": 1
+        },
+        {
+          "name": "Bus slicer",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Thermometer-to-binary encoder": {
+    "component_box": [
+      270.0,
+      525.0,
+      459.0,
+      590.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Fine time interpolators",
+          "count": 1
+        },
+        {
+          "name": "Online calibrator",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "Online calibrator": {
+    "component_box": [
+      80.0,
+      525.0,
+      220.0,
+      589.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Fine time interpolators",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Thermometer-to-binary encoder",
+          "count": 1
+        },
+        {
+          "name": "Output",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

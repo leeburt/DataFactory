@@ -1,0 +1,151 @@
+{
+  "Decision Circuit": {
+    "component_box": [
+      540.0,
+      195.0,
+      570.0,
+      216.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LA",
+          "count": 1
+        },
+        {
+          "name": "Clock Recovery",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "DEMUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Clock Recovery": {
+    "component_box": [
+      484.0,
+      282.0,
+      628.0,
+      362.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "LA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Decision Circuit",
+          "count": 1
+        },
+        {
+          "name": "DEMUX",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TIA": {
+    "component_box": [
+      195.0,
+      118.0,
+      290.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Photodiode",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "LA",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LA": {
+    "component_box": [
+      331.0,
+      116.0,
+      427.0,
+      233.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TIA",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Decision Circuit",
+          "count": 1
+        },
+        {
+          "name": "Clock Recovery",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "DEMUX": {
+    "component_box": [
+      677.0,
+      116.0,
+      751.0,
+      232.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Decision Circuit",
+          "count": 1
+        },
+        {
+          "name": "Clock Recovery",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Output Data",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Photodiode": {
+    "component_box": [
+      102.0,
+      97.0,
+      135.0,
+      121.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "TIA",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

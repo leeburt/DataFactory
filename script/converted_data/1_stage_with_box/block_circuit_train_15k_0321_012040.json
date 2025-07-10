@@ -1,0 +1,327 @@
+{
+  "PROGRAMMABLE XMT LEVEL ATTENUATOR": {
+    "component_box": [
+      348.0,
+      670.0,
+      543.0,
+      802.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "COMPENSATED SAMPLE AND HOLD",
+          "count": 1
+        },
+        {
+          "name": "ADC (10 BIT)/DAC (9 BIT)",
+          "count": 1
+        },
+        {
+          "name": "TRAN OUT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ADC (10 BIT)/DAC (9 BIT)": {
+    "component_box": [
+      747.0,
+      527.0,
+      992.0,
+      805.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "COMPENSATED SAMPLE AND HOLD",
+          "count": 1
+        },
+        {
+          "name": "PROGRAMMABLE XMT LEVEL ATTENUATOR",
+          "count": 1
+        },
+        {
+          "name": "VOLTAGE REFERENCE",
+          "count": 1
+        },
+        {
+          "name": "TIMING GENERATOR",
+          "count": 1
+        },
+        {
+          "name": "ANALOG GROUND GENERATOR",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "AGC",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ZERO CROSSING DETECTOR": {
+    "component_box": [
+      1149.0,
+      382.0,
+      1336.0,
+      487.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "ADC (10 BIT)/DAC (9 BIT)",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "HIGHPASS FILTER",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "VOLTAGE REFERENCE": {
+    "component_box": [
+      835.0,
+      382.0,
+      1029.0,
+      477.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "ADC (10 BIT)/DAC (9 BIT)",
+          "count": 1
+        },
+        {
+          "name": "ZERO CROSSING DETECTOR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "COMPENSATED SAMPLE AND HOLD": {
+    "component_box": [
+      347.0,
+      382.0,
+      543.0,
+      509.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LOWPASS FILTER",
+          "count": 1
+        },
+        {
+          "name": "ADC (10 BIT)/DAC (9 BIT)",
+          "count": 1
+        },
+        {
+          "name": "MODE SELECT",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "HIGHPASS FILTER": {
+    "component_box": [
+      812.0,
+      148.0,
+      1008.0,
+      266.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "LOWPASS FILTER",
+          "count": 1
+        },
+        {
+          "name": "O BYPASS",
+          "count": 1
+        },
+        {
+          "name": "BYPASS",
+          "count": 1
+        },
+        {
+          "name": "ADC (10 BIT)/DAC (9 BIT)",
+          "count": 1
+        },
+        {
+          "name": "ZERO CROSSING DETECTOR",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "POWER ON RESET": {
+    "component_box": [
+      428.0,
+      957.0,
+      650.0,
+      1066.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "POR",
+          "count": 1
+        },
+        {
+          "name": "RC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "LOWPASS FILTER": {
+    "component_box": [
+      346.0,
+      148.0,
+      542.0,
+      269.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "INPUT",
+          "count": 1
+        },
+        {
+          "name": "COMPENSATED SAMPLE AND HOLD",
+          "count": 1
+        },
+        {
+          "name": "HIGHPASS FILTER",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ANALOG GROUND GENERATOR": {
+    "component_box": [
+      989.0,
+      957.0,
+      1212.0,
+      1066.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "ADC (10 BIT)/DAC (9 BIT)",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "0V",
+          "count": 1
+        },
+        {
+          "name": "CAP",
+          "count": 1
+        },
+        {
+          "name": "5V",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "TIMING GENERATOR": {
+    "component_box": [
+      713.0,
+      958.0,
+      937.0,
+      1066.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "POWER ON RESET",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC (10 BIT)/DAC (9 BIT)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "AGC": {
+    "component_box": [
+      1139.0,
+      672.0,
+      1337.0,
+      801.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC (10 BIT)/DAC (9 BIT)",
+          "count": 1
+        },
+        {
+          "name": "S/I",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "S/O",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MF1 FILTER": {
+    "component_box": [
+      346.0,
+      8.0,
+      542.0,
+      123.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "INPUT",
+          "count": 1
+        },
+        {
+          "name": "HIGHPASS FILTER",
+          "count": 1
+        },
+        {
+          "name": "BYPASS",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

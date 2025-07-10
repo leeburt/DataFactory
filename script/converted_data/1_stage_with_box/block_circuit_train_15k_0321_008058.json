@@ -1,0 +1,152 @@
+{
+  "DPWM": {
+    "component_box": [
+      18.0,
+      516.0,
+      173.0,
+      577.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI Compensator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "c(t)",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "One-Shot": {
+    "component_box": [
+      624.0,
+      115.0,
+      781.0,
+      210.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "v_out(t)",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Window DL-ADC",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "PI Compensator": {
+    "component_box": [
+      2.0,
+      369.0,
+      203.0,
+      463.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Summing Junction",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "m-to-k Bits Casting",
+          "count": 1
+        },
+        {
+          "name": "DPWM",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Summing Junction": {
+    "component_box": [
+      274.0,
+      364.0,
+      376.0,
+      467.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "m-to-k Bits Casting",
+          "count": 1
+        },
+        {
+          "name": "Window DL-ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "PI Compensator",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "Window DL-ADC": {
+    "component_box": [
+      412.0,
+      368.0,
+      570.0,
+      464.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "Reference Pulse I_ref",
+          "count": 1
+        },
+        {
+          "name": "One-Shot",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing Junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "m-to-k Bits Casting": {
+    "component_box": [
+      85.0,
+      251.0,
+      249.0,
+      339.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "PI Compensator",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "Summing Junction",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

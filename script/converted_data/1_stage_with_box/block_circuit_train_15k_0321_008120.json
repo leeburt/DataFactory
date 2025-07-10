@@ -1,0 +1,290 @@
+{
+  "CPU": {
+    "component_box": [
+      383.0,
+      361.0,
+      451.0,
+      426.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ADC",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "HOST PC EMBEDDED CONTROL MONITOR",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "INT CONTROLLER",
+          "count": 1
+        },
+        {
+          "name": "HIGH SPEED I/O",
+          "count": 1
+        },
+        {
+          "name": "PORT1",
+          "count": 1
+        },
+        {
+          "name": "TIMERS",
+          "count": 1
+        },
+        {
+          "name": "MEMORY CONTOL",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "TO BOOST CONVERTER": {
+    "component_box": [
+      108.0,
+      587.0,
+      427.0,
+      637.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "DIGITAL I/O",
+          "count": 1
+        },
+        {
+          "name": "ANALOG INPUT CIRCUITRY",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": []
+    }
+  },
+  "ADC": {
+    "component_box": [
+      236.0,
+      372.0,
+      303.0,
+      416.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "ANALOG INPUT CIRCUITRY",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "CPU",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "MEMORY CONTOL": {
+    "component_box": [
+      287.0,
+      73.0,
+      491.0,
+      119.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [
+        {
+          "name": "EXTERNAL MEMORY",
+          "count": 1
+        }
+      ],
+      "inout": [
+        {
+          "name": "central bus",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "DIGITAL I/O": {
+    "component_box": [
+      66.0,
+      482.0,
+      205.0,
+      548.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "TO BOOST CONVERTER",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "PORT1",
+          "count": 1
+        },
+        {
+          "name": "HIGH SPEED I/O",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "PORT1": {
+    "component_box": [
+      82.0,
+      366.0,
+      176.0,
+      416.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "SYSTEM BUS",
+          "count": 1
+        },
+        {
+          "name": "DIGITAL I/O",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "INT CONTROLLER": {
+    "component_box": [
+      78.0,
+      72.0,
+      272.0,
+      118.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "HIGH SPEED I/O",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "System Bus",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "TIMERS": {
+    "component_box": [
+      277.0,
+      158.0,
+      370.0,
+      204.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": []
+    }
+  },
+  "HOST PC EMBEDDED CONTROL MONITOR": {
+    "component_box": [
+      550.0,
+      495.0,
+      782.0,
+      636.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CPU",
+          "count": 1
+        }
+      ],
+      "output": [],
+      "inout": [
+        {
+          "name": "EXTERNAL MEMORY",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "EXTERNAL MEMORY": {
+    "component_box": [
+      605.0,
+      179.0,
+      784.0,
+      308.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "MEMORY CONTOL",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "HOST PC EMBEDDED CONTROL MONITOR",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  },
+  "HIGH SPEED I/O": {
+    "component_box": [
+      84.0,
+      130.0,
+      179.0,
+      226.0
+    ],
+    "connections": {
+      "input": [],
+      "output": [],
+      "inout": [
+        {
+          "name": "DIGITAL I/O",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "ANALOG INPUT CIRCUITRY": {
+    "component_box": [
+      280.0,
+      478.0,
+      452.0,
+      561.0
+    ],
+    "connections": {
+      "input": [
+        {
+          "name": "CPU",
+          "count": 1
+        }
+      ],
+      "output": [
+        {
+          "name": "ADC",
+          "count": 1
+        },
+        {
+          "name": "TO BOOST CONVERTER",
+          "count": 1
+        }
+      ],
+      "inout": []
+    }
+  }
+}

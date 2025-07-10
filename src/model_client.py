@@ -33,8 +33,7 @@ class ModelClient:
                 # Build messages
                 content = []
                 
-                # Add text content
-                content.append({"type": "text", "text": f"{prompt}\n\n{query}"})
+                
                 
                 # If image is provided, add image content
                 if image_base64:
@@ -42,6 +41,9 @@ class ModelClient:
                         "type": "image_url",
                         "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"}
                     })
+
+                # Add text content
+                content.append({"type": "text", "text": f"{prompt}\n\n{query}".strip()})
                 
                 system_message = "You are a professional circuit diagram analysis assistant. Please answer questions according to the user-specified format"
                 if enforce_json:
@@ -192,3 +194,26 @@ class ModelClient:
             
         except Exception as e:
             return {"error": f"带图像评估时出错: {str(e)}"} 
+        
+
+
+if __name__ == "__main__":
+    async def main():
+        model_client = ModelClient(api_base="http://0.0.0.0:8000/v1", api_key="111", model="checkpoint-135")
+        image_path = "/data/home/libo/work/DataFactory/.cache/images/583_block_circuit_train_15k_0321_000858.jpg"
+        
+        try:
+            from image_processor import ImageProcessor
+            image_base64 = ImageProcessor.encode_image(image_path)
+            prompt = "What are the connections for the component located in <|box_start|>(150,50),(209,109)<|box_end|>?"
+            
+            async with aiohttp.ClientSession() as session:
+                print(prompt)
+                result = await model_client.generate(session, prompt, "", image_base64=image_base64)
+                print(result)
+        except Exception as e:
+            print(f"测试运行时出错: {e}")
+    
+    # 运行异步主函数
+    asyncio.run(main())
+
