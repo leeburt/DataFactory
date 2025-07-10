@@ -22383,5 +22383,376 @@
             "串连省略"
         ],
         "annotator": "姚思思"
+    },
+    "[IEEE_1994_IEEE_Symposium_on_VLSI_Circuits_-_Honolulu,_HI_(JUNE_9-11,_1994)]_Proceedings_of_1994_IEE_10.1109_vlsic.1994.586249_page_2_img4.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1994_IEEE_Symposium_on_VLSI_Circuits_-_Honolulu,_HI_(JUNE_9-11,_1994)]_Proceedings_of_1994_IEE_10.1109_vlsic.1994.586249_page_2_img4.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1994_Power_Electronics_Specialist_Conference_-_PESC'94_-_Taipei,_Taiwan_(20-25_June_1994)]_Pro_10.1109_pesc.1994.349738_page_1_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1994_Power_Electronics_Specialist_Conference_-_PESC'94_-_Taipei,_Taiwan_(20-25_June_1994)]_Pro_10.1109_pesc.1994.349738_page_1_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1994_Power_Electronics_Specialist_Conference_-_PESC'94_-_Taipei,_Taiwan_(20-25_June_1994)]_Pro_10.1109_pesc.1994.349738_page_1_img2.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1994_Power_Electronics_Specialist_Conference_-_PESC'94_-_Taipei,_Taiwan_(20-25_June_1994)]_Pro_10.1109_pesc.1994.349738_page_1_img2.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "14252_2078_block_circuit_train_15k_0321_001118.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/14252_2078_block_circuit_train_15k_0321_001118.jpg",
+        "tags": [
+            "系统框图流向不确定"
+        ],
+        "annotator": "姚思思"
+    },
+    "[IEEE_1994_Power_Electronics_Specialist_Conference_-_PESC'94_-_Taipei,_Taiwan_(20-25_June_1994)]_Pro_10.1109_pesc.1994.349738_page_1_img3.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1994_Power_Electronics_Specialist_Conference_-_PESC'94_-_Taipei,_Taiwan_(20-25_June_1994)]_Pro_10.1109_pesc.1994.349738_page_1_img3.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "14256_2078_block_circuit_train_15k_0321_001118.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/14256_2078_block_circuit_train_15k_0321_001118.jpg",
+        "tags": [
+            "系统框图流向不确定"
+        ],
+        "annotator": "姚思思"
+    },
+    "[IEEE_1994_Power_Electronics_Specialist_Conference_-_PESC'94_-_Taipei,_Taiwan_(20-25_June_1994)]_Pro_10.1109_pesc.1994.349738_page_2_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1994_Power_Electronics_Specialist_Conference_-_PESC'94_-_Taipei,_Taiwan_(20-25_June_1994)]_Pro_10.1109_pesc.1994.349738_page_2_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "1425_block_circuit_train_15k_0321_000956.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/1425_block_circuit_train_15k_0321_000956.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "姚思思"
+    },
+    "[IEEE_1994_Power_Electronics_Specialist_Conference_-_PESC'94_-_Taipei,_Taiwan_(20-25_June_1994)]_Pro_10.1109_pesc.1994.349738_page_6_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1994_Power_Electronics_Specialist_Conference_-_PESC'94_-_Taipei,_Taiwan_(20-25_June_1994)]_Pro_10.1109_pesc.1994.349738_page_6_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "14270_2078_block_circuit_train_15k_0321_001118.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/14270_2078_block_circuit_train_15k_0321_001118.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "姚思思"
+    },
+    "[IEEE_1995_IEEE_45th_Vehicular_Technology_Conference._Countdown_to_the_Wireless_Twenty-First_Century_10.1109_vetec.1995.504973_page_2_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1995_IEEE_45th_Vehicular_Technology_Conference._Countdown_to_the_Wireless_Twenty-First_Century_10.1109_vetec.1995.504973_page_2_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "14273_2078_block_circuit_train_15k_0321_001118.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/14273_2078_block_circuit_train_15k_0321_001118.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "姚思思"
+    },
+    "[IEEE_1995_IEEE_Instrumentation_and_Measurement_Technology_Conference_-_IMTC_'95_-_Waltham,_MA,_USA__10.1109_imtc.1995.515398_page_2_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1995_IEEE_Instrumentation_and_Measurement_Technology_Conference_-_IMTC_'95_-_Waltham,_MA,_USA__10.1109_imtc.1995.515398_page_2_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "1433_block_circuit_train_15k_0321_000956.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/1433_block_circuit_train_15k_0321_000956.jpg",
+        "tags": [
+            "父子图"
+        ],
+        "annotator": "姚思思"
+    },
+    "[IEEE_1995_IEEE_Instrumentation_and_Measurement_Technology_Conference_-_IMTC_'95_-_Waltham,_MA,_USA__10.1109_imtc.1995.515398_page_3_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1995_IEEE_Instrumentation_and_Measurement_Technology_Conference_-_IMTC_'95_-_Waltham,_MA,_USA__10.1109_imtc.1995.515398_page_3_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "1437_block_circuit_train_15k_0321_000956.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/1437_block_circuit_train_15k_0321_000956.jpg",
+        "tags": [
+            "父子图"
+        ],
+        "annotator": "姚思思"
+    },
+    "145_block_circuit_train_15k_0321_000755.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/145_block_circuit_train_15k_0321_000755.jpg",
+        "tags": [
+            "带基础电路图"
+        ],
+        "annotator": "姚思思"
+    },
+    "[IEEE_1995_IEEE_Instrumentation_and_Measurement_Technology_Conference_-_IMTC_'95_-_Waltham,_MA,_USA__10.1109_imtc.1995.515398_page_4_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1995_IEEE_Instrumentation_and_Measurement_Technology_Conference_-_IMTC_'95_-_Waltham,_MA,_USA__10.1109_imtc.1995.515398_page_4_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1995_IEEE_MTT-S_International_Microwave_Symposium_-_Orlando,_FL,_USA_(16-20_May_1995)]_Proceed_10.1109_mwsym.1995.406147_page_2_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1995_IEEE_MTT-S_International_Microwave_Symposium_-_Orlando,_FL,_USA_(16-20_May_1995)]_Proceed_10.1109_mwsym.1995.406147_page_2_img1.jpg",
+        "tags": [
+            "其他"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1995_IEEE_MTT-S_International_Microwave_Symposium_-_Orlando,_FL,_USA_(16-20_May_1995)]_Proceed_10.1109_mwsym.1995.406171_page_1_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1995_IEEE_MTT-S_International_Microwave_Symposium_-_Orlando,_FL,_USA_(16-20_May_1995)]_Proceed_10.1109_mwsym.1995.406171_page_1_img1.jpg",
+        "tags": [
+            "带基础电路图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1995_International_Conference_on_Acoustics,_Speech,_and_Signal_Processing_-_Detroit,_MI,_USA_(_10.1109_icassp.1995.479553_page_1_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1995_International_Conference_on_Acoustics,_Speech,_and_Signal_Processing_-_Detroit,_MI,_USA_(_10.1109_icassp.1995.479553_page_1_img1.jpg",
+        "tags": [
+            "系统框图流向不确定"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1995_International_Conference_on_Acoustics,_Speech,_and_Signal_Processing_-_Detroit,_MI,_USA_(_10.1109_icassp.1995.480476_page_1_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1995_International_Conference_on_Acoustics,_Speech,_and_Signal_Processing_-_Detroit,_MI,_USA_(_10.1109_icassp.1995.480476_page_1_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1995_International_Conference_on_Acoustics,_Speech,_and_Signal_Processing_-_Detroit,_MI,_USA_(_10.1109_icassp.1995.480557_page_2_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1995_International_Conference_on_Acoustics,_Speech,_and_Signal_Processing_-_Detroit,_MI,_USA_(_10.1109_icassp.1995.480557_page_2_img1.jpg",
+        "tags": [
+            "并联省略"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._-_Pavia,_Italy_(13-14_Sept._199_10.1109_amicd.1996.1296589_page_2_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._-_Pavia,_Italy_(13-14_Sept._199_10.1109_amicd.1996.1296589_page_2_img1.jpg",
+        "tags": [
+            "其他"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569375_page_1_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569375_page_1_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569375_page_1_img2.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569375_page_1_img2.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569375_page_3_img2.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569375_page_3_img2.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569375_page_3_img4.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569375_page_3_img4.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569375_page_3_img5.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569375_page_3_img5.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569375_page_4_img3.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569375_page_4_img3.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569394_page_3_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569394_page_3_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569394_page_4_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE-CAS_Region_8_Workshop_on_Analog_and_Mixed_IC_Design._Proceedings_-_Pavia,_Italy_(13-_10.1109_amicd.1996.569394_page_4_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Conference_on_Acoustics,_Speech,_and_Signal_Processing_Conference_Proc_10.1109_icassp.1996.545873_page_1_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Conference_on_Acoustics,_Speech,_and_Signal_Processing_Conference_Proc_10.1109_icassp.1996.545873_page_1_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Conference_on_Acoustics,_Speech,_and_Signal_Processing_Conference_Proc_10.1109_icassp.1996.545873_page_2_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Conference_on_Acoustics,_Speech,_and_Signal_Processing_Conference_Proc_10.1109_icassp.1996.545873_page_2_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Conference_on_Acoustics,_Speech,_and_Signal_Processing_Conference_Proc_10.1109_icassp.1996.545873_page_2_img2.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Conference_on_Acoustics,_Speech,_and_Signal_Processing_Conference_Proc_10.1109_icassp.1996.545873_page_2_img2.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488511_page_2_img6.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488511_page_2_img6.jpg",
+        "tags": [
+            "带基础电路图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488519_page_2_img4.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488519_page_2_img4.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488519_page_2_img5.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488519_page_2_img5.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488539_page_2_img2.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488539_page_2_img2.jpg",
+        "tags": [
+            "带基础电路图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488539_page_2_img6.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488539_page_2_img6.jpg",
+        "tags": [
+            "带基础电路图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488541_page_2_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488541_page_2_img1.jpg",
+        "tags": [
+            "带基础电路图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488565_page_2_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488565_page_2_img1.jpg",
+        "tags": [
+            "其他"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488585_page_2_img4.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488585_page_2_img4.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488587_page_2_img3.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488587_page_2_img3.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488595_page_2_img3.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488595_page_2_img3.jpg",
+        "tags": [
+            "带基础电路图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488623_page_2_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488623_page_2_img1.jpg",
+        "tags": [
+            "带基础电路图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488624_page_2_img3.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488624_page_2_img3.jpg",
+        "tags": [
+            "并联省略"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488632_page_2_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Solid-State_Circuits_Conference._Digest_of_TEchnical_Papers,_ISSCC_-_S_10.1109_isscc.1996.488632_page_2_img1.jpg",
+        "tags": [
+            "其他"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Symposium_on_Circuits_and_Systems._Circuits_and_Systems_Connecting_the_10.1109_iscas.1996.539794_page_3_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Symposium_on_Circuits_and_Systems._Circuits_and_Systems_Connecting_the_10.1109_iscas.1996.539794_page_3_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Symposium_on_Circuits_and_Systems._Circuits_and_Systems_Connecting_the_10.1109_iscas.1996.539794_page_3_img2.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Symposium_on_Circuits_and_Systems._Circuits_and_Systems_Connecting_the_10.1109_iscas.1996.539794_page_3_img2.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Symposium_on_Circuits_and_Systems._Circuits_and_Systems_Connecting_the_10.1109_iscas.1996.539794_page_4_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Symposium_on_Circuits_and_Systems._Circuits_and_Systems_Connecting_the_10.1109_iscas.1996.539794_page_4_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Symposium_on_Circuits_and_Systems._Circuits_and_Systems_Connecting_the_10.1109_iscas.1996.539870_page_1_img1.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Symposium_on_Circuits_and_Systems._Circuits_and_Systems_Connecting_the_10.1109_iscas.1996.539870_page_1_img1.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
+    },
+    "[IEEE_1996_IEEE_International_Symposium_on_Circuits_and_Systems._Circuits_and_Systems_Connecting_the_10.1109_iscas.1996.539870_page_1_img3.jpg": {
+        "image_path": "/data/home/libo/work/data_juice/dataset/cleaned_data/41.classified_images/20k-image-duplicated_converted_filter-0619/[IEEE_1996_IEEE_International_Symposium_on_Circuits_and_Systems._Circuits_and_Systems_Connecting_the_10.1109_iscas.1996.539870_page_1_img3.jpg",
+        "tags": [
+            "标准系统框图"
+        ],
+        "annotator": "王梦杰"
     }
 }
