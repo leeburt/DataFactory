@@ -6,7 +6,7 @@ class YoloDet():
 
     def __init__(self):
         # Load a pretrained YOLO11n model
-        self.det  = YOLO("/data/home/libo/work/DataFactory/node_connections/port-det-0630.pt") 
+        self.det  = YOLO(os.path.join(os.path.dirname(os.path.abspath(__file__)),"port_det_v2_20250711.pt"))
 
     # Run inference on 'bus.jpg' with arguments
 

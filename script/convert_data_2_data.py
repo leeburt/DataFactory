@@ -15,6 +15,7 @@ def convert_component_details_to_test_format(component_details):
             
         description = details['description']
         component_name = description.get('component_name')
+
         
         # 解析边界框坐标
         # box_coord 格式如 "[599, 160, 737, 253]"
@@ -54,6 +55,8 @@ def convert_component_details_to_test_format(component_details):
                 })
         
         # 使用组件名作为键
+        if component_name  in result: 
+            component_name = f"{component_name}_{int(component_box[0])}"
         result[component_name] = {
             "component_box": component_box,
             "connections": connections
@@ -104,14 +107,14 @@ def process_model_analysis_file(input_file, output_dir):
 def main():
     # 配置输入和输出路径
     input_files = [
-        "/data/home/libo/work/DataFactory/results/1_stage_with_box/model_analysis.json",
+        "/data/home/libo/work/DataFactory/results/test_image/model_analysis.json",
     ]
     
     for input_file in input_files:
         if os.path.exists(input_file):
             print(f"\n处理文件: {input_file}")
             # 根据输入文件路径生成输出目录
-            output_dir = f"converted_data/{Path(input_file).parent.name}"
+            output_dir = f"{Path(input_file).parent}/converted_data"
             process_model_analysis_file(input_file, output_dir)
             break  # 找到第一个存在的文件就处理
     else:

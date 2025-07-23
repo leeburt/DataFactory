@@ -1,0 +1,468 @@
+{
+  "image_width": 800,
+  "image_height": 600,
+  "nodes": [
+    {
+      "node_id": "node_0",
+      "node_type": "start",
+      "bbox": [
+        0.1125,
+        0.12330550110900929,
+        0.1,
+        0.06666666666666667
+      ],
+      "keypoints": [
+        {
+          "id": "node_0_input_0",
+          "type": "input",
+          "x": 0.0625,
+          "y": 0.12330550110900927,
+          "visibility": 1
+        },
+        {
+          "id": "node_0_output_0",
+          "type": "output",
+          "x": 0.1625,
+          "y": 0.10663883444234261,
+          "visibility": 1
+        },
+        {
+          "id": "node_0_output_1",
+          "type": "output",
+          "x": 0.1625,
+          "y": 0.12330550110900927,
+          "visibility": 1
+        },
+        {
+          "id": "node_0_output_2",
+          "type": "output",
+          "x": 0.1625,
+          "y": 0.13997216777567595,
+          "visibility": 1
+        }
+      ]
+    },
+    {
+      "node_id": "node_1",
+      "node_type": "process",
+      "bbox": [
+        0.44306539219856406,
+        0.125,
+        0.15,
+        0.08333333333333333
+      ],
+      "keypoints": [
+        {
+          "id": "node_1_input_0",
+          "type": "input",
+          "x": 0.36806539219856405,
+          "y": 0.125,
+          "visibility": 1
+        },
+        {
+          "id": "node_1_output_0",
+          "type": "output",
+          "x": 0.5180653921985641,
+          "y": 0.125,
+          "visibility": 1
+        }
+      ]
+    },
+    {
+      "node_id": "node_2",
+      "node_type": "start",
+      "bbox": [
+        0.7063862037882649,
+        0.1575258103805264,
+        0.15,
+        0.08333333333333333
+      ],
+      "keypoints": [
+        {
+          "id": "node_2_input_0",
+          "type": "input",
+          "x": 0.6313862037882649,
+          "y": 0.1575258103805264,
+          "visibility": 1
+        },
+        {
+          "id": "node_2_output_0",
+          "type": "output",
+          "x": 0.7813862037882648,
+          "y": 0.1436369214916375,
+          "visibility": 1
+        },
+        {
+          "id": "node_2_output_1",
+          "type": "output",
+          "x": 0.7813862037882648,
+          "y": 0.1714146992694153,
+          "visibility": 1
+        }
+      ]
+    },
+    {
+      "node_id": "node_3",
+      "node_type": "process",
+      "bbox": [
+        0.1375,
+        0.443013358145381,
+        0.15,
+        0.08333333333333333
+      ],
+      "keypoints": [
+        {
+          "id": "node_3_input_0",
+          "type": "input",
+          "x": 0.0625,
+          "y": 0.44301335814538095,
+          "visibility": 1
+        },
+        {
+          "id": "node_3_output_0",
+          "type": "output",
+          "x": 0.2125,
+          "y": 0.4291244692564921,
+          "visibility": 1
+        },
+        {
+          "id": "node_3_output_1",
+          "type": "output",
+          "x": 0.2125,
+          "y": 0.45690224703426985,
+          "visibility": 1
+        }
+      ]
+    },
+    {
+      "node_id": "node_4",
+      "node_type": "decision",
+      "bbox": [
+        0.4621913390549791,
+        0.36062299605170156,
+        0.125,
+        0.1
+      ],
+      "keypoints": [
+        {
+          "id": "node_4_input_0",
+          "type": "input",
+          "x": 0.3996913390549791,
+          "y": 0.36062299605170156,
+          "visibility": 1
+        },
+        {
+          "id": "node_4_output_0",
+          "type": "output",
+          "x": 0.5246913390549791,
+          "y": 0.3439563293850349,
+          "visibility": 1
+        },
+        {
+          "id": "node_4_output_1",
+          "type": "output",
+          "x": 0.5246913390549791,
+          "y": 0.3772896627183682,
+          "visibility": 1
+        }
+      ]
+    },
+    {
+      "node_id": "node_5",
+      "node_type": "start",
+      "bbox": [
+        0.7199195882581167,
+        0.4403068395923077,
+        0.15,
+        0.08333333333333333
+      ],
+      "keypoints": [
+        {
+          "id": "node_5_input_0",
+          "type": "input",
+          "x": 0.6449195882581168,
+          "y": 0.4403068395923077,
+          "visibility": 1
+        },
+        {
+          "id": "node_5_output_0",
+          "type": "output",
+          "x": 0.7949195882581168,
+          "y": 0.4194735062589744,
+          "visibility": 1
+        },
+        {
+          "id": "node_5_output_1",
+          "type": "output",
+          "x": 0.7949195882581168,
+          "y": 0.4403068395923077,
+          "visibility": 1
+        },
+        {
+          "id": "node_5_output_2",
+          "type": "output",
+          "x": 0.7949195882581168,
+          "y": 0.461140172925641,
+          "visibility": 1
+        }
+      ]
+    },
+    {
+      "node_id": "node_6",
+      "node_type": "decision",
+      "bbox": [
+        0.125,
+        0.6530788531946586,
+        0.125,
+        0.1
+      ],
+      "keypoints": [
+        {
+          "id": "node_6_input_0",
+          "type": "input",
+          "x": 0.0625,
+          "y": 0.6280788531946586,
+          "visibility": 1
+        },
+        {
+          "id": "node_6_input_1",
+          "type": "input",
+          "x": 0.0625,
+          "y": 0.6530788531946586,
+          "visibility": 1
+        },
+        {
+          "id": "node_6_input_2",
+          "type": "input",
+          "x": 0.0625,
+          "y": 0.6780788531946585,
+          "visibility": 1
+        },
+        {
+          "id": "node_6_output_0",
+          "type": "output",
+          "x": 0.1875,
+          "y": 0.6364121865279919,
+          "visibility": 1
+        },
+        {
+          "id": "node_6_output_1",
+          "type": "output",
+          "x": 0.1875,
+          "y": 0.6697455198613252,
+          "visibility": 1
+        }
+      ]
+    },
+    {
+      "node_id": "node_7",
+      "node_type": "end",
+      "bbox": [
+        0.35131868353670975,
+        0.7174844701105775,
+        0.1,
+        0.06666666666666667
+      ],
+      "keypoints": [
+        {
+          "id": "node_7_input_0",
+          "type": "input",
+          "x": 0.30131868353670976,
+          "y": 0.7174844701105775,
+          "visibility": 1
+        },
+        {
+          "id": "node_7_output_0",
+          "type": "output",
+          "x": 0.4013186835367098,
+          "y": 0.7174844701105775,
+          "visibility": 1
+        }
+      ]
+    }
+  ],
+  "keypoints": [
+    {
+      "id": "node_0_input_0",
+      "type": "input",
+      "x": 0.0625,
+      "y": 0.12330550110900927,
+      "visibility": 1
+    },
+    {
+      "id": "node_0_output_0",
+      "type": "output",
+      "x": 0.1625,
+      "y": 0.10663883444234261,
+      "visibility": 1
+    },
+    {
+      "id": "node_0_output_1",
+      "type": "output",
+      "x": 0.1625,
+      "y": 0.12330550110900927,
+      "visibility": 1
+    },
+    {
+      "id": "node_0_output_2",
+      "type": "output",
+      "x": 0.1625,
+      "y": 0.13997216777567595,
+      "visibility": 1
+    },
+    {
+      "id": "node_1_input_0",
+      "type": "input",
+      "x": 0.36806539219856405,
+      "y": 0.125,
+      "visibility": 1
+    },
+    {
+      "id": "node_1_output_0",
+      "type": "output",
+      "x": 0.5180653921985641,
+      "y": 0.125,
+      "visibility": 1
+    },
+    {
+      "id": "node_2_input_0",
+      "type": "input",
+      "x": 0.6313862037882649,
+      "y": 0.1575258103805264,
+      "visibility": 1
+    },
+    {
+      "id": "node_2_output_0",
+      "type": "output",
+      "x": 0.7813862037882648,
+      "y": 0.1436369214916375,
+      "visibility": 1
+    },
+    {
+      "id": "node_2_output_1",
+      "type": "output",
+      "x": 0.7813862037882648,
+      "y": 0.1714146992694153,
+      "visibility": 1
+    },
+    {
+      "id": "node_3_input_0",
+      "type": "input",
+      "x": 0.0625,
+      "y": 0.44301335814538095,
+      "visibility": 1
+    },
+    {
+      "id": "node_3_output_0",
+      "type": "output",
+      "x": 0.2125,
+      "y": 0.4291244692564921,
+      "visibility": 1
+    },
+    {
+      "id": "node_3_output_1",
+      "type": "output",
+      "x": 0.2125,
+      "y": 0.45690224703426985,
+      "visibility": 1
+    },
+    {
+      "id": "node_4_input_0",
+      "type": "input",
+      "x": 0.3996913390549791,
+      "y": 0.36062299605170156,
+      "visibility": 1
+    },
+    {
+      "id": "node_4_output_0",
+      "type": "output",
+      "x": 0.5246913390549791,
+      "y": 0.3439563293850349,
+      "visibility": 1
+    },
+    {
+      "id": "node_4_output_1",
+      "type": "output",
+      "x": 0.5246913390549791,
+      "y": 0.3772896627183682,
+      "visibility": 1
+    },
+    {
+      "id": "node_5_input_0",
+      "type": "input",
+      "x": 0.6449195882581168,
+      "y": 0.4403068395923077,
+      "visibility": 1
+    },
+    {
+      "id": "node_5_output_0",
+      "type": "output",
+      "x": 0.7949195882581168,
+      "y": 0.4194735062589744,
+      "visibility": 1
+    },
+    {
+      "id": "node_5_output_1",
+      "type": "output",
+      "x": 0.7949195882581168,
+      "y": 0.4403068395923077,
+      "visibility": 1
+    },
+    {
+      "id": "node_5_output_2",
+      "type": "output",
+      "x": 0.7949195882581168,
+      "y": 0.461140172925641,
+      "visibility": 1
+    },
+    {
+      "id": "node_6_input_0",
+      "type": "input",
+      "x": 0.0625,
+      "y": 0.6280788531946586,
+      "visibility": 1
+    },
+    {
+      "id": "node_6_input_1",
+      "type": "input",
+      "x": 0.0625,
+      "y": 0.6530788531946586,
+      "visibility": 1
+    },
+    {
+      "id": "node_6_input_2",
+      "type": "input",
+      "x": 0.0625,
+      "y": 0.6780788531946585,
+      "visibility": 1
+    },
+    {
+      "id": "node_6_output_0",
+      "type": "output",
+      "x": 0.1875,
+      "y": 0.6364121865279919,
+      "visibility": 1
+    },
+    {
+      "id": "node_6_output_1",
+      "type": "output",
+      "x": 0.1875,
+      "y": 0.6697455198613252,
+      "visibility": 1
+    },
+    {
+      "id": "node_7_input_0",
+      "type": "input",
+      "x": 0.30131868353670976,
+      "y": 0.7174844701105775,
+      "visibility": 1
+    },
+    {
+      "id": "node_7_output_0",
+      "type": "output",
+      "x": 0.4013186835367098,
+      "y": 0.7174844701105775,
+      "visibility": 1
+    }
+  ]
+}
